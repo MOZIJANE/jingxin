@@ -1,0 +1,11 @@
+[CRITICAL]2021-05-06 16:46:11,364: taskFunc2:task[6093ac643dc23969e6a4fbef][AGV30] 6(1) -> 7(8) [moveoutFromLoadPoint] cause a error: 'scadaTask' object has no attribute 'self'
+pid=11376, ppid=15868, tid=16456
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 699, in _taskFunc
+    elif not self.handle():
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 645, in handle
+    self.param["location"] = self.self.t_info["prepoint"]
+AttributeError: 'scadaTask' object has no attribute 'self'
+

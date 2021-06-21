@@ -1,0 +1,64 @@
+[INFO]2021-04-20 16:07:27,841: log files at E:\projects_by_myself\MeiWei\common\log
+[INFO]2021-04-20 16:07:27,842: find module account.main_account
+[INFO]2021-04-20 16:07:27,843: find module agvCtrl.main_agv
+[INFO]2021-04-20 16:07:27,844: find module agvDevice.main_agvDevice
+[INFO]2021-04-20 16:07:27,845: find module akmCtrl.main_akmCtrl
+[INFO]2021-04-20 16:07:27,846: find module alarm.main_alarm
+[INFO]2021-04-20 16:07:27,847: find module auth.main_auth
+[INFO]2021-04-20 16:07:27,848: find module door.main_door
+[INFO]2021-04-20 16:07:27,848: find module elevator.main_elevator
+[INFO]2021-04-20 16:07:27,849: find module feed.main_feed
+[INFO]2021-04-20 16:07:27,928: find module remoteio.main_remoteio
+[INFO]2021-04-20 16:07:27,929: import account.main_account
+[INFO]2021-04-20 16:07:28,032: import agvCtrl.main_agv
+[INFO]2021-04-20 16:07:28,863: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA5820DE70>>
+[INFO]2021-04-20 16:07:29,728: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA5824C3F0>>
+[INFO]2021-04-20 16:07:29,836: create lock <lock name:timer.lock_2930652971456,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58878330>>
+[ERROR]2021-04-20 16:07:29,847: mqtt is disabled
+[INFO]2021-04-20 16:07:29,849: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-20 16:07:29,850: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-20 16:07:32,888: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-20 16:07:32,913: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58A89D20>>
+[WARNING]2021-04-20 16:07:32,924: use mockAgvCtrl
+[INFO]2021-04-20 16:07:32,927: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA56B03330>>
+[INFO]2021-04-20 16:07:33,277: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58B2E030>>
+[INFO]2021-04-20 16:07:33,280: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58BC5480>>
+[INFO]2021-04-20 16:07:33,349: charge policy 1 , fix time
+[INFO]2021-04-20 16:07:33,383: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58BD0060>>
+[INFO]2021-04-20 16:07:33,708: start load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\AKM2F.smap
+[DEBUG]2021-04-20 16:07:33,820: elevator thread start
+[INFO]2021-04-20 16:07:33,840: load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\AKM2F.smap ,used 141 ms
+[INFO]2021-04-20 16:07:33,851: start load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\akmsmt.smap
+[INFO]2021-04-20 16:07:33,902: load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\akmsmt.smap ,used 60 ms
+[INFO]2021-04-20 16:07:33,913: start load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\akmsmtMap.smap
+[INFO]2021-04-20 16:07:34,049: load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\akmsmtMap.smap ,used 147 ms
+[INFO]2021-04-20 16:07:34,060: start load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\desai-all-20191223.smap
+[INFO]2021-04-20 16:07:34,211: load map E:\projects_by_myself\MeiWei\agvCtrl\projects\test\desai-all-20191223.smap ,used 161 ms
+[INFO]2021-04-20 16:07:34,214: import agvDevice.main_agvDevice
+[INFO]2021-04-20 16:07:34,217: import akmCtrl.main_akmCtrl
+[INFO]2021-04-20 16:07:34,224: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58F7A930>>
+[INFO]2021-04-20 16:07:34,229: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA575862D0>>
+[INFO]2021-04-20 16:07:34,795: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA5A91F4E0>>
+[INFO]2021-04-20 16:07:34,858: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA5A91F3C0>>
+[CRITICAL]2021-04-20 16:07:34,881: import main_akmCtrl failed, path: akmCtrl cause a error: [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\akmCtrl\\agvCtrl\\projects\\test\\agv.cfg'
+pid=13200, ppid=10888, tid=18036
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "E:\projects_by_myself\MeiWei\akmCtrl\main_akmCtrl.py", line 18, in <module>
+    import runTasks,runTasks01
+  File "E:\projects_by_myself\MeiWei\akmCtrl\runTasks01.py", line 30, in <module>
+    g_agvList = toolsUtil.loadAgvList()
+  File "E:\projects_by_myself\MeiWei\akmCtrl\utils\toolsUtil.py", line 30, in loadAgvList
+    with open(os.path.abspath(os.path.dirname(__file__) + file), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\akmCtrl\\agvCtrl\\projects\\test\\agv.cfg'
+
+[CRITICAL]2021-04-20 16:07:34,883: import main_akmCtrl failed, path: akmCtrl ,cause [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\akmCtrl\\agvCtrl\\projects\\test\\agv.cfg'
+[INFO]2021-04-20 16:07:37,587: load agv file: E:\projects_by_myself\MeiWei\agvCtrl/projects/test/agv.cfg
+[INFO]2021-04-20 16:07:37,588: create lock <lock name:agvList.AGV30.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA58F71C00>>
+[DEBUG]2021-04-20 16:07:37,592: create aliveObj AGV30 AGV¿Îœﬂ“Ï≥£ timeout 300
+[INFO]2021-04-20 16:07:37,594: AGV30 start agvList run thread
+[INFO]2021-04-20 16:07:37,595: AGV30 start agvList run2 thread
+[ERROR]2021-04-20 16:07:37,603: agv check init error False
+[INFO]2021-04-20 16:07:38,107: AGV30 current map AKM2F
+[INFO]2021-04-20 16:07:38,108: AGV30 is online

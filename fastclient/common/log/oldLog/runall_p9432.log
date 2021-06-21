@@ -1,0 +1,108 @@
+[INFO]2021-03-17 09:54:18,237: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 09:54:18,237: find module account.main_account
+[INFO]2021-03-17 09:54:18,238: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 09:54:18,238: find module alarm.main_alarm
+[INFO]2021-03-17 09:54:18,239: find module auth.main_auth
+[INFO]2021-03-17 09:54:18,239: find module feed.main_feed
+[INFO]2021-03-17 09:54:18,240: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 09:54:18,240: find module scadaCtrlEle.main_scadaCtrl
+[INFO]2021-03-17 09:54:18,240: import account.main_account
+[INFO]2021-03-17 09:54:18,320: import agvDevice.main_agvDevice
+[INFO]2021-03-17 09:54:18,322: import alarm.main_alarm
+[INFO]2021-03-17 09:54:18,415: create lock <lock name:timer.lock_2253671396968,<unlocked _thread.RLock object owner=0 count=0 at 0x0000020CB943C698>>
+[ERROR]2021-03-17 09:54:18,425: mqtt is disabled
+[INFO]2021-03-17 09:54:18,426: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 09:54:18,426: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 09:54:21,471: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-17 09:54:21,475: import auth.main_auth
+[INFO]2021-03-17 09:54:21,482: import feed.main_feed
+[INFO]2021-03-17 09:54:21,488: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000020CB96B92D8>>
+[INFO]2021-03-17 09:54:21,491: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000020CB96B9738>>
+[INFO]2021-03-17 09:54:21,551: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 09:54:21,560: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000020CB976C4B8>>
+[INFO]2021-03-17 09:54:21,601: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000020CB976C558>>
+[INFO]2021-03-17 09:54:21,603: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000020CB976C1E8>>
+[INFO]2021-03-17 09:54:21,680: load task: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]
+[INFO]2021-03-17 09:54:21,683: import scadaCtrlEle.main_scadaCtrl
+[SUCC]2021-03-17 09:54:21,690: utility start, pid=9432, ppid=15128
+[DEBUG]2021-03-17 09:54:21,691: start timer
+[INFO]2021-03-17 09:54:21,691: add_ignore: taskStatus
+[INFO]2021-03-17 09:54:21,692: add_ignore: api/elevator/status
+[INFO]2021-03-17 09:54:21,692: add_ignore: scada/getTask
+[INFO]2021-03-17 09:54:24,046: task: start *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]
+[DEBUG]2021-03-17 09:54:26,724: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 09:54:27,323: [return] use 599 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 09:54:27,398: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 09:54:27,583: timer_thread[tid:14832] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=14832 count=1 at 0x0000020CB976C558>> ,hold 3875 ms
+[INFO]2021-03-17 09:54:27,921: name=timer_thread, pid=9432, tid=14832
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[WARNING]2021-03-17 09:54:32,490: scada.60515fa963fdc12e93ab111b[tid:14624] <locked _thread.RLock object owner=14624 count=1 at 0x0000020CB976C8A0> ,hold 8441 ms
+[INFO]2021-03-17 09:54:32,709: name=scada.60515fa963fdc12e93ab111b, pid=9432, tid=14624
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 09:54:32,800: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 09:55:19,993: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: ('http get', 'http://127.0.0.1:5551/api/agv/apply', {'loc': 'LM242', 'exclude': '', 'autoLock': False, 'mapId': 'fp20190712-1', 'taskId': '60515fa963fdc12e93ab111b', 'timeout': 10, 'appName': 'scadaTask'}, 'error:', 'timed out')
+[WARNING]2021-03-17 09:55:25,074: scada.60515fa963fdc12e93ab111b[tid:14624] <locked _thread.RLock object owner=14624 count=1 at 0x0000020CB976C8A0> ,hold 50195 ms
+[INFO]2021-03-17 09:55:25,215: name=scada.60515fa963fdc12e93ab111b, pid=9432, tid=14624
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 09:55:25,291: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 09:56:12,489: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: ('http get', 'http://127.0.0.1:5551/api/agv/apply', {'loc': 'LM242', 'exclude': '', 'autoLock': False, 'mapId': 'fp20190712-1', 'taskId': '60515fa963fdc12e93ab111b', 'timeout': 10, 'appName': 'scadaTask'}, 'error:', 'timed out')
+[WARNING]2021-03-17 09:56:17,577: scada.60515fa963fdc12e93ab111b[tid:14624] <locked _thread.RLock object owner=14624 count=1 at 0x0000020CB976C8A0> ,hold 50211 ms
+[INFO]2021-03-17 09:56:17,716: name=scada.60515fa963fdc12e93ab111b, pid=9432, tid=14624
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 09:56:17,793: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 09:57:05,034: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: ('http get', 'http://127.0.0.1:5551/api/agv/apply', {'loc': 'LM242', 'exclude': '', 'autoLock': False, 'mapId': 'fp20190712-1', 'taskId': '60515fa963fdc12e93ab111b', 'timeout': 10, 'appName': 'scadaTask'}, 'error:', 'timed out')
+[WARNING]2021-03-17 09:57:10,121: scada.60515fa963fdc12e93ab111b[tid:14624] <locked _thread.RLock object owner=14624 count=1 at 0x0000020CB976C8A0> ,hold 50229 ms
+[INFO]2021-03-17 09:57:10,292: name=scada.60515fa963fdc12e93ab111b, pid=9432, tid=14624
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 09:57:10,370: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 09:57:57,627: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: ('http get', 'http://127.0.0.1:5551/api/agv/apply', {'loc': 'LM242', 'exclude': '', 'autoLock': False, 'mapId': 'fp20190712-1', 'taskId': '60515fa963fdc12e93ab111b', 'timeout': 10, 'appName': 'scadaTask'}, 'error:', 'timed out')
+[WARNING]2021-03-17 09:58:02,719: scada.60515fa963fdc12e93ab111b[tid:14624] <locked _thread.RLock object owner=14624 count=1 at 0x0000020CB976C8A0> ,hold 50239 ms
+[INFO]2021-03-17 09:58:02,859: name=scada.60515fa963fdc12e93ab111b, pid=9432, tid=14624
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 09:58:02,934: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 09:58:50,139: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: ('http get', 'http://127.0.0.1:5551/api/agv/apply', {'loc': 'LM242', 'exclude': '', 'autoLock': False, 'mapId': 'fp20190712-1', 'taskId': '60515fa963fdc12e93ab111b', 'timeout': 10, 'appName': 'scadaTask'}, 'error:', 'timed out')
+[WARNING]2021-03-17 09:58:55,219: scada.60515fa963fdc12e93ab111b[tid:14624] <locked _thread.RLock object owner=14624 count=1 at 0x0000020CB976C8A0> ,hold 50200 ms
+[INFO]2021-03-17 09:58:55,359: name=scada.60515fa963fdc12e93ab111b, pid=9432, tid=14624
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 09:58:55,439: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error

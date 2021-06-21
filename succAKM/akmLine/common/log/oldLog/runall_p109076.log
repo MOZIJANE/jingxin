@@ -1,0 +1,82 @@
+[INFO]2020-09-21 14:28:24,514: log files at C:\akmLine\common\log
+[INFO]2020-09-21 14:28:24,515: find module agvCtrl.main_agv
+[INFO]2020-09-21 14:28:24,516: find module agvDevice.main_agvDevice
+[INFO]2020-09-21 14:28:24,517: find module alarm.main_alarm
+[INFO]2020-09-21 14:28:24,518: find module auth.main_auth
+[INFO]2020-09-21 14:28:24,519: find module door.main_door
+[INFO]2020-09-21 14:28:24,521: find module elevator.main_elevator
+[INFO]2020-09-21 14:28:24,522: find module feed.main_feed
+[INFO]2020-09-21 14:28:24,522: import agvCtrl.main_agv
+[INFO]2020-09-21 14:28:25,543: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C1328>>
+[INFO]2020-09-21 14:28:25,550: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C1580>>
+[INFO]2020-09-21 14:28:25,809: create lock <lock name:timer.lock_128120424,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007A0CB70>>
+[ERROR]2020-09-21 14:28:25,836: mqtt is disabled
+[INFO]2020-09-21 14:28:25,838: mqtt: subscribe [alarm/raise/+]
+[INFO]2020-09-21 14:28:25,840: mqtt: subscribe [alarm/clear/+]
+[INFO]2020-09-21 14:28:28,908: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-21 14:28:28,965: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C2B5F8>>
+[INFO]2020-09-21 14:28:28,968: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C2B238>>
+[INFO]2020-09-21 14:28:28,973: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007BA6D28>>
+[INFO]2020-09-21 14:28:29,659: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000005B727B0>>
+[INFO]2020-09-21 14:28:30,792: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FC7968>>
+[INFO]2020-09-21 14:28:30,799: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FF52B0>>
+[INFO]2020-09-21 14:28:31,075: charge policy 0 , fix time
+[INFO]2020-09-21 14:28:31,216: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FF5E18>>
+[INFO]2020-09-21 14:28:31,624: start load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap
+[DEBUG]2020-09-21 14:28:41,318: elevator thread start
+[INFO]2020-09-21 14:28:42,112: load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap ,used 10526 ms
+[INFO]2020-09-21 14:28:42,152: start load map C:\akmLine\agvCtrl\projects\akmLine\office.smap
+[INFO]2020-09-21 14:28:42,402: load map C:\akmLine\agvCtrl\projects\akmLine\office.smap ,used 288 ms
+[WARNING]2020-09-21 14:28:42,405: MainThread[tid:109080] <lock name:mapMgr.lock,<locked _thread.RLock object owner=109080 count=1 at 0x0000000005B727B0>> ,hold 11186 ms
+[INFO]2020-09-21 14:28:42,410: name=MainThread, pid=109076, tid=109080
+[01] File "C:/akmLine/common/run_all.py", line 57, in <module>() 
+[02] File "C:/akmLine/common/run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "C:/akmLine/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "C:/akmLine/common/lock.py", line 122, in _call() 
+[10] File "C:/akmLine/common/lock.py", line 100, in release() 
+[11] File "C:/akmLine/common/enhance.py", line 258, in getTrace() 
+[12] File "C:/akmLine/common/enhance.py", line 240, in getThreadStack()
+[INFO]2020-09-21 14:28:42,429: import agvDevice.main_agvDevice
+[INFO]2020-09-21 14:28:42,431: import alarm.main_alarm
+[INFO]2020-09-21 14:28:42,435: import auth.main_auth
+[INFO]2020-09-21 14:28:42,455: import door.main_door
+[INFO]2020-09-21 14:28:42,463: import elevator.main_elevator
+[INFO]2020-09-21 14:28:42,465: import feed.main_feed
+[INFO]2020-09-21 14:28:42,478: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000000892A080>>
+[INFO]2020-09-21 14:28:42,703: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000000892A620>>
+[INFO]2020-09-21 14:28:42,711: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000000892A7B0>>
+[INFO]2020-09-21 14:28:42,873: IP: 0.0.0.0 port: 10001
+[SUCC]2020-09-21 14:28:42,933: utility start, pid=109076, ppid=109036
+[DEBUG]2020-09-21 14:28:42,935: start timer
+[INFO]2020-09-21 14:28:42,976: load agv file: C:\akmLine\agvCtrl/projects/akmLine/agv.cfg
+[INFO]2020-09-21 14:28:42,979: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A32E90>>
+[DEBUG]2020-09-21 14:28:42,990: create aliveObj AGV01 AGV¿Îœﬂ“Ï≥£ timeout 300
+[INFO]2020-09-21 14:28:42,994: AGV01 start agvList run thread
+[INFO]2020-09-21 14:28:42,994: AGV01 start agvList run2 thread
+[INFO]2020-09-21 14:28:42,997: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A740D0>>
+[WARNING]2020-09-21 14:28:43,009: Local server start! version 3.7.3, path C:\akmLine\common, pid 109076
+[DEBUG]2020-09-21 14:28:43,010: try connect AGV01 192.168.20.199:19204
+[INFO]2020-09-21 14:28:43,013: add_ignore: taskStatus
+[INFO]2020-09-21 14:28:43,019: AGV01 connected
+[INFO]2020-09-21 14:28:43,024: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000086CB990>>
+[DEBUG]2020-09-21 14:28:43,027: try connect AGV01 192.168.20.199:19205
+[INFO]2020-09-21 14:28:43,033: AGV01 connected
+[INFO]2020-09-21 14:28:43,035: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A740F8>>
+[DEBUG]2020-09-21 14:28:43,039: try connect AGV01 192.168.20.199:19206
+[INFO]2020-09-21 14:28:43,047: AGV01 connected
+[INFO]2020-09-21 14:28:43,051: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A741C0>>
+[DEBUG]2020-09-21 14:28:43,059: try connect AGV01 192.168.20.199:19207
+[INFO]2020-09-21 14:28:43,067: AGV01 connected
+[INFO]2020-09-21 14:28:43,070: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A74BE8>>
+[DEBUG]2020-09-21 14:28:43,073: try connect AGV01 192.168.20.199:19208
+[INFO]2020-09-21 14:28:43,079: AGV01 connected
+[INFO]2020-09-21 14:28:43,081: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A74C10>>
+[DEBUG]2020-09-21 14:28:43,084: try connect AGV01 192.168.20.199:19210
+[INFO]2020-09-21 14:28:43,090: AGV01 connected
+[INFO]2020-09-21 14:28:43,126: AGV01 current map akmLineMap
+[INFO]2020-09-21 14:28:43,152: AGV01 is online

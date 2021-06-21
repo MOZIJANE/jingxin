@@ -1,0 +1,530 @@
+[CRITICAL]2021-05-08 14:32:52,329: upStation01 init failed cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=2072, ppid=3720, tid=10080
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 175, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-08 14:32:58,270: [modbusApi: 172.16.167.221] execute fcode=1, addr=8256 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=11064
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:32:58,767: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=11064
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:32:58,872: invoke <function urlReadDOList at 0x000001B3A25A0D08> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=11064
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:08,499: downStation01 init failed cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'downStation01'}, 'error:', 'timed out')
+pid=2072, ppid=3720, tid=10080
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 175, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'downStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-08 14:33:19,270: [modbusApi: 172.16.167.220] execute fcode=1, addr=8256 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=13164
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:19,567: downStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=13164
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:19,672: invoke <function urlReadDOList at 0x000001B3A25A0D08> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=13164
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:24,670: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=2072, ppid=3720, tid=10080
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-08 14:33:30,779: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=12460
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:30,901: invoke <function urlReadDOList at 0x000001B3A25A0D08> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=12460
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:42,436: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=2072, ppid=3720, tid=10080
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-08 14:33:46,534: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=13164
+
+[CRITICAL]2021-05-08 14:33:46,695: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=13164
+
+[CRITICAL]2021-05-08 14:33:46,857: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=13164
+
+[CRITICAL]2021-05-08 14:33:47,053: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=13164
+
+[CRITICAL]2021-05-08 14:33:47,187: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=13164
+
+[CRITICAL]2021-05-08 14:33:47,232: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609630b973dabd0818391337', 'loc', 'AP142')
+pid=2072, ppid=3720, tid=13164
+
+[CRITICAL]2021-05-08 14:33:51,994: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=12132
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:52,123: invoke <function urlReadDOList at 0x000001B3A25A0D08> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=12132
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:33:57,869: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=6632
+
+[CRITICAL]2021-05-08 14:33:58,033: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=6632
+
+[CRITICAL]2021-05-08 14:33:58,186: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=6632
+
+[CRITICAL]2021-05-08 14:33:58,338: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=6632
+
+[CRITICAL]2021-05-08 14:33:58,516: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=6632
+
+[CRITICAL]2021-05-08 14:33:58,561: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609630b973dabd0818391337', 'loc', 'AP142')
+pid=2072, ppid=3720, tid=6632
+
+[CRITICAL]2021-05-08 14:34:00,955: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=2072, ppid=3720, tid=10080
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-08 14:34:09,119: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=12092
+
+[CRITICAL]2021-05-08 14:34:09,253: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=12092
+
+[CRITICAL]2021-05-08 14:34:09,379: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=12092
+
+[CRITICAL]2021-05-08 14:34:09,573: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=12092
+
+[CRITICAL]2021-05-08 14:34:09,708: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=2072, ppid=3720, tid=12092
+
+[CRITICAL]2021-05-08 14:34:09,747: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609630b973dabd0818391337', 'loc', 'AP142')
+pid=2072, ppid=3720, tid=12092
+
+[CRITICAL]2021-05-08 14:34:13,181: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=3420
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-08 14:34:13,297: invoke <function urlReadDOList at 0x000001B3A25A0D08> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=2072, ppid=3720, tid=3420
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+

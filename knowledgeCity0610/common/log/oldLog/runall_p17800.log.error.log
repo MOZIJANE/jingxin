@@ -1,0 +1,74 @@
+[CRITICAL]2021-05-11 13:04:13,682: apply agv failed, count=0 cause a error: 找不到可用的位置comba-ZSC-F1-F3.AP142
+pid=17800, ppid=17092, tid=12280
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1122, in apply
+    agvId = _apply(mapId, autoLock, exclude, loc, taskId=taskId,appName=appName)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1105, in _apply
+    raise Exception("找不到可用的位置"+loc)
+Exception: 找不到可用的位置comba-ZSC-F1-F3.AP142
+
+[CRITICAL]2021-05-11 13:04:13,857: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17800, ppid=17092, tid=12280
+
+[CRITICAL]2021-05-11 13:04:13,982: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17800, ppid=17092, tid=12280
+
+[CRITICAL]2021-05-11 13:04:14,114: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17800, ppid=17092, tid=12280
+
+[CRITICAL]2021-05-11 13:04:14,258: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17800, ppid=17092, tid=12280
+
+[CRITICAL]2021-05-11 13:04:14,290: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17800, ppid=17092, tid=12280
+
+[CRITICAL]2021-05-11 13:04:15,017: invoke <function urlJackup at 0x0000026ACB2266A8> cause a error: jackUpOld() takes 1 positional argument but 2 were given
+pid=17800, ppid=17092, tid=16044
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 124, in jackUpOld
+    ret = agvCtrl.jackUpOld(agvId,loc)
+TypeError: jackUpOld() takes 1 positional argument but 2 were given
+
+[CRITICAL]2021-05-11 13:04:15,280: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() takes 1 positional argument but 2 were given
+pid=17800, ppid=17092, tid=12632
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() takes 1 positional argument but 2 were given
+
+[CRITICAL]2021-05-11 13:04:17,788: invoke <function urlJackup at 0x0000026ACB2266A8> cause a error: jackUpOld() takes 1 positional argument but 2 were given
+pid=17800, ppid=17092, tid=9132
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 124, in jackUpOld
+    ret = agvCtrl.jackUpOld(agvId,loc)
+TypeError: jackUpOld() takes 1 positional argument but 2 were given
+
+[CRITICAL]2021-05-11 13:04:17,937: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() takes 1 positional argument but 2 were given
+pid=17800, ppid=17092, tid=12632
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() takes 1 positional argument but 2 were given
+

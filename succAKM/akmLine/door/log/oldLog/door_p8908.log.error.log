@@ -1,0 +1,15 @@
+[CRITICAL]2020-07-16 11:06:12,550: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=8908, ppid=17756, tid=18600
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 189, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 40, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 81, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 99, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+

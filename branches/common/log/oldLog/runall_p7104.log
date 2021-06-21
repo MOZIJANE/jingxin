@@ -1,0 +1,49 @@
+[INFO]2021-04-07 16:19:24,337: log files at C:\Users\Administrator\Desktop\SVN\branches\common\log
+[INFO]2021-04-07 16:19:24,338: find module account.main_account
+[INFO]2021-04-07 16:19:24,339: find module agvCtrl.main_agv
+[INFO]2021-04-07 16:19:24,341: find module agvDevice.main_agvDevice
+[INFO]2021-04-07 16:19:24,341: find module alarm.main_alarm
+[INFO]2021-04-07 16:19:24,342: find module auth.main_auth
+[INFO]2021-04-07 16:19:24,343: find module door.main_door
+[INFO]2021-04-07 16:19:24,347: find module elevator.main_elevator
+[INFO]2021-04-07 16:19:24,347: find module feed.main_feed
+[INFO]2021-04-07 16:19:24,349: find module menu.main_menu
+[INFO]2021-04-07 16:19:24,350: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-07 16:19:24,352: find module webFront.main_web
+[INFO]2021-04-07 16:19:24,354: find module wmqtt.main_wmqtt
+[INFO]2021-04-07 16:19:24,356: import account.main_account
+[INFO]2021-04-07 16:19:24,716: import agvCtrl.main_agv
+[INFO]2021-04-07 16:19:25,414: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FBFD4FF8F0>>
+[INFO]2021-04-07 16:19:25,418: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FBFD4FFAA8>>
+[INFO]2021-04-07 16:19:25,516: create lock <lock name:timer.lock_2181802049096,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FBFD850490>>
+[ERROR]2021-04-07 16:19:25,528: mqtt is disabled
+[INFO]2021-04-07 16:19:25,529: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-07 16:19:25,530: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-07 16:19:28,572: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-07 16:19:28,854: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FBFDC51198>>
+[INFO]2021-04-07 16:19:28,860: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FBFBB63DA0>>
+[INFO]2021-04-07 16:19:28,864: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FBFBB63828>>
+[CRITICAL]2021-04-07 16:19:29,194: import main_agv failed, path: agvCtrl cause a error: Expecting property name enclosed in double quotes: line 43 column 5 (char 1096)
+pid=7104, ppid=552, tid=5264
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\mapMgr.py", line 25, in <module>
+    import driver.seerAgv.agvCtrl as agvCtrl
+  File "..\driver\seerAgv\agvCtrl.py", line 33, in <module>
+    g_agvType = _loadAgvType()
+  File "..\driver\seerAgv\agvCtrl.py", line 28, in _loadAgvType
+    aa = json.load(f)
+  File "C:\Python37\lib\json\__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python37\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 43 column 5 (char 1096)
+
+[CRITICAL]2021-04-07 16:19:29,199: import main_agv failed, path: agvCtrl ,cause Expecting property name enclosed in double quotes: line 43 column 5 (char 1096)

@@ -1,0 +1,24 @@
+[CRITICAL]2021-04-14 15:24:15,319: import main_agv failed, path: agvCtrl cause a error: 'gbk' codec can't decode byte 0x8c in position 597: illegal multibyte sequence
+pid=12212, ppid=14668, tid=16632
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvDevice\main_agvDevice.py", line 12, in <module>
+    import rotationMgr
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvDevice\rotationMgr.py", line 52, in <module>
+    g_agvType = _loadAgvType()
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvDevice\rotationMgr.py", line 48, in _loadAgvType
+    aa = json.load(f)
+  File "C:\Python37\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x8c in position 597: illegal multibyte sequence
+
+[CRITICAL]2021-04-14 15:24:15,325: import main_agv failed, path: agvCtrl ,cause 'gbk' codec can't decode byte 0x8c in position 597: illegal multibyte sequence

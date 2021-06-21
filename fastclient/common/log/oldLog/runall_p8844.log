@@ -1,0 +1,211 @@
+[INFO]2021-03-17 08:43:37,732: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 08:43:37,733: find module account.main_account
+[INFO]2021-03-17 08:43:37,734: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 08:43:37,735: find module alarm.main_alarm
+[INFO]2021-03-17 08:43:37,736: find module auth.main_auth
+[INFO]2021-03-17 08:43:37,737: find module feed.main_feed
+[INFO]2021-03-17 08:43:37,738: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 08:43:37,738: find module scadaCtrlEle.main_scadaCtrl
+[INFO]2021-03-17 08:43:37,739: import account.main_account
+[ERROR]2021-03-17 08:43:37,879: mongo db is disabled
+[INFO]2021-03-17 08:43:37,884: import agvDevice.main_agvDevice
+[INFO]2021-03-17 08:43:37,887: import alarm.main_alarm
+[INFO]2021-03-17 08:43:38,112: create lock <lock name:timer.lock_2535195309392,<unlocked _thread.RLock object owner=0 count=0 at 0x0000024E4565D620>>
+[ERROR]2021-03-17 08:43:38,157: mqtt is disabled
+[INFO]2021-03-17 08:43:38,160: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 08:43:38,161: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 08:43:38,308: import auth.main_auth
+[INFO]2021-03-17 08:43:38,333: import feed.main_feed
+[INFO]2021-03-17 08:43:38,362: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000024E457FF940>>
+[INFO]2021-03-17 08:43:38,377: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000024E457FFD28>>
+[INFO]2021-03-17 08:43:38,585: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 08:43:38,606: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000024E458CDBE8>>
+[INFO]2021-03-17 08:43:38,690: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000024E458CDC88>>
+[INFO]2021-03-17 08:43:38,693: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000024E458CD918>>
+[INFO]2021-03-17 08:43:41,716: Mongodb connect to 127.0.0.1 port 27017
+[WARNING]2021-03-17 08:43:41,753: MainThread[tid:3100] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=3100 count=1 at 0x0000024E458CDC88>> ,hold 3057 ms
+[INFO]2021-03-17 08:43:41,757: name=MainThread, pid=8844, tid=3100
+[01] File "run_all.py", line 57, in <module>() 
+[02] File "run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/main_scadaCtrl.py", line 18, in <module>() 
+[09] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[10] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[11] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[12] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[13] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[14] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 1129, in <module>() 
+[15] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 995, in __init__() 
+[16] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[17] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[18] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[19] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 08:43:41,762: import scadaCtrlEle.main_scadaCtrl
+[SUCC]2021-03-17 08:43:41,775: utility start, pid=8844, ppid=8580
+[DEBUG]2021-03-17 08:43:41,777: start timer
+[INFO]2021-03-17 08:43:41,784: add_ignore: taskStatus
+[INFO]2021-03-17 08:43:41,787: add_ignore: api/elevator/status
+[INFO]2021-03-17 08:43:41,788: add_ignore: scada/getTask
+[CRITICAL]2021-03-17 08:43:43,843: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=8844, ppid=8580, tid=15160
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-17 08:43:46,927: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=8844, ppid=8580, tid=15160
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-17 08:43:49,998: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=8844, ppid=8580, tid=15160
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+

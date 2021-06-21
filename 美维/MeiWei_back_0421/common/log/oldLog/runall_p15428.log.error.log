@@ -1,0 +1,22 @@
+[CRITICAL]2021-05-11 11:03:03,704: agvApi finish callback cause a error: 'NoneType' object is not subscriptable
+pid=15428, ppid=15900, tid=15712
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 279, in _checkFinish
+    t.finishCallback(t.params)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 413, in onFinish
+    if self.btns["btns"]["bt_1"] != 1:      #假设是按钮
+TypeError: 'NoneType' object is not subscriptable
+
+[CRITICAL]2021-05-11 11:03:08,817: agvApi finish callback cause a error: 'NoneType' object is not subscriptable
+pid=15428, ppid=15900, tid=15712
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 279, in _checkFinish
+    t.finishCallback(t.params)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 428, in onFinish
+    if self.btns["btns"]["bt_1"] != 2:      #这里需要修改成self.btns["btns"]["bt_2"] !=1
+TypeError: 'NoneType' object is not subscriptable
+

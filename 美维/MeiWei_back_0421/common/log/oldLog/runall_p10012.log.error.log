@@ -1,0 +1,48 @@
+[CRITICAL]2021-06-11 16:55:48,877: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000001F61D27DEA0> cause a error: 'NoneType' object is not subscriptable
+pid=10012, ppid=11176, tid=3260
+Traceback (most recent call last):
+  File "..\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\runTasks01.py", line 58, in run
+    if not g_taskMgr.checkTask(t):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskMgrBean.py", line 68, in checkTask
+    ret = task.islocAvailable(task.s_info["floorId"], task.s_info["prepoint"])
+TypeError: 'NoneType' object is not subscriptable
+
+[CRITICAL]2021-06-11 16:55:58,975: 192.168.252.159:10001 <--> 192.168.252.147:64044 time out cause a error: <tcpSocket.client object at 0x000001F61EB75710>
+pid=10012, ppid=11176, tid=20968
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 131, in _handle
+    data = client.recv(6)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 179, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-11 16:56:31,176: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000001F61D27DEA0> cause a error: 'NoneType' object is not subscriptable
+pid=10012, ppid=11176, tid=3260
+Traceback (most recent call last):
+  File "..\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\runTasks01.py", line 58, in run
+    if not g_taskMgr.checkTask(t):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskMgrBean.py", line 68, in checkTask
+    ret = task.islocAvailable(task.s_info["floorId"], task.s_info["prepoint"])
+TypeError: 'NoneType' object is not subscriptable
+
+[CRITICAL]2021-06-11 16:56:32,415: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000001F61D27DEA0> cause a error: 'NoneType' object is not subscriptable
+pid=10012, ppid=11176, tid=3260
+Traceback (most recent call last):
+  File "..\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\runTasks01.py", line 58, in run
+    if not g_taskMgr.checkTask(t):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskMgrBean.py", line 68, in checkTask
+    ret = task.islocAvailable(task.s_info["floorId"], task.s_info["prepoint"])
+TypeError: 'NoneType' object is not subscriptable
+

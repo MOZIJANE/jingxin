@@ -1,0 +1,140 @@
+[INFO]2021-03-09 08:32:56,539: AGV01 checkLink failed 192.168.252.241 19204
+[WARNING]2021-03-09 08:32:56,559: agvThread.AGV01[tid:4872] <lock name:agv.AGV01.lock_status,<locked _thread.RLock object owner=4872 count=1 at 0x0000018B1A836E18>> ,hold 57347189 ms
+[INFO]2021-03-09 08:32:56,558: lock info: count 1
+agvThread.AGV01[tid:4872] <lock name:agv.AGV01.lock_status,<locked _thread.RLock object owner=4872 count=1 at 0x0000018B1A836E18>> ,hold 57347188 ms
+
+try lock info: count 0
+[INFO]2021-03-09 08:32:56,567: name=agvThread.AGV01, pid=8320, tid=4872
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/agvCtrl/agvList.py", line 562, in run() 
+[03] File "../driver/seerAgv/agvCtrl.py", line 36, in checkLink() 
+[04] File "../driver/seerAgv/agvApi.py", line 175, in checkLink() 
+[05] File "C:/Users/WINDOWS/Desktop/akmLine/common/lock.py", line 100, in release() 
+[06] File "C:/Users/WINDOWS/Desktop/akmLine/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/WINDOWS/Desktop/akmLine/common/enhance.py", line 240, in getThreadStack()
+[ERROR]2021-03-09 08:32:56,569: user press Ctrl+C, print thread stack
+[INFO]2021-03-09 08:32:57,586: name=pymongo_kill_cursors_thread, pid=8320, tid=9164
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/pymongo/periodic_executor.py", line 140, in _run() 
+
+name=pymongo_server_monitor_thread, pid=8320, tid=6252
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/pymongo/periodic_executor.py", line 140, in _run() 
+
+name=worker 9, pid=8320, tid=13736
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 8, pid=8320, tid=15064
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 7, pid=8320, tid=13440
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 6, pid=8320, tid=5784
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 5, pid=8320, tid=15280
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 4, pid=8320, tid=15504
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 3, pid=8320, tid=14528
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 2, pid=8320, tid=9020
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 1, pid=8320, tid=5488
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=worker 0, pid=8320, tid=72
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "C:/anaconda/lib/queue.py", line 164, in get() 
+[04] File "C:/anaconda/lib/threading.py", line 295, in wait() 
+
+name=agvThread2.AGV01, pid=8320, tid=14772
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/agvCtrl/agvList.py", line 588, in run2() 
+
+name=agvThread.AGV01, pid=8320, tid=4872
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/agvCtrl/agvList.py", line 568, in run() 
+
+name=timer_thread, pid=8320, tid=14940
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/common/mytimer.py", line 117, in _loop() 
+
+name=tcplisten.port_10001, pid=8320, tid=11036
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/common/tcpSocket.py", line 65, in _acceptThread() 
+[03] File "C:/anaconda/lib/socket.py", line 205, in accept() 
+
+name=door.office, pid=8320, tid=14244
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/agvCtrl/doorMgr.py", line 181, in run() 
+
+name=elevator.keep, pid=8320, tid=11624
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/agvCtrl/elevatorMgr.py", line 497, in keepOpenThread() 
+
+name=door.akmLineMap, pid=8320, tid=7976
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/agvCtrl/doorMgr.py", line 181, in run() 
+
+name=tcplisten.port_6789, pid=8320, tid=13012
+[01] File "C:/anaconda/lib/threading.py", line 864, in run() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/common/tcpSocket.py", line 65, in _acceptThread() 
+[03] File "C:/anaconda/lib/socket.py", line 205, in accept() 
+
+name=MainThread, pid=8320, tid=3908
+[01] File "run_all.py", line 60, in <module>() 
+[02] File "C:/Users/WINDOWS/Desktop/akmLine/common/webutility.py", line 318, in run() 
+[03] File "C:/anaconda/lib/site-packages/bottle.py", line 3133, in run() 
+[04] File "C:/anaconda/lib/site-packages/bottle.py", line 2830, in run() 
+[05] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 1361, in serve() 
+[06] File "C:/anaconda/lib/site-packages/paste/httpserver.py", line 1107, in serve_forever() 
+[07] File "C:/anaconda/lib/socketserver.py", line 295, in handle_request() 
+[08] File "C:/anaconda/lib/selectors.py", line 323, in select() 
+[09] File "C:/anaconda/lib/selectors.py", line 314, in _select() 
+[10] File "C:/Users/WINDOWS/Desktop/akmLine/common/utility.py", line 598, in exit() 
+[11] File "C:/Users/WINDOWS/Desktop/akmLine/common/enhance.py", line 256, in getTrace() 
+[12] File "C:/Users/WINDOWS/Desktop/akmLine/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-09 08:32:57,596: lock info: count 0
+
+try lock info: count 0
+[ERROR]2021-03-09 08:32:57,598: user press Ctrl+C, print thread stack
+[DEBUG]2021-03-09 08:32:58,579: try connect AGV01 192.168.252.241:19204
+[ERROR]2021-03-09 08:32:58,584: connect AGV01 failed [WinError 10065] 套接字操作尝试一个无法连接的主机。
+[INFO]2021-03-09 08:32:58,644: AGV01 checkLink failed 192.168.252.241 19204
+[ERROR]2021-03-09 08:32:58,652: user press Ctrl+C, system quit!
+[ERROR]2021-03-09 08:32:59,524: user press Ctrl+C, system quit!
+[ERROR]2021-03-09 08:32:59,527: process exited, living 15:56:53.200409 seconds

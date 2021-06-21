@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<global>
+	<!-- 在这里定义全局变量的值
+		系统预定义变量:
+		@now@	 当前时间
+		@now_str@ 当前时间的字符串 
+		<variable name="变量名">变量值</variable> 
+	-->
+		<variable name="globalVar1">1</variable>
+		<variable name="globalVar2">0</variable>
+	</global>
+<!--
+日期格式的定义方法 
+	datetime(2017-12-26 16:27:34)
+
+一个完整的map-reduce写法 
+	<mongo.map-reduce>
+		<query></query>
+		<map>
+		<![CDATA[
+		]]>
+		</map>
+		<reduce>
+		<![CDATA[
+		]]>
+		</reduce>
+		<finalize>
+		<![CDATA[
+		]]>
+		</finalize>
+	</mongo.map-reduce>
+-->
+	<query name="ycat测试1" collection="test_test_aggregate" out_collection=""  dateField=""> 
+		<bottle url="">
+			<variable name="test1"/>
+			<variable name="test2"/>	
+		</bottle>
+		<mongo.aggregate>
+			<group>{"_id": { "state": "$state", "city": "$city" },"pop": { "$sum": "$pop" }}</group>
+			<sort>{ "pop": @globalVar1@ }</sort>
+			<group><![CDATA[{
+				"_id" : "$_id.state",
+				"biggestCity":  { "$last": "$_id.city" },
+				"biggestPop":   { "$last": "$pop" },
+				"smallestCity": { "$first": "$_id.city" },
+				"smallestPop":  { "$first": "$pop" }}
+				]]></group>
+			<project><![CDATA[{
+				"_id": 0,
+				"state": "$_id",
+				"biggestCity":  { "name": "$biggestCity",  "pop": "$biggestPop" },
+				"smallestCity": { "name": "$smallestCity", "pop": "$smallestPop" }}
+				]]>
+			</project>
+		</mongo.aggregate>
+	</query>
+
+	<query name="ycat测试2" collection="test_test_mr" out_collection="" result_type="line" dateField="">
+		<bottle url="">
+			<variable name="test1"/>
+			<variable name="test2"/>	
+		</bottle>
+		<mongo.map-reduce>
+			<query>"ord_date":{"$gte": datetime(2018,1,8,0,0,0)}</query>
+			<map>
+			<![CDATA[
+			function() {
+					   for (var idx = @globalVar2@; idx < this.items.length; idx++) {
+					   var key = this.items[idx].sku;
+					   var value = {
+									 count: 1,
+									 qty: this.items[idx].qty
+								   };
+					   emit(key, value);
+				   }
+				}
+			]]>
+			</map>
+			<reduce>
+			<![CDATA[
+			function(keySKU, countObjVals) {
+					 reducedVal = { count: 0, qty: 0 };
+
+					 for (var idx = 0; idx < countObjVals.length; idx++) {
+						 reducedVal.count += countObjVals[idx].count;
+						 reducedVal.qty += countObjVals[idx].qty;
+					 }
+
+					 return reducedVal;
+				  }
+			]]>
+			</reduce>
+			<finalize>
+			<![CDATA[
+			function (key, reducedVal) {
+
+					   reducedVal.avg = reducedVal.qty/reducedVal.count;
+
+					   return reducedVal;
+
+					}
+			]]>
+			</finalize> 
+		</mongo.map-reduce>
+		</query>
+	
+	<!-- 
+	<cond>代表过滤条件，多个条件之间会用是并集关系 
+	<column>代表需要选择的列名，可以有多个 
+	<sort>代表排序，1为由小到大，-1为由大到小
+	<skip>代表跳过多少行
+	<limit>代表选择1000行
+	-->
+	<query name="ycat测试3" collection="test_test_find" out_collection="test_test_find_out"  dateField="">
+		<bottle url="">
+			<variable name="test1"/>
+			<variable name="test2"/>	
+		</bottle>
+		<mongo.find>
+			<cond>{ "dim_cm": { "$elemMatch": { "$gt": 22, "$lt": 30 } } }</cond>
+			<cond>{"item":"planner"}</cond>
+			<column>qty</column>
+			<column>dim_cm</column>	
+			<sort>{"qty":-1}</sort>
+			<sort>{"dim_cm":1}</sort>
+		</mongo.find>
+	</query>
+	<query name="ycat测试4" collection="test_test_find" out_collection="test_test_find_out"  dateField="">
+		<mongo.find>
+			<column>qty</column>
+			<sort>{"qty":1}</sort> 
+			<skip>2</skip>
+			<limit>2</limit>
+		</mongo.find>
+	</query>
+	
+	<!-- 
+	dateRangeGroup支持自动配置dateRange的控件，这时_id会产生一个_id.dateAxis字段, _id.dateAxis字段字段里有year,和一个dateKey字段
+	-->
+	<!--
+	echarts
+	-->
+	<query name="ycat测试5" collection="test_test_aggregate2" out_collection="" dateField=""> 
+		<bottle url="">
+			<variable name="test1"/>
+			<variable name="test2"/>	
+		</bottle>
+		<echarts title="大数据量面积图2">
+			<template xAxis="dateAxis">
+				<!-- serirs将是N乘M的关系，N是_id个数减1(即减去X轴的值)，M是除_id之外的参数个数 -->
+				<series id="value1">{"type":"bar","name":"测试数据1"}</series>
+				<series id="value2">{"type":"line","name":"测试数据2"}</series>
+			</template>
+			<option>
+				<title>{"left": "center","text": "大数据量面积图"}</title>
+				<legend></legend>
+				<tooltip></tooltip>
+				<dataset></dataset>
+				<xAxis>{"type":"category"}</xAxis>
+				<yAxis></yAxis>
+			</option>
+		</echarts>
+		<mongo.aggregate>
+			<dateRangeGroup>
+				{"_id": {"key1":"$strValue"},"value1": { "$sum": 1},"value2": { "$sum": "$intValue"}}
+			</dateRangeGroup>
+		</mongo.aggregate>
+	</query>
+	<!--
+	select:			为连接表的字段，用逗号分隔 
+	from:  			为连接表名
+	localField: 	主表的字段名
+	foreignField: 	连接表的字段名  
+	生成的文档里会带上 from的表名 做为字段 
+	-->
+	<query name="ycat测试leftjoin" collection="test_orders" out_collection="" dateField=""> 
+			<mongo.aggregate>
+				<leftjoin select="description,instock" from="test_inventory" localField="item" foreignField="itemN"></leftjoin>
+				<leftjoin select="description" from="test_inventory2" localField="test_inventory.instock" foreignField="instock2"></leftjoin>
+			</mongo.aggregate>
+	</query>
+	
+	<query name="ycat测试9" collection="test_real_chart" out_collection=""  dateField=""> 
+		<bottle url="">
+			<variable name="test1"/>
+			<variable name="test2"/>
+		</bottle>
+		<echarts title="大数据量面积图2">
+			<!-- 
+			最后的数据集字段一定要有dateAxis，用于过滤时间 
+			refresh:  图表的刷新最低频率(秒) 
+			increment:是否为增量刷新，要求传过来dateRangeLastSec参数
+			-->
+			<template xAxis="dateAxis" refresh="10" increment="True">
+				<!-- serirs将是N乘M的关系，N是_id个数减1(即减去X轴的值)，M是除_id之外的参数个数 -->
+				<series id="value1">{"type":"bar","name":"CPU"}</series>
+				<series id="value2">{"type":"line","name":"内存"}</series>
+			</template>
+			<option>
+				<title>{"left": "center","text": "系统资源"}</title>
+				<legend></legend>
+				<tooltip></tooltip>
+				<dataset></dataset>
+				<xAxis>{"type":"category"}</xAxis>
+				<yAxis></yAxis>
+			</option>
+		</echarts>
+		<mongo.find>
+			<cond>{ "dim_cm": { "$elemMatch": { "$gt": 22, "$lt": 30 } } }</cond>
+			<cond>{"item":"planner"}</cond>dd
+			<column>value1</column>
+			<column>value2</column>	
+		</mongo.find>
+	</query>
+	<!-- 显示更详细数据， "connectNulls"要为"true"，用dateRange代替dateRangeGroup，数据用$first代替$agv -->
+	<query name="ag_pressureHistory" collection="r_izone_data" out_collection="" dateField="recordTime">
+		<bottle url="/api/watermeter/datahistory">
+		</bottle>
+		<echarts title="水压监控">
+			<template xAxis="dateRange">
+				<series id="data">{"type":"line","name":"水压（MPa）","connectNulls":"true"}</series>
+			</template>
+			<option>
+			</option>
+		</echarts>
+		<mongo.aggregate>
+			<match>{ "waterId": {"$ne": null}}</match>
+			<leftjoin select="name" from="u_watermeter_info" localField="waterId" foreignField="_id"></leftjoin>
+			<dateRange>
+				{"_id":{"name": "$u_watermeter_info.name"},"data": {"$first": "$data"}}
+			</dateRange>
+		</mongo.aggregate>
+	</query>
+	
+	<!-- 饼图，设置xAxis为none, <template xAxis="none"> -->
+	<query name="ag_logcritical" collection="r_log_critical" out_collection="" dateField="starttime">
+		<bottle url="/api/rlog/logPie">
+		</bottle>
+		<echarts title="模块异常统计">
+			<template xAxis="none">
+				<series id="_id">{"type":"pie","name":"次数"}</series>
+			</template>
+			<option>
+			</option>
+		</echarts>
+		<mongo.aggregate>
+			<group>
+				{"_id":"$app","count": {"$sum": 1}}
+			</group>
+		</mongo.aggregate>
+	</query>
+</root>
+
+
+

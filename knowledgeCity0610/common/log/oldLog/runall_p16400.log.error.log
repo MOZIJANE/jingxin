@@ -1,0 +1,124 @@
+[CRITICAL]2021-05-11 14:44:05,434: readStatus1, agvId:AGV03 cause a error: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+pid=16400, ppid=15644, tid=18188
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 883, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 453, in _relocHome
+    agvCtrl.reloc2(self.agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 57, in reloc2
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"loc": loc})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+
+[CRITICAL]2021-05-11 14:44:11,753: readStatus1, agvId:AGV03 cause a error: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+pid=16400, ppid=15644, tid=18188
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 883, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 453, in _relocHome
+    agvCtrl.reloc2(self.agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 57, in reloc2
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"loc": loc})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+
+[CRITICAL]2021-05-11 14:44:18,495: readStatus1, agvId:AGV03 cause a error: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+pid=16400, ppid=15644, tid=18188
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 883, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 453, in _relocHome
+    agvCtrl.reloc2(self.agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 57, in reloc2
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"loc": loc})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+
+[CRITICAL]2021-05-11 14:44:24,924: readStatus1, agvId:AGV03 cause a error: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+pid=16400, ppid=15644, tid=18188
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 883, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 453, in _relocHome
+    agvCtrl.reloc2(self.agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 57, in reloc2
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"loc": loc})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV03执行2002错误,code=60001,msg=<class 'struct.error'>: 'required argument is not a float' when writing 'loc: ''
+x: -0.605
+y: 10.863
+angle: None
+isRotate: False'
+

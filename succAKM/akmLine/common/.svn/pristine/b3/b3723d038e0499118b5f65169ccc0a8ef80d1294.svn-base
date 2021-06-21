@@ -1,0 +1,220 @@
+#coding=utf-8 
+# ycat			 2019/01/10	  create
+# 简单的画图脚本
+# matplotlib的Path和patches是两个概念，patches有点象区域 
+#https://matplotlib.org/api/patches_api.html
+# https://matplotlib.org/gallery/shapes_and_collections/artist_reference.html#sphx-glr-gallery-shapes-and-collections-artist-reference-py
+import sys,os
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.path as mpath
+import matplotlib.patches as mpathes
+import setup
+if __name__ == '__main__':
+	setup.setCurPath(__file__)
+import json_codec as json
+import enhance
+
+class drawScript:
+	def __init__(self):
+		self.shapes = []
+		self.items = []
+		self.transforms = None
+		
+	def load(self,filename,key="draw"):
+		import slam.matrix
+		self.shapes = []
+		self.items = []
+		items = json.load_file(filename)[key]
+		for i in items:
+			self._addItemText(i)
+		self.setTransform(slam.matrix.create(0,0,0))
+		
+	#def save(self,filename):
+	#	self.shapes = []
+	#	self.items = []
+		
+	def draw(self):
+		for p in self.shapes:
+			plt.gca().add_patch(p)
+		plt.gca().axis('square')
+		
+	def drawPath(self):
+		for p in self.getPaths():
+			plt.gca().add_patch(mpathes.PathPatch(p))
+		
+	def show(self,minValue=-5,maxValue=5):
+		assert minValue != maxValue
+		self.draw()
+		plt.xlim(left=minValue,right=maxValue)
+		plt.ylim(bottom=minValue,top=maxValue)
+		plt.gca().grid(True, which='major')
+		tt = np.arange(minValue,maxValue,1)
+		plt.show()
+	
+	#有两个坐标
+	def contains(self,x,y):
+		t= plt.gca().transData
+		ptr = t.transform((x,y))
+		for p in self.shapes:
+			if p.contains_point(ptr):
+				return True
+		return False
+		
+	#返回matplotlib.path.Path对象，注意不是self.shapes，这是matplotlib.patches列表
+	def getPaths(self):
+		pp = []
+		for p in self.shapes:
+			t = p.get_patch_transform()
+			p2 = p.get_path()
+			p2 = t.transform_path(p2)
+			if self.transforms is not None:
+				p2 = self.transforms.transform_path(p2)
+			pp.append(p2)
+		return pp
+	
+	#是否有点有交集，点的大小为radius
+	def intersects(self,x,y,radius=0.01):
+		c = mpath.Path.circle((x,y),radius)
+		pp = self.getPaths()
+		for p in pp:
+			if c.intersects_path(p,filled=False):
+				return True
+		return False
+	
+	def _addItemText(self,item):
+		self.items.append(item)
+		m,func = item["func"].split(".")
+		p = enhance.invoke_func("matplotlib",m,func,**item["params"])
+		self.shapes.append(p)
+		return p
+		
+	def setTransform(self,M):
+		import slam.matrix
+		import matplotlib.transforms
+		assert isinstance(M,slam.matrix.matrix2D)
+		t = matplotlib.transforms.Affine2D(M.H)
+		self.transforms = t
+		t = t+ plt.gca().transData
+		for p in self.shapes:
+			p.set_transform(t)
+		return t
+			
+	#外接矩形：return x1,y1,x2,y2
+	#呈现：bbox = dd.bound()
+	#ui.pltUtil.rect(bbox[0],bbox[1],(bbox[2]-bbox[0]),(bbox[3]-bbox[1]))
+	def bound(self):
+		t= plt.gca().transData.inverted()
+		rr = None
+		for p in self.shapes:
+			a = p.get_extents()
+			a1 = t.transform(a.p0)
+			a2 = t.transform(a.p1)
+			#a1 = a.p0
+			#a2 = a.p1
+			if rr is None:
+				rr = a1
+			else:
+				rr = np.vstack((rr,a1))
+			rr = np.vstack((rr,a2))
+		return np.min(rr[:,0]),np.max(rr[:,1]),np.max(rr[:,0]),np.min(rr[:,1])
+	
+	#中心点
+	def center(self):
+		x1,y1,x2,y2 = self.bound()
+		return x1 + (x2-x1)/2,y2 + (y1-y2)/2,
+		
+	#返回每个path的中心点 
+	def centers(self):
+		r = []
+		t = plt.gca().transData.inverted()
+		for p in self.shapes:
+			a = p.get_extents()
+			a1 = t.transform(a.p0)
+			a2 = t.transform(a.p1)
+			#print(a1,a2)
+			#a1 = a.p0
+			#a2 = a.p1
+			r.append((a1[0]+(a2[0]-a1[0])/2,a2[1]+(a1[1]-a2[1])/2))
+		return r
+		
+	def clone(self):
+		r = drawScript()
+		for i in len(self.shapes):
+			r.items.append(self.items[i])
+			r.paths.append(self.shapes[i].deepcopy())
+		return r
+		
+			
+######### unit test #########
+def testdrawpath():
+	import ui.pltUtil
+	if "../../" not in sys.path:
+		sys.path.append("../../")
+	
+	import slam.matrix
+	s = '{"func":"patches.Circle","params":{"xy":[0,0],"radius":0.3}}'
+	s2 = '{"func":"patches.Rectangle","params":{"xy":[0,0],"width":1,"height":1,"angle":0,"color":"yellow"}}'
+	sp = drawScript()
+	item = sp._addItemText(json.load(s))
+	item2 = sp._addItemText(json.load(s2))
+	#sp.show()
+	c = mpath.Path.circle((0.98,0.98),0.01)
+	r = c.intersects_path(item2.get_path(),filled=False)
+	
+#	sp.draw()
+	sp2 = drawScript()
+	sp2.load("./draw.script")
+	sp2.setTransform(slam.matrix.create(0,0,0))
+	plt.plot(0,1.5,"g*")
+#	assert sp2.intersects(0,1.5) 
+#	assert not sp2.intersects(0.43,2.5) 
+	sp2.draw()
+	#draw2()
+	plt.plot(1.1,0.5,"r*")
+	plt.plot(0,1.5,"g*")
+	
+	assert sp2.contains(1.1,0.5) 
+	assert sp2.contains(1.9,0.8) 
+	assert not sp2.contains(2,2) 
+	
+	sp2.setTransform(slam.matrix.create(0,1,0))
+	sp2.drawPath()
+	def click(event):
+		r1 = sp2.contains(event.xdata,event.ydata)
+		r2 =sp2.intersects(event.xdata,event.ydata,radius=0.1)
+		print("contains",r1,", intersects:",r2)
+	ui.pltUtil.mouseDown(plt.gcf(),click)
+	plt.xlim(left=-5,right=5)
+	plt.ylim(bottom=-5,top=5)
+	plt.show()
+
+def testdrawpath2():
+	import ui.pltUtil
+	if "../../" not in sys.path:
+		sys.path.append("../../")
+	import slam.matrix
+	sp2 = drawScript()
+	sp2.load("./draw.script")
+	sp2.setTransform(slam.matrix.create(1,0,0))
+	print(sp2.centers())
+	print(sp2.center())
+	print(sp2.bound())
+	plt.plot(*sp2.center(),"r+")
+	ui.pltUtil.rect2(*sp2.bound())
+	
+	sp2.setTransform(slam.matrix.create(0,1,0))
+	plt.plot(*sp2.center(),"r+")
+	ui.pltUtil.rect2(*sp2.bound())
+	print(sp2.centers())
+	print(sp2.center())
+	print(sp2.bound())
+	sp2.show()
+	
+	
+if __name__ == '__main__':  
+	#testdrawpath2()
+	testdrawpath()
+	assert 0
+	

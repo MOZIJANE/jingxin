@@ -1,0 +1,196 @@
+[CRITICAL]2021-05-11 13:00:16,337: invoke <function urlLock at 0x00000189DBA2EE18> cause a error: ('AGV02上锁失败,taskId:', '609a0d5573dabd440805b0ef, occupy task:609a022473dabd455cf7253e')
+pid=10500, ppid=15656, tid=15212
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\main_agv.py", line 75, in urlLock
+    agvControl.lock(agvId=agvId,taskId=webutility.get_param('taskId'),appName=webutility.get_param('appName'),force=force)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1153, in lock
+    agv.lock(taskId,appName,force)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 486, in lock
+    raise Exception(self.agvId + "上锁失败"+",taskId:",taskId + ", occupy task:"+str(self.lockTaskId))
+Exception: ('AGV02上锁失败,taskId:', '609a0d5573dabd440805b0ef, occupy task:609a022473dabd455cf7253e')
+
+[CRITICAL]2021-05-11 13:00:16,359: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=15184
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:16,760: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:19,265: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=17340
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:19,441: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:22,190: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=17824
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:22,481: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:24,094: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=10500, ppid=15656, tid=15212
+
+[CRITICAL]2021-05-11 13:00:24,218: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=10500, ppid=15656, tid=15212
+
+[CRITICAL]2021-05-11 13:00:24,386: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=10500, ppid=15656, tid=15212
+
+[CRITICAL]2021-05-11 13:00:24,625: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=10500, ppid=15656, tid=15212
+
+[CRITICAL]2021-05-11 13:00:24,907: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=10500, ppid=15656, tid=15212
+
+[CRITICAL]2021-05-11 13:00:25,038: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=10500, ppid=15656, tid=15212
+
+[CRITICAL]2021-05-11 13:00:25,088: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=16164
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:25,550: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:27,870: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=17668
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:28,039: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:30,530: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=17824
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:30,709: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:33,050: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=16164
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:33,266: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=14688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-05-11 13:00:35,649: invoke <function urlJackup at 0x00000189DB7756A8> cause a error: jackUpOld() got an unexpected keyword argument 'loc'
+pid=10500, ppid=15656, tid=17668
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUpOld(agvId=agvId, timeout=timeout, loc=loc)
+TypeError: jackUpOld() got an unexpected keyword argument 'loc'
+

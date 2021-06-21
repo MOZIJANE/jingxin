@@ -1,0 +1,54 @@
+[ERROR]2021-03-17 08:16:30,812: raise alarm obj=AGV02, typeId=49999, desc=AGV¿Îœﬂ“Ï≥£, id=60514a5e84e1c5c371a67455
+[INFO]2021-03-17 08:25:00,344: Scada send a task to the server from None to None payloadId: None
+[DEBUG]2021-03-17 08:25:00,723: used 53783674ms 200 OK , GET: http://127.0.0.1:5551/api/scada/addTask/
+[INFO]2021-03-17 08:25:00,941: Scada send a task to the server from None to None payloadId: None
+[CRITICAL]2021-03-17 08:25:01,127: invoke <function urlAddTask at 0x0000027F0FFF6400> cause a error: 'scadaTask' object has no attribute 'taskId'
+pid=12528, ppid=12348, tid=12804
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\main_scadaCtrl.py", line 79, in urlAddTask
+    return {"taskId" : runTasks.addTask(source,target,payloadId,priority)}
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 81, in addTask
+    g_taskMgr.add(task)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 967, in add
+    self.tasks[task.taskId] = task
+AttributeError: 'scadaTask' object has no attribute 'taskId'
+
+[INFO]2021-03-17 08:25:01,157: Scada send a task to the server from None to None payloadId: None
+[CRITICAL]2021-03-17 08:25:01,175: invoke <function urlAddTask at 0x0000027F0FFF6400> cause a error: 'scadaTask' object has no attribute 'taskId'
+pid=12528, ppid=12348, tid=13556
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\main_scadaCtrl.py", line 79, in urlAddTask
+    return {"taskId" : runTasks.addTask(source,target,payloadId,priority)}
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 81, in addTask
+    g_taskMgr.add(task)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 967, in add
+    self.tasks[task.taskId] = task
+AttributeError: 'scadaTask' object has no attribute 'taskId'
+
+[CRITICAL]2021-03-17 08:25:01,362: invoke <function urlAddTask at 0x0000027F0FFF6400> cause a error: 'scadaTask' object has no attribute 'taskId'
+pid=12528, ppid=12348, tid=5940
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\main_scadaCtrl.py", line 79, in urlAddTask
+    return {"taskId" : runTasks.addTask(source,target,payloadId,priority)}
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 81, in addTask
+    g_taskMgr.add(task)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 967, in add
+    self.tasks[task.taskId] = task
+AttributeError: 'scadaTask' object has no attribute 'taskId'
+
+[WARNING]2021-03-17 08:25:01,531: clear alarm obj=AGV02, typeId=49999, id=60514a5e84e1c5c371a67455
+[DEBUG]2021-03-17 08:34:47,948: GET: http://127.0.0.1:5551/api/scada/addTask?source=DOOR23&target=DOOR25&payloadId=&priority= addr: 127.0.0.1
+[DEBUG]2021-03-17 08:41:35,313: GET: http://127.0.0.1:5551/api/scada/addTask?source=DOOR23&target=DOOR25&payloadId=&priority= addr: 127.0.0.1
+[DEBUG]2021-03-17 08:41:41,313: GET: http://127.0.0.1:5551/api/scada/addTask?source=DOOR23&target=DOOR25&payloadId=&priority= addr: 127.0.0.1

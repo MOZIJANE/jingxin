@@ -1,0 +1,101 @@
+[CRITICAL]2021-05-26 13:57:39,168: agv thread cause a error: AGVchache执行move AP101失败,taskId:60ade1b973dabd17149f06b1_4
+pid=5908, ppid=3236, tid=7600
+
+[CRITICAL]2021-05-26 13:59:20,649: invoke <function urlMove at 0x0000023806283AE8> cause a error: 'NoneType' object is not subscriptable
+pid=5908, ppid=3236, tid=5944
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 121, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1190, in move
+    if taskId[0:6] != "charge" and not agv.isLock():
+TypeError: 'NoneType' object is not subscriptable
+
+[CRITICAL]2021-05-26 14:11:55,184: invoke <function goHome.<locals>.goHomeFinish at 0x00000238007EE400> cause a error: 解锁异常
+pid=5908, ppid=3236, tid=7600
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\utility.py", line 167, in __call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1295, in goHomeFinish
+    unlock(params["agvId"],params["taskId"],force=False)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1171, in unlock
+    agv.unlock(taskId,force=force)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvList.py", line 501, in unlock
+    raise Exception('解锁异常')
+Exception: 解锁异常
+
+[CRITICAL]2021-05-26 14:17:18,507: invoke <function urlStatus at 0x00000238003A8620> cause a error: list index out of range
+pid=5908, ppid=3236, tid=2212
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 229, in urlStatus
+    {"name": "任务类型","fieldId": "task_type","value": task_type[info["task_type"]]},
+IndexError: list index out of range
+
+[CRITICAL]2021-05-26 14:18:08,560: invoke <function urlUnlock at 0x000002380023B9D8> cause a error: 解锁异常
+pid=5908, ppid=3236, tid=6020
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 82, in urlUnlock
+    agvControl.unlock(agvId=agvId,taskId=webutility.get_param('taskId'),force=force)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1171, in unlock
+    agv.unlock(taskId,force=force)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvList.py", line 501, in unlock
+    raise Exception('解锁异常')
+Exception: 解锁异常
+
+[CRITICAL]2021-05-26 14:18:08,565: task[60ade5bf73dabd17149f06d2][AGVchache] AP142(LM120) -> AP101(LM145) [loadPlayload]task release cause a error: Exception: 解锁异常
+pid=5908, ppid=3236, tid=10344
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 968, in _release
+    agvApi.release(self.agvId, self.taskId, force=False)
+  File "..\agvCtrl\agvApi.py", line 119, in release
+    _http_get(url + '/api/agv/release', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 解锁异常
+
+[CRITICAL]2021-05-26 14:18:13,731: invoke <function urlStatus at 0x00000238003A8620> cause a error: list index out of range
+pid=5908, ppid=3236, tid=5848
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 229, in urlStatus
+    {"name": "任务类型","fieldId": "task_type","value": task_type[info["task_type"]]},
+IndexError: list index out of range
+
+[CRITICAL]2021-05-26 14:36:28,376: task [AGV01] [60adebe773dabd17149f06f7] rollerFrontLoad failed cause a error: 'ret_code'
+pid=5908, ppid=3236, tid=9164
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1626, in rollerFrontLoad
+    if ret["ret_code"] == 0:
+KeyError: 'ret_code'
+
+[CRITICAL]2021-05-26 14:37:14,726: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=5908, ppid=3236, tid=12392
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

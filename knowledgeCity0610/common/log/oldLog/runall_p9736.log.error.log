@@ -1,0 +1,368 @@
+[CRITICAL]2021-05-28 14:08:38,871: invoke <function urlGoHome at 0x00000191842D59D8> cause a error: comba-ZXC-F3.AP22->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+pid=9736, ppid=10348, tid=7576
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 99, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1331, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1266, in move
+    _func()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1232, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: comba-ZXC-F3.AP22->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-28 14:08:39,066: task[60b0885c73dabd2608d534eb][AGVwuliao] AP25(LM24) -> AP22(LM17) [finish]task release cause a error: Exception: comba-ZXC-F3.AP22->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+pid=9736, ppid=10348, tid=7092
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1090, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 131, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: comba-ZXC-F3.AP22->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-28 14:14:18,222: invoke <function urlPlayAudio at 0x0000019184074840> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=9736, ppid=10348, tid=13920
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 658, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 224, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-28 14:14:18,420: 60b0890873dabd2608d534f4 playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=9736, ppid=10348, tid=11872
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1645, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-28 14:14:18,503: taskFunc2:从上工序设备运送框至下工序设备 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=9736, ppid=10348, tid=11872
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1310, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1568, in handle
+    self._audioPlay()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1645, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-28 14:14:25,624: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7576
+
+[CRITICAL]2021-05-28 14:14:25,781: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7576
+
+[CRITICAL]2021-05-28 14:14:25,967: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7576
+
+[CRITICAL]2021-05-28 14:14:26,229: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7576
+
+[CRITICAL]2021-05-28 14:14:26,537: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7576
+
+[CRITICAL]2021-05-28 14:14:26,693: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=7576
+
+[CRITICAL]2021-05-28 14:14:38,976: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:14:39,073: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:14:39,211: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:14:39,373: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:14:39,513: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:14:39,609: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:14:51,541: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:14:51,676: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:14:51,805: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:14:51,967: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:14:52,133: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:14:52,213: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:15:04,395: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:04,666: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:04,758: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:04,849: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:04,964: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:05,032: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:16,853: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:15:17,116: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:15:17,296: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:15:17,527: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:15:17,703: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:15:17,763: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:15:30,512: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:30,733: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:30,965: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:31,069: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:31,307: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:15:31,369: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=13696
+
+[CRITICAL]2021-05-28 14:16:09,838: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:16:10,033: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:16:10,210: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:16:10,333: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:16:10,484: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:16:10,558: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:14,522: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:14,869: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:15,035: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:15,311: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:15,519: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:15,594: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:29,478: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:29,666: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:29,949: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:30,109: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:30,260: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:30,339: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=7664
+
+[CRITICAL]2021-05-28 14:17:33,428: exception cause a error: comba-ZXC-F3.AP22->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+pid=9736, ppid=10348, tid=4268
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\qtutility.py", line 17, in __call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvUI.py", line 363, in gohomeAgv
+    agvControl.goHome(agvId,force=True)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1331, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1266, in move
+    _func()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1232, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: comba-ZXC-F3.AP22->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-28 14:17:42,704: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14260
+
+[CRITICAL]2021-05-28 14:17:42,840: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14260
+
+[CRITICAL]2021-05-28 14:17:42,983: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14260
+
+[CRITICAL]2021-05-28 14:17:43,110: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14260
+
+[CRITICAL]2021-05-28 14:17:43,259: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14260
+
+[CRITICAL]2021-05-28 14:17:43,396: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=14260
+
+[CRITICAL]2021-05-28 14:17:55,485: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12732
+
+[CRITICAL]2021-05-28 14:17:55,634: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12732
+
+[CRITICAL]2021-05-28 14:17:55,831: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12732
+
+[CRITICAL]2021-05-28 14:17:56,000: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12732
+
+[CRITICAL]2021-05-28 14:17:56,231: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12732
+
+[CRITICAL]2021-05-28 14:17:56,343: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=12732
+
+[CRITICAL]2021-05-28 14:18:08,406: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:18:08,563: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:18:08,764: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:18:08,881: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:18:09,005: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:18:09,055: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=14248
+
+[CRITICAL]2021-05-28 14:18:21,190: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:18:21,445: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:18:21,553: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:18:21,755: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:18:21,886: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:18:21,946: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=12620
+
+[CRITICAL]2021-05-28 14:18:34,217: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=4232
+
+[CRITICAL]2021-05-28 14:18:34,425: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=4232
+
+[CRITICAL]2021-05-28 14:18:34,521: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=4232
+
+[CRITICAL]2021-05-28 14:18:34,714: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=4232
+
+[CRITICAL]2021-05-28 14:18:34,889: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=4232
+
+[CRITICAL]2021-05-28 14:18:34,940: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=4232
+
+[CRITICAL]2021-05-28 14:18:47,253: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12232
+
+[CRITICAL]2021-05-28 14:18:47,409: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12232
+
+[CRITICAL]2021-05-28 14:18:47,581: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12232
+
+[CRITICAL]2021-05-28 14:18:47,812: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12232
+
+[CRITICAL]2021-05-28 14:18:48,020: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=9736, ppid=10348, tid=12232
+
+[CRITICAL]2021-05-28 14:18:48,050: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b08a3c73dabd2608d534fe', 'loc', 'comba-ZXC-F3.AP11')
+pid=9736, ppid=10348, tid=12232
+

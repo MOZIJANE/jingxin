@@ -1,0 +1,352 @@
+[CRITICAL]2021-05-28 16:46:44,683: task: [60b0ad8e73dabd10acc1f391][upStation01] readDo status error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1687, in _readDO
+    s = ioApi.readDOList(io)["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-28 16:47:01,942: task: [60b0ad8e73dabd10acc1f391][upStation01] writeIo error:  cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1701, in writeIO
+    ioApi.writeDO(io, id+1, value)
+  File "..\remoteio\remoteioApi.py", line 25, in writeDO
+    return _remoteio('/api/remoteio/writeDO', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-28 16:47:19,339: task: [60b0ad8e73dabd10acc1f391][upStation01] writeIo error:  cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1701, in writeIO
+    ioApi.writeDO(io, id+1, value)
+  File "..\remoteio\remoteioApi.py", line 25, in writeDO
+    return _remoteio('/api/remoteio/writeDO', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-28 16:47:36,652: task: [60b0ad8e73dabd10acc1f391][upStation01] writeIo error:  cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1701, in writeIO
+    ioApi.writeDO(io, id+1, value)
+  File "..\remoteio\remoteioApi.py", line 25, in writeDO
+    return _remoteio('/api/remoteio/writeDO', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-28 16:47:53,976: task: [60b0ad8e73dabd10acc1f391][upStation01] writeIo error:  cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1701, in writeIO
+    ioApi.writeDO(io, id+1, value)
+  File "..\remoteio\remoteioApi.py", line 25, in writeDO
+    return _remoteio('/api/remoteio/writeDO', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/writeDO', {'index': 3, 'value': 1, 'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-28 16:48:08,655: [modbusApi: 172.16.166.181] execute fcode=1, addr=0 exception:  cause a error: timed out
+pid=4268, ppid=11984, tid=14032
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-05-28 16:48:08,976: 3FElevarot readDIList fail cause a error: timed out
+pid=4268, ppid=11984, tid=14032
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr_old.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-05-28 16:48:09,358: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002DDB1DE7F28> cause a error: timed out
+pid=4268, ppid=11984, tid=14032
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDIList('3FElevarot')['status'][4]
+  File "..\remoteio\remoteioMgr_old.py", line 87, in readDIList
+    result=remoteioInfo.readDIList()
+  File "..\remoteio\remoteioMgr_old.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-05-28 16:49:06,663: invoke <function urlPlayAudio at 0x000002DDB1904840> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=4268, ppid=11984, tid=8024
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 658, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 224, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-28 16:49:06,924: 60b0ad8e73dabd10acc1f391 playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1659, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-28 16:49:07,016: taskFunc2:从上工序设备运送框至下工序设备 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=4268, ppid=11984, tid=13688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1324, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1449, in handle
+    self._audioPlay()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1659, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-28 16:49:12,083: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=4268, ppid=11984, tid=12572
+
+[CRITICAL]2021-05-28 16:49:12,309: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=4268, ppid=11984, tid=12572
+
+[CRITICAL]2021-05-28 16:49:12,553: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=4268, ppid=11984, tid=12572
+
+[CRITICAL]2021-05-28 16:49:12,662: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=4268, ppid=11984, tid=12572
+
+[CRITICAL]2021-05-28 16:49:12,771: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=4268, ppid=11984, tid=12572
+
+[CRITICAL]2021-05-28 16:49:12,815: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b0ad8e73dabd10acc1f392', 'loc', 'comba-ZXC-F3.AP12')
+pid=4268, ppid=11984, tid=12572
+

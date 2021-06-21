@@ -1,0 +1,15 @@
+[CRITICAL]2021-06-11 16:08:35,177: 192.168.252.159:10001 <--> 192.168.252.147:62506 error:  cause a error: 'scadaTask' object has no attribute 'source'
+pid=9896, ppid=21396, tid=2848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 179, in _handle
+    addTaskByButton(target=target)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 219, in addTaskByButton
+    taskId = runTasks01.addTaskByButton(source, target, payloadId, priority, btTag, taskKind)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\runTasks01.py", line 89, in addTaskByButton
+    task = scadaTaskBean.scadaTask(source, target, payloadId, int(priority),btTag,taskKind)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 46, in __init__
+    log.info(self.source,self.target)
+AttributeError: 'scadaTask' object has no attribute 'source'
+

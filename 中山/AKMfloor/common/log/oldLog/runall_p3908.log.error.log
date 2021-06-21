@@ -1,0 +1,510 @@
+[CRITICAL]2021-06-16 14:20:17,213: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=3908, ppid=9840, tid=12428
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-06-16 14:20:20,310: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=3908, ppid=9840, tid=12428
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-06-16 14:20:23,378: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=3908, ppid=9840, tid=12428
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-06-16 14:20:35,033: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+pid=3908, ppid=9840, tid=12428
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-16 14:20:35,155: invoke <function urlElevatorstatus at 0x00000180C0AA1048> cause a error: timed out
+pid=3908, ppid=9840, tid=3380
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 38, in sendViaTcp
+    with tcpSocket.client(ip, port, timeout=5) as client:
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:36,653: [modbusApi: 192.168.8.201] execute fcode=1, addr=16 exception:  cause a error: timed out
+pid=3908, ppid=9840, tid=1392
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:37,772: unload001 readDOList fail cause a error: timed out
+pid=3908, ppid=9840, tid=1392
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    return self._read(D10, IO_LENTH)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:37,944: invoke <function urlReadDOList at 0x00000180C1212E18> cause a error: timed out
+pid=3908, ppid=9840, tid=1392
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\remoteio\main_remoteio.py", line 49, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 93, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    return self._read(D10, IO_LENTH)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:38,268: unload001 init failed cause a error: timeout: timed out
+pid=3908, ppid=9840, tid=556
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\akmCtrl\deviceCtrl.py", line 151, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 50, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 65, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:45,804: unload001 readDIList fail cause a error: timed out
+pid=3908, ppid=9840, tid=3076
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 169, in _read
+    self.master.open()
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:46,082: invoke <function urlReadDIList at 0x00000180C1212A60> cause a error: timed out
+pid=3908, ppid=9840, tid=3076
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\remoteio\main_remoteio.py", line 44, in urlReadDIList
+    return ioMgr.readDIList(id)
+  File "..\remoteio\remoteioMgr.py", line 87, in readDIList
+    result=remoteioInfo.readDIList()
+  File "..\remoteio\remoteioMgr.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 169, in _read
+    self.master.open()
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:46,303: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+pid=3908, ppid=9840, tid=12428
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-16 14:20:46,333: invoke <function urlElevatorstatus at 0x00000180C0AA1048> cause a error: timed out
+pid=3908, ppid=9840, tid=13796
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 38, in sendViaTcp
+    with tcpSocket.client(ip, port, timeout=5) as client:
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:46,344: readDIList error cause a error: timeout: timed out
+pid=3908, ppid=9840, tid=556
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\akmCtrl\deviceCtrl.py", line 67, in _monitorDevices
+    s2 = ioApi.readDIList(devices[d]["io2"])["status"] #下板机
+  File "..\remoteio\remoteioApi.py", line 45, in readDIList
+    return _remoteio('/api/remoteio/readDIList', id, param)
+  File "..\remoteio\remoteioApi.py", line 65, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:54,188: unload001 readDIList fail cause a error: timed out
+pid=3908, ppid=9840, tid=1632
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 169, in _read
+    self.master.open()
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:54,343: invoke <function urlReadDIList at 0x00000180C1212A60> cause a error: timed out
+pid=3908, ppid=9840, tid=1632
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\remoteio\main_remoteio.py", line 44, in urlReadDIList
+    return ioMgr.readDIList(id)
+  File "..\remoteio\remoteioMgr.py", line 87, in readDIList
+    result=remoteioInfo.readDIList()
+  File "..\remoteio\remoteioMgr.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 169, in _read
+    self.master.open()
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:54,700: readDIList error cause a error: timeout: timed out
+pid=3908, ppid=9840, tid=556
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\akmCtrl\deviceCtrl.py", line 67, in _monitorDevices
+    s2 = ioApi.readDIList(devices[d]["io2"])["status"] #下板机
+  File "..\remoteio\remoteioApi.py", line 45, in readDIList
+    return _remoteio('/api/remoteio/readDIList', id, param)
+  File "..\remoteio\remoteioApi.py", line 65, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:57,628: invoke <function urlElevatorstatus at 0x00000180C0AA1048> cause a error: timed out
+pid=3908, ppid=9840, tid=11012
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 38, in sendViaTcp
+    with tcpSocket.client(ip, port, timeout=5) as client:
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-16 14:20:57,644: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+pid=3908, ppid=9840, tid=12428
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+

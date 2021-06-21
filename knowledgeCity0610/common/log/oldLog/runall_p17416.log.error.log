@@ -1,0 +1,958 @@
+[CRITICAL]2021-05-11 12:51:35,322: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16580
+
+[CRITICAL]2021-05-11 12:51:35,330: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16580
+
+[CRITICAL]2021-05-11 12:51:35,336: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16580
+
+[CRITICAL]2021-05-11 12:51:35,344: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16580
+
+[CRITICAL]2021-05-11 12:51:35,351: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16580
+
+[CRITICAL]2021-05-11 12:51:35,357: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=16580
+
+[CRITICAL]2021-05-11 12:51:40,510: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17316
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:40,519: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:42,810: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10500
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:42,953: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:45,439: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10492
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:45,609: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:45,844: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:51:45,968: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:51:46,129: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:51:46,235: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:51:46,358: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:51:46,474: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:51:48,047: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15724
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:48,206: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:50,699: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=16380
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:50,936: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:53,259: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17228
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:53,413: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:55,899: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=16580
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:56,128: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:57,343: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:51:57,486: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:51:57,607: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:51:57,804: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:51:57,925: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:51:57,973: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:51:58,610: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=1456
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:51:58,895: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:01,533: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17316
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:01,636: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:04,120: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10500
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:04,326: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:06,789: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10492
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:07,015: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:08,464: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=17316
+
+[CRITICAL]2021-05-11 12:52:08,616: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=17316
+
+[CRITICAL]2021-05-11 12:52:08,765: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=17316
+
+[CRITICAL]2021-05-11 12:52:08,893: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=17316
+
+[CRITICAL]2021-05-11 12:52:09,125: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=17316
+
+[CRITICAL]2021-05-11 12:52:09,190: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=17316
+
+[CRITICAL]2021-05-11 12:52:09,783: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15724
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:09,972: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:12,483: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=18424
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:12,670: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:15,173: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17228
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:15,339: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:17,960: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15724
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:18,221: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:20,048: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:52:20,232: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:52:20,486: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:52:20,928: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:52:21,226: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10492
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:21,346: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:52:21,477: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=18424
+
+[CRITICAL]2021-05-11 12:52:21,516: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:24,022: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=16580
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:24,155: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:26,668: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17316
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:26,803: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:29,246: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17228
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:29,386: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:31,942: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=16580
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:32,235: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:32,461: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=10500
+
+[CRITICAL]2021-05-11 12:52:32,754: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=10500
+
+[CRITICAL]2021-05-11 12:52:32,904: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=10500
+
+[CRITICAL]2021-05-11 12:52:33,047: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=10500
+
+[CRITICAL]2021-05-11 12:52:33,199: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=10500
+
+[CRITICAL]2021-05-11 12:52:33,233: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=10500
+
+[CRITICAL]2021-05-11 12:52:34,834: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10492
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:35,027: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:37,376: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15724
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:37,550: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:39,988: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=1456
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:40,146: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:42,553: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=10500
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:42,690: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:43,755: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:52:43,916: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:52:44,070: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:52:44,191: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:52:44,360: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:52:44,435: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609a0d5573dabd440805b0ef', 'loc', 'AP142')
+pid=17416, ppid=11252, tid=16380
+
+[CRITICAL]2021-05-11 12:52:45,404: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=18424
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:45,541: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:47,999: invoke <function urlJackup at 0x000001C197A6DD90> cause a error: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=17316
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 303, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 223, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 247, in _handle
+    typeId = g_cmd[type]
+KeyError: 'robot_other_set_fork_height_req'
+
+[CRITICAL]2021-05-11 12:52:48,190: *task[609a022473dabd455cf7253e][AGV02] AP142(LM120) -> AP143(LM118) [loadPlayload_jackup] jackup cause a error: KeyError: 'robot_other_set_fork_height_req'
+pid=17416, ppid=11252, tid=15352
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 872, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'robot_other_set_fork_height_req'
+

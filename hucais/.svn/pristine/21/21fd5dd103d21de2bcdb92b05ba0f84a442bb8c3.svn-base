@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<global>
+	<!-- 在这里定义全局变量的值
+		系统预定义变量:
+		@now@	 当前时间
+		@now_str@ 当前时间的字符串 
+		<variable name="变量名">变量值</variable> 
+	-->
+		<variable name="globalVar1">1</variable>
+		<variable name="globalVar2">0</variable>
+	</global>
+	<query name="ag_battery" collection="r_agv_info" out_collection="" dateField="time">
+		<bottle url="/api/agv/battery">
+			<variable name="agv"/>
+		</bottle>
+		<echarts title="电池电量">
+			<template xAxis="dateRange">
+				<series id="battery">{"type":"line","name":"电池电量%","symbol":"none", "connectNulls":"true","smooth": "true", "markLine": {"silent": "true","symbol": "none","data":  [{ "yAxis": 20},{ "yAxis": 60}]}}</series>
+			</template>
+			<option> 
+				<xAxis>{"type":"category"}</xAxis>
+				<yAxis>{"max": 100,"min": 0}</yAxis>
+				<dataZoom>{"show":"True","realtime":"True","start":0,"end":100}</dataZoom>
+				<visualMap>{"top": 10,"right": 10,"pieces": [{"lte": 20,"color": "#c33"},{"gt": 20,"lte": 60,"color": "#f60"},{"gt": 60,"color": "#9c0"}] ,"outOfRange": {"color": "#9c0"}}</visualMap>
+			</option>
+		</echarts>
+		<mongo.aggregate>
+			<match>{ "agvId": {"$eq": "@agv@"}}</match>
+			<dateRange>
+				{"_id": {"name": "$agvId"},"battery": { "$max": "$battery" }}
+			</dateRange>   
+		</mongo.aggregate>
+	</query>
+	<query name="ag_confidence" collection="r_agv_info" out_collection="" dateField="time">
+		<bottle url="/api/agv/confidence">
+			<variable name="agv"/>
+		</bottle>
+		<echarts title="置信度">
+			<template xAxis="dateRange">
+				<series id="confidence">{"type":"line","name":"置信度%","symbol":"none", "connectNulls":"true","smooth": "true", "markLine": {"silent": "true","symbol": "none","data":  [{ "yAxis": 90}]}}</series>
+			</template>
+			<option> 
+				<xAxis>{"type":"category"}</xAxis>
+				<yAxis>{"max": 100,"min": 0}</yAxis>
+				<dataZoom>{"show":"True","realtime":"True","start":0,"end":100}</dataZoom>
+				<visualMap>{"top": 10,"right": 10,"pieces": [{"lt": 90,"color": "#c33"},{"gte": 90,"color": "#9c0"}] ,"outOfRange": {"color": "#9c0"}}</visualMap>
+			</option>
+		</echarts>
+		<mongo.aggregate>
+			<match>{ "agvId": {"$eq": "@agv@"}}</match>
+			<dateRange>
+				{"_id": {"name": "$agvId"},"confidence": {"$max": "$confidence" }}
+			</dateRange>
+		</mongo.aggregate>
+	</query>
+</root>
+
+
+

@@ -1,0 +1,31 @@
+[CRITICAL]2021-05-28 11:29:36,175: agv thread cause a error: AGVwuliao执行move AP25取消,taskId:60b0638273dabd1f20a20e99_2
+pid=7968, ppid=12364, tid=13912
+
+[CRITICAL]2021-05-28 11:29:36,457: invoke <function urlGoHome at 0x000001D6048379D8> cause a error: comba-ZXC-F3.LM15->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+pid=7968, ppid=12364, tid=14060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 99, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1331, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1266, in move
+    _func()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1232, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: comba-ZXC-F3.LM15->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-28 11:29:36,467: task[60b0638273dabd1f20a20e99][AGVwuliao] AP25(LM24) -> AP22(LM17) [loadPlayload]task release cause a error: Exception: comba-ZXC-F3.LM15->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+pid=7968, ppid=12364, tid=14264
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1078, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 131, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: comba-ZXC-F3.LM15->comba-ZXC-F3.LM25 路径不存在1,agvId=AGVwuliao
+

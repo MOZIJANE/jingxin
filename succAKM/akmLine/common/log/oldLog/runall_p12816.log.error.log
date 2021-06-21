@@ -1,0 +1,16 @@
+[CRITICAL]2021-03-09 12:11:49,634: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 6046f564007776dc362b3130, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')>]>
+pid=12816, ppid=1556, tid=14832
+
+[CRITICAL]2021-03-09 12:11:49,694: invoke timer func<function msubscribe at 0x00000163A345BB80> cause a error: mongodb is not connected
+pid=12816, ppid=1556, tid=14832
+Traceback (most recent call last):
+  File "C:\Users\WINDOWS\Desktop\akmLine\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\WINDOWS\Desktop\akmLine\alarm\alarmThreshold.py", line 65, in msubscribe
+    for key in _loadInfo():
+  File "C:\Users\WINDOWS\Desktop\akmLine\alarm\alarmThreshold.py", line 51, in _loadInfo
+    ds = db.find("c_alarm_threshold")
+  File "C:\Users\WINDOWS\Desktop\akmLine\common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+

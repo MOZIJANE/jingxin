@@ -1,0 +1,41 @@
+[CRITICAL]2021-05-28 13:44:37,233: invoke <function urlGoHome at 0x0000015D887659D8> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGVwuliao
+pid=12884, ppid=12328, tid=10008
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 99, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1322, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGVwuliao
+
+[CRITICAL]2021-05-28 13:44:37,241: task[60b082fa73dabd3254dc4eb4][AGVwuliao] AP25(LM24) -> AP22(LM17) [finish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGVwuliao
+pid=12884, ppid=12328, tid=10976
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1087, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 131, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGVwuliao
+
+[CRITICAL]2021-05-28 13:46:44,581: checkFinish cause a error: Expecting value: line 1 column 1 (char 0)
+pid=12884, ppid=12328, tid=1260
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 243, in _checkFinish
+    status = getTaskStatus(ids)
+  File "..\agvCtrl\agvApi.py", line 74, in getTaskStatus
+    return _http_get(url + '/api/agv/taskStatus',{"taskId": taskId})["taskList"]
+  File "..\agvCtrl\agvApi.py", line 62, in _http_get
+    result = json.load(r)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\json_codec.py", line 229, in load
+    r = json.loads(text)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+

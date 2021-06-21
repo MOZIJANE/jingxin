@@ -1,0 +1,41 @@
+[INFO]2021-03-08 15:32:37,319: log files at C:\Users\WINDOWS\Desktop\akmLine\common\log
+[INFO]2021-03-08 15:32:37,320: find module agvCtrl.main_agv
+[INFO]2021-03-08 15:32:37,321: find module agvDevice.main_agvDevice
+[INFO]2021-03-08 15:32:37,323: find module alarm.main_alarm
+[INFO]2021-03-08 15:32:37,324: find module auth.main_auth
+[INFO]2021-03-08 15:32:37,325: find module door.main_door
+[INFO]2021-03-08 15:32:37,326: find module elevator.main_elevator
+[INFO]2021-03-08 15:32:37,327: find module elevator.main_elevator
+[INFO]2021-03-08 15:32:37,329: find module feed.main_feed
+[INFO]2021-03-08 15:32:37,330: import agvCtrl.main_agv
+[ERROR]2021-03-08 15:32:37,573: mongo db is disabled
+[INFO]2021-03-08 15:32:38,051: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002396BBB05F8>>
+[INFO]2021-03-08 15:32:38,061: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002396BBB0800>>
+[INFO]2021-03-08 15:32:38,151: create lock <lock name:timer.lock_2445645973768,<unlocked _thread.RLock object owner=0 count=0 at 0x000002396BD7EFA8>>
+[ERROR]2021-03-08 15:32:38,170: mqtt is disabled
+[INFO]2021-03-08 15:32:38,171: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-08 15:32:38,172: mqtt: subscribe [alarm/clear/+]
+[CRITICAL]2021-03-08 15:32:38,380: import main_agv failed, path: agvCtrl cause a error: No module named 'serial'
+pid=1500, ppid=13632, tid=9284
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\mapMgr.py", line 20, in <module>
+    import elevatorMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\elevatorMgr.py", line 22, in <module>
+    import elevator.elevatorApi as elevatorApi
+  File "..\elevator\elevatorApi.py", line 12, in <module>
+    import main_elevator
+  File "C:\Users\WINDOWS\Desktop\akmLine\elevator\main_elevator.py", line 10, in <module>
+    import elevator.elevatorMgr as elevatorMgr
+  File "..\elevator\elevatorMgr.py", line 16, in <module>
+    import elevator.elevatorControlNanqu as elevatorControl
+  File "..\elevator\elevatorControlNanqu.py", line 20, in <module>
+    import modbusapi
+  File "C:\Users\WINDOWS\Desktop\akmLine\common\modbusapi.py", line 8, in <module>
+    import serial
+ModuleNotFoundError: No module named 'serial'
+
+[CRITICAL]2021-03-08 15:32:38,383: import main_agv failed, path: agvCtrl ,cause No module named 'serial'

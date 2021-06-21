@@ -1,0 +1,97 @@
+[INFO]2021-03-17 10:21:21,908: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 10:21:21,908: find module account.main_account
+[INFO]2021-03-17 10:21:21,909: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 10:21:21,909: find module alarm.main_alarm
+[INFO]2021-03-17 10:21:21,910: find module auth.main_auth
+[INFO]2021-03-17 10:21:21,910: find module feed.main_feed
+[INFO]2021-03-17 10:21:21,910: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:21:21,911: import account.main_account
+[INFO]2021-03-17 10:21:21,986: import agvDevice.main_agvDevice
+[INFO]2021-03-17 10:21:21,989: import alarm.main_alarm
+[INFO]2021-03-17 10:21:22,084: create lock <lock name:timer.lock_1479018247112,<unlocked _thread.RLock object owner=0 count=0 at 0x000001585C56D620>>
+[ERROR]2021-03-17 10:21:22,095: mqtt is disabled
+[INFO]2021-03-17 10:21:22,096: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 10:21:22,096: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 10:21:25,147: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-17 10:21:25,164: import auth.main_auth
+[INFO]2021-03-17 10:21:25,170: import feed.main_feed
+[INFO]2021-03-17 10:21:25,176: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001585C7E9260>>
+[INFO]2021-03-17 10:21:25,179: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001585C7E96C0>>
+[INFO]2021-03-17 10:21:25,239: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:21:25,249: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001585C8A4440>>
+[INFO]2021-03-17 10:21:25,291: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001585C8A44E0>>
+[INFO]2021-03-17 10:21:25,292: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001585C8A41E8>>
+[SUCC]2021-03-17 10:21:25,369: utility start, pid=1356, ppid=13196
+[DEBUG]2021-03-17 10:21:25,371: start timer
+[INFO]2021-03-17 10:21:25,375: add_ignore: taskStatus
+[INFO]2021-03-17 10:21:25,376: add_ignore: api/elevator/status
+[INFO]2021-03-17 10:21:25,376: add_ignore: scada/getTask
+[WARNING]2021-03-17 10:21:31,076: timer_thread[tid:12836] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=12836 count=1 at 0x000001585C8A44E0>> ,hold 3684 ms
+[INFO]2021-03-17 10:21:31,443: name=timer_thread, pid=1356, tid=12836
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:21:54,037: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-SZ-DG-01&target=ZZ-SZ-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[INFO]2021-03-17 10:21:54,115: Scada send a task to the server from ZZ-SZ-DG-01 to ZZ-SZ-DG-03 payloadId: None
+[INFO]2021-03-17 10:21:54,191: create task[605167c2785d0968614b792a]: type= scadaTask , 从ZZ-SZ-DG-01运送货架None到ZZ-SZ-DG-03 {'source': 'ZZ-SZ-DG-01', 'target': 'ZZ-SZ-DG-03', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从ZZ-SZ-DG-01运送货架None到ZZ-SZ-DG-03', 'createTime': datetime.datetime(2021, 3, 17, 10, 21, 54, 176565), 'updateTime': datetime.datetime(2021, 3, 17, 10, 21, 54, 176565), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('605167c2785d0968614b792a')}
+[INFO]2021-03-17 10:21:54,381: task[605167c2785d0968614b792a][-] AP238(LM242) -> AP240(LM244) [waiting] is inside False
+[INFO]2021-03-17 10:21:54,458: task cmd: got a task from scada task[605167c2785d0968614b792a][-] AP238(LM242) -> AP240(LM244) [waiting]
+[DEBUG]2021-03-17 10:21:54,538: used 501ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-SZ-DG-01&target=ZZ-SZ-DG-03&payloadId=&priority=1
+[INFO]2021-03-17 10:21:55,893: task[605167c2785d0968614b792a]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 3, 17, 10, 21, 55, 861235), 'updateTime': datetime.datetime(2021, 3, 17, 10, 21, 55, 861235), 'status': 'running'}
+[INFO]2021-03-17 10:21:55,968: task: start task[605167c2785d0968614b792a][-] AP238(LM242) -> AP240(LM244) [waiting]
+[INFO]2021-03-17 10:21:56,030: task[605167c2785d0968614b792a] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 3, 17, 10, 21, 55, 999557)}
+[DEBUG]2021-03-17 10:21:56,093: task[605167c2785d0968614b792a][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waiting -> waitForAgv
+[DEBUG]2021-03-17 10:22:01,102: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:22:01,687: [return] use 585 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:22:03,242: task[605167c2785d0968614b792a][-] AP238(LM242) -> AP240(LM244) [waitForAgv] apply AGV04
+[INFO]2021-03-17 10:22:03,368: task[605167c2785d0968614b792a] update info: {'agvId': 'AGV04', 'failMsg': '成功分配小车AGV04,检测顶升下降', 'updateTime': datetime.datetime(2021, 3, 17, 10, 22, 3, 306518)}
+[WARNING]2021-03-17 10:22:03,429: scada.605167c2785d0968614b792a[tid:8932] <locked _thread.RLock object owner=8932 count=1 at 0x000001585C8A4148> ,hold 6038 ms
+[INFO]2021-03-17 10:22:03,645: name=scada.605167c2785d0968614b792a, pid=1356, tid=8932
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:22:03,768: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [waitSrcPreLoc] waitForAgv -> waitSrcPreLoc
+[INFO]2021-03-17 10:22:04,223: task: prepoint locked  605167c2785d0968614b792a fp20190712-1.LM242
+[INFO]2021-03-17 10:22:04,427: task[605167c2785d0968614b792a] update info: {'failMsg': '等待前置点LM242与工位点AP238处无小车', 'updateTime': datetime.datetime(2021, 3, 17, 10, 22, 4, 285862)}
+[DEBUG]2021-03-17 10:22:04,490: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [initJackdown] waitSrcPreLoc -> initJackdown
+[INFO]2021-03-17 10:22:04,954: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [initJackdown] _jackDown
+[DEBUG]2021-03-17 10:22:05,031: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:22:05,537: [return] use 506 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:22:05,631: task[605167c2785d0968614b792a] update info: {'failMsg': '等待ZZ-SZ-DG-01前置点锁', 'updateTime': datetime.datetime(2021, 3, 17, 10, 22, 5, 599398)}
+[DEBUG]2021-03-17 10:22:05,693: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [waitSrcPreLoc1] initJackdown -> waitSrcPreLoc1
+[INFO]2021-03-17 10:22:06,449: task[605167c2785d0968614b792a] update info: {'failMsg': '前往ZZ-SZ-DG-01前置点', 'updateTime': datetime.datetime(2021, 3, 17, 10, 22, 6, 369290)}
+[DEBUG]2021-03-17 10:22:06,526: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [startMovePreSrc] waitSrcPreLoc1 -> startMovePreSrc
+[CRITICAL]2021-03-17 10:22:07,444: taskFunc2:task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [startMovePreSrc] cause a error: Exception: fp20190712-1.AP88->fp20190712-1.LM242 路径不存在1,agvId=AGV04
+pid=1356, ppid=13196, tid=8932
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 745, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 590, in handle
+    if not self._moveAgvPrepoint():
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 847, in _moveAgvPrepoint
+    raise e
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 842, in _moveAgvPrepoint
+    agvApi.moveJackdown(self.agvId, self.param["floorId"]+'.'+self.param["location"], self.onFinish, self.param,stepCallback=stepCallback)
+  File "../agvCtrl\agvApi.py", line 187, in moveJackdown
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "../agvCtrl\agvApi.py", line 169, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "../agvCtrl\agvApi.py", line 63, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: fp20190712-1.AP88->fp20190712-1.LM242 路径不存在1,agvId=AGV04
+
+[WARNING]2021-03-17 10:22:07,450: task[605167c2785d0968614b792a]:  error {'failMsg': 'Exception: fp20190712-1.AP88->fp20190712-1.LM242 路径不存在1,agvId=AGV04', 'endTime': datetime.datetime(2021, 3, 17, 10, 22, 7, 449441), 'status': 'error'}
+[INFO]2021-03-17 10:22:07,451: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [startMovePreSrc] AGV04 release task, release agv True True False
+[INFO]2021-03-17 10:22:07,852: task[605167c2785d0968614b792a][AGV04] AP238(LM242) -> AP240(LM244) [startMovePreSrc] let AGV04 gohome
+[INFO]2021-03-17 10:22:08,391: task: prepoint released2  605167c2785d0968614b792a fp20190712-1.LM242
+[INFO]2021-03-17 10:22:08,452: task: stop task[605167c2785d0968614b792a][-] AP238(LM242) -> AP240(LM244) [startMovePreSrc]
+[DEBUG]2021-03-17 10:22:08,452: task: delete task 605167c2785d0968614b792a

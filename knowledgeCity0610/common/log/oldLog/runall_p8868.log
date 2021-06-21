@@ -1,0 +1,45 @@
+[INFO]2021-04-25 17:21:23,212: log files at C:\Users\Administrator\Desktop\SVN\knowledgeCity\common\log
+[INFO]2021-04-25 17:21:23,214: find module agvCtrl.main_agv
+[INFO]2021-04-25 17:21:23,214: find module agvDevice.main_agvDevice
+[INFO]2021-04-25 17:21:23,215: find module alarm.main_alarm
+[INFO]2021-04-25 17:21:23,216: find module auth.main_auth
+[INFO]2021-04-25 17:21:23,217: find module autoCtrl.main_akmCtrl
+[INFO]2021-04-25 17:21:23,217: find module door.main_door
+[INFO]2021-04-25 17:21:23,218: find module elevator.main_elevator
+[INFO]2021-04-25 17:21:23,219: find module remoteio.main_remoteio
+[INFO]2021-04-25 17:21:23,219: import agvCtrl.main_agv
+[INFO]2021-04-25 17:21:23,581: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B559830D0>>
+[INFO]2021-04-25 17:21:23,585: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B55983238>>
+[INFO]2021-04-25 17:21:23,680: create lock <lock name:timer.lock_2316427008656,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B55C86C38>>
+[ERROR]2021-04-25 17:21:23,694: mqtt is disabled
+[INFO]2021-04-25 17:21:23,695: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-25 17:21:23,696: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-25 17:21:26,728: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-25 17:21:26,782: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B55F58C38>>
+[INFO]2021-04-25 17:21:26,784: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B55F58878>>
+[INFO]2021-04-25 17:21:26,786: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B55F583F0>>
+[INFO]2021-04-25 17:21:26,796: create lock <lock name:agvserver,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021B560698C8>>
+[CRITICAL]2021-04-25 17:21:26,963: import main_agv failed, path: agvCtrl cause a error: Expecting ',' delimiter: line 24 column 3 (char 459)
+pid=8868, ppid=144, tid=5676
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\mapMgr.py", line 25, in <module>
+    import driver.seerAgv.agvCtrl as agvCtrl
+  File "..\driver\seerAgv\agvCtrl.py", line 33, in <module>
+    g_agvType = _loadAgvType()
+  File "..\driver\seerAgv\agvCtrl.py", line 28, in _loadAgvType
+    aa = json.load(f)
+  File "C:\Python37\lib\json\__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python37\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 24 column 3 (char 459)
+
+[CRITICAL]2021-04-25 17:21:26,969: import main_agv failed, path: agvCtrl ,cause Expecting ',' delimiter: line 24 column 3 (char 459)

@@ -1,0 +1,756 @@
+[CRITICAL]2021-03-29 15:34:36,382: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=2080
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:36,952: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:40,294: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9680
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:40,580: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:43,977: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=12560
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:44,276: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:47,732: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9084
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:48,271: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:51,668: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:52,042: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:55,410: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=6780
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:55,695: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:59,257: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=4336
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:34:59,872: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:03,122: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=1988
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:03,526: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:07,522: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:07,911: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:11,534: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=2080
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:11,909: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:15,219: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9680
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:15,594: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:18,932: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=12560
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:19,188: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:23,486: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9084
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:23,920: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:27,183: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:27,467: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:31,225: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=6780
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:31,644: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:35,496: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=4336
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:35,781: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:39,029: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=1988
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:39,373: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:42,784: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:43,220: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:46,633: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=2080
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:47,052: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:50,558: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9680
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:50,873: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:54,316: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=12560
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:54,668: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:57,972: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9084
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:35:58,603: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:01,950: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:02,175: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:05,859: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=6780
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:06,248: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:10,619: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=4336
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:10,888: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:14,168: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=1988
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:14,528: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:18,150: invoke <function urlJackdown at 0x000002865F8289D8> cause a error: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=9848
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 297, in jackDown
+    if checkIOSJackzero(agvId, 'down'):
+  File "..\driver\seerAgv\agvCtrl.py", line 169, in checkIOSJackzero
+    if int(x['id'])==31:
+TypeError: 'int' object is not subscriptable
+
+[CRITICAL]2021-03-29 15:36:18,599: task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] jackDown cause a error: TypeError: 'int' object is not subscriptable
+pid=3888, ppid=5344, tid=3564
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 916, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: 'int' object is not subscriptable
+

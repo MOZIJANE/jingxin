@@ -1,0 +1,194 @@
+[INFO]2021-04-25 15:32:25,778: log files at E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\log
+[INFO]2021-04-25 15:32:25,778: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA46186C90>>
+[INFO]2021-04-25 15:32:26,596: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA461A98A0>>
+[INFO]2021-04-25 15:32:26,666: **********************执行配置文件的路径是： E:\projects_by_myself\backup\MeiWei_back_0421\door/run.xml
+[INFO]2021-04-25 15:32:26,674: create lock <lock name:timer.lock_2930346407152,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA4641B510>>
+[INFO]2021-04-25 15:32:26,705: **********************执行配置文件的路径是： E:\projects_by_myself\backup\MeiWei_back_0421\elevator/run.xml
+[INFO]2021-04-25 15:32:26,706: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA4644B450>>
+[INFO]2021-04-25 15:32:26,787: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA464502D0>>
+[INFO]2021-04-25 15:32:26,839: **********************执行配置文件的路径是： E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice/run.xml
+[INFO]2021-04-25 15:32:26,865: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA4649EA80>>
+[INFO]2021-04-25 15:32:26,866: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA465009C0>>
+[INFO]2021-04-25 15:32:26,893: charge policy 1 , fix time
+[INFO]2021-04-25 15:32:26,916: **********************执行配置文件的路径是： E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl/run.xml
+[INFO]2021-04-25 15:32:26,916: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA46508600>>
+[INFO]2021-04-25 15:32:26,918: add_ignore: taskStatus
+[INFO]2021-04-25 15:32:26,918: add_ignore: api/elevator/status
+[INFO]2021-04-25 15:32:26,918: add_ignore: scada/getTask
+[INFO]2021-04-25 15:32:26,919: **********************执行配置文件的路径是： E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl/run.xml
+[DEBUG]2021-04-25 15:32:41,202: GET: http://127.0.0.1:8999/api/agv/init?appName=feed2 addr: 127.0.0.1
+[INFO]2021-04-25 15:32:41,203: **********************状态************: False
+[INFO]2021-04-25 15:32:41,203: feed2 init client agvApi
+[INFO]2021-04-25 15:32:41,226: load agv file: E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-04-25 15:32:41,226: create lock <lock name:agvList.AGV30.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA465AE8A0>>
+[DEBUG]2021-04-25 15:32:41,233: create aliveObj AGV30 AGV离线异常 timeout 300
+[INFO]2021-04-25 15:32:41,234: AGV30 start agvList run thread
+[INFO]2021-04-25 15:32:41,234: create lock <lock name:agv.AGV30.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x000002AA465AEF30>>
+[INFO]2021-04-25 15:32:41,234: AGV30 start agvList run2 thread
+[DEBUG]2021-04-25 15:32:41,235: try connect AGV30 192.168.8.68:19204
+[DEBUG]2021-04-25 15:32:41,244: used 42ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/init?appName=feed2
+[DEBUG]2021-04-25 15:32:41,248: GET: http://127.0.0.1:8999/api/agv/apply?appName=feed2&autoLock=False&exclude&loc=18&mapId=untitled_20210420032952&taskId=untitled_20210420032952%3A2021-04-25%2015%3A32%3A41&timeout=15 addr: 127.0.0.1
+[DEBUG]2021-04-25 15:32:41,257: elevator thread start
+[ERROR]2021-04-25 15:32:41,257: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:41 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:41,263: apply agv failed, count=0 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=18392
+
+[ERROR]2021-04-25 15:32:41,264: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:41 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:41,269: apply agv failed, count=1 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=18392
+
+[ERROR]2021-04-25 15:32:41,270: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:41 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:41,275: apply agv failed, count=2 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=18392
+
+[ERROR]2021-04-25 15:32:41,275: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:41 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:41,282: apply agv failed, count=3 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=18392
+
+[ERROR]2021-04-25 15:32:41,286: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:41 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:41,291: apply agv failed, count=4 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=18392
+
+[CRITICAL]2021-04-25 15:32:41,298: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', 'untitled_20210420032952:2021-04-25 15:32:41', 'loc', '18')
+pid=10004, ppid=12516, tid=18392
+
+[ERROR]2021-04-25 15:32:44,301: apply agv timeout
+[DEBUG]2021-04-25 15:32:44,301: used 3053ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=feed2&autoLock=False&exclude&loc=18&mapId=untitled_20210420032952&taskId=untitled_20210420032952%3A2021-04-25%2015%3A32%3A41&timeout=15
+[DEBUG]2021-04-25 15:32:49,671: GET: http://127.0.0.1:8999/api/agv/apply?appName=feed2&autoLock=False&exclude&loc=18&mapId=untitled_20210420032952&taskId=untitled_20210420032952%3A2021-04-25%2015%3A32%3A49&timeout=15 addr: 127.0.0.1
+[ERROR]2021-04-25 15:32:49,672: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:49 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:49,679: apply agv failed, count=0 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=14888
+
+[ERROR]2021-04-25 15:32:49,679: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:49 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:49,686: apply agv failed, count=1 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=14888
+
+[ERROR]2021-04-25 15:32:49,686: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:49 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:49,692: apply agv failed, count=2 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=14888
+
+[ERROR]2021-04-25 15:32:49,692: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:49 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:49,697: apply agv failed, count=3 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=14888
+
+[ERROR]2021-04-25 15:32:49,698: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:49 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:49,703: apply agv failed, count=4 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=14888
+
+[CRITICAL]2021-04-25 15:32:49,709: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', 'untitled_20210420032952:2021-04-25 15:32:49', 'loc', '18')
+pid=10004, ppid=12516, tid=14888
+
+[ERROR]2021-04-25 15:32:51,247: connect AGV30 failed timed out
+[DEBUG]2021-04-25 15:32:51,247: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:32:52,715: apply agv timeout
+[DEBUG]2021-04-25 15:32:52,715: used 3044ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=feed2&autoLock=False&exclude&loc=18&mapId=untitled_20210420032952&taskId=untitled_20210420032952%3A2021-04-25%2015%3A32%3A49&timeout=15
+[DEBUG]2021-04-25 15:32:58,141: GET: http://127.0.0.1:8999/api/agv/apply?appName=feed2&autoLock=False&exclude&loc=18&mapId=untitled_20210420032952&taskId=untitled_20210420032952%3A2021-04-25%2015%3A32%3A57&timeout=15 addr: 127.0.0.1
+[ERROR]2021-04-25 15:32:58,142: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:57 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:58,147: apply agv failed, count=0 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=11908
+
+[ERROR]2021-04-25 15:32:58,148: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:57 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:58,153: apply agv failed, count=1 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=11908
+
+[ERROR]2021-04-25 15:32:58,153: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:57 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:58,159: apply agv failed, count=2 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=11908
+
+[ERROR]2021-04-25 15:32:58,159: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:57 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:58,164: apply agv failed, count=3 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=11908
+
+[ERROR]2021-04-25 15:32:58,164: apply agv failed!  [no agv in map untitled_20210420032952] taskId untitled_20210420032952:2021-04-25 15:32:57 loc untitled_20210420032952.18
+[CRITICAL]2021-04-25 15:32:58,170: apply agv failed, count=4 cause a error: untitled_20210420032952.18找不到可用的小车
+pid=10004, ppid=12516, tid=11908
+
+[CRITICAL]2021-04-25 15:32:58,176: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', 'untitled_20210420032952:2021-04-25 15:32:57', 'loc', '18')
+pid=10004, ppid=12516, tid=11908
+
+[ERROR]2021-04-25 15:33:01,179: apply agv timeout
+[DEBUG]2021-04-25 15:33:01,179: used 3038ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=feed2&autoLock=False&exclude&loc=18&mapId=untitled_20210420032952&taskId=untitled_20210420032952%3A2021-04-25%2015%3A32%3A57&timeout=15
+[ERROR]2021-04-25 15:33:01,259: connect AGV30 failed timed out
+[INFO]2021-04-25 15:33:01,259: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:33:01,260: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 20025 ms
+[INFO]2021-04-25 15:33:01,261: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:33:03,268: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:33:13,276: connect AGV30 failed timed out
+[INFO]2021-04-25 15:33:13,277: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:33:13,278: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 10010 ms
+[INFO]2021-04-25 15:33:13,280: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:33:15,294: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:33:25,305: connect AGV30 failed timed out
+[INFO]2021-04-25 15:33:25,306: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:33:25,307: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 10013 ms
+[INFO]2021-04-25 15:33:25,309: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:33:27,322: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:33:37,332: connect AGV30 failed timed out
+[INFO]2021-04-25 15:33:37,332: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:33:37,333: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 10011 ms
+[INFO]2021-04-25 15:33:37,334: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:33:39,343: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:33:49,350: connect AGV30 failed timed out
+[INFO]2021-04-25 15:33:49,351: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:33:49,351: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 10008 ms
+[INFO]2021-04-25 15:33:49,353: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:33:51,368: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:34:01,382: connect AGV30 failed timed out
+[INFO]2021-04-25 15:34:01,383: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:34:01,384: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 10016 ms
+[INFO]2021-04-25 15:34:01,386: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:34:03,391: try connect AGV30 192.168.8.68:19204
+[ERROR]2021-04-25 15:34:13,397: connect AGV30 failed timed out
+[INFO]2021-04-25 15:34:13,398: AGV30 checkLink failed 192.168.8.68 19204
+[WARNING]2021-04-25 15:34:13,399: agvThread.AGV30[tid:16764] <lock name:agv.AGV30.lock_status,<locked _thread.RLock object owner=16764 count=1 at 0x000002AA465AEF30>> ,hold 10008 ms
+[INFO]2021-04-25 15:34:13,401: name=agvThread.AGV30, pid=10004, tid=16764
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/agvCtrl/agvList.py", line 570, in run() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvCtrl.py", line 43, in checkLink() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-25 15:34:15,411: try connect AGV30 192.168.8.68:19204

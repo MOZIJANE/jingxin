@@ -1,0 +1,376 @@
+[INFO]2021-03-26 14:08:36,087: log files at D:\python_work\AKMfloor\common\log
+[INFO]2021-03-26 14:08:36,089: find module account.main_account
+[INFO]2021-03-26 14:08:36,089: find module agvCtrl.main_agv
+[INFO]2021-03-26 14:08:36,090: find module agvDevice.main_agvDevice
+[INFO]2021-03-26 14:08:36,091: find module alarm.main_alarm
+[INFO]2021-03-26 14:08:36,092: find module auth.main_auth
+[INFO]2021-03-26 14:08:36,094: find module door.main_door
+[INFO]2021-03-26 14:08:36,095: find module elevator.main_elevator
+[INFO]2021-03-26 14:08:36,095: find module feed.main_feed
+[INFO]2021-03-26 14:08:36,097: find module menu.main_menu
+[INFO]2021-03-26 14:08:36,098: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-26 14:08:36,100: find module webFront.main_web
+[INFO]2021-03-26 14:08:36,100: find module wmqtt.main_wmqtt
+[INFO]2021-03-26 14:08:36,101: import account.main_account
+[INFO]2021-03-26 14:08:36,462: import agvCtrl.main_agv
+[INFO]2021-03-26 14:08:36,985: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C39331AB0>>
+[INFO]2021-03-26 14:08:36,989: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C393413F0>>
+[INFO]2021-03-26 14:08:37,307: create lock <lock name:timer.lock_1495611776448,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C39689F00>>
+[ERROR]2021-03-26 14:08:37,328: mqtt is disabled
+[INFO]2021-03-26 14:08:37,328: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-26 14:08:37,328: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-26 14:08:40,399: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-26 14:08:40,470: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C398EA540>>
+[INFO]2021-03-26 14:08:40,471: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C398DB900>>
+[INFO]2021-03-26 14:08:41,140: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C3999C2A0>>
+[INFO]2021-03-26 14:08:41,562: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C399D34B0>>
+[INFO]2021-03-26 14:08:41,564: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C39A742D0>>
+[INFO]2021-03-26 14:08:41,633: charge policy 1 , fix time
+[INFO]2021-03-26 14:08:41,672: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C39A74E70>>
+[INFO]2021-03-26 14:08:41,893: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-03-26 14:08:42,205: create aliveObj ELEVATOR01 电梯离线异常 timeout 30
+[DEBUG]2021-03-26 14:08:42,207: elevator thread start
+[INFO]2021-03-26 14:08:42,283: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 414 ms
+[INFO]2021-03-26 14:08:42,303: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[INFO]2021-03-26 14:08:42,412: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 128 ms
+[INFO]2021-03-26 14:08:42,422: import agvDevice.main_agvDevice
+[INFO]2021-03-26 14:08:42,422: import alarm.main_alarm
+[INFO]2021-03-26 14:08:42,423: import auth.main_auth
+[INFO]2021-03-26 14:08:42,451: import door.main_door
+[INFO]2021-03-26 14:08:42,458: import elevator.main_elevator
+[INFO]2021-03-26 14:08:42,459: import feed.main_feed
+[INFO]2021-03-26 14:08:42,492: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C39D42120>>
+[INFO]2021-03-26 14:08:42,499: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C39D42FC0>>
+[INFO]2021-03-26 14:08:44,994: import menu.main_menu
+[CRITICAL]2021-03-26 14:08:45,007: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=26420, ppid=20496, tid=3432
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-26 14:08:45,020: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-26 14:08:45,184: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C408AD750>>
+[INFO]2021-03-26 14:08:45,185: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41039210>>
+[INFO]2021-03-26 14:08:45,198: load task: *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayloadMove]
+[INFO]2021-03-26 14:08:45,200: import webFront.main_web
+[INFO]2021-03-26 14:08:45,210: import wmqtt.main_wmqtt
+[SUCC]2021-03-26 14:08:45,232: utility start, pid=26420, ppid=20496
+[DEBUG]2021-03-26 14:08:45,233: start timer
+[INFO]2021-03-26 14:08:45,254: load agv file: D:\python_work\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-03-26 14:08:45,255: create lock <lock name:agvList.AGV03.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C4104FC30>>
+[DEBUG]2021-03-26 14:08:45,260: create aliveObj AGV03 AGV离线异常 timeout 300
+[INFO]2021-03-26 14:08:45,261: AGV03 start agvList run thread
+[INFO]2021-03-26 14:08:45,262: create lock <lock name:agv.AGV03.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41058A20>>
+[INFO]2021-03-26 14:08:45,262: AGV03 start agvList run2 thread
+[DEBUG]2021-03-26 14:08:45,263: try connect AGV03 192.168.20.183:19204
+[INFO]2021-03-26 14:08:45,269: add_ignore: taskStatus
+[INFO]2021-03-26 14:08:45,270: add_ignore: api/elevator/status
+[INFO]2021-03-26 14:08:45,270: add_ignore: scada/getTask
+[INFO]2021-03-26 14:08:45,293: AGV03 connected 192.168.20.183 19204
+[INFO]2021-03-26 14:08:45,294: create lock <lock name:agv.AGV03.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41058A50>>
+[DEBUG]2021-03-26 14:08:45,294: try connect AGV03 192.168.20.183:19205
+[INFO]2021-03-26 14:08:45,311: AGV03 connected 192.168.20.183 19205
+[INFO]2021-03-26 14:08:45,312: create lock <lock name:agv.AGV03.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41058A80>>
+[DEBUG]2021-03-26 14:08:45,312: try connect AGV03 192.168.20.183:19206
+[INFO]2021-03-26 14:08:45,391: AGV03 connected 192.168.20.183 19206
+[INFO]2021-03-26 14:08:45,392: create lock <lock name:agv.AGV03.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41058BD0>>
+[DEBUG]2021-03-26 14:08:45,392: try connect AGV03 192.168.20.183:19207
+[INFO]2021-03-26 14:08:45,397: AGV03 connected 192.168.20.183 19207
+[INFO]2021-03-26 14:08:45,397: create lock <lock name:agv.AGV03.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41058060>>
+[DEBUG]2021-03-26 14:08:45,398: try connect AGV03 192.168.20.183:19208
+[INFO]2021-03-26 14:08:45,405: AGV03 connected 192.168.20.183 19208
+[INFO]2021-03-26 14:08:45,405: create lock <lock name:agv.AGV03.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000015C41058510>>
+[DEBUG]2021-03-26 14:08:45,405: try connect AGV03 192.168.20.183:19210
+[INFO]2021-03-26 14:08:45,493: AGV03 connected 192.168.20.183 19210
+[INFO]2021-03-26 14:08:45,508: AGV03 current map AKM4F
+[INFO]2021-03-26 14:08:45,623: AGV03 is online
+[INFO]2021-03-26 14:08:47,052: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:47,163: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:47,172: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:08:47,259: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-03-26 14:08:47,335: scadaTask init client agvApi
+[DEBUG]2021-03-26 14:08:47,368: used 109ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[INFO]2021-03-26 14:08:47,405: task: start *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayloadMove]
+[DEBUG]2021-03-26 14:08:47,482: GET: http://127.0.0.1:5551/api/agv/isAvailable?agv=AGV03&appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-26 14:08:47,504: used 22ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/isAvailable?agv=AGV03&appName=scadaTask
+[DEBUG]2021-03-26 14:08:47,615: GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV03&appName=scadaTask&taskId=605d7774c95becbca68e7959 addr: 127.0.0.1
+[DEBUG]2021-03-26 14:08:47,637: lock:  AGV03 taskId 605d7774c95becbca68e7959 app scadaTask
+[INFO]2021-03-26 14:08:48,258: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:48,435: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:48,453: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:08:48,657: AGV03 clear task finish, cur= AKM4F.LM12 task_status= 4
+[INFO]2021-03-26 14:08:48,694: *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayloadMove] recover lock AGV03
+[DEBUG]2021-03-26 14:08:48,741: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV03&agvId=AGV03&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.AP35&location=AP35&p_direction=0.0&pgv_type=1&recognize=False&result=True&resultDesc=None&seer_jackup=JackUnload&taskId=605d7774c95becbca68e7959_4&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-03-26 14:08:48,799: AGV03 use elevator: ELEVATOR01 ,('AKM4F', ['LM12', 'AP1'], 4.761),('AKM2F', ['AP1', 'LM2', 'LM3', 'AP35'], 7.696999999999999)
+[INFO]2021-03-26 14:08:48,825: Begin: AGV03 move from AKM4F.LM12 to AKM2F.AP35 by paths: [('AKM4F', ['LM12', 'AP1'], 4.761), ('AKM2F', ['AP1', 'LM2', 'LM3', 'AP35'], 7.696999999999999)] task: 605d7774c95becbca68e7959_4 timeout 86400 used 83 ms
+[INFO]2021-03-26 14:08:48,827: task[605d7774c95becbca68e7959] update info: {'step': 'dropPayload', 'updateTime': datetime.datetime(2021, 3, 26, 14, 8, 48, 826244)}
+[DEBUG]2021-03-26 14:08:48,828: *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayload] dropPayloadMove -> dropPayload
+[INFO]2021-03-26 14:08:49,497: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:49,570: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:49,571: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:49,807: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:49,813: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:49,829: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:49,900: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:49,914: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:49,943: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:49,977: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:50,008: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:50,021: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:50,024: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:50,024: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:08:50,060: invoke <function urlElevatorgo at 0x0000015C398ED430> cause a error: 'str' object cannot be interpreted as an integer
+pid=26420, ppid=20496, tid=7524
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 198, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[DEBUG]2021-03-26 14:08:50,062: used 41ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:50,068: [return] use 60 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:08:50,070: elevatorApi failed: TypeError: 'str' object cannot be interpreted as an integer
+[DEBUG]2021-03-26 14:08:50,414: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-26 14:08:50,416: used 2ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-03-26 14:08:50,421: timer_thread[tid:12156] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=12156 count=1 at 0x0000015C408AD750>> ,hold 3176 ms
+[INFO]2021-03-26 14:08:50,427: name=timer_thread, pid=26420, tid=12156
+[01] File "C:/Python38/lib/threading.py", line 870, in run() 
+[02] File "D:/python_work/AKMfloor/common/mytimer.py", line 113, in _loop() 
+[03] File "D:/python_work/AKMfloor/common/lock.py", line 122, in _call() 
+[04] File "D:/python_work/AKMfloor/common/lock.py", line 100, in release() 
+[05] File "D:/python_work/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[06] File "D:/python_work/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-26 14:08:50,588: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:50,596: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:50,602: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:50,607: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:50,672: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:50,673: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:50,675: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:50,677: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:50,682: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:50,683: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:50,683: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:50,688: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:50,690: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:50,690: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:08:50,719: invoke <function urlElevatorgo at 0x0000015C398ED430> cause a error: 'str' object cannot be interpreted as an integer
+pid=26420, ppid=20496, tid=10620
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 198, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[DEBUG]2021-03-26 14:08:50,721: used 33ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:50,724: [return] use 41 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:08:50,724: elevatorApi failed: TypeError: 'str' object cannot be interpreted as an integer
+[INFO]2021-03-26 14:08:51,252: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:51,258: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:51,263: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:51,324: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:51,324: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:51,326: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:51,327: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:51,327: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:51,340: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:51,341: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:51,342: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:08:51,358: invoke <function urlElevatorgo at 0x0000015C398ED430> cause a error: 'str' object cannot be interpreted as an integer
+pid=26420, ppid=20496, tid=23236
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 198, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[DEBUG]2021-03-26 14:08:51,359: used 19ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:51,361: [return] use 34 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:08:51,362: elevatorApi failed: TypeError: 'str' object cannot be interpreted as an integer
+[INFO]2021-03-26 14:08:51,685: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:51,745: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:51,746: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:52,010: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:52,029: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:52,049: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:52,116: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:52,117: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:52,121: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:52,122: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:52,124: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:52,129: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:52,130: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:52,131: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:08:52,161: invoke <function urlElevatorgo at 0x0000015C398ED430> cause a error: 'str' object cannot be interpreted as an integer
+pid=26420, ppid=20496, tid=15476
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 198, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[DEBUG]2021-03-26 14:08:52,163: used 33ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:52,166: [return] use 43 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:08:52,167: elevatorApi failed: TypeError: 'str' object cannot be interpreted as an integer
+[WARNING]2021-03-26 14:08:52,440: AGV03 low battery charge,batteryLevel= 0.424 start charge level= 0.500
+[WARNING]2021-03-26 14:08:52,442: AGV03 battery 0.424 check failed: isLocked
+[INFO]2021-03-26 14:08:52,695: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:52,701: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:52,707: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:52,766: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:52,770: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:52,771: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:52,776: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:52,777: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:52,779: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:52,783: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:52,785: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:52,785: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:08:52,821: invoke <function urlElevatorgo at 0x0000015C398ED430> cause a error: 'str' object cannot be interpreted as an integer
+pid=26420, ppid=20496, tid=940
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 198, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[INFO]2021-03-26 14:08:52,840: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[DEBUG]2021-03-26 14:08:52,851: used 68ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[INFO]2021-03-26 14:08:52,885: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:08:52,901: [return] use 121 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:08:52,923: elevatorApi failed: TypeError: 'str' object cannot be interpreted as an integer
+[INFO]2021-03-26 14:08:53,476: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:53,485: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:53,492: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:53,559: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:53,561: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:53,568: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:53,569: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:53,570: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:53,586: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:53,588: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:53,589: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:08:53,621: invoke <function urlElevatorgo at 0x0000015C398ED430> cause a error: 'str' object cannot be interpreted as an integer
+pid=26420, ppid=20496, tid=9676
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 198, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[DEBUG]2021-03-26 14:08:53,623: used 37ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:53,628: [return] use 58 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:08:53,629: elevatorApi failed: TypeError: 'str' object cannot be interpreted as an integer
+[INFO]2021-03-26 14:08:53,979: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:54,042: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:54,044: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:54,167: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:54,174: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:08:54,182: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:54,243: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:08:54,243: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:08:54,247: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:08:54,247: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:08:54,248: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:08:54,250: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:08:54,251: +++type: <class 'int'>
+[INFO]2021-03-26 14:08:54,252: +++type: <class 'str'>

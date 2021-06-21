@@ -1,0 +1,435 @@
+[INFO]2021-04-01 11:00:50,585: log files at E:\安捷利电梯项目\AKMfloor\common\log
+[INFO]2021-04-01 11:00:50,587: find module account.main_account
+[INFO]2021-04-01 11:00:50,587: find module agvCtrl.main_agv
+[INFO]2021-04-01 11:00:50,588: find module agvDevice.main_agvDevice
+[INFO]2021-04-01 11:00:50,589: find module alarm.main_alarm
+[INFO]2021-04-01 11:00:50,591: find module auth.main_auth
+[INFO]2021-04-01 11:00:50,592: find module door.main_door
+[INFO]2021-04-01 11:00:50,594: find module elevator.main_elevator
+[INFO]2021-04-01 11:00:50,595: find module feed.main_feed
+[INFO]2021-04-01 11:00:50,596: find module menu.main_menu
+[INFO]2021-04-01 11:00:50,601: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-01 11:00:50,602: find module webFront.main_web
+[INFO]2021-04-01 11:00:50,604: find module wmqtt.main_wmqtt
+[INFO]2021-04-01 11:00:50,605: import account.main_account
+[INFO]2021-04-01 11:00:50,705: import agvCtrl.main_agv
+[INFO]2021-04-01 11:00:51,062: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A087F60>>
+[INFO]2021-04-01 11:00:51,958: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A09B4E0>>
+[INFO]2021-04-01 11:00:52,075: create lock <lock name:timer.lock_1767017067328,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A6CB4B0>>
+[ERROR]2021-04-01 11:00:52,088: mqtt is disabled
+[INFO]2021-04-01 11:00:52,090: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-01 11:00:52,091: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-01 11:00:55,129: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-01 11:00:55,168: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A8E9B70>>
+[INFO]2021-04-01 11:00:55,173: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A8DEED0>>
+[INFO]2021-04-01 11:00:55,383: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A8F3B10>>
+[INFO]2021-04-01 11:00:55,663: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6A9AC660>>
+[INFO]2021-04-01 11:00:55,670: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6AA4D4B0>>
+[INFO]2021-04-01 11:00:55,747: charge policy 1 , fix time
+[INFO]2021-04-01 11:00:55,787: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6AA57090>>
+[INFO]2021-04-01 11:00:56,126: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-04-01 11:00:56,221: create aliveObj DOOR_01 门控离线异常 timeout 60
+[DEBUG]2021-04-01 11:00:56,222: create aliveObj DOOR_02 门控离线异常 timeout 60
+[DEBUG]2021-04-01 11:00:56,254: create aliveObj ELEVATOR01 电梯离线异常 timeout 30
+[DEBUG]2021-04-01 11:00:56,256: elevator thread start
+[INFO]2021-04-01 11:00:56,296: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 179 ms
+[INFO]2021-04-01 11:00:56,309: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[CRITICAL]2021-04-01 11:00:58,296: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=6592, ppid=14404, tid=13756
+Traceback (most recent call last):
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1010, in _send_output
+    self.send(msg)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 950, in send
+    self.connect()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 808, in create_connection
+    raise err
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1383, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "E:\安捷利电梯项目\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-04-01 11:00:58,810: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 2512 ms
+[INFO]2021-04-01 11:00:58,825: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\akmsmtMap.smap
+[INFO]2021-04-01 11:00:59,077: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\akmsmtMap.smap ,used 265 ms
+[WARNING]2021-04-01 11:00:59,079: MainThread[tid:6724] <lock name:mapMgr.lock,<locked _thread.RLock object owner=6724 count=1 at 0x0000019B6A8F3B10>> ,hold 3290 ms
+[INFO]2021-04-01 11:00:59,081: name=MainThread, pid=6592, tid=6724
+[01] File "run_all.py", line 57, in <module>() 
+[02] File "run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 991, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 671, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 783, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[10] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[11] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[12] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-04-01 11:00:59,088: import agvDevice.main_agvDevice
+[INFO]2021-04-01 11:00:59,090: import alarm.main_alarm
+[INFO]2021-04-01 11:00:59,091: import auth.main_auth
+[INFO]2021-04-01 11:00:59,101: import door.main_door
+[INFO]2021-04-01 11:00:59,105: import elevator.main_elevator
+[INFO]2021-04-01 11:00:59,107: import feed.main_feed
+[INFO]2021-04-01 11:00:59,121: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6E51ADB0>>
+[INFO]2021-04-01 11:00:59,129: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6E520810>>
+[INFO]2021-04-01 11:00:59,752: import menu.main_menu
+[INFO]2021-04-01 11:00:59,788: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-01 11:00:59,904: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6E5101E0>>
+[INFO]2021-04-01 11:00:59,905: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE6B120>>
+[INFO]2021-04-01 11:00:59,912: import webFront.main_web
+[INFO]2021-04-01 11:00:59,919: import wmqtt.main_wmqtt
+[SUCC]2021-04-01 11:00:59,930: utility start, pid=6592, ppid=14404
+[DEBUG]2021-04-01 11:00:59,933: start timer
+[INFO]2021-04-01 11:00:59,944: load agv file: E:\安捷利电梯项目\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-04-01 11:00:59,947: create lock <lock name:agvList.AGV02.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE77D80>>
+[DEBUG]2021-04-01 11:00:59,950: create aliveObj AGV02 AGV离线异常 timeout 300
+[INFO]2021-04-01 11:00:59,952: AGV02 start agvList run thread
+[INFO]2021-04-01 11:00:59,953: AGV02 start agvList run2 thread
+[INFO]2021-04-01 11:00:59,955: create lock <lock name:agv.AGV02.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE79F30>>
+[DEBUG]2021-04-01 11:00:59,957: try connect AGV02 192.168.20.182:19204
+[INFO]2021-04-01 11:00:59,958: create lock <lock name:agvList.AGV03.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE79F60>>
+[DEBUG]2021-04-01 11:00:59,962: create aliveObj AGV03 AGV离线异常 timeout 300
+[INFO]2021-04-01 11:00:59,963: AGV02 connected 192.168.20.182 19204
+[INFO]2021-04-01 11:00:59,964: AGV03 start agvList run thread
+[INFO]2021-04-01 11:00:59,966: AGV03 start agvList run2 thread
+[INFO]2021-04-01 11:00:59,966: add_ignore: taskStatus
+[INFO]2021-04-01 11:00:59,967: create lock <lock name:agv.AGV02.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE79DB0>>
+[INFO]2021-04-01 11:00:59,969: create lock <lock name:agv.AGV03.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CEE9600>>
+[INFO]2021-04-01 11:00:59,972: add_ignore: api/elevator/status
+[DEBUG]2021-04-01 11:00:59,973: try connect AGV02 192.168.20.182:19205
+[DEBUG]2021-04-01 11:00:59,974: try connect AGV03 192.168.20.183:19204
+[INFO]2021-04-01 11:00:59,975: add_ignore: scada/getTask
+[INFO]2021-04-01 11:00:59,981: AGV02 connected 192.168.20.182 19205
+[INFO]2021-04-01 11:00:59,982: create lock <lock name:agv.AGV02.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE79E70>>
+[INFO]2021-04-01 11:00:59,983: AGV03 connected 192.168.20.183 19204
+[DEBUG]2021-04-01 11:00:59,985: try connect AGV02 192.168.20.182:19206
+[INFO]2021-04-01 11:00:59,987: create lock <lock name:agv.AGV03.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CEE94E0>>
+[DEBUG]2021-04-01 11:00:59,990: try connect AGV03 192.168.20.183:19205
+[INFO]2021-04-01 11:00:59,993: AGV02 connected 192.168.20.182 19206
+[INFO]2021-04-01 11:00:59,994: create lock <lock name:agv.AGV02.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CE79FC0>>
+[DEBUG]2021-04-01 11:00:59,996: try connect AGV02 192.168.20.182:19207
+[INFO]2021-04-01 11:00:59,997: AGV03 connected 192.168.20.183 19205
+[INFO]2021-04-01 11:01:00,001: create lock <lock name:agv.AGV03.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CEE9570>>
+[DEBUG]2021-04-01 11:01:00,003: try connect AGV03 192.168.20.183:19206
+[INFO]2021-04-01 11:01:00,004: AGV02 connected 192.168.20.182 19207
+[INFO]2021-04-01 11:01:00,006: create lock <lock name:agv.AGV02.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CEE96C0>>
+[DEBUG]2021-04-01 11:01:00,008: try connect AGV02 192.168.20.182:19208
+[INFO]2021-04-01 11:01:00,009: AGV03 connected 192.168.20.183 19206
+[INFO]2021-04-01 11:01:00,011: create lock <lock name:agv.AGV03.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CEE9750>>
+[INFO]2021-04-01 11:01:00,013: AGV02 connected 192.168.20.182 19208
+[DEBUG]2021-04-01 11:01:00,015: try connect AGV03 192.168.20.183:19207
+[INFO]2021-04-01 11:01:00,017: create lock <lock name:agv.AGV02.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CF53150>>
+[DEBUG]2021-04-01 11:01:00,021: try connect AGV02 192.168.20.182:19210
+[INFO]2021-04-01 11:01:00,022: AGV03 connected 192.168.20.183 19207
+[INFO]2021-04-01 11:01:00,024: create lock <lock name:agv.AGV03.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CF531B0>>
+[DEBUG]2021-04-01 11:01:00,026: try connect AGV03 192.168.20.183:19208
+[INFO]2021-04-01 11:01:00,027: AGV02 connected 192.168.20.182 19210
+[INFO]2021-04-01 11:01:00,036: AGV03 connected 192.168.20.183 19208
+[INFO]2021-04-01 11:01:00,038: create lock <lock name:agv.AGV03.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000019B6CF53300>>
+[DEBUG]2021-04-01 11:01:00,040: try connect AGV03 192.168.20.183:19210
+[INFO]2021-04-01 11:01:00,047: AGV02 current map AKM2F
+[INFO]2021-04-01 11:01:00,048: AGV03 connected 192.168.20.183 19210
+[INFO]2021-04-01 11:01:00,068: AGV03 current map AKM2F
+[INFO]2021-04-01 11:01:00,082: AGV02 is online
+[INFO]2021-04-01 11:01:00,098: AGV03 is online
+[WARNING]2021-04-01 11:01:00,099: clear alarm obj=AGV02, typeId=54004, id=60652fb17b43eb40d2c9a2f4
+[WARNING]2021-04-01 11:01:00,116: clear alarm obj=AGV02, typeId=54231, id=606533c27b43eb40d2c9b86d
+[ERROR]2021-04-01 11:01:00,120: raise alarm obj=AGV02, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7203
+[DEBUG]2021-04-01 11:01:01,971: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-04-01 11:01:01,978: scadaTask init client agvApi
+[DEBUG]2021-04-01 11:01:01,982: used 11ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[DEBUG]2021-04-01 11:01:05,168: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-04-01 11:01:05,278: used 111ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-04-01 11:01:05,418: timer_thread[tid:10572] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=10572 count=1 at 0x0000019B6E5101E0>> ,hold 3451 ms
+[INFO]2021-04-01 11:01:05,576: name=timer_thread, pid=6592, tid=10572
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/mytimer.py", line 113, in _loop() 
+[03] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[WARNING]2021-04-01 11:01:05,654: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:06,171: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=15736
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:06,376: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:12,750: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:12,891: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=9940
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:13,096: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:19,342: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:19,516: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=2876
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:19,658: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:25,984: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:26,222: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=4524
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:26,427: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:32,808: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:32,979: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=1984
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:33,186: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:39,599: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:39,726: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=13972
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:39,900: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:46,210: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:46,353: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=8168
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:46,479: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:52,765: elevator: error timed out
+[CRITICAL]2021-04-01 11:01:52,939: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=11768
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[ERROR]2021-04-01 11:01:53,081: elevatorApi failed: timeout: timed out
+[WARNING]2021-04-01 11:01:59,295: elevator: error timed out
+[CRITICAL]2021-04-01 11:02:04,389: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+pid=6592, ppid=14404, tid=13756
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1383, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1358, in do_open
+    r = h.getresponse()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1347, in getresponse
+    response.begin()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "E:\安捷利电梯项目\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', 'timed out')
+
+[ERROR]2021-04-01 11:02:23,322: raise alarm obj=ELEVATOR01, typeId=39999, desc=电梯离线异常, id=606537bf7b43eb40d2c9c11e
+[CRITICAL]2021-04-01 11:02:50,215: invoke <function urlElevatorstatus at 0x0000019B6A8F5F70> cause a error: timed out
+pid=6592, ppid=14404, tid=2460
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[WARNING]2021-04-01 11:02:51,590: clear alarm obj=ELEVATOR01, typeId=39999, id=606537bf7b43eb40d2c9c11e
+[ERROR]2021-04-01 11:02:52,841: user press Ctrl+C, system quit!
+[WARNING]2021-04-01 11:02:53,687: runTask:stop save file
+[ERROR]2021-04-01 11:02:53,693: process exited, living 0:02:03.189574 seconds

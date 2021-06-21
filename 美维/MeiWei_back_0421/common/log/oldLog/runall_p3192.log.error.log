@@ -1,0 +1,29 @@
+[CRITICAL]2021-04-27 17:16:02,309: : 192.168.252.237:10001 <--> 192.168.252.242:60458 error:  cause a error: too many values to unpack (expected 3)
+pid=3192, ppid=17380, tid=9656
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 63, in _handle
+    addTask(str(devID), str(keyID))
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 107, in addTask
+    type, source, target = getButtonInfo(devID, keyID)
+ValueError: too many values to unpack (expected 3)
+
+[CRITICAL]2021-04-27 17:16:13,876: : 192.168.252.237:10001 <--> 192.168.252.242:60459 time out cause a error: <tcpSocket.client object at 0x000001D359E2DAF0>
+pid=3192, ppid=17380, tid=17848
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 51, in _handle
+    data = client.recv(6)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\tcpSocket.py", line 165, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-27 17:16:24,312: : 192.168.252.237:10001 <--> 192.168.252.242:60460 time out cause a error: <tcpSocket.client object at 0x000001D359E2DC70>
+pid=3192, ppid=17380, tid=9380
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 51, in _handle
+    data = client.recv(6)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\tcpSocket.py", line 165, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+

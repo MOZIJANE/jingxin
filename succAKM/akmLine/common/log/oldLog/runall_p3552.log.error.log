@@ -1,0 +1,22 @@
+[CRITICAL]2021-03-08 16:03:15,342: import main_agv failed, path: agvCtrl cause a error: No module named 'crcmod'
+pid=3552, ppid=14896, tid=13264
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\mapMgr.py", line 20, in <module>
+    import elevatorMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\elevatorMgr.py", line 22, in <module>
+    import elevator.elevatorApi as elevatorApi
+  File "..\elevator\elevatorApi.py", line 12, in <module>
+    import main_elevator
+  File "C:\Users\WINDOWS\Desktop\akmLine\elevator\main_elevator.py", line 10, in <module>
+    import elevator.elevatorMgr as elevatorMgr
+  File "..\elevator\elevatorMgr.py", line 16, in <module>
+    import elevator.elevatorControlNanqu as elevatorControl
+  File "..\elevator\elevatorControlNanqu.py", line 21, in <module>
+    from crcmod import *
+ModuleNotFoundError: No module named 'crcmod'
+
+[CRITICAL]2021-03-08 16:03:15,346: import main_agv failed, path: agvCtrl ,cause No module named 'crcmod'

@@ -1,0 +1,38 @@
+[CRITICAL]2021-04-23 16:01:41,005: [modbusApi: 192.168.8.122] execute fcode=1, addr=16 exception:  cause a error: timed out
+pid=8968, ppid=12516, tid=120
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-23 16:01:41,025: ZLAN01 readDOList fail cause a error: timed out
+pid=8968, ppid=12516, tid=120
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\remoteio\remoteioMgr.py", line 158, in readDOList
+    return self._read(D10, IO_LENTH)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\remoteio\remoteioMgr.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+

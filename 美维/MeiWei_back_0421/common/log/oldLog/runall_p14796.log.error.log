@@ -1,0 +1,15 @@
+[CRITICAL]2021-06-15 09:50:58,726: 192.168.252.159:10001 <--> 192.168.252.148:61948 error:  cause a error: 'int' object has no attribute 'strip'
+pid=14796, ppid=12376, tid=16868
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 179, in _handle
+    addTaskByButton(devID=devID, target=target)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 223, in addTaskByButton
+    taskId = runTasks01.addTaskByButton(source, target, payloadId, priority, btTag, taskKind, devID=devID)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\runTasks01.py", line 92, in addTaskByButton
+    task = scadaTaskBean.scadaTask(source, target, devID, payloadId, int(priority),btTag,taskKind=taskKind)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 62, in __init__
+    self.payloadId = payloadId.strip()
+AttributeError: 'int' object has no attribute 'strip'
+

@@ -1,0 +1,40 @@
+[INFO]2021-03-08 13:42:02,099: log files at C:\Users\WINDOWS\Desktop\akmLine\common\log
+[INFO]2021-03-08 13:42:02,099: find module agvCtrl.main_agv
+[INFO]2021-03-08 13:42:02,099: find module agvDevice.main_agvDevice
+[INFO]2021-03-08 13:42:02,099: find module alarm.main_alarm
+[INFO]2021-03-08 13:42:02,099: find module auth.main_auth
+[INFO]2021-03-08 13:42:02,099: find module door.main_door
+[INFO]2021-03-08 13:42:02,099: find module elevator.main_elevator
+[INFO]2021-03-08 13:42:02,099: find module feed.main_feed
+[INFO]2021-03-08 13:42:02,099: import agvCtrl.main_agv
+[INFO]2021-03-08 13:42:06,740: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A86A63E558>>
+[INFO]2021-03-08 13:42:06,756: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A86A63E7B0>>
+[INFO]2021-03-08 13:42:07,412: create lock <lock name:timer.lock_1822853162880,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A86A80EF58>>
+[ERROR]2021-03-08 13:42:07,443: mqtt is disabled
+[INFO]2021-03-08 13:42:07,443: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-08 13:42:07,443: mqtt: subscribe [alarm/clear/+]
+[CRITICAL]2021-03-08 13:42:41,861: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 6045b9306dc2681deee9fe89, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)>]>
+pid=12412, ppid=12376, tid=6260
+
+[CRITICAL]2021-03-08 13:42:41,923: import main_agv failed, path: agvCtrl cause a error: mongodb is not connected
+pid=12412, ppid=12376, tid=6260
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\mapMgr.py", line 19, in <module>
+    import doorMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\doorMgr.py", line 24, in <module>
+    import alarm.aliveApi
+  File "..\alarm\__init__.py", line 2, in <module>
+    import alarm.alarmApi
+  File "..\alarm\alarmApi.py", line 11, in <module>
+    import main_alarm
+  File "C:\Users\WINDOWS\Desktop\akmLine\alarm\main_alarm.py", line 75, in <module>
+    ds = db.find("c_alarm_type",{"visible": True})
+  File "C:\Users\WINDOWS\Desktop\akmLine\common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
+[CRITICAL]2021-03-08 13:42:41,939: import main_agv failed, path: agvCtrl ,cause mongodb is not connected

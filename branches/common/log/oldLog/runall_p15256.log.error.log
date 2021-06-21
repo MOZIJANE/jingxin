@@ -1,0 +1,11 @@
+[CRITICAL]2021-03-17 09:54:26,971: invoke <function urlcheckInitStatus at 0x000001B488746620> cause a error: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+pid=15256, ppid=7304, tid=10436
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 49, in urlcheckInitStatus
+    return jackMgr.checkInitStatus(agvId=agvId, timeout=timeout)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 53, in checkInitStatus
+    ret=agvCtrl.checkInitSuccess(agvId)
+AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+

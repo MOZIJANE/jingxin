@@ -1,0 +1,374 @@
+[CRITICAL]2021-05-26 13:28:21,068: [modbusApi: 172.16.166.181] execute fcode=1, addr=19 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:28:21,309: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 320, in _read
+    s = self.master.read(mdef.READ_COILS,addr,1)[0]
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:28:21,506: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 320, in _read
+    s = self.master.read(mdef.READ_COILS,addr,1)[0]
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:28:43,823: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:28:44,015: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:28:53,358: invoke <function urlReadDIList at 0x000002730A2BEBF8> cause a error: 'remoteioInfo' object has no attribute 'readDIList'
+pid=864, ppid=8292, tid=3060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 66, in urlReadDIList
+    return ioMgr.readDIList(id)
+  File "..\remoteio\remoteioMgr.py", line 156, in readDIList
+    result=remoteioInfo.readDIList()
+AttributeError: 'remoteioInfo' object has no attribute 'readDIList'
+
+[CRITICAL]2021-05-26 13:30:33,770: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:30:34,360: invoke <function urlReadDIList at 0x000002730A2BEBF8> cause a error: 'remoteioInfo' object has no attribute 'readDIList'
+pid=864, ppid=8292, tid=13276
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 66, in urlReadDIList
+    return ioMgr.readDIList(id)
+  File "..\remoteio\remoteioMgr.py", line 156, in readDIList
+    result=remoteioInfo.readDIList()
+AttributeError: 'remoteioInfo' object has no attribute 'readDIList'
+
+[CRITICAL]2021-05-26 13:30:34,366: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:31:04,516: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:31:04,860: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:32:50,414: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:32:50,719: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:32:54,842: invoke <function urlReadDIList at 0x000002730A2BEBF8> cause a error: 'remoteioInfo' object has no attribute 'readDIList'
+pid=864, ppid=8292, tid=3060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 66, in urlReadDIList
+    return ioMgr.readDIList(id)
+  File "..\remoteio\remoteioMgr.py", line 156, in readDIList
+    result=remoteioInfo.readDIList()
+AttributeError: 'remoteioInfo' object has no attribute 'readDIList'
+
+[CRITICAL]2021-05-26 13:37:26,266: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:37:26,652: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:37:58,800: 3FElevarot readDI fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-26 13:37:59,221: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002730B8C46A8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=864, ppid=8292, tid=12776
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDI('3FElevarot',4)['status']
+  File "..\remoteio\remoteioMgr.py", line 126, in readDI
+    result=remoteioInfo.readDI(index)
+  File "..\remoteio\remoteioMgr.py", line 257, in readDI
+    return self._read(ioAddr)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+

@@ -1,0 +1,30 @@
+[CRITICAL]2021-04-07 15:45:17,383: import main_agv failed, path: agvCtrl cause a error: Expecting property name enclosed in double quotes: line 43 column 5 (char 1096)
+pid=12620, ppid=8300, tid=13796
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 11, in <module>
+    import rotationMgr
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\rotationMgr.py", line 52, in <module>
+    g_agvType = _loadAgvType()
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\rotationMgr.py", line 48, in _loadAgvType
+    aa = json.load(f)
+  File "C:\Python37\lib\json\__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python37\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 43 column 5 (char 1096)
+
+[CRITICAL]2021-04-07 15:45:17,396: import main_agv failed, path: agvCtrl ,cause Expecting property name enclosed in double quotes: line 43 column 5 (char 1096)

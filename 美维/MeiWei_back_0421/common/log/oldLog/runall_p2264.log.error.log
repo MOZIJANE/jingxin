@@ -1,0 +1,730 @@
+[CRITICAL]2021-03-26 13:23:11,375: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=6352
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:14,369: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=7600
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:14,409: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=6352
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:17,381: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=7600
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:17,422: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=6352
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:20,424: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=7600
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:20,443: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=6352
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:23,464: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=7600
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:23,465: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=2264, ppid=20496, tid=6352
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:23:45,811: invoke <function urlElevatoropen at 0x00000212BE9EC9D0> cause a error: timed out
+pid=2264, ppid=20496, tid=26596
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 201, in open
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 150, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "D:\python_work\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-03-26 13:23:45,863: invoke <function urlElevatorstatus at 0x00000212BE9EC5E0> cause a error: timed out
+pid=2264, ppid=20496, tid=15904
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 162, in getStatus
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 150, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "D:\python_work\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-03-26 13:23:49,280: invoke <function urlElevatorstatus at 0x00000212BE9EC5E0> cause a error: index out of range
+pid=2264, ppid=20496, tid=15904
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 162, in getStatus
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 93, in parseResult
+    if ret[5] == RET_STATUS:
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:23:49,281: invoke <function urlElevatoropen at 0x00000212BE9EC9D0> cause a error: index out of range
+pid=2264, ppid=20496, tid=22796
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 201, in open
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 93, in parseResult
+    if ret[5] == RET_STATUS:
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:23:51,621: invoke <function urlElevatorgo at 0x00000212BE9EC3A0> cause a error: 'str' object cannot be interpreted as an integer
+pid=2264, ppid=20496, tid=9456
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 180, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:23:52,177: invoke <function urlElevatorgo at 0x00000212BE9EC3A0> cause a error: 'str' object cannot be interpreted as an integer
+pid=2264, ppid=20496, tid=26596
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 180, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:23:56,159: invoke <function urlElevatorstatus at 0x00000212BE9EC5E0> cause a error: index out of range
+pid=2264, ppid=20496, tid=3184
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 162, in getStatus
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 93, in parseResult
+    if ret[5] == RET_STATUS:
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:23:56,161: invoke <function urlElevatoropen at 0x00000212BE9EC9D0> cause a error: index out of range
+pid=2264, ppid=20496, tid=5900
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 201, in open
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 93, in parseResult
+    if ret[5] == RET_STATUS:
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:23:59,542: invoke <function urlElevatorstatus at 0x00000212BE9EC5E0> cause a error: index out of range
+pid=2264, ppid=20496, tid=5900
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 162, in getStatus
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 93, in parseResult
+    if ret[5] == RET_STATUS:
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:23:59,543: invoke <function urlElevatoropen at 0x00000212BE9EC9D0> cause a error: index out of range
+pid=2264, ppid=20496, tid=9456
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 201, in open
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 93, in parseResult
+    if ret[5] == RET_STATUS:
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:24:05,539: invoke <function urlElevatorstatus at 0x00000212BE9EC5E0> cause a error: index out of range
+pid=2264, ppid=20496, tid=15904
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 162, in getStatus
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 96, in parseResult
+    inFloor = ret[8]
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:24:05,540: invoke <function urlElevatorstatus at 0x00000212BE9EC5E0> cause a error: index out of range
+pid=2264, ppid=20496, tid=22796
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 162, in getStatus
+    res = sendData(ip, port, buf)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 151, in sendData
+    res = parseResult(result)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 96, in parseResult
+    inFloor = ret[8]
+IndexError: index out of range
+
+[CRITICAL]2021-03-26 13:24:06,719: invoke <function urlElevatorgo at 0x00000212BE9EC3A0> cause a error: 'str' object cannot be interpreted as an integer
+pid=2264, ppid=20496, tid=10568
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 180, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:24:11,325: invoke <function urlElevatorgo at 0x00000212BE9EC3A0> cause a error: 'str' object cannot be interpreted as an integer
+pid=2264, ppid=20496, tid=10568
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 180, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:24:15,436: invoke <function urlElevatorgo at 0x00000212BE9EC3A0> cause a error: 'str' object cannot be interpreted as an integer
+pid=2264, ppid=20496, tid=3184
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 180, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+

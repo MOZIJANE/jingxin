@@ -1,0 +1,15 @@
+[CRITICAL]2020-04-26 11:20:46,346: update task error: cause a error: 'NoneType' object has no attribute 'setBackground'
+pid=9632, ppid=9592, tid=128
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 182, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 169, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 118, in updateTask
+    set(i, task["name"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 112, in set
+    setItemColor(rowIndex,col,bgColor = resultColor)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 87, in setItemColor
+    self.table.itemAt(rowIndex,cellIndex).setBackground(PyQt5.QtGui.QBrush(PyQt5.QtGui.QColor(bgColor)))
+AttributeError: 'NoneType' object has no attribute 'setBackground'
+

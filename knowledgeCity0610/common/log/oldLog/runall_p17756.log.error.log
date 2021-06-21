@@ -1,0 +1,42 @@
+[CRITICAL]2021-05-11 12:03:59,981: agvApi send task, agvId=AGV02 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=17756, ppid=12020, tid=17508
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 202, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 251, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 288, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    headData = _recv(agvId,ip, port, 1)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _recv
+    return tcpSocketLong.recv(agvId,ip, port, len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 155, in recv
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 150, in recv
+    return c.recv(len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 94, in recv
+    recvdata = self._socket.recv(remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-11 12:04:30,628: agvApi send task, agvId=AGV02 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=17756, ppid=12020, tid=17508
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 202, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 251, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 288, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 296, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 380, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

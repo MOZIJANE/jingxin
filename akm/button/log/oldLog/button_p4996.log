@@ -1,0 +1,64 @@
+[INFO]2021-06-07 18:09:28,314: log files at C:\Users\Administrator\Desktop\SVN\akm\button\log
+[INFO]2021-06-07 18:09:28,315: add_ignore: taskStatus
+[INFO]2021-06-07 18:12:47,190: tcp server [192.168.252.159][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53533
+[CRITICAL]2021-06-07 18:12:57,240: 192.168.252.159:10001 <--> 192.168.252.159:53533 time out cause a error: <tcpSocket.client object at 0x000002417FA3F898>
+pid=4996, ppid=3600, tid=17816
+Traceback (most recent call last):
+  File "main_button.py", line 40, in _handle
+    data = client.recv(5)
+  File "../common\tcpSocket.py", line 177, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-06-07 18:12:57,278: tcp server [192.168.252.159][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53533
+[WARN]2021-06-07 18:12:57,280: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53533
+[INFO]2021-06-07 18:14:09,450: name=tcplisten.port_10001, pid=4996, tid=8124
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "../common/tcpSocket.py", line 65, in _acceptThread() 
+[03] File "C:/Python37/lib/socket.py", line 212, in accept() 
+
+name=MainThread, pid=4996, tid=3152
+[01] File "main_button.py", line 142, in <module>() 
+[02] File "../common/webutility.py", line 324, in run() 
+[03] File "C:/Python37/lib/site-packages/bottle.py", line 3092, in run() 
+[04] File "../common/utility.py", line 598, in exit() 
+[05] File "../common/enhance.py", line 266, in getTrace() 
+[06] File "../common/enhance.py", line 248, in getThreadStack()
+[INFO]2021-06-07 18:14:09,477: lock info: count 0
+
+try lock info: count 0
+[ERROR]2021-06-07 18:14:09,513: user press Ctrl+C, print thread stack
+[INFO]2021-06-07 18:14:10,514: name=tcplisten.port_10001, pid=4996, tid=8124
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "../common/tcpSocket.py", line 65, in _acceptThread() 
+[03] File "C:/Python37/lib/socket.py", line 212, in accept() 
+
+name=MainThread, pid=4996, tid=3152
+[01] File "main_button.py", line 142, in <module>() 
+[02] File "../common/webutility.py", line 324, in run() 
+[03] File "C:/Python37/lib/site-packages/bottle.py", line 3092, in run() 
+[04] File "../common/utility.py", line 598, in exit() 
+[05] File "../common/enhance.py", line 266, in getTrace() 
+[06] File "../common/enhance.py", line 248, in getThreadStack()
+[INFO]2021-06-07 18:14:10,532: lock info: count 0
+
+try lock info: count 0
+[ERROR]2021-06-07 18:14:10,541: user press Ctrl+C, print thread stack
+[INFO]2021-06-07 18:14:11,101: name=tcplisten.port_10001, pid=4996, tid=8124
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "../common/tcpSocket.py", line 65, in _acceptThread() 
+[03] File "C:/Python37/lib/socket.py", line 212, in accept() 
+
+name=MainThread, pid=4996, tid=3152
+[01] File "main_button.py", line 142, in <module>() 
+[02] File "../common/webutility.py", line 324, in run() 
+[03] File "C:/Python37/lib/site-packages/bottle.py", line 3092, in run() 
+[04] File "../common/utility.py", line 598, in exit() 
+[05] File "../common/enhance.py", line 266, in getTrace() 
+[06] File "../common/enhance.py", line 248, in getThreadStack()
+[INFO]2021-06-07 18:14:11,104: lock info: count 0
+
+try lock info: count 0
+[ERROR]2021-06-07 18:14:11,107: user press Ctrl+C, print thread stack
+[ERROR]2021-06-07 18:14:11,384: user press Ctrl+C, system quit!
+[ERROR]2021-06-07 18:14:11,392: process exited, living 0:04:43.116407 seconds

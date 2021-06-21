@@ -1,0 +1,352 @@
+[INFO]2021-03-26 14:29:46,234: log files at D:\python_work\AKMfloor\common\log
+[INFO]2021-03-26 14:29:46,236: find module account.main_account
+[INFO]2021-03-26 14:29:46,237: find module agvCtrl.main_agv
+[INFO]2021-03-26 14:29:46,239: find module agvDevice.main_agvDevice
+[INFO]2021-03-26 14:29:46,240: find module alarm.main_alarm
+[INFO]2021-03-26 14:29:46,241: find module auth.main_auth
+[INFO]2021-03-26 14:29:46,242: find module door.main_door
+[INFO]2021-03-26 14:29:46,243: find module elevator.main_elevator
+[INFO]2021-03-26 14:29:46,244: find module feed.main_feed
+[INFO]2021-03-26 14:29:46,245: find module menu.main_menu
+[INFO]2021-03-26 14:29:46,246: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-26 14:29:46,247: find module webFront.main_web
+[INFO]2021-03-26 14:29:46,248: find module wmqtt.main_wmqtt
+[INFO]2021-03-26 14:29:46,249: import account.main_account
+[INFO]2021-03-26 14:29:46,588: import agvCtrl.main_agv
+[INFO]2021-03-26 14:29:47,249: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF29D1AE0>>
+[INFO]2021-03-26 14:29:47,253: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF29E1420>>
+[INFO]2021-03-26 14:29:47,404: create lock <lock name:timer.lock_2314766163392,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF2D09F00>>
+[ERROR]2021-03-26 14:29:47,425: mqtt is disabled
+[INFO]2021-03-26 14:29:47,425: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-26 14:29:47,425: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-26 14:29:50,467: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-26 14:29:50,544: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF2F69540>>
+[INFO]2021-03-26 14:29:50,545: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF2F5C900>>
+[INFO]2021-03-26 14:29:51,297: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF301B2A0>>
+[INFO]2021-03-26 14:29:51,911: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF30534B0>>
+[INFO]2021-03-26 14:29:51,914: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF30F42D0>>
+[INFO]2021-03-26 14:29:51,997: charge policy 1 , fix time
+[INFO]2021-03-26 14:29:52,039: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF30F4E70>>
+[INFO]2021-03-26 14:29:52,312: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-03-26 14:29:52,565: create aliveObj ELEVATOR01 电梯离线异常 timeout 30
+[DEBUG]2021-03-26 14:29:52,567: elevator thread start
+[INFO]2021-03-26 14:29:52,660: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 371 ms
+[INFO]2021-03-26 14:29:52,682: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[CRITICAL]2021-03-26 14:29:54,756: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=6960, ppid=20496, tid=14744
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-26 14:29:57,007: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 4347 ms
+[WARNING]2021-03-26 14:29:57,007: MainThread[tid:24140] <lock name:mapMgr.lock,<locked _thread.RLock object owner=24140 count=1 at 0x0000021AF301B2A0>> ,hold 4968 ms
+[INFO]2021-03-26 14:29:57,008: name=MainThread, pid=6960, tid=24140
+[01] File "D:/python_work/AKMfloor/common/run_all.py", line 57, in <module>() 
+[02] File "D:/python_work/AKMfloor/common/run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 991, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 671, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 783, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "D:/python_work/AKMfloor/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "D:/python_work/AKMfloor/common/lock.py", line 122, in _call() 
+[10] File "D:/python_work/AKMfloor/common/lock.py", line 100, in release() 
+[11] File "D:/python_work/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[12] File "D:/python_work/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-26 14:29:57,011: import agvDevice.main_agvDevice
+[INFO]2021-03-26 14:29:57,011: import alarm.main_alarm
+[INFO]2021-03-26 14:29:57,011: import auth.main_auth
+[INFO]2021-03-26 14:29:57,024: import door.main_door
+[INFO]2021-03-26 14:29:57,028: import elevator.main_elevator
+[INFO]2021-03-26 14:29:57,029: import feed.main_feed
+[INFO]2021-03-26 14:29:57,043: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3446C60>>
+[INFO]2021-03-26 14:29:57,046: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3467C00>>
+[CRITICAL]2021-03-26 14:29:58,687: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=6960, ppid=20496, tid=14744
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-26 14:29:58,690: import menu.main_menu
+[INFO]2021-03-26 14:29:58,696: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-26 14:29:58,832: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3C49330>>
+[INFO]2021-03-26 14:29:58,832: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF52874E0>>
+[INFO]2021-03-26 14:29:58,837: import webFront.main_web
+[INFO]2021-03-26 14:29:58,842: import wmqtt.main_wmqtt
+[SUCC]2021-03-26 14:29:58,854: utility start, pid=6960, ppid=20496
+[DEBUG]2021-03-26 14:29:58,854: start timer
+[INFO]2021-03-26 14:29:58,868: load agv file: D:\python_work\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-03-26 14:29:58,869: create lock <lock name:agvList.AGV03.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF52A4120>>
+[DEBUG]2021-03-26 14:29:58,872: create aliveObj AGV03 AGV离线异常 timeout 300
+[INFO]2021-03-26 14:29:58,872: AGV03 start agvList run thread
+[INFO]2021-03-26 14:29:58,873: create lock <lock name:agv.AGV03.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF52A4F90>>
+[DEBUG]2021-03-26 14:29:58,873: try connect AGV03 192.168.20.183:19204
+[INFO]2021-03-26 14:29:58,874: AGV03 start agvList run2 thread
+[INFO]2021-03-26 14:29:58,878: add_ignore: taskStatus
+[INFO]2021-03-26 14:29:58,878: add_ignore: api/elevator/status
+[INFO]2021-03-26 14:29:58,878: add_ignore: scada/getTask
+[INFO]2021-03-26 14:29:58,883: AGV03 connected 192.168.20.183 19204
+[INFO]2021-03-26 14:29:58,884: create lock <lock name:agv.AGV03.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF52A4FC0>>
+[DEBUG]2021-03-26 14:29:58,884: try connect AGV03 192.168.20.183:19205
+[INFO]2021-03-26 14:29:58,896: AGV03 connected 192.168.20.183 19205
+[INFO]2021-03-26 14:29:58,896: create lock <lock name:agv.AGV03.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3EC9030>>
+[DEBUG]2021-03-26 14:29:58,897: try connect AGV03 192.168.20.183:19206
+[INFO]2021-03-26 14:29:58,909: AGV03 connected 192.168.20.183 19206
+[INFO]2021-03-26 14:29:58,910: create lock <lock name:agv.AGV03.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3EC9090>>
+[DEBUG]2021-03-26 14:29:58,912: try connect AGV03 192.168.20.183:19207
+[INFO]2021-03-26 14:29:58,939: AGV03 connected 192.168.20.183 19207
+[INFO]2021-03-26 14:29:58,941: create lock <lock name:agv.AGV03.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3EC9120>>
+[DEBUG]2021-03-26 14:29:58,942: try connect AGV03 192.168.20.183:19208
+[INFO]2021-03-26 14:29:58,948: AGV03 connected 192.168.20.183 19208
+[INFO]2021-03-26 14:29:58,949: create lock <lock name:agv.AGV03.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000021AF3EC9F90>>
+[DEBUG]2021-03-26 14:29:58,951: try connect AGV03 192.168.20.183:19210
+[INFO]2021-03-26 14:29:58,967: AGV03 connected 192.168.20.183 19210
+[INFO]2021-03-26 14:29:58,999: AGV03 current map AKM4F
+[INFO]2021-03-26 14:29:59,148: AGV03 is online
+[WARNING]2021-03-26 14:29:59,208: clear alarm obj=AGV03, typeId=54231, id=605d7d011bc1a36ea1644c97
+[DEBUG]2021-03-26 14:30:00,876: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-03-26 14:30:00,878: scadaTask init client agvApi
+[DEBUG]2021-03-26 14:30:00,881: used 4ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[INFO]2021-03-26 14:30:00,886: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:00,887: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:02,020: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:02,046: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:03,352: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:03,369: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:03,941: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-26 14:30:03,948: used 7ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-03-26 14:30:03,990: timer_thread[tid:19112] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=19112 count=1 at 0x0000021AF3C49330>> ,hold 3129 ms
+[INFO]2021-03-26 14:30:04,132: name=timer_thread, pid=6960, tid=19112
+[01] File "C:/Python38/lib/threading.py", line 870, in run() 
+[02] File "D:/python_work/AKMfloor/common/mytimer.py", line 113, in _loop() 
+[03] File "D:/python_work/AKMfloor/common/lock.py", line 122, in _call() 
+[04] File "D:/python_work/AKMfloor/common/lock.py", line 100, in release() 
+[05] File "D:/python_work/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[06] File "D:/python_work/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-26 14:30:04,582: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:04,594: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:05,240: AGV03 low battery charge,batteryLevel= 0.412 start charge level= 0.500
+[WARNING]2021-03-26 14:30:05,262: AGV03 battery 0.412 check failed: no_idle_6.388
+[INFO]2021-03-26 14:30:05,750: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:05,756: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:06,957: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:06,969: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:08,159: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:08,166: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:09,423: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:09,469: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:10,642: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:10,690: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:11,904: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:11,942: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:13,152: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:13,170: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:14,195: GET: http://192.168.20.48:5551/api/scada/addTask?source=%E5%9B%9B%E6%A5%BCTest1&target=%E4%BA%8C%E6%A5%BC%E5%BA%93%E4%BD%8D addr: 192.168.20.60
+[INFO]2021-03-26 14:30:14,214: Scada send a task to the server from 四楼Test1 to 二楼库位 payloadId: None
+[INFO]2021-03-26 14:30:14,256: create task[605d7f76d7d3a10045e3f22d]: type= scadaTask , 从四楼Test1运送货架到二楼库位 {'source': '四楼Test1', 'target': '二楼库位', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从四楼Test1运送货架到二楼库位', 'createTime': datetime.datetime(2021, 3, 26, 14, 30, 14, 232842), 'updateTime': datetime.datetime(2021, 3, 26, 14, 30, 14, 232842), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('605d7f76d7d3a10045e3f22d')}
+[INFO]2021-03-26 14:30:14,354: task[605d7f76d7d3a10045e3f22d][-] AP13(LM15) -> AP35(LM3) [waiting] is inside False
+[INFO]2021-03-26 14:30:14,367: task cmd: got a task from scada task[605d7f76d7d3a10045e3f22d][-] AP13(LM15) -> AP35(LM3) [waiting]
+[INFO]2021-03-26 14:30:14,386: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:14,427: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:15,571: AGV03 low battery charge,batteryLevel= 0.412 start charge level= 0.500
+[INFO]2021-03-26 14:30:15,619: AGV03 battery 0.412 check success
+[WARNING]2021-03-26 14:30:15,630: AGV03 Can't find charge point at AKM4F battery: 0.412
+[INFO]2021-03-26 14:30:15,660: task[605d7f76d7d3a10045e3f22d]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 3, 26, 14, 30, 15, 642617), 'updateTime': datetime.datetime(2021, 3, 26, 14, 30, 15, 642617), 'status': 'running'}
+[INFO]2021-03-26 14:30:15,673: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:15,674: task: start task[605d7f76d7d3a10045e3f22d][-] AP13(LM15) -> AP35(LM3) [waiting]
+[INFO]2021-03-26 14:30:15,682: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:15,703: task[605d7f76d7d3a10045e3f22d] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 3, 26, 14, 30, 15, 695018)}
+[DEBUG]2021-03-26 14:30:15,805: task[605d7f76d7d3a10045e3f22d][-] AP13(LM15) -> AP35(LM3) [waitForAgv] waiting -> waitForAgv
+[INFO]2021-03-26 14:30:16,909: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:16,938: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:17,137: GET: http://127.0.0.1:5551/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=AP13&mapId=AKM4F&taskId=605d7f76d7d3a10045e3f22d&timeout=10 addr: 127.0.0.1
+[INFO]2021-03-26 14:30:18,164: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:18,211: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:18,682: apply AGV03 ,taskId: 605d7f76d7d3a10045e3f22d ,loc AKM4F.AP13 ,autoLock False , used 1520 ms
+[DEBUG]2021-03-26 14:30:18,833: GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV03&appName=scadaTask&taskId=605d7f76d7d3a10045e3f22d addr: 127.0.0.1
+[DEBUG]2021-03-26 14:30:18,864: lock:  AGV03 taskId 605d7f76d7d3a10045e3f22d app scadaTask
+[INFO]2021-03-26 14:30:19,439: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:19,463: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:19,910: AGV03 clear task finish, cur= AKM4F.LM8 task_status= 4
+[INFO]2021-03-26 14:30:19,941: task[605d7f76d7d3a10045e3f22d][-] AP13(LM15) -> AP35(LM3) [waitForAgv] apply AGV03
+[INFO]2021-03-26 14:30:20,018: task[605d7f76d7d3a10045e3f22d] update info: {'agvId': 'AGV03', 'failMsg': '成功分配小车AGV03,检测顶升下降', 'updateTime': datetime.datetime(2021, 3, 26, 14, 30, 19, 988832)}
+[DEBUG]2021-03-26 14:30:20,038: task[605d7f76d7d3a10045e3f22d][AGV03] AP13(LM15) -> AP35(LM3) [initJackdown] waitForAgv -> initJackdown
+[INFO]2021-03-26 14:30:20,387: task[605d7f76d7d3a10045e3f22d][AGV03] AP13(LM15) -> AP35(LM3) [initJackdown] _jackDown
+[DEBUG]2021-03-26 14:30:20,409: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV03&loc=None&timeoutSec=90
+[DEBUG]2021-03-26 14:30:20,487: GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV03&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-03-26 14:30:20,694: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:20,725: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:21,757: _jack in jackMgr: AGV03 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-03-26 14:30:21,803: AGV03 jack down status:  True
+[DEBUG]2021-03-26 14:30:21,840: [return] use 1431 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV03&loc=None&timeoutSec=90
+[INFO]2021-03-26 14:30:21,888: task[605d7f76d7d3a10045e3f22d] update info: {'failMsg': '前往四楼Test1工位点拉取货架', 'updateTime': datetime.datetime(2021, 3, 26, 14, 30, 21, 880529)}
+[DEBUG]2021-03-26 14:30:21,916: task[605d7f76d7d3a10045e3f22d][AGV03] AP13(LM15) -> AP35(LM3) [startMoveJackup] initJackdown -> startMoveJackup
+[INFO]2021-03-26 14:30:21,965: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:22,002: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:22,320: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV03&agvId=AGV03&appName=scadaTask&direction=None&floorId=AKM4F&isRotate&loc=AKM4F.AP13&location=AP13&p_direction=0.0&pgv_type=1&recognize=False&seer_jackup=JackLoad&taskId=605d7f76d7d3a10045e3f22d_2&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-03-26 14:30:22,444: Begin: AGV03 move from AKM4F.LM8 to AKM4F.AP13 by paths: [('AKM4F', ['LM8', 'LM9', 'LM15', 'AP13'], 8.128000000000002)] task: 605d7f76d7d3a10045e3f22d_2 timeout 86400 used 119 ms
+[DEBUG]2021-03-26 14:30:22,448: task[605d7f76d7d3a10045e3f22d][AGV03] AP13(LM15) -> AP35(LM3) [loadPlayload] startMoveJackup -> loadPlayload
+[INFO]2021-03-26 14:30:23,156: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[DEBUG]2021-03-26 14:30:23,192: agvInfo: AGV03 AKM4F.LM8 move to AKM4F.LM9 ,taskId 605d7f76d7d3a10045e3f22d_2
+[INFO]2021-03-26 14:30:23,192: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:23,194: goTarget {'id': 'LM9'}
+[CRITICAL]2021-03-26 14:30:23,403: agvApi step callback cause a error: 'dict' object is not callable
+pid=6960, ppid=20496, tid=6368
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[INFO]2021-03-26 14:30:24,365: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:24,367: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:25,456: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:25,459: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:25,840: AGV03 low battery charge,batteryLevel= 0.412 start charge level= 0.500
+[WARNING]2021-03-26 14:30:25,843: AGV03 battery 0.412 check failed: isLocked
+[INFO]2021-03-26 14:30:26,536: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:26,538: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:27,614: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:27,614: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:28,737: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:28,738: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:29,836: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:29,836: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:30,915: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:30,916: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:31,998: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:32,000: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:33,083: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:33,084: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:30:34,164: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:34,165: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:34,995: AGV03 turn to wait check cur LM8 next LM15 0.653 False
+[INFO]2021-03-26 14:30:35,240: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:35,240: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:35,574: agvInfo: AGV03 AKM4F.LM8 move to AKM4F.LM15 ,taskId 605d7f76d7d3a10045e3f22d_2
+[INFO]2021-03-26 14:30:35,575: goTarget {'id': 'LM15'}
+[CRITICAL]2021-03-26 14:30:35,753: agvApi step callback cause a error: 'dict' object is not callable
+pid=6960, ppid=20496, tid=6368
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[WARNING]2021-03-26 14:30:35,880: AGV03 low battery charge,batteryLevel= 0.412 start charge level= 0.500
+[WARNING]2021-03-26 14:30:35,880: AGV03 battery 0.412 check failed: isLocked
+[DEBUG]2021-03-26 14:30:35,941: AGV03 set loc AKM4F.LM9 ,old LM8 (-9.99,-4.43)
+[DEBUG]2021-03-26 14:30:36,310: AGV03 choise next pos cur LM9 next AP13 pre LM15 2.200 False
+[DEBUG]2021-03-26 14:30:36,310: AGV03 turn to wait check cur LM9 next AP13 2.200 False
+[INFO]2021-03-26 14:30:36,320: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:36,322: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:30:36,865: agvInfo: AGV03 AKM4F.LM9 move jackup to AKM4F.AP13 ,taskId 605d7f76d7d3a10045e3f22d_2
+[CRITICAL]2021-03-26 14:30:37,373: agvApi step callback cause a error: 'dict' object is not callable
+pid=6960, ppid=20496, tid=6368
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[INFO]2021-03-26 14:30:37,467: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:37,476: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:38,080: AGV03 waitFinish: loc is diff LM9 AP13 task_status= 2
+[INFO]2021-03-26 14:30:38,561: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:38,563: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:38,583: AGV03 waitFinish: loc is diff LM9 AP13 task_status= 2
+[WARNING]2021-03-26 14:30:39,084: AGV03 waitFinish: loc is diff LM9 AP13 task_status= 2
+[WARNING]2021-03-26 14:30:39,585: AGV03 waitFinish: loc is diff LM9 AP13 task_status= 2
+[INFO]2021-03-26 14:30:39,631: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:39,632: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:30:40,087: AGV03 waitFinish: loc is diff LM9 AP13 task_status= 2
+[WARNING]2021-03-26 14:30:40,589: AGV03 waitFinish: loc is diff LM9 AP13 task_status= 2
+[INFO]2021-03-26 14:30:40,700: result: inbuf[12] AB 66 00 00 05 81 00 00 04 04 72 03
+[INFO]2021-03-26 14:30:40,700: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 4, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}

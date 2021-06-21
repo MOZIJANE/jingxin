@@ -1,0 +1,2195 @@
+[CRITICAL]2021-05-12 14:59:13,141: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 14:59:29,119: upStation01 init failed cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 175, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 14:59:34,950: [modbusApi: 172.16.167.221] execute fcode=1, addr=8256 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=18384
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 14:59:35,868: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=18384
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 14:59:35,961: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=18384
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 14:59:45,369: downStation01 init failed cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'downStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 175, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'downStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 14:59:55,856: [modbusApi: 172.16.167.220] execute fcode=1, addr=8256 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=17908
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 14:59:56,233: downStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=17908
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 14:59:56,387: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=17908
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 314, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:01,786: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 15:00:04,619: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:00:08,026: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=5292
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:08,132: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=5292
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:23,109: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 15:00:25,142: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:00:29,174: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=13280
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:29,182: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=13280
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:40,167: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 15:00:42,184: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:00:50,203: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=5292
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:50,209: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=5292
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:00:57,202: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 15:00:59,220: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:01:11,233: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=12676
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:01:11,240: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=12676
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:01:14,234: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 15:01:16,263: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:01:31,288: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-05-12 15:01:32,274: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=17480
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:01:32,288: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=17480
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:01:33,314: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:01:43,853: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:01:53,297: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=13280
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:01:53,303: invoke <function urlReadDOList at 0x00000170710829D8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=10312, ppid=18768, tid=13280
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\remoteio\main_remoteio.py", line 87, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 158, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 262, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 311, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-05-12 15:01:54,402: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:02:05,492: check charge finish cause a error: 当前小车的位置为空,agvId=Jiaju-AGV
+pid=10312, ppid=18768, tid=3348
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 234, in onCheckCharge
+    goHome(agv.agvId,force=False)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1328, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 1193, in move
+    raise Exception("当前小车的位置为空,agvId="+agv.agvId)
+Exception: 当前小车的位置为空,agvId=Jiaju-AGV
+
+[CRITICAL]2021-05-12 15:02:11,373: agvApi send task, agvId=1F-ChaChe-AGV cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=13124
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 300, in sendCmd
+    headData = _recv(agvId,ip, port, 1)
+  File "..\driver\seerAgv\agvApi.py", line 384, in _recv
+    return tcpSocketLong.recv(agvId,ip, port, len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 155, in recv
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 150, in recv
+    return c.recv(len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 94, in recv
+    recvdata = self._socket.recv(remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:03:08,455: readStatus1, agvId:Jiaju-AGV cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 896, in _checkReloc
+    self._confirmReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 465, in _confirmReloc
+    agvCtrl.confirmReloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 63, in confirmReloc
+    data= agvApi.ctrl(agvId,"robot_control_comfirmloc_req",None)
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:04:13,473: invoke <function urlJackup at 0x00000170721B1488> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=18736
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 59, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 302, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 252, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 224, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:04:13,487: task[609b7da873dabd28489a6f1c][1F-ChaChe-AGV] AP143(LM118) -> AP142(LM120) [loadPlayload_jackup] jackup cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=5552
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 867, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:05:19,919: invoke <function urlJackdown at 0x00000170721B1840> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=13280
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 73, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 29, in jackDown
+    return _jack(agvId=agvId, timeout=timeout, action="down", successfulNum=1)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 102, in _jack
+    status = agvCtrl.jackDownStatus(agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 363, in jackDownStatus
+    return forkDownStatus(agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 192, in forkDownStatus
+    status = readIOs(agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 818, in readIOs
+    data = agvApi.status(agvId, "robot_status_io_req", None)
+  File "..\driver\seerAgv\agvApi.py", line 196, in status
+    return _handle(agvId, API_PORT_STATE, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 300, in sendCmd
+    headData = _recv(agvId,ip, port, 1)
+  File "..\driver\seerAgv\agvApi.py", line 384, in _recv
+    return tcpSocketLong.recv(agvId,ip, port, len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 155, in recv
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 150, in recv
+    return c.recv(len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 94, in recv
+    recvdata = self._socket.recv(remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:05:20,209: task[609b7da873dabd28489a6f1c][1F-ChaChe-AGV] AP143(LM118) -> AP142(LM120) [dropPayloadJackdown] jackDown cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=5552
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 881, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:05:22,687: invoke <function urlJackdown at 0x00000170721B1840> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=5292
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 73, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 336, in jackDown
+    _forkDownOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 256, in _forkDownOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height": 0})
+  File "..\driver\seerAgv\agvApi.py", line 224, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:05:22,832: task[609b7da873dabd28489a6f1c][1F-ChaChe-AGV] AP143(LM118) -> AP142(LM120) [dropPayloadJackdown] jackDown cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=5552
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 881, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:05:29,700: agvApi send task, agvId=1F-ChaChe-AGV cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=13124
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-12 15:06:22,027: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:23,366: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:24,157: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:25,051: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:25,859: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:26,643: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:27,574: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:28,506: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:29,321: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:30,094: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:30,991: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:31,889: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:32,709: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:33,489: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:34,445: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:35,229: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:36,143: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:37,031: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:37,895: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:39,246: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:40,102: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:40,901: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:41,867: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:42,732: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:43,525: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:44,411: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:45,181: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:46,073: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:46,960: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:47,788: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:48,785: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:49,511: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:50,319: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:51,268: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:52,074: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:52,854: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:53,854: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:54,762: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:55,584: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:56,465: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:57,330: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:58,272: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:06:59,152: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:07:00,013: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:07:00,815: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:07:01,880: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:07:02,696: readStatus1, agvId:Jiaju-AGV cause a error: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+pid=10312, ppid=18768, tid=15136
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 866, in readStatus1
+    self._checkReloc()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 893, in _checkReloc
+    self._relocHome()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 449, in _relocHome
+    agvCtrl.reloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 50, in reloc
+    agvApi.ctrl(agvId,"robot_control_reloc_req",{"home":True})
+  File "..\driver\seerAgv\agvApi.py", line 191, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: Jiaju-AGV执行2002错误,code=41003,msg=no robot home in param settings
+
+[CRITICAL]2021-05-12 15:11:58,797: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17908
+
+[CRITICAL]2021-05-12 15:11:58,880: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17908
+
+[CRITICAL]2021-05-12 15:11:58,991: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17908
+
+[CRITICAL]2021-05-12 15:11:59,150: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17908
+
+[CRITICAL]2021-05-12 15:11:59,294: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17908
+
+[CRITICAL]2021-05-12 15:11:59,339: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609b7fbc73dabd28489a6f22', 'loc', 'AP143')
+pid=10312, ppid=18768, tid=17908
+
+[CRITICAL]2021-05-12 15:12:09,829: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=18736
+
+[CRITICAL]2021-05-12 15:12:09,933: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=18736
+
+[CRITICAL]2021-05-12 15:12:10,087: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=18736
+
+[CRITICAL]2021-05-12 15:12:10,173: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=18736
+
+[CRITICAL]2021-05-12 15:12:10,272: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=18736
+
+[CRITICAL]2021-05-12 15:12:10,318: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609b7fbc73dabd28489a6f22', 'loc', 'AP143')
+pid=10312, ppid=18768, tid=18736
+
+[CRITICAL]2021-05-12 15:12:20,797: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17852
+
+[CRITICAL]2021-05-12 15:12:20,881: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17852
+
+[CRITICAL]2021-05-12 15:12:20,986: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17852
+
+[CRITICAL]2021-05-12 15:12:21,090: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17852
+
+[CRITICAL]2021-05-12 15:12:21,188: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP143找不到可用的小车
+pid=10312, ppid=18768, tid=17852
+
+[CRITICAL]2021-05-12 15:12:21,233: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '609b7fbc73dabd28489a6f22', 'loc', 'AP143')
+pid=10312, ppid=18768, tid=17852
+
+[CRITICAL]2021-05-12 15:12:52,322: agvApi send task, agvId=1F-ChaChe-AGV cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=10312, ppid=18768, tid=13124
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

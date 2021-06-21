@@ -1,0 +1,13 @@
+[CRITICAL]2021-04-25 17:09:18,383: taskFunc2:task[6085318b138c41f78d84dbf0][AGV30] 6(1) -> 7(8) [startMoveJackup] cause a error: '6085318b138c41f78d84dbf0'
+pid=8688, ppid=14152, tid=10548
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 618, in _taskFunc
+    elif not self.handle():
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 484, in handle
+    log.info("******************Â·¾¶ÐÅÏ¢***************£º",toolsUtil.getTaskPath(self.taskId))
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\utils\toolsUtil.py", line 31, in getTaskPath
+    return g_taskPath[tid]
+KeyError: '6085318b138c41f78d84dbf0'
+

@@ -1,0 +1,288 @@
+#coding=utf-8
+# ycat			2018-10-03	  create 
+import rospy
+import genpy
+import tf
+import tf2_ros
+import threading
+import time
+import setup
+if __name__ == '__main__':
+	setup.setCurPath(__file__)
+import utility
+import log  
+
+# x=roll  y=pitch  z=yaw 
+def quaternion_from_euler(x,y,z):
+	return tf.transformations.quaternion_from_euler(x, y, z) 
+	
+def quaternion_from_yaw(z):
+	return quaternion_from_euler(0, 0, z) 
+
+def euler_from_quaternion(q):
+	return tf.transformations.euler_from_quaternion(q)
+	
+def euler_from_quaternion2(x,y,z,w):
+	q = [x,y,z,w]
+	return euler_from_quaternion(q)
+	
+def yaw_from_quaternion(q):
+	return euler_from_quaternion(q)[2]
+	
+g_publisher = None
+g_static_publisher = None
+g_listener = None
+	
+def _getPub():
+	global g_publisher
+	if g_publisher is None:
+		g_publisher = publisher()
+	return g_publisher
+	
+	
+def _getStaticPub():
+	global g_static_publisher
+	if g_static_publisher is None:
+		g_static_publisher = staticPublisher()
+	return g_static_publisher	
+	
+	
+def _getListen():
+	global g_listener
+	if g_listener  is None:
+		g_listener = subscriber()
+	return g_listener
+	 
+	
+def send2D(x,y,r,parent,child,time=None):
+	return _getPub().send2D(x,y,r,parent,child,time)
+	
+def send3D(pos,angles,parent,child,time=None):
+	return _getPub().send3D(pos,angles,parent,child,time)
+	
+def sendStatic2D(pos,angles,parent,child,hz=10):
+	return _getStaticPub().send2D(pos,angles,parent,child,time)
+
+def sendStatic3D(pos,angles,parent,child,hz=10):
+	return _getStaticPub().send3D(pos,angles,parent,child)
+	
+def lookup2D(source, target):
+	return _getListen().lookup2D(source,target)
+	
+def lookup3D(source, target):
+	return _getListen().lookup3D(source,target)
+	
+def wait(source,target,second):
+	return _getListen().wait(source,target,second)
+	
+def canTransform(source, target):
+	return _getListen().canTransform(source,target) == 1
+	
+	
+class publisher:
+	def __init__(self):
+		import tf2_ros 
+		self.imp = None  
+	
+	# tf assumes that all transforms move from parent to child
+	#发送2维的变换矩阵 
+	#从parent转换到child的变换 
+	#可以通过命令： rosrun tf tf_echo <parent> <child>
+	def send2D(self,x,y,r,parent,child,time=None):
+		return self.send3D((x,y,0),(0,0,r),parent=parent,child=child,time=time)
+		
+	def send3D(self,pos,angles,parent,child,time=None):
+		assert 3 == len(pos)
+		assert 3 == len(angles)
+		import geometry_msgs
+		if time is None:
+			time = rospy.Time.now() 
+		else: 
+			assert isinstance(time,rospy.Time) or isinstance(time,genpy.rostime.Time)  
+		if self.imp is None:
+			self.imp = tf2_ros.TransformBroadcaster() 
+		t = geometry_msgs.msg.TransformStamped() 
+		t.header.stamp = time
+		t.header.frame_id = parent
+		t.child_frame_id = child
+		t.transform.translation.x = pos[0]
+		t.transform.translation.y = pos[1]
+		t.transform.translation.z = pos[2]
+		q = quaternion_from_euler(*angles)
+		t.transform.rotation.x = q[0]
+		t.transform.rotation.y = q[1]
+		t.transform.rotation.z = q[2]
+		t.transform.rotation.w = q[3] 
+		self.imp.sendTransform(t) 
+		
+
+class staticPublisher:
+	def __init__(self,hz=10.):
+		self.imp = None 
+		self.thread = None
+		self.timeout = 1./hz
+		self.buffer = {}
+		
+	def send2D(self,x,y,r,parent,child):
+		return self.sendStatic3D((x,y,0),(0,0,r),parent=parent,child=child)
+		
+	def send3D(self,pos,angles,parent,child,hz=10):
+		import geometry_msgs
+		if self.imp is None:
+			self.imp = tf2_ros.StaticTransformBroadcaster()
+			self.thread = threading.Thread(target=self._threadFunc)
+			self.thread.start()
+			
+		key = parent+"->"+child
+		if key not in self.buffer:
+			s = geometry_msgs.msg.TransformStamped()
+			s.header.frame_id = parent
+			s.child_frame_id = child 
+			s.transform.translation.x = pos[0]
+			s.transform.translation.y = pos[1]
+			s.transform.translation.z = pos[2] 
+			quat = quaternion_from_euler(*angles)
+			s.transform.rotation.x = quat[0]
+			s.transform.rotation.y = quat[1]
+			s.transform.rotation.z = quat[2]
+			s.transform.rotation.w = quat[3]
+			self.buffer[key] = s
+		#else:
+		#	s = self.buffer[key]
+		#s.header.stamp = rospy.Time.now()
+		#self.imp.sendTransform(s)
+		
+	def _threadFunc(self):
+		while not utility.is_exited():
+			for s in self.buffer.values():
+				s.header.stamp = rospy.Time.now()
+				self.imp.sendTransform(s)
+			time.sleep(self.timeout)
+			
+	
+	
+#TF还有些自动转换消息的函数未封装，可以把消息里的header.frame_id和当前的frame进行映射 
+#'transformPoint', 'transformPointCloud', 'transformPose', 'transformQuaternion', 'transformVector3' 
+class subscriber:
+	def __init__(self):
+		import tf2_ros 
+		self.buf = tf2_ros.Buffer()
+		self.imp = tf2_ros.TransformListener(self.buf)  
+		
+	def canTransform(self,source, target):
+		return self.buf.can_transform(source,target,rospy.Time(0))
+	
+	#查找2维的变换，返回x,y,rad
+	def lookup2D(self,source, target, time=None):
+		ret = self.lookup3D(source,target,time)
+		if ret is None:
+			return None 
+		return ret[0][0],ret[0][1],ret[1][2]
+		
+	#查找3维的变换，返回(x,y,z) (r1,r2,r3)
+	def lookup3D(self,source, target, time=None):
+		if time is None:
+			# Providing rospy.Time(0) will just get us the latest available transform.  
+			time = rospy.Time(0) 
+		else: 
+			assert isinstance(time,rospy.Time) or isinstance(time,genpy.rostime.Time)
+		try:
+			trans = self.buf.lookup_transform(source,target,rospy.Time(0)) 
+			rot = trans.transform.rotation  
+			angles = euler_from_quaternion2(rot.x,rot.y,rot.z,rot.w)
+			t = trans.transform.translation
+			return ((t.x,t.y,t.z),angles)
+		except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
+			log.error("lookup tf",str(e))
+		return None  
+		
+	def wait(self,source, target, second):  
+		for i in range(second):
+			if self.canTransform(source,target):
+				return True
+			time.sleep(1)
+		return False
+		
+	
+############ unit test ############
+def teststatic():
+	import time,math
+	for i in range(100):
+		#sendStatic(10,-0.2,math.pi/3.,"base_link","ycat") 
+		send2D(10,-0.2,math.pi/3.,"base_link","ycat") 
+		print("send tf")
+		time.sleep(1)
+	assert 0
+		
+	
+def testclient():
+	l = subscriber()
+	b = publisher()
+	
+	t = utility.ticks()
+	assert not l.wait("world","ycat",None,2)
+	assert (utility.ticks() - t) > 1900
+	
+	for i in range(3):
+		b.send2D(5,10,3.14/4,"ycat","world")
+		
+		time.sleep(0.4)
+		l.wait("world","ycat",None,2)
+		ret = l.lookup2D("ycat","world") 
+		assert utility.equal(ret[0],5.0,floatDiff=0.1)
+		assert utility.equal(ret[1],10.0,floatDiff=0.1)
+		assert utility.equal(ret[2],0.785,floatDiff=0.1) 
+		
+		#没搞明白为什么来去的偏移量不一样 
+		ret = l.lookup2D("world","ycat") 
+		assert utility.equal(ret[0],-10.605,floatDiff=0.1)
+		assert utility.equal(ret[1],-3.5397,floatDiff=0.1)
+		assert utility.equal(ret[2],-0.785,floatDiff=0.1) 
+	now = rospy.Time.now()
+	past = now - rospy.Duration(1.0) 
+	ret = l.lookup2DFull("ycat","world",past,now,"world")
+	print(ret)
+	assert utility.equal(ret[0],-10.605,floatDiff=0.1)
+	assert utility.equal(ret[1],-3.5397,floatDiff=0.1)
+	assert utility.equal(ret[2],-0.785,floatDiff=0.1) 
+	
+	
+if __name__ == "__main__": 	
+	import ros2.rosUtility
+	
+	utility.start() 
+	ros2.rosUtility.init("ycattest2")
+	teststatic()
+	testclient() 
+
+	
+	
+#base_link
+#
+#The coordinate frame called base_link is rigidly attached to the mobile robot base. The base_link can be attached to the base in any arbitrary position or orientation; for every hardware platform there will be a different place on the base that provides an obvious point of reference. Note that REP 103 [1] specifies a preferred orientation for frames.
+#
+#odom
+#
+#The coordinate frame called odom is a world-fixed frame. The pose of a mobile platform in the odom frame can drift over time, without any bounds. This drift makes the odom frame useless as a long-term global reference. However, the pose of a robot in the odom frame is guaranteed to be continuous, meaning that the pose of a mobile platform in the odom frame always evolves in a smooth way, without discrete jumps.
+#
+#In a typical setup the odom frame is computed based on an odometry source, such as wheel odometry, visual odometry or an inertial measurement unit.
+#
+#The odom frame is useful as an accurate, short-term local reference, but drift makes it a poor frame for long-term reference.
+#
+#map
+#
+#The coordinate frame called map is a world fixed frame, with its Z-axis pointing upwards. The pose of a mobile platform, relative to the map frame, should not significantly drift over time. The map frame is not continuous, meaning the pose of a mobile platform in the map frame can change in discrete jumps at any time.
+#
+#In a typical setup, a localization component constantly re-computes the robot pose in the map frame based on sensor observations, therefore eliminating drift, but causing discrete jumps when new sensor information arrives.
+#
+#The map frame is useful as a long-term global reference, but discrete jumps in position estimators make it a poor reference frame for local sensing and acting.	
+#	
+	
+	
+	
+	
+	
+	
+	
+	
+	

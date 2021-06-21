@@ -1,0 +1,17 @@
+[CRITICAL]2021-03-29 08:57:50,726: invoke <function urlAddTask at 0x000002589A345730> cause a error: 'NoneType' object is not subscriptable
+pid=12856, ppid=3960, tid=11116
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\main_scadaCtrl.py", line 79, in urlAddTask
+    return {"taskId" : runTasks.addTask(source,target,payloadId,priority)}
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 81, in addTask
+    task = scadaTask(source,target,payloadId,int(priority))
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 237, in __init__
+    log.info(self,"is inside",self.isInside)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 312, in isInside
+    return self.s_info["floorId"] == "fp-neiwei"
+TypeError: 'NoneType' object is not subscriptable
+

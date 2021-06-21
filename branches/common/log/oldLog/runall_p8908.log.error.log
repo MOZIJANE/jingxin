@@ -1,0 +1,114 @@
+[CRITICAL]2021-05-11 15:48:12,211: invoke <function urlJackup at 0x00000257AC8FDD90> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+pid=8908, ppid=10360, tid=11472
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 32, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 328, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 159, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 229, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 257, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 295, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 321, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 372, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+
+[CRITICAL]2021-05-11 15:48:12,668: task[609a367958b7255c2a827b11][AGV02] AP143(LM118) -> AP101(LM145) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+pid=8908, ppid=10360, tid=8376
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 914, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+
+[CRITICAL]2021-05-11 15:48:15,674: invoke <function urlJackup at 0x00000257AC8FDD90> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+pid=8908, ppid=10360, tid=14060
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 32, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 328, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 159, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 229, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 257, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 295, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 321, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 372, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+
+[CRITICAL]2021-05-11 15:48:16,023: task[609a367958b7255c2a827b11][AGV02] AP143(LM118) -> AP101(LM145) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+pid=8908, ppid=10360, tid=8376
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 914, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+
+[CRITICAL]2021-05-11 15:48:19,658: invoke <function urlJackup at 0x00000257AC8FDD90> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+pid=8908, ppid=10360, tid=7208
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 32, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout, loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 328, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 159, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"height":1})
+  File "..\driver\seerAgv\agvApi.py", line 229, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 257, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 295, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 321, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 372, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+
+[CRITICAL]2021-05-11 15:48:20,068: task[609a367958b7255c2a827b11][AGV02] AP143(LM118) -> AP101(LM145) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+pid=8908, ppid=10360, tid=8376
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 914, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40101,msg=param: robot in emc state
+

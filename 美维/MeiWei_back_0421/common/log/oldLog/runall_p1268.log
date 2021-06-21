@@ -1,0 +1,26 @@
+[INFO]2021-06-10 22:18:39,277: log files at C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\log
+[INFO]2021-06-10 22:18:39,280: find module account.main_account
+[INFO]2021-06-10 22:18:39,282: find module agvCtrl.main_agv
+[INFO]2021-06-10 22:18:39,284: find module agvDevice.main_agvDevice
+[INFO]2021-06-10 22:18:39,286: find module akmCtrl.main_akmCtrl
+[INFO]2021-06-10 22:18:39,288: find module alarm.main_alarm
+[INFO]2021-06-10 22:18:39,290: find module auth.main_auth
+[INFO]2021-06-10 22:18:39,295: find module elevator.main_elevator
+[INFO]2021-06-10 22:18:39,297: find module feed.main_feed
+[INFO]2021-06-10 22:18:39,299: find module remoteio.main_remoteio
+[INFO]2021-06-10 22:18:39,300: import account.main_account
+[INFO]2021-06-10 22:18:39,622: import agvCtrl.main_agv
+[CRITICAL]2021-06-10 22:18:40,388: import main_agv failed, path: agvCtrl cause a error: No module named 'door'
+pid=1268, ppid=22352, tid=15160
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\agvCtrl\mapMgr.py", line 19, in <module>
+    import doorMgr
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\agvCtrl\doorMgr.py", line 21, in <module>
+    import door.switchMgr as switchMgr
+ModuleNotFoundError: No module named 'door'
+
+[CRITICAL]2021-06-10 22:18:40,391: import main_agv failed, path: agvCtrl ,cause No module named 'door'

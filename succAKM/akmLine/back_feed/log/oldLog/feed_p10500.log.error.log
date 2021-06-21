@@ -1,0 +1,17 @@
+[CRITICAL]2020-09-08 13:25:37,151: taskFunc2:<__main__.feed object at 0x000001FDA13A5040> cause a error: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'setDOs'
+pid=10500, ppid=16060, tid=13964
+Traceback (most recent call last):
+  File "E:\python_work\znzz_office\feed\runTasknanqu.py", line 208, in _taskFunc
+    elif not self.handle():
+  File "E:\python_work\znzz_office\feed\runTasknanqu.py", line 245, in handle
+    if not self._jackDown():	 ##  seer don't need jackdown
+  File "E:\python_work\znzz_office\feed\runTasknanqu.py", line 423, in _jackDown
+    ret = jackApi.jackDownCattle(self.agvId)
+  File "./..\agvDevice\jackApi.py", line 54, in jackDownCattle
+    return _jack('/api/agv/jackDownCattle', agvId,timeoutSec)
+  File "./..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "./..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'setDOs'
+

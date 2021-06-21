@@ -1,0 +1,37 @@
+[INFO]2020-07-16 10:46:58,066: log files at E:\python_work\akm_office\door\log
+[SUCC]2020-07-16 10:46:58,068: utility start, pid=3108, ppid=25204
+[INFO]2020-07-16 10:46:58,069: create lock <lock name:timer.lock_2156496683744,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F619380300>>
+[DEBUG]2020-07-16 10:46:58,070: start timer
+[INFO]2020-07-16 10:46:58,072: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:47:00,097: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=3108, ppid=25204, tid=2760
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:47:02,106: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:47:04,131: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=3108, ppid=25204, tid=2760
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:47:06,151: open the door 192.168.252.195

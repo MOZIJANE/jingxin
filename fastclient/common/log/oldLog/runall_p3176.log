@@ -1,0 +1,877 @@
+[INFO]2021-03-16 14:26:42,473: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-16 14:26:42,474: find module account.main_account
+[INFO]2021-03-16 14:26:42,474: find module agvDevice.main_agvDevice
+[INFO]2021-03-16 14:26:42,475: find module alarm.main_alarm
+[INFO]2021-03-16 14:26:42,475: find module auth.main_auth
+[INFO]2021-03-16 14:26:42,476: find module feed.main_feed
+[INFO]2021-03-16 14:26:42,476: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-16 14:26:42,476: find module scadaCtrlEle.main_scadaCtrl
+[INFO]2021-03-16 14:26:42,477: import account.main_account
+[ERROR]2021-03-16 14:26:42,553: mongo db is disabled
+[INFO]2021-03-16 14:26:42,556: import agvDevice.main_agvDevice
+[INFO]2021-03-16 14:26:42,557: import alarm.main_alarm
+[INFO]2021-03-16 14:26:42,649: create lock <lock name:timer.lock_1707953714736,<unlocked _thread.RLock object owner=0 count=0 at 0x0000018DA9F4D648>>
+[ERROR]2021-03-16 14:26:42,659: mqtt is disabled
+[INFO]2021-03-16 14:26:42,660: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-16 14:26:42,661: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-16 14:26:42,693: import auth.main_auth
+[INFO]2021-03-16 14:26:42,699: import feed.main_feed
+[INFO]2021-03-16 14:26:42,705: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000018DAA0F0968>>
+[INFO]2021-03-16 14:26:42,707: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000018DAA0F0D50>>
+[INFO]2021-03-16 14:26:42,792: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-16 14:26:42,812: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000018DAA1BCC10>>
+[INFO]2021-03-16 14:26:42,922: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000018DAA1BCCB0>>
+[INFO]2021-03-16 14:26:42,924: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000018DAA1BC940>>
+[INFO]2021-03-16 14:26:45,932: Mongodb connect to 127.0.0.1 port 27017
+[WARNING]2021-03-16 14:26:45,971: MainThread[tid:10328] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=10328 count=1 at 0x0000018DAA1BCCB0>> ,hold 3046 ms
+[INFO]2021-03-16 14:26:45,981: name=MainThread, pid=3176, tid=10328
+[01] File "run_all.py", line 57, in <module>() 
+[02] File "run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/main_scadaCtrl.py", line 18, in <module>() 
+[09] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[10] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[11] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[12] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[13] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[14] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 1129, in <module>() 
+[15] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 995, in __init__() 
+[16] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[17] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[18] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[19] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-16 14:26:45,990: import scadaCtrlEle.main_scadaCtrl
+[SUCC]2021-03-16 14:26:46,008: utility start, pid=3176, ppid=1892
+[DEBUG]2021-03-16 14:26:46,010: start timer
+[INFO]2021-03-16 14:26:46,017: add_ignore: taskStatus
+[INFO]2021-03-16 14:26:46,019: add_ignore: api/elevator/status
+[INFO]2021-03-16 14:26:46,021: add_ignore: scada/getTask
+[CRITICAL]2021-03-16 14:26:48,073: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:26:51,162: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:26:54,223: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:26:57,296: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:00,373: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:03,451: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:06,532: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:09,624: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:12,693: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:15,767: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:18,850: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:21,943: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:25,022: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:28,100: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:31,192: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:34,265: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:37,341: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:40,406: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:43,463: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:46,538: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:49,620: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:52,702: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:55,769: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:27:58,853: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:01,916: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:04,983: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:08,069: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:11,149: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:14,223: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:17,306: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:20,397: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:23,451: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:26,519: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:29,592: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:32,657: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:39,088: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:42,156: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:45,263: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:48,366: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:51,440: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:54,505: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:28:57,589: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:00,663: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:03,751: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:06,822: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:09,904: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:12,986: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:16,056: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:19,131: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:22,217: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:25,285: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:28,371: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:31,447: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:34,532: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:37,601: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:40,685: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:43,749: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:46,808: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:49,880: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:52,953: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:56,031: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:29:59,117: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:02,199: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:05,271: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:08,355: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:11,446: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:14,512: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:17,566: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:20,669: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:23,772: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:26,862: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:29,951: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:33,051: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:36,124: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+
+[CRITICAL]2021-03-16 14:30:39,191: agvApi.init cause a error: local variable 'f' referenced before assignment
+pid=3176, ppid=1892, tid=9644
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 110, in http_get
+    buffer = f.read()
+UnboundLocalError: local variable 'f' referenced before assignment
+

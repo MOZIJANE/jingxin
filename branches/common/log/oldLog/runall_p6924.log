@@ -1,0 +1,94 @@
+[INFO]2021-03-31 10:15:47,851: log files at C:\Users\Administrator\Desktop\SVN\branches\common\log
+[INFO]2021-03-31 10:15:47,852: find module account.main_account
+[INFO]2021-03-31 10:15:47,853: find module agvCtrl.main_agv
+[INFO]2021-03-31 10:15:47,854: find module agvDevice.main_agvDevice
+[INFO]2021-03-31 10:15:47,855: find module alarm.main_alarm
+[INFO]2021-03-31 10:15:47,855: find module auth.main_auth
+[INFO]2021-03-31 10:15:47,856: find module door.main_door
+[INFO]2021-03-31 10:15:47,857: find module elevator.main_elevator
+[INFO]2021-03-31 10:15:47,857: find module feed.main_feed
+[INFO]2021-03-31 10:15:47,858: find module menu.main_menu
+[INFO]2021-03-31 10:15:47,858: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-31 10:15:47,859: find module webFront.main_web
+[INFO]2021-03-31 10:15:47,859: find module wmqtt.main_wmqtt
+[INFO]2021-03-31 10:15:47,859: import account.main_account
+[INFO]2021-03-31 10:15:48,009: import agvCtrl.main_agv
+[INFO]2021-03-31 10:15:48,857: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A933AF8F0>>
+[INFO]2021-03-31 10:15:48,861: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A933AFAA8>>
+[INFO]2021-03-31 10:15:49,018: create lock <lock name:timer.lock_2794202636360,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A93700508>>
+[ERROR]2021-03-31 10:15:49,037: mqtt is disabled
+[INFO]2021-03-31 10:15:49,038: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-31 10:15:49,039: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-31 10:15:52,178: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-31 10:15:52,223: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A91A038A0>>
+[WARNING]2021-03-31 10:15:52,235: use mockAgvCtrl
+[INFO]2021-03-31 10:15:52,241: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A91D967D8>>
+[INFO]2021-03-31 10:15:52,599: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A93B93850>>
+[INFO]2021-03-31 10:15:52,605: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A93BB0A80>>
+[INFO]2021-03-31 10:15:52,670: charge policy 1 , fix time
+[INFO]2021-03-31 10:15:52,708: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A93BB0D78>>
+[INFO]2021-03-31 10:15:53,018: start load map C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\projects\test\comba-ZSC-F1-F3.smap
+[DEBUG]2021-03-31 10:15:58,395: elevator thread start
+[INFO]2021-03-31 10:16:00,470: load map C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\projects\test\comba-ZSC-F1-F3.smap ,used 7461 ms
+[INFO]2021-03-31 10:16:00,481: start load map C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\projects\test\comba-ZXC-F3.smap
+[INFO]2021-03-31 10:16:00,651: load map C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\projects\test\comba-ZXC-F3.smap ,used 179 ms
+[WARNING]2021-03-31 10:16:00,653: MainThread[tid:8360] <lock name:mapMgr.lock,<locked _thread.RLock object owner=8360 count=1 at 0x0000028A91D967D8>> ,hold 7943 ms
+[INFO]2021-03-31 10:16:00,654: name=MainThread, pid=6924, tid=8360
+[01] File "run_all.py", line 57, in <module>() 
+[02] File "run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "C:/Users/Administrator/Desktop/SVN/branches/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 122, in _call() 
+[10] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 100, in release() 
+[11] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 258, in getTrace() 
+[12] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-31 10:16:00,660: import agvDevice.main_agvDevice
+[INFO]2021-03-31 10:16:00,661: import alarm.main_alarm
+[INFO]2021-03-31 10:16:00,665: import auth.main_auth
+[INFO]2021-03-31 10:16:00,674: import door.main_door
+[INFO]2021-03-31 10:16:00,677: import elevator.main_elevator
+[INFO]2021-03-31 10:16:00,760: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A940DA120>>
+[INFO]2021-03-31 10:16:00,761: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A940DAC10>>
+[INFO]2021-03-31 10:16:00,765: import feed.main_feed
+[INFO]2021-03-31 10:16:00,778: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A947FA030>>
+[INFO]2021-03-31 10:16:00,788: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A947FA738>>
+[INFO]2021-03-31 10:16:00,870: import menu.main_menu
+[INFO]2021-03-31 10:16:00,873: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-31 10:16:00,992: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A94832FA8>>
+[INFO]2021-03-31 10:16:00,994: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A94832E18>>
+[INFO]2021-03-31 10:16:01,537: {'_id': 'ZXC01', 'location': '37', 'prepoint': '18', 'floorId': 'comba-ZXC-F3', 'p_direction': 0.0, 'isWorkPlace': 'true'}
+{'_id': 'ZXC03', 'location': '40', 'prepoint': '36', 'floorId': 'comba-ZXC-F3', 'p_direction': 0.0, 'isWorkPlace': 'true'}
+[INFO]2021-03-31 10:16:01,553: recover can release agv *task[6062903861987a0c539ee590][AGV01] 37(18) -> 40(36) [finish]
+[INFO]2021-03-31 10:16:01,555: import webFront.main_web
+[INFO]2021-03-31 10:16:01,561: import wmqtt.main_wmqtt
+[SUCC]2021-03-31 10:16:01,580: utility start, pid=6924, ppid=11196
+[DEBUG]2021-03-31 10:16:01,582: start timer
+[INFO]2021-03-31 10:16:01,608: load agv file: C:\Users\Administrator\Desktop\SVN\branches\agvCtrl/projects/test/agv.cfg
+[INFO]2021-03-31 10:16:01,610: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028A9492E300>>
+[DEBUG]2021-03-31 10:16:01,617: create aliveObj AGV01 AGV¿Îœﬂ“Ï≥£ timeout 300
+[INFO]2021-03-31 10:16:01,621: AGV01 start agvList run thread
+[INFO]2021-03-31 10:16:01,621: AGV01 start agvList run2 thread
+[ERROR]2021-03-31 10:16:01,642: agv check init error False
+[INFO]2021-03-31 10:16:01,646: add_ignore: taskStatus
+[INFO]2021-03-31 10:16:01,647: add_ignore: api/elevator/status
+[INFO]2021-03-31 10:16:01,650: add_ignore: scada/getTask
+[INFO]2021-03-31 10:16:02,145: AGV01 current map comba-ZXC-F3
+[INFO]2021-03-31 10:16:02,147: AGV01 is online
+[INFO]2021-03-31 10:16:03,595: startCharge is false
+[DEBUG]2021-03-31 10:16:03,613: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-03-31 10:16:03,615: scadaTask init client agvApi
+[DEBUG]2021-03-31 10:16:03,618: used 6ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[DEBUG]2021-03-31 10:16:06,702: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-31 10:16:06,738: used 36ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-03-31 10:16:06,813: timer_thread[tid:12500] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=12500 count=1 at 0x0000028A94832FA8>> ,hold 3215 ms
+[INFO]2021-03-31 10:16:06,929: name=timer_thread, pid=6924, tid=12500
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/branches/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 240, in getThreadStack()

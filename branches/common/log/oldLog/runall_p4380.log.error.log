@@ -1,0 +1,15 @@
+[CRITICAL]2021-04-29 09:14:54,368: invoke <function urlFeed at 0x0000020DD72E86A8> cause a error: can't find source-None and target-None info
+pid=4380, ppid=5864, tid=14916
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\feed\main_feed.py", line 55, in urlFeed
+    return {"taskId": runTask.feedTask(param)}
+  File "C:\Users\Administrator\Desktop\SVN\branches\feed\runTask.py", line 58, in feedTask
+    t_task = feed(param)
+  File "C:\Users\Administrator\Desktop\SVN\branches\feed\runTask.py", line 81, in __init__
+    self._load(param)
+  File "C:\Users\Administrator\Desktop\SVN\branches\feed\runTask.py", line 115, in _load
+    raise Exception("can't find source-%s and target-%s info"%(param["seat1"],param["seat2"]))
+Exception: can't find source-None and target-None info
+

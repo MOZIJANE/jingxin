@@ -1,0 +1,21 @@
+[CRITICAL]2021-05-11 13:03:35,666: import main_agv failed, path: agvCtrl cause a error: unindent does not match any outer indentation level (jackMgr.py, line 139)
+pid=17740, ppid=17724, tid=16984
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 10, in <module>
+    import jackMgr
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 139
+    def _jackOld(agvId,timeout,action,successfulNum):
+                                                    ^
+IndentationError: unindent does not match any outer indentation level
+
+[CRITICAL]2021-05-11 13:03:35,670: import main_agv failed, path: agvCtrl ,cause unindent does not match any outer indentation level (jackMgr.py, line 139)

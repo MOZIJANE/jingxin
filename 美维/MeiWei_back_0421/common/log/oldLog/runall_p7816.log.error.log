@@ -1,0 +1,21 @@
+[CRITICAL]2021-04-01 08:56:03,472: invoke <function urlElevatorstatus at 0x000002140D264F70> cause a error: timed out
+pid=7816, ppid=14156, tid=8916
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+

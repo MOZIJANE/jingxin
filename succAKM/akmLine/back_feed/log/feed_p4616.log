@@ -1,0 +1,27 @@
+[INFO]2021-03-12 14:52:43,471: log files at D:\akmLine\feed\log
+[ERROR]2021-03-12 14:52:43,472: mongo db is disabled
+[INFO]2021-03-12 14:52:43,501: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDCE497D8>>
+[INFO]2021-03-12 14:52:44,246: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDE76DA08>>
+[INFO]2021-03-12 14:52:44,254: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDE76DBC0>>
+[INFO]2021-03-12 14:52:44,503: create lock <lock name:timer.lock_334447559176,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDE76DF30>>
+[INFO]2021-03-12 14:52:44,619: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDEA10558>>
+[INFO]2021-03-12 14:52:45,155: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDD0EECD8>>
+[INFO]2021-03-12 14:52:45,269: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDD0EE260>>
+[INFO]2021-03-12 14:52:45,592: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDEB283F0>>
+[INFO]2021-03-12 14:52:45,638: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDCE49530>>
+[INFO]2021-03-12 14:52:45,645: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000004DDEB28BC0>>
+[INFO]2021-03-12 14:52:45,701: IP: 0.0.0.0 port: 8899
+[INFO]2021-03-12 14:52:45,705: add_ignore: taskStatus
+[INFO]2021-03-12 14:52:45,837: tcp server [0.0.0.0][8899] ,connectedLen: 1, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:62361
+[CRITICAL]2021-03-12 14:52:55,845: : 192.168.252.90:8899 <--> 192.168.252.13:62361 time out cause a error: <tcpSocket.client object at 0x0000004DDEBEDD68>
+pid=4616, ppid=1764, tid=964
+Traceback (most recent call last):
+  File "D:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "../common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 14:52:55,856: tcp server [0.0.0.0][8899] ,connectedLen: 1, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:62361
+[WARNING]2021-03-12 14:52:55,860: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:62361
+[INFO]2021-03-12 14:52:55,883: tcp server [0.0.0.0][8899] ,connectedLen: 1, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:62362

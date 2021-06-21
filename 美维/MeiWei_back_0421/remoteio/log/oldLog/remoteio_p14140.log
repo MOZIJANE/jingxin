@@ -1,0 +1,50 @@
+[INFO]2021-04-23 15:59:35,382: log files at E:\projects_by_myself\backup\MeiWei_back_0421\remoteio\log
+[INFO]2021-04-23 15:59:35,383: create lock <lock name:timer.lock_1536210751792,<unlocked _thread.RLock object owner=0 count=0 at 0x00000165AD4BD150>>
+[INFO]2021-04-23 15:59:35,388: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000165ADE028D0>>
+[CRITICAL]2021-04-23 15:59:40,421: [modbusApi: 192.168.8.122] execute fcode=1, addr=16 exception:  cause a error: timed out
+pid=14140, ppid=12516, tid=11704
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[WARNING]2021-04-23 15:59:40,424: MainThread[tid:11704] <locked _thread.RLock object owner=11704 count=1 at 0x00000165A4815090> ,hold 5036 ms
+[INFO]2021-04-23 15:59:40,426: name=MainThread, pid=14140, tid=11704
+[01] File "E:/projects_by_myself/backup/MeiWei_back_0421/remoteio/testZLIO.py", line 17, in <module>() 
+[02] File "E:/projects_by_myself/backup/MeiWei_back_0421/remoteio/remoteioMgr.py", line 93, in readDOList() 
+[03] File "E:/projects_by_myself/backup/MeiWei_back_0421/remoteio/remoteioMgr.py", line 158, in readDOList() 
+[04] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 122, in _call() 
+[05] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/lock.py", line 100, in release() 
+[06] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/projects_by_myself/backup/MeiWei_back_0421/common/enhance.py", line 240, in getThreadStack()
+[CRITICAL]2021-04-23 15:59:40,443: ZLAN01 readDOList fail cause a error: timed out
+pid=14140, ppid=12516, tid=11704
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\remoteio\remoteioMgr.py", line 158, in readDOList
+    return self._read(D10, IO_LENTH)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\remoteio\remoteioMgr.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+

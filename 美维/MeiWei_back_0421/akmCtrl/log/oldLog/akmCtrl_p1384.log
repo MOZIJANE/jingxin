@@ -1,0 +1,15 @@
+[INFO]2020-04-26 11:33:00,962: log files at E:\python_work\akm\akmCtrl\log
+[INFO]2020-04-26 11:33:00,962: Mongodb connect to 192.168.5.137 port 27017
+[CRITICAL]2020-04-26 11:33:01,071: update task error: cause a error: 'NoneType' object has no attribute 'setBackground'
+pid=1384, ppid=9592, tid=8508
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 184, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 171, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 123, in updateTask
+    set(i, task["agvId"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 115, in set
+    item.setBackground(PyQt5.QtGui.QBrush(PyQt5.QtGui.QColor(resultColor)))
+AttributeError: 'NoneType' object has no attribute 'setBackground'
+

@@ -1,0 +1,44 @@
+[INFO]2021-05-11 13:03:32,090: log files at C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\log
+[INFO]2021-05-11 13:03:32,090: find module agvCtrl.main_agv
+[INFO]2021-05-11 13:03:32,090: find module agvDevice.main_agvDevice
+[INFO]2021-05-11 13:03:32,091: find module alarm.main_alarm
+[INFO]2021-05-11 13:03:32,091: find module auth.main_auth
+[INFO]2021-05-11 13:03:32,091: find module autoCtrl.main_akmCtrl
+[INFO]2021-05-11 13:03:32,091: find module door.main_door
+[INFO]2021-05-11 13:03:32,092: find module elevator.main_elevator
+[INFO]2021-05-11 13:03:32,092: find module feed.main_feed
+[INFO]2021-05-11 13:03:32,097: find module remoteio.main_remoteio
+[INFO]2021-05-11 13:03:32,098: import agvCtrl.main_agv
+[INFO]2021-05-11 13:03:32,329: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CD5967B0>>
+[INFO]2021-05-11 13:03:32,331: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CD596918>>
+[INFO]2021-05-11 13:03:32,380: create lock <lock name:timer.lock_2202470885920,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CD7DE440>>
+[ERROR]2021-05-11 13:03:32,389: mqtt is disabled
+[INFO]2021-05-11 13:03:32,389: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-05-11 13:03:32,390: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-05-11 13:03:35,408: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-05-11 13:03:35,456: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CD9A8B48>>
+[INFO]2021-05-11 13:03:35,458: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CD9A8788>>
+[INFO]2021-05-11 13:03:35,459: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CD9A8300>>
+[INFO]2021-05-11 13:03:35,467: create lock <lock name:agvserver,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CDAE1760>>
+[INFO]2021-05-11 13:03:35,625: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000200CBD6C198>>
+[CRITICAL]2021-05-11 13:03:35,666: import main_agv failed, path: agvCtrl cause a error: unindent does not match any outer indentation level (jackMgr.py, line 139)
+pid=17740, ppid=17724, tid=16984
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\main_agvDevice.py", line 10, in <module>
+    import jackMgr
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvDevice\jackMgr.py", line 139
+    def _jackOld(agvId,timeout,action,successfulNum):
+                                                    ^
+IndentationError: unindent does not match any outer indentation level
+
+[CRITICAL]2021-05-11 13:03:35,670: import main_agv failed, path: agvCtrl ,cause unindent does not match any outer indentation level (jackMgr.py, line 139)

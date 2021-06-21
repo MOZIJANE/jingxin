@@ -1,0 +1,130 @@
+[INFO]2021-03-18 08:42:51,418: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-18 08:42:51,418: find module account.main_account
+[INFO]2021-03-18 08:42:51,419: find module agvDevice.main_agvDevice
+[INFO]2021-03-18 08:42:51,420: find module alarm.main_alarm
+[INFO]2021-03-18 08:42:51,420: find module auth.main_auth
+[INFO]2021-03-18 08:42:51,421: find module feed.main_feed
+[INFO]2021-03-18 08:42:51,421: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-18 08:42:51,421: import account.main_account
+[INFO]2021-03-18 08:42:51,535: import agvDevice.main_agvDevice
+[INFO]2021-03-18 08:42:51,538: import alarm.main_alarm
+[INFO]2021-03-18 08:42:51,639: create lock <lock name:timer.lock_2918271513992,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A77684B648>>
+[ERROR]2021-03-18 08:42:51,651: mqtt is disabled
+[INFO]2021-03-18 08:42:51,652: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-18 08:42:51,653: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-18 08:42:54,722: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-18 08:42:54,728: import auth.main_auth
+[INFO]2021-03-18 08:42:54,739: import feed.main_feed
+[INFO]2021-03-18 08:42:54,751: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A776AC8288>>
+[INFO]2021-03-18 08:42:54,764: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A776AC86E8>>
+[INFO]2021-03-18 08:42:54,909: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-18 08:42:54,921: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A776B72468>>
+[INFO]2021-03-18 08:42:54,988: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A776B72508>>
+[INFO]2021-03-18 08:42:54,990: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A776B72210>>
+[INFO]2021-03-18 08:42:55,072: recover can release agv *task[605198a0291cd74781d5f79d][AGV05] AP188(LM190) -> AP191(LM195) [finish]
+[SUCC]2021-03-18 08:42:55,080: utility start, pid=11872, ppid=4060
+[DEBUG]2021-03-18 08:42:55,081: start timer
+[INFO]2021-03-18 08:42:55,082: add_ignore: taskStatus
+[INFO]2021-03-18 08:42:55,083: add_ignore: api/elevator/status
+[INFO]2021-03-18 08:42:55,084: add_ignore: scada/getTask
+[WARNING]2021-03-18 08:43:00,935: timer_thread[tid:12276] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=12276 count=1 at 0x000002A776B72508>> ,hold 3827 ms
+[INFO]2021-03-18 08:43:01,376: name=timer_thread, pid=11872, tid=12276
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-18 08:46:15,780: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[INFO]2021-03-18 08:46:15,871: Scada send a task to the server from ZZ-AI-DG-05 to ZZ-AI-DG-03 payloadId: None
+[INFO]2021-03-18 08:46:15,967: create task[6052a2d709e439fc7f7aae34]: type= scadaTask , 从ZZ-AI-DG-05运送货架None到ZZ-AI-DG-03 {'source': 'ZZ-AI-DG-05', 'target': 'ZZ-AI-DG-03', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从ZZ-AI-DG-05运送货架None到ZZ-AI-DG-03', 'createTime': datetime.datetime(2021, 3, 18, 8, 46, 15, 951226), 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 15, 951226), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('6052a2d709e439fc7f7aae34')}
+[INFO]2021-03-18 08:46:16,154: task[6052a2d709e439fc7f7aae34][-] AP188(LM190) -> AP185(LM186) [waiting] is inside False
+[INFO]2021-03-18 08:46:16,234: task cmd: got a task from scada task[6052a2d709e439fc7f7aae34][-] AP188(LM190) -> AP185(LM186) [waiting]
+[DEBUG]2021-03-18 08:46:16,298: used 518ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1
+[DEBUG]2021-03-18 08:46:16,472: GET: http://127.0.0.1:5550/favicon.ico addr: 127.0.0.1
+[DEBUG]2021-03-18 08:46:16,549: used 77ms 200 OK , GET: http://127.0.0.1:5550/favicon.ico
+[INFO]2021-03-18 08:46:17,422: task[6052a2d709e439fc7f7aae34]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 3, 18, 8, 46, 17, 391374), 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 17, 391374), 'status': 'running'}
+[INFO]2021-03-18 08:46:17,498: task: start task[6052a2d709e439fc7f7aae34][-] AP188(LM190) -> AP185(LM186) [waiting]
+[INFO]2021-03-18 08:46:17,607: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 17, 559968)}
+[DEBUG]2021-03-18 08:46:17,669: task[6052a2d709e439fc7f7aae34][-] AP188(LM190) -> AP185(LM186) [waitForAgv] waiting -> waitForAgv
+[DEBUG]2021-03-18 08:46:22,893: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV05&loc=None&timeoutSec=90
+[DEBUG]2021-03-18 08:46:23,281: [return] use 388 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV05&loc=None&timeoutSec=90
+[INFO]2021-03-18 08:46:24,925: task[6052a2d709e439fc7f7aae34][-] AP188(LM190) -> AP185(LM186) [waitForAgv] apply AGV05
+[INFO]2021-03-18 08:46:25,052: task[6052a2d709e439fc7f7aae34] update info: {'agvId': 'AGV05', 'failMsg': '成功分配小车AGV05,检测顶升下降', 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 25, 21331)}
+[WARNING]2021-03-18 08:46:25,130: scada.6052a2d709e439fc7f7aae34[tid:6736] <locked _thread.RLock object owner=6736 count=1 at 0x000002A776C28A30> ,hold 6171 ms
+[INFO]2021-03-18 08:46:25,337: name=scada.6052a2d709e439fc7f7aae34, pid=11872, tid=6736
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-18 08:46:25,447: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitSrcPreLoc] waitForAgv -> waitSrcPreLoc
+[INFO]2021-03-18 08:46:25,909: task: prepoint locked  6052a2d709e439fc7f7aae34 fp20190712-1.LM190
+[INFO]2021-03-18 08:46:26,035: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '等待前置点LM190与工位点AP188处无小车', 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 25, 987751)}
+[DEBUG]2021-03-18 08:46:26,097: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [initJackdown] waitSrcPreLoc -> initJackdown
+[INFO]2021-03-18 08:46:26,540: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [initJackdown] _jackDown
+[DEBUG]2021-03-18 08:46:26,602: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV05&loc=None&timeoutSec=90
+[DEBUG]2021-03-18 08:46:27,121: [return] use 519 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV05&loc=None&timeoutSec=90
+[INFO]2021-03-18 08:46:27,199: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '等待ZZ-AI-DG-05前置点锁', 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 27, 183540)}
+[DEBUG]2021-03-18 08:46:27,263: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitSrcPreLoc1] initJackdown -> waitSrcPreLoc1
+[INFO]2021-03-18 08:46:28,111: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '前往ZZ-AI-DG-05前置点', 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 28, 95231)}
+[DEBUG]2021-03-18 08:46:28,188: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [startMovePreSrc] waitSrcPreLoc1 -> startMovePreSrc
+[INFO]2021-03-18 08:46:30,156: task[6052a2d709e439fc7f7aae34] update info: {'step': 'moveSource', 'updateTime': datetime.datetime(2021, 3, 18, 8, 46, 30, 154309)}
+[DEBUG]2021-03-18 08:46:30,164: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [moveSource] startMovePreSrc -> moveSource
+[INFO]2021-03-18 08:47:38,063: task: move finish callback task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [moveSource]
+[INFO]2021-03-18 08:47:38,066: task[6052a2d709e439fc7f7aae34] update info: {'step': 'waitSource', 'failMsg': '等待scada允许进入源信号', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 38, 65699)}
+[INFO]2021-03-18 08:47:38,204: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitRotationClear] scada allow task AGV05 LM190 -> ZZ-AI-DG-05
+[INFO]2021-03-18 08:47:38,207: task[6052a2d709e439fc7f7aae34] update info: {'step': 'loadPlayload', 'failMsg': '等待AGV旋转顶升初始化', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 38, 205324)}
+[DEBUG]2021-03-18 08:47:38,209: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitRotationClear] waitSource -> waitRotationClear
+[INFO]2021-03-18 08:47:38,512: clear rotation task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitRotationClear]
+[DEBUG]2021-03-18 08:47:38,512: send http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV05&timeoutSec=30
+[DEBUG]2021-03-18 08:47:40,053: [return] use 1541 ms,http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV05&timeoutSec=30
+[INFO]2021-03-18 08:47:40,145: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '前往源位置ZZ-AI-DG-05', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 40, 114255)}
+[DEBUG]2021-03-18 08:47:40,206: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [startMoveJackup] waitRotationClear -> startMoveJackup
+[DEBUG]2021-03-18 08:47:42,153: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [loadPlayload] startMoveJackup -> loadPlayload
+[INFO]2021-03-18 08:47:53,150: task: move finish callback task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [loadPlayload]
+[INFO]2021-03-18 08:47:53,157: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '识别二维码，AGV顶升', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 53, 155345)}
+[DEBUG]2021-03-18 08:47:53,307: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [loadPlayload_jackup] loadPlayload_readqr -> loadPlayload_jackup
+[INFO]2021-03-18 08:47:53,620: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [loadPlayload_jackup] _jackUp
+[DEBUG]2021-03-18 08:47:53,622: send http_get: http://127.0.0.1:5551/api/agv/jackup?agv=AGV05&loc=None&timeoutSec=90
+[DEBUG]2021-03-18 08:47:54,021: [return] use 399 ms,http_get: http://127.0.0.1:5551/api/agv/jackup?agv=AGV05&loc=None&timeoutSec=90
+[INFO]2021-03-18 08:47:54,097: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '等待目标位置ZZ-AI-DG-03前置点锁', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 54, 82863)}
+[DEBUG]2021-03-18 08:47:54,158: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitDestPreLoc] loadPlayload_jackup -> waitDestPreLoc
+[INFO]2021-03-18 08:47:54,632: task: prepoint locked  6052a2d709e439fc7f7aae34 fp20190712-1.LM186
+[INFO]2021-03-18 08:47:54,738: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '等待前置点LM186与工位点AP185处无小车', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 54, 692748)}
+[DEBUG]2021-03-18 08:47:54,830: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitDestPreLoc1] waitDestPreLoc -> waitDestPreLoc1
+[INFO]2021-03-18 08:47:55,664: task[6052a2d709e439fc7f7aae34] update info: {'step': 'movePreSource', 'failMsg': '前往目标位置ZZ-AI-DG-03前置点', 'updateTime': datetime.datetime(2021, 3, 18, 8, 47, 55, 618320)}
+[DEBUG]2021-03-18 08:47:55,723: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [movePreSource] waitDestPreLoc1 -> movePreSource
+[DEBUG]2021-03-18 08:47:57,552: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [movePreSourceStep] movePreSource -> movePreSourceStep
+[INFO]2021-03-18 08:48:06,423: task: move step callback task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [movePreSourceStep]
+[INFO]2021-03-18 08:48:16,876: task: move step callback task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [movePreSourceStep]
+[INFO]2021-03-18 08:48:16,879: task[6052a2d709e439fc7f7aae34] update info: {'step': 'moveTarget', 'updateTime': datetime.datetime(2021, 3, 18, 8, 48, 16, 878446)}
+[INFO]2021-03-18 08:48:16,882: task: prepoint released  6052a2d709e439fc7f7aae34 fp20190712-1.LM190
+[INFO]2021-03-18 08:48:31,042: task: move finish callback task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [moveTarget]
+[INFO]2021-03-18 08:48:31,048: task[6052a2d709e439fc7f7aae34] update info: {'step': 'waitTarget', 'failMsg': '等待scada允许进入目标信号', 'updateTime': datetime.datetime(2021, 3, 18, 8, 48, 31, 46556)}
+[INFO]2021-03-18 08:48:31,323: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitTarget] scada allow task AGV05 LM186 -> ZZ-AI-DG-03
+[INFO]2021-03-18 08:48:31,328: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '调整方向进目标位置', 'updateTime': datetime.datetime(2021, 3, 18, 8, 48, 31, 326852)}
+[DEBUG]2021-03-18 08:48:31,331: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitTargetTurn] waitTarget -> waitTargetTurn
+[DEBUG]2021-03-18 08:48:31,664: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [waitTargetTurn] AGV05 rotate 0.000 -> 0.000
+[INFO]2021-03-18 08:48:31,772: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '前往目标位置ZZ-AI-DG-03', 'updateTime': datetime.datetime(2021, 3, 18, 8, 48, 31, 726736)}
+[DEBUG]2021-03-18 08:48:31,834: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [dropPayloadMove] waitTargetTurn -> dropPayloadMove
+[INFO]2021-03-18 08:48:33,810: task[6052a2d709e439fc7f7aae34] update info: {'step': 'dropPayload', 'updateTime': datetime.datetime(2021, 3, 18, 8, 48, 33, 809205)}
+[DEBUG]2021-03-18 08:48:33,811: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [dropPayload] dropPayloadMove -> dropPayload
+[INFO]2021-03-18 08:48:44,666: task: move finish callback task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [dropPayload]
+[INFO]2021-03-18 08:48:44,672: task[6052a2d709e439fc7f7aae34] update info: {'failMsg': '放下货架，旋转顶升机构初始化', 'updateTime': datetime.datetime(2021, 3, 18, 8, 48, 44, 669133)}
+[INFO]2021-03-18 08:48:44,914: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [dropPayloadJackdown] _jackDown
+[DEBUG]2021-03-18 08:48:44,915: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV05&loc=None&timeoutSec=90
+[DEBUG]2021-03-18 08:48:45,250: [return] use 335 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV05&loc=None&timeoutSec=90
+[DEBUG]2021-03-18 08:48:45,311: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [dropPayloadReset] dropPayloadJackdown -> dropPayloadReset
+[INFO]2021-03-18 08:48:45,762: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [dropPayloadReset] rotationClear
+[DEBUG]2021-03-18 08:48:45,823: send http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV05&timeoutSec=30
+[DEBUG]2021-03-18 08:48:47,226: [return] use 1403 ms,http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV05&timeoutSec=30
+[INFO]2021-03-18 08:48:47,304: task[6052a2d709e439fc7f7aae34]:  successed {'step': 'finish', 'failMsg': '任务成功', 'endTime': datetime.datetime(2021, 3, 18, 8, 48, 47, 288122), 'status': 'success'}
+[DEBUG]2021-03-18 08:48:47,366: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [finish] dropPayloadReset -> finish
+[INFO]2021-03-18 08:48:47,831: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [finish] AGV05 release task, release agv True True False
+[INFO]2021-03-18 08:48:48,604: task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [finish] let AGV05 gohome
+[INFO]2021-03-18 08:48:50,105: task: prepoint released2  6052a2d709e439fc7f7aae34 fp20190712-1.LM186
+[INFO]2021-03-18 08:48:50,167: task: stop task[6052a2d709e439fc7f7aae34][-] AP188(LM190) -> AP185(LM186) [finish]
+[DEBUG]2021-03-18 08:48:50,167: task: delete task 6052a2d709e439fc7f7aae34

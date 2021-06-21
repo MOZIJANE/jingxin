@@ -1,0 +1,1116 @@
+[CRITICAL]2021-04-01 08:59:20,081: agvApi step callback cause a error: 'dict' object is not callable
+pid=11228, ppid=14156, tid=4576
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 09:00:15,773: agv thread cause a error: AGV02执行move AP32取消,taskId:60651ad8393cb48f6003fbeb_2
+pid=11228, ppid=14156, tid=5388
+
+[CRITICAL]2021-04-01 09:01:14,547: agvApi step callback cause a error: 'dict' object is not callable
+pid=11228, ppid=14156, tid=4576
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 09:01:23,477: agvApi step callback cause a error: 'dict' object is not callable
+pid=11228, ppid=14156, tid=4576
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 09:03:35,722: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: timed out
+pid=11228, ppid=14156, tid=11892
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:05:00,071: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:05:09,034: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=15516
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:05:10,216: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:05:20,311: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=12672
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:05:20,361: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:05:20,683: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: timed out
+pid=11228, ppid=14156, tid=15516
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:05:21,371: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: index out of range
+pid=11228, ppid=14156, tid=14800
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 127, in parseResult
+    tempstr = bin(ret[9])[2:]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 09:05:21,373: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: index out of range
+pid=11228, ppid=14156, tid=7716
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 127, in parseResult
+    tempstr = bin(ret[9])[2:]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 09:05:30,471: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:05:40,669: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:05:49,183: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: index out of range
+pid=11228, ppid=14156, tid=14308
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 127, in parseResult
+    tempstr = bin(ret[9])[2:]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 09:05:49,185: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: index out of range
+pid=11228, ppid=14156, tid=3248
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 127, in parseResult
+    tempstr = bin(ret[9])[2:]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 09:05:50,807: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:00,931: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:03,104: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=14308
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:06:03,708: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: timed out
+pid=11228, ppid=14156, tid=14800
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:06:11,056: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:21,174: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:31,333: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:39,750: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=7716
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:06:39,761: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=14800
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:06:41,456: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:51,657: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:06:55,480: readStatus1, agvId:AGV02 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=11228, ppid=14156, tid=6712
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 869, in readStatus1
+    self._checkReloc()
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 899, in _checkReloc
+    self._confirmReloc()
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 466, in _confirmReloc
+    agvCtrl.confirmReloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 63, in confirmReloc
+    data= agvApi.ctrl(agvId,"robot_control_comfirmloc_req",None)
+  File "..\driver\seerAgv\agvApi.py", line 192, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 09:07:00,079: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: timed out
+pid=11228, ppid=14156, tid=13308
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:07:00,615: invoke <function urlElevatorstatus at 0x00000230A7C04F70> cause a error: timed out
+pid=11228, ppid=14156, tid=6388
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:07:01,885: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:07:12,033: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:07:22,128: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:07:32,274: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:07:42,421: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:07:47,041: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=13308
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:07:47,043: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=15424
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:07:52,554: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:08:02,767: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:08:12,924: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:08:13,562: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=8160
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:08:13,565: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=12192
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:08:23,075: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:08:26,184: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=15424
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:08:26,201: invoke <function urlElevatorgo at 0x00000230A7C04D30> cause a error: timed out
+pid=11228, ppid=14156, tid=17964
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:08:33,214: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:08:34,794: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=9208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:08:34,795: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=10532
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:08:43,386: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:08:54,143: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:09:00,781: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=8160
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:09:04,806: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:09:14,967: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=6468
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:09:15,800: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:09:26,716: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:09:37,625: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:09:48,550: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:09:59,435: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:10:03,936: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=9208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:10:09,466: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:10:20,399: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:10:31,214: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:10:37,185: invoke <function urlElevatoropen at 0x00000230A7C033A0> cause a error: timed out
+pid=11228, ppid=14156, tid=10532
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 09:10:42,294: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:10:53,432: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:11:04,522: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:11:15,426: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:11:26,353: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:11:37,180: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:11:48,103: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+
+[CRITICAL]2021-04-01 09:11:58,940: check charge cause a error: getPos(),在地图akmsmtMap找不到位置AP1
+pid=11228, ppid=14156, tid=11660
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 206, in onCheckCharge
+    if agv.isChargeTask:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 342, in isChargeTask
+    if self.isAtChargePos:
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 366, in isAtChargePos
+    return self.map.getPos(pos).isChargePoint
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\mapMgr.py", line 586, in getPos
+    raise Exception("getPos(),在地图"+self.mapId+"找不到位置"+loc)
+Exception: getPos(),在地图akmsmtMap找不到位置AP1
+

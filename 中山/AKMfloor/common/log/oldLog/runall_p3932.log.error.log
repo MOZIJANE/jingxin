@@ -1,0 +1,1938 @@
+[CRITICAL]2021-06-17 11:26:19,476: invoke <function urlPlayAudio at 0x000001F92BEA0A60> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=11568
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 536, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 317, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 368, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 11:26:19,843: 60cabfc8ea99ff456d113a02 playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=10948
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 11:26:19,951: taskFunc2:从生产线001下板机运送满框至生产线001上板机 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=10948
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 260, in _taskFunc
+    elif not self.handle():
+  File "..\akmCtrl\runTasks.py", line 474, in handle
+    self._audioPlay()
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 11:26:30,540: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=5604
+
+[CRITICAL]2021-06-17 11:26:30,728: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=5604
+
+[CRITICAL]2021-06-17 11:26:31,051: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=5604
+
+[CRITICAL]2021-06-17 11:26:31,404: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=5604
+
+[CRITICAL]2021-06-17 11:26:31,790: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=5604
+
+[CRITICAL]2021-06-17 11:26:31,961: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=5604
+
+[CRITICAL]2021-06-17 11:26:42,797: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:26:43,152: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:26:43,522: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:26:43,895: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:26:44,113: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:26:44,284: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:26:54,886: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:26:55,012: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:26:55,342: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:26:55,604: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:26:55,930: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:26:56,116: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:06,717: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=720
+
+[CRITICAL]2021-06-17 11:27:06,974: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=720
+
+[CRITICAL]2021-06-17 11:27:07,126: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=720
+
+[CRITICAL]2021-06-17 11:27:07,308: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=720
+
+[CRITICAL]2021-06-17 11:27:07,495: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=720
+
+[CRITICAL]2021-06-17 11:27:07,630: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=720
+
+[CRITICAL]2021-06-17 11:27:18,633: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:27:18,837: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:27:19,135: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:27:19,320: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:27:19,533: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:27:19,612: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=10980
+
+[CRITICAL]2021-06-17 11:27:30,254: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:27:30,430: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:27:30,584: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:27:30,801: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:27:31,032: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:27:31,081: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:27:42,023: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:42,129: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:42,330: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:42,591: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:42,716: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:42,839: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=11336
+
+[CRITICAL]2021-06-17 11:27:53,716: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11316
+
+[CRITICAL]2021-06-17 11:27:53,888: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11316
+
+[CRITICAL]2021-06-17 11:27:54,121: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11316
+
+[CRITICAL]2021-06-17 11:27:54,259: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11316
+
+[CRITICAL]2021-06-17 11:27:54,464: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11316
+
+[CRITICAL]2021-06-17 11:27:54,693: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=11316
+
+[CRITICAL]2021-06-17 11:28:06,096: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:28:06,584: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:28:07,051: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:28:07,236: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:28:07,627: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:28:07,894: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cabfd8ea99ff456d113a03', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=11568
+
+[CRITICAL]2021-06-17 11:38:42,796: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1844
+
+[CRITICAL]2021-06-17 11:38:43,035: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1844
+
+[CRITICAL]2021-06-17 11:38:43,379: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1844
+
+[CRITICAL]2021-06-17 11:38:43,790: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1844
+
+[CRITICAL]2021-06-17 11:38:44,141: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1844
+
+[CRITICAL]2021-06-17 11:38:44,361: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac3b7ea99ff456d113a1c', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1844
+
+[CRITICAL]2021-06-17 12:01:21,825: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9964
+
+[CRITICAL]2021-06-17 12:01:22,011: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9964
+
+[CRITICAL]2021-06-17 12:01:22,196: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9964
+
+[CRITICAL]2021-06-17 12:01:22,519: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9964
+
+[CRITICAL]2021-06-17 12:01:22,830: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9964
+
+[CRITICAL]2021-06-17 12:01:22,997: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac8fdea99ff456d113a4c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=9964
+
+[CRITICAL]2021-06-17 12:05:12,783: invoke <function urlPlayAudio at 0x000001F92BEA0A60> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=1276
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 536, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 317, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 368, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 12:05:13,233: 60cac8fdea99ff456d113a4c playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=4808
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 12:05:13,346: taskFunc2:从生产线001上板机运送空框至生产线001下板机 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=4808
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 260, in _taskFunc
+    elif not self.handle():
+  File "..\akmCtrl\runTasks.py", line 417, in handle
+    self._audioPlay()
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 12:05:21,358: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:05:21,651: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:05:21,868: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:05:22,098: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:05:22,315: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:05:22,421: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:05:33,450: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:05:33,908: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:05:34,127: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:05:34,672: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:05:35,021: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:05:35,179: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:05:46,155: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:05:46,515: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:05:46,637: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:05:46,807: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:05:46,961: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:05:47,147: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:05:57,976: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:05:58,191: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:05:58,284: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:05:58,535: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:05:58,800: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:05:58,918: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:06:09,752: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:06:09,880: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:06:10,102: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:06:10,268: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:06:10,439: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:06:10,502: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:06:21,684: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:21,869: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:22,225: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:22,504: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:22,795: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:22,841: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:33,612: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:06:34,010: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:06:34,256: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:06:34,738: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:06:35,125: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:06:35,172: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:06:45,781: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:06:45,966: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:06:46,152: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:06:46,383: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:06:46,754: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:06:47,096: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:06:58,567: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:58,753: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:58,921: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:59,153: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:59,292: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:06:59,369: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:07:10,342: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:07:10,544: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:07:11,092: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:07:11,408: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:07:11,663: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:07:11,757: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:09:34,846: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12608
+
+[CRITICAL]2021-06-17 12:09:35,092: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12608
+
+[CRITICAL]2021-06-17 12:09:35,633: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12608
+
+[CRITICAL]2021-06-17 12:09:35,971: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12608
+
+[CRITICAL]2021-06-17 12:09:36,434: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12608
+
+[CRITICAL]2021-06-17 12:09:36,589: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12608
+
+[CRITICAL]2021-06-17 12:09:47,102: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:09:47,457: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:09:47,902: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:09:48,304: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:09:48,412: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:09:48,678: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:09:59,453: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:09:59,760: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:10:00,131: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:10:00,518: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:10:00,735: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:10:00,967: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:10:11,710: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:10:11,926: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:10:12,111: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:10:12,683: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:10:13,008: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:10:13,197: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6424
+
+[CRITICAL]2021-06-17 12:10:23,905: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:10:24,215: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:10:24,511: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:10:24,931: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:10:25,212: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:10:25,366: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=13292
+
+[CRITICAL]2021-06-17 12:10:36,129: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:10:36,317: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:10:36,577: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:10:36,872: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:10:37,151: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:10:37,306: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:10:48,046: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:10:48,180: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:10:48,307: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:10:48,459: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:10:48,708: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:10:48,727: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:10:59,480: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:10:59,605: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:10:59,759: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:10:59,913: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:00,222: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:00,372: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:11,100: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:11:11,285: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:11:11,444: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:11:11,552: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:11:11,755: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:11:11,817: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:11:22,830: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:23,244: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:23,367: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:23,522: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:23,708: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:23,849: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:34,759: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:35,129: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:35,375: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:35,700: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:35,854: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:35,927: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:46,583: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:47,080: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:47,418: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:47,528: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:47,733: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:47,803: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=11016
+
+[CRITICAL]2021-06-17 12:11:58,664: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:59,052: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:59,301: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:59,347: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:59,577: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:11:59,761: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:10,442: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:10,550: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:10,798: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:11,062: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:11,243: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:11,522: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:22,982: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:23,228: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:23,520: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:23,704: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:23,841: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:23,935: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:35,025: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:35,256: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:35,521: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:35,781: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:36,027: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:36,152: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1276
+
+[CRITICAL]2021-06-17 12:12:47,024: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:47,443: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:47,673: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:47,905: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:48,089: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:48,199: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:12:59,100: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:59,455: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:12:59,765: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:13:00,213: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:13:00,665: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:13:00,848: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=14144
+
+[CRITICAL]2021-06-17 12:13:11,646: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:13:11,958: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:13:12,295: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:13:12,621: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:13:12,791: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:13:13,008: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=10784
+
+[CRITICAL]2021-06-17 12:13:23,726: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:13:24,065: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:13:24,481: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:13:24,805: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:13:25,008: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:13:25,179: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=4884
+
+[CRITICAL]2021-06-17 12:13:35,911: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:13:36,177: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:13:36,456: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:13:36,687: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:13:37,000: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:13:37,061: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=5904
+
+[CRITICAL]2021-06-17 12:13:47,859: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:13:48,074: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:13:48,324: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:13:48,605: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:13:48,948: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:13:49,166: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cac987ea99ff456d113a50', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=3036
+
+[CRITICAL]2021-06-17 12:21:17,317: invoke <function urlPlayAudio at 0x000001F92BEA0A60> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=4384
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 536, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 317, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 368, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 12:21:17,706: 60caccdbea99ff456d113a55 playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=7972
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 12:21:17,779: taskFunc2:从生产线001上板机运送空框至生产线001下板机 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=7972
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 260, in _taskFunc
+    elif not self.handle():
+  File "..\akmCtrl\runTasks.py", line 417, in handle
+    self._audioPlay()
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 12:21:50,147: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:21:50,302: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:21:50,441: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:21:50,627: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:21:50,811: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:21:50,888: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:22:01,633: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:22:01,775: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:22:01,929: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:22:02,176: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:22:02,659: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:22:02,798: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:22:13,572: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:22:13,725: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:22:13,864: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:22:14,080: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:22:14,341: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:22:14,587: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:22:25,440: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:22:25,687: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:22:26,005: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:22:26,295: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:22:26,573: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:22:26,727: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:22:37,378: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:22:37,550: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:22:37,704: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:22:37,891: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:22:38,321: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:22:38,445: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:22:49,039: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9848
+
+[CRITICAL]2021-06-17 12:22:49,238: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9848
+
+[CRITICAL]2021-06-17 12:22:49,395: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9848
+
+[CRITICAL]2021-06-17 12:22:49,520: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9848
+
+[CRITICAL]2021-06-17 12:22:49,642: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9848
+
+[CRITICAL]2021-06-17 12:22:49,718: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=9848
+
+[CRITICAL]2021-06-17 12:23:00,666: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:01,016: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:01,219: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:01,542: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:01,727: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:01,819: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:12,580: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:12,748: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:12,871: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:13,070: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:13,253: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:13,378: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:24,149: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:24,290: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:24,397: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:24,677: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:24,818: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:24,926: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=13776
+
+[CRITICAL]2021-06-17 12:23:35,697: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:35,836: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:35,974: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:36,147: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:36,500: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:36,562: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=9304
+
+[CRITICAL]2021-06-17 12:23:47,305: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:23:47,414: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:23:47,550: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:23:47,736: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:23:47,875: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:23:47,973: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=7352
+
+[CRITICAL]2021-06-17 12:23:58,771: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:23:58,930: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:23:59,143: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:23:59,482: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:23:59,681: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:23:59,851: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=10064
+
+[CRITICAL]2021-06-17 12:24:10,582: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:24:10,722: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:24:10,909: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:24:11,222: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:24:11,575: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:24:11,818: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=1548
+
+[CRITICAL]2021-06-17 12:24:22,635: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:22,790: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:22,898: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:23,023: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:23,162: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:23,285: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:34,023: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:24:34,223: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:24:34,348: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:24:34,501: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:24:34,641: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:24:34,691: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=4384
+
+[CRITICAL]2021-06-17 12:24:45,570: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:45,897: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:46,083: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:46,258: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:46,389: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:46,514: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=8360
+
+[CRITICAL]2021-06-17 12:24:57,484: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:24:57,846: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:24:58,094: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:24:58,249: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:24:58,511: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:24:58,603: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:09,533: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=2980
+
+[CRITICAL]2021-06-17 12:25:09,894: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=2980
+
+[CRITICAL]2021-06-17 12:25:10,263: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=2980
+
+[CRITICAL]2021-06-17 12:25:10,417: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=2980
+
+[CRITICAL]2021-06-17 12:25:10,587: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=2980
+
+[CRITICAL]2021-06-17 12:25:10,666: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=2980
+
+[CRITICAL]2021-06-17 12:25:21,497: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:21,651: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:21,764: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:22,027: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:22,119: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:22,243: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=12388
+
+[CRITICAL]2021-06-17 12:25:33,291: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13276
+
+[CRITICAL]2021-06-17 12:25:33,541: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13276
+
+[CRITICAL]2021-06-17 12:25:33,733: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13276
+
+[CRITICAL]2021-06-17 12:25:33,857: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13276
+
+[CRITICAL]2021-06-17 12:25:34,044: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13276
+
+[CRITICAL]2021-06-17 12:25:34,135: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=13276
+
+[CRITICAL]2021-06-17 12:25:44,895: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=6152
+
+[CRITICAL]2021-06-17 12:25:45,282: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=6152
+
+[CRITICAL]2021-06-17 12:25:45,652: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=6152
+
+[CRITICAL]2021-06-17 12:25:46,018: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=6152
+
+[CRITICAL]2021-06-17 12:25:46,484: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=6152
+
+[CRITICAL]2021-06-17 12:25:46,560: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cacdd6ea99ff456d113a5c', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=6152
+
+[CRITICAL]2021-06-17 13:36:47,091: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13452
+
+[CRITICAL]2021-06-17 13:36:47,289: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13452
+
+[CRITICAL]2021-06-17 13:36:47,475: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13452
+
+[CRITICAL]2021-06-17 13:36:47,660: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13452
+
+[CRITICAL]2021-06-17 13:36:47,814: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=13452
+
+[CRITICAL]2021-06-17 13:36:47,906: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf64ea99ff456d113add', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=13452
+
+[CRITICAL]2021-06-17 14:23:30,725: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=3932, ppid=12536, tid=1640
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 204, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-17 14:24:53,740: task [AGV01] [60cadf64ea99ff456d113add] rollerFrontUnload failed cause a error: 'ret_code'
+pid=3932, ppid=12536, tid=14024
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 655, in rollerFrontUnload
+    if ret["ret_code"] == 0:
+KeyError: 'ret_code'
+
+[CRITICAL]2021-06-17 14:25:53,356: invoke <function urlPlayAudio at 0x000001F92BEA0A60> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=13964
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 536, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 317, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 368, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:25:53,724: 60cadf64ea99ff456d113add playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=14024
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:25:54,133: taskFunc2:从生产线001上板机运送空框至生产线001下板机 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=14024
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 260, in _taskFunc
+    elif not self.handle():
+  File "..\akmCtrl\runTasks.py", line 474, in handle
+    self._audioPlay()
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:26:04,755: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:26:04,969: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:26:05,145: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:26:05,342: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:26:05,532: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:26:05,707: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:26:16,558: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12772
+
+[CRITICAL]2021-06-17 14:26:16,728: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12772
+
+[CRITICAL]2021-06-17 14:26:17,052: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12772
+
+[CRITICAL]2021-06-17 14:26:17,407: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12772
+
+[CRITICAL]2021-06-17 14:26:17,757: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12772
+
+[CRITICAL]2021-06-17 14:26:17,921: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12772
+
+[CRITICAL]2021-06-17 14:26:28,719: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:26:28,938: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:26:29,237: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:26:29,592: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:26:29,761: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:26:29,864: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:26:40,600: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13264
+
+[CRITICAL]2021-06-17 14:26:40,828: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13264
+
+[CRITICAL]2021-06-17 14:26:41,045: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13264
+
+[CRITICAL]2021-06-17 14:26:41,382: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13264
+
+[CRITICAL]2021-06-17 14:26:41,490: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=13264
+
+[CRITICAL]2021-06-17 14:26:41,802: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=13264
+
+[CRITICAL]2021-06-17 14:26:53,026: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:26:53,383: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:26:53,655: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:26:54,099: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:26:54,421: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:26:54,549: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:05,483: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:05,698: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:05,873: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:06,104: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:06,303: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:06,407: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:17,411: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:17,732: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:18,188: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:18,444: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:18,652: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:18,741: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:29,640: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:29,927: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:30,270: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:30,592: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:30,976: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:31,183: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:27:41,947: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:42,163: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:42,438: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:42,609: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:42,831: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:43,026: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:27:53,897: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:54,078: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:54,393: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:54,807: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:55,057: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:27:55,196: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=1580
+
+[CRITICAL]2021-06-17 14:28:06,384: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:06,657: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:07,086: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:07,425: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:07,598: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:07,725: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:18,625: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:28:18,755: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:28:19,071: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:28:19,465: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:28:19,576: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:28:19,799: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:28:30,492: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=2124
+
+[CRITICAL]2021-06-17 14:28:30,686: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=2124
+
+[CRITICAL]2021-06-17 14:28:30,898: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=2124
+
+[CRITICAL]2021-06-17 14:28:31,053: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=2124
+
+[CRITICAL]2021-06-17 14:28:31,232: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=2124
+
+[CRITICAL]2021-06-17 14:28:31,370: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=2124
+
+[CRITICAL]2021-06-17 14:28:42,165: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:42,558: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:42,888: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:43,023: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:43,369: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:43,539: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:28:54,184: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=8196
+
+[CRITICAL]2021-06-17 14:28:54,357: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=8196
+
+[CRITICAL]2021-06-17 14:28:54,704: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=8196
+
+[CRITICAL]2021-06-17 14:28:54,988: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=8196
+
+[CRITICAL]2021-06-17 14:28:55,296: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=8196
+
+[CRITICAL]2021-06-17 14:28:55,508: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=8196
+
+[CRITICAL]2021-06-17 14:29:06,522: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:29:06,762: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:29:06,951: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:29:07,174: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:29:07,378: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:29:07,523: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=6616
+
+[CRITICAL]2021-06-17 14:29:18,397: apply agv failed, count=0 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:29:18,670: apply agv failed, count=1 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:29:19,047: apply agv failed, count=2 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:29:19,507: apply agv failed, count=3 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:29:19,804: apply agv failed, count=4 cause a error: HLD.AP7找不到可用的小车
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:29:19,959: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60cadf86ea99ff456d113ade', 'loc', 'HLD.AP7')
+pid=3932, ppid=12536, tid=12904
+
+[CRITICAL]2021-06-17 14:38:53,556: invoke <function urlPlayAudio at 0x000001F92BEA0A60> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=1108
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 536, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 317, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 368, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:38:53,889: 60caed2fea99ff456d113afc playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=9444
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:38:54,161: taskFunc2:从生产线001下板机运送满框至生产线001上板机 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=9444
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 260, in _taskFunc
+    elif not self.handle():
+  File "..\akmCtrl\runTasks.py", line 383, in handle
+    self._audioPlay()
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:43:19,877: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4028
+
+[CRITICAL]2021-06-17 14:43:20,091: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4028
+
+[CRITICAL]2021-06-17 14:43:20,307: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4028
+
+[CRITICAL]2021-06-17 14:43:20,771: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4028
+
+[CRITICAL]2021-06-17 14:43:21,074: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=4028
+
+[CRITICAL]2021-06-17 14:43:21,304: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60caeefeea99ff456d113b00', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=4028
+
+[CRITICAL]2021-06-17 14:43:42,298: apply agv failed, count=0 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1108
+
+[CRITICAL]2021-06-17 14:43:42,656: apply agv failed, count=1 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1108
+
+[CRITICAL]2021-06-17 14:43:42,930: apply agv failed, count=2 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1108
+
+[CRITICAL]2021-06-17 14:43:43,138: apply agv failed, count=3 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1108
+
+[CRITICAL]2021-06-17 14:43:43,320: apply agv failed, count=4 cause a error: HLD.AP6找不到可用的小车
+pid=3932, ppid=12536, tid=1108
+
+[CRITICAL]2021-06-17 14:43:43,429: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60caeefeea99ff456d113b00', 'loc', 'HLD.AP6')
+pid=3932, ppid=12536, tid=1108
+
+[CRITICAL]2021-06-17 14:45:44,071: [modbusApi: 192.168.8.201] execute fcode=5, addr=17 exception:  cause a error: timed out
+pid=3932, ppid=12536, tid=13620
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-17 14:45:44,898: load001 writeDO fail cause a error: timed out
+pid=3932, ppid=12536, tid=13620
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 109, in writeDO
+    self._write(ioAddr, value)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 186, in _write
+    s = self.master.write(mdef.WRITE_SINGLE_COIL,addr,value)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-17 14:45:45,053: invoke <function urlwriteDO at 0x000001F92AB20D08> cause a error: timed out
+pid=3932, ppid=12536, tid=13620
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\remoteio\main_remoteio.py", line 21, in urlwriteDO
+    return ioMgr.writeDO(id,index,value)
+  File "..\remoteio\remoteioMgr.py", line 65, in writeDO
+    remoteioInfo.writeDO(index,value)
+  File "..\remoteio\remoteioMgr.py", line 109, in writeDO
+    self._write(ioAddr, value)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 186, in _write
+    s = self.master.write(mdef.WRITE_SINGLE_COIL,addr,value)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-17 14:45:45,433: task: [60caeefeea99ff456d113b00][load001] writeIo error:  cause a error: timeout: timed out
+pid=3932, ppid=12536, tid=5716
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 578, in writeIO
+    ioApi.writeDO(io, id, value)
+  File "..\remoteio\remoteioApi.py", line 25, in writeDO
+    return _remoteio('/api/remoteio/writeDO', id, param)
+  File "..\remoteio\remoteioApi.py", line 65, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: timeout: timed out
+
+[CRITICAL]2021-06-17 14:48:04,712: invoke <function urlPlayAudio at 0x000001F92BEA0A60> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=14208
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 536, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 317, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 368, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:48:04,975: 60caeefeea99ff456d113b00 playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=5716
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-06-17 14:48:05,214: taskFunc2:从生产线001上板机运送空框至生产线001下板机 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=3932, ppid=12536, tid=5716
+Traceback (most recent call last):
+  File "..\akmCtrl\runTasks.py", line 260, in _taskFunc
+    elif not self.handle():
+  File "..\akmCtrl\runTasks.py", line 474, in handle
+    self._audioPlay()
+  File "..\akmCtrl\runTasks.py", line 552, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+

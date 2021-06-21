@@ -1,0 +1,169 @@
+[CRITICAL]2021-05-27 18:08:30,604: readStatus1, agvId:AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12868, ppid=4936, tid=3024
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvList.py", line 859, in readStatus1
+    self._initState = agvCtrl.checkInit(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 44, in checkInit
+    data= agvApi.status(agvId,"robot_status_init_req",None)
+  File "..\driver\seerAgv\agvApi.py", line 196, in status
+    return _handle(agvId, API_PORT_STATE, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-27 18:08:44,570: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=12868, ppid=4936, tid=10676
+
+[CRITICAL]2021-05-27 18:08:44,757: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=12868, ppid=4936, tid=10676
+
+[CRITICAL]2021-05-27 18:08:45,160: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=12868, ppid=4936, tid=10676
+
+[CRITICAL]2021-05-27 18:08:45,398: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=12868, ppid=4936, tid=10676
+
+[CRITICAL]2021-05-27 18:08:45,631: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP11找不到可用的小车
+pid=12868, ppid=4936, tid=10676
+
+[CRITICAL]2021-05-27 18:08:45,711: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af6fa573dabd324477a596', 'loc', 'comba-ZXC-F3.AP11')
+pid=12868, ppid=4936, tid=10676
+
+[CRITICAL]2021-05-27 18:09:27,264: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12868, ppid=4936, tid=3952
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-27 18:10:11,804: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12868, ppid=4936, tid=3952
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-27 18:11:01,597: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12868, ppid=4936, tid=3952
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-27 18:11:30,642: task [AGV01] [60af6fa573dabd324477a596] rollerFrontLoad failed cause a error: 'ret_code'
+pid=12868, ppid=4936, tid=4864
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1627, in rollerFrontLoad
+    if ret["ret_code"] == 0:
+KeyError: 'ret_code'
+
+[CRITICAL]2021-05-27 18:11:41,742: task [AGV01] [60af6fa573dabd324477a596] rollerFrontLoad failed cause a error: 'ret_code'
+pid=12868, ppid=4936, tid=4864
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1627, in rollerFrontLoad
+    if ret["ret_code"] == 0:
+KeyError: 'ret_code'
+
+[CRITICAL]2021-05-27 18:12:16,662: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12868, ppid=4936, tid=3952
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 297, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 381, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 136, in send
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 131, in send
+    c.send(sendData)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 82, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-27 18:12:23,596: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12868, ppid=4936, tid=3952
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 203, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 300, in sendCmd
+    headData = _recv(agvId,ip, port, 1)
+  File "..\driver\seerAgv\agvApi.py", line 384, in _recv
+    return tcpSocketLong.recv(agvId,ip, port, len)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 155, in recv
+    raise e
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 150, in recv
+    return c.recv(len)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\tcpSocketLong.py", line 94, in recv
+    recvdata = self._socket.recv(remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-27 18:12:57,737: task [AGV01] [60af6fa573dabd324477a596] rollerFrontUnload failed cause a error: 'ret_code'
+pid=12868, ppid=4936, tid=4864
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1638, in rollerFrontUnload
+    if ret["ret_code"] == 0:
+KeyError: 'ret_code'
+

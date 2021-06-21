@@ -1,0 +1,45 @@
+[INFO]2020-09-18 16:06:04,690: log files at C:\akmLine\common\log
+[INFO]2020-09-18 16:06:04,691: find module agvCtrl.main_agv
+[INFO]2020-09-18 16:06:04,692: find module agvDevice.main_agvDevice
+[INFO]2020-09-18 16:06:04,693: find module alarm.main_alarm
+[INFO]2020-09-18 16:06:04,694: find module auth.main_auth
+[INFO]2020-09-18 16:06:04,695: find module door.main_door
+[INFO]2020-09-18 16:06:04,695: find module elevator.main_elevator
+[INFO]2020-09-18 16:06:04,696: find module feed.main_feed
+[INFO]2020-09-18 16:06:04,697: import agvCtrl.main_agv
+[INFO]2020-09-18 16:06:05,773: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C1328>>
+[INFO]2020-09-18 16:06:05,780: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C1580>>
+[INFO]2020-09-18 16:06:06,051: create lock <lock name:timer.lock_128112400,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007A0BBC0>>
+[ERROR]2020-09-18 16:06:06,079: mqtt is disabled
+[INFO]2020-09-18 16:06:06,082: mqtt: subscribe [alarm/raise/+]
+[INFO]2020-09-18 16:06:06,085: mqtt: subscribe [alarm/clear/+]
+[INFO]2020-09-18 16:06:09,157: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-18 16:06:09,222: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C2B648>>
+[INFO]2020-09-18 16:06:09,224: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C2B288>>
+[INFO]2020-09-18 16:06:09,227: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007BA5DA0>>
+[INFO]2020-09-18 16:06:09,985: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000005B727B0>>
+[INFO]2020-09-18 16:06:11,069: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000080389B8>>
+[INFO]2020-09-18 16:06:11,075: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008265300>>
+[INFO]2020-09-18 16:06:11,341: charge policy 0 , fix time
+[INFO]2020-09-18 16:06:11,475: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008265E68>>
+[INFO]2020-09-18 16:06:12,138: start load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap
+[CRITICAL]2020-09-18 16:06:12,230: import main_agv failed, path: agvCtrl cause a error: 'NoneType' object has no attribute 'x'
+pid=58352, ppid=58328, tid=58356
+Traceback (most recent call last):
+  File "C:\akmLine\common\run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\akmLine\agvCtrl\main_agv.py", line 22, in <module>
+    mapMgr.loadAllMap()
+  File "C:\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\akmLine\agvCtrl\mapMgr.py", line 78, in loadAllMap
+    getMap(m["id"])
+  File "C:\akmLine\agvCtrl\mapMgr.py", line 54, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "C:\akmLine\agvCtrl\mapMgr.py", line 349, in load
+    p = o.ptrList #≥ı ºªØbezier
+  File "C:\akmLine\agvCtrl\mapElement.py", line 644, in ptrList
+    pp = [(self.startPos.x, self.startPos.y), (self.ctrlPoint1.x, self.ctrlPoint1.y),(self.ctrlPoint2.x, self.ctrlPoint2.y), (self.endPos.x,self.endPos.y)]
+AttributeError: 'NoneType' object has no attribute 'x'
+
+[CRITICAL]2020-09-18 16:06:12,236: import main_agv failed, path: agvCtrl ,cause 'NoneType' object has no attribute 'x'

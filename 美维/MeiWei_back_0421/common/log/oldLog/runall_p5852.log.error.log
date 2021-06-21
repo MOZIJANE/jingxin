@@ -1,0 +1,11 @@
+[CRITICAL]2021-04-21 15:44:33,672: taskFunc2:task[607fd7da2898060cd87a8c02][AGV30] LM16(LM17) -> LM9(LM12) [startMoveJackup] cause a error: _moveJackup() takes 1 positional argument but 2 were given
+pid=5852, ppid=5704, tid=1964
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\akmCtrl\beans\scadaTaskBean.py", line 567, in _taskFunc
+    elif not self.handle():
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\akmCtrl\beans\scadaTaskBean.py", line 440, in handle
+    self._moveJackup(self.stepCallback)
+TypeError: _moveJackup() takes 1 positional argument but 2 were given
+

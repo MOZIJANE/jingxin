@@ -1,0 +1,72 @@
+import os
+import sys
+import time
+
+import setup
+if __name__ == "__main__":
+	setup.setCurPath(__file__)
+	
+import utility
+import alarm.alarmApi
+import log
+if utility.is_test(): 
+	import driver.seerAgv.mockAgvCtrl as agvCtrl 
+else:
+	import driver.seerAgv.agvCtrl as agvCtrl
+ 
+# 自研车体
+def rotationReset(agvId , timeout):
+	ret = agvCtrl.rotationReset(agvId)
+	return _rotation(agvId=agvId,target=None, timeout=timeout,action="reset")
+	 
+def rotationLeft(agvId , target, timeout):
+	ret = agvCtrl.rotationLeft(agvId,target=target)
+	return _rotation(agvId=agvId, target=target, timeout=timeout,action="left")
+	
+def rotationRight(agvId , target, timeout):
+	agvCtrl.rotationRight(agvId,target=target)
+	return _rotation(agvId=agvId, target=target, timeout=timeout,action="right")
+	 
+def rotationStop(agvId):
+	agvCtrl.rotationStop(agvId)
+	return {}
+	
+def rotationDistanceStatus(agvId):
+	return agvCtrl.rotationDistanceStatus(agvId)
+	
+def rotationResetStatus(agvId):
+	return agvCtrl.rotationResetStatus(agvId)
+	
+
+def rotationClear(agvId, timeout):
+	ret = agvCtrl.rotationClear(agvId)
+	return _rotation(agvId=agvId,target=None, timeout=timeout,action="clear")
+
+	
+def _rotation(agvId,target, timeout,action):
+	for i in range(int(timeout)):
+		time.sleep(1)
+		status = None
+		
+		if action == "left" :
+			status = agvCtrl.rotationLeftStatus(agvId, target)
+		elif action == "right":
+			status = agvCtrl.rotationRightStatus(agvId, target)
+		elif action == "reset":
+			status = agvCtrl.rotationResetStatus(agvId)
+		elif action == "clear":
+			status = agvCtrl.rotationClearStatus(agvId)
+		if status != None :
+			if "isRotationALarm" in status and status["isRotationALarm"] != 0:
+				msg = "rotation device has alarm"
+				alarm.alarmApi.alarm(moid=agvId, typeId=49995, desc=msg, domain="agv")
+				raise Exception(msg+",action:"+action)
+			else:
+				alarm.alarmApi.clear(moid=agvId, typeId=49995, domain="agv")
+			if "status" in status and status["status"]:
+				log.info(agvId,"rotation %s status:"%action, status["status"])
+				return {}
+	else:
+		# agvCtrl.cancelTask(agvId) # 自研车体不需要
+		error = agvId + "rotation" + " action：" + action + ",timeout=" + timeout 
+		raise Exception(error) 

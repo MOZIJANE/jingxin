@@ -1,0 +1,11 @@
+[CRITICAL]2021-05-11 11:27:02,115: : 192.168.252.164:10001 <--> 192.168.252.165:51924 error:  cause a error: 'str' object has no attribute 'btTag'
+pid=12120, ppid=15900, tid=5480
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 136, in _handle
+    checkAndSetBtnValues(btnKey,prefixBtn + staticDevID)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 43, in checkAndSetBtnValues
+    tasksIdDict = findBtnTask()
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 75, in findBtnTask
+    if task.btTag is True:
+AttributeError: 'str' object has no attribute 'btTag'
+

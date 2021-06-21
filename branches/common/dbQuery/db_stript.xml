@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<global>
+	<!-- 在这里定义全局变量的值
+		系统预定义变量:
+		@now@	 当前时间
+		@now_str@ 当前时间的字符串 
+		
+		<variable name="变量名">变量值</variable> 
+	-->
+		<variable name="traffic_unit">1048576</variable>
+		<!-- 90天 90*24*3600*1000 -->
+		<variable name="day_range">7776000000</variable>
+	</global>
+
+<!--
+result_type: 返回格式
+	pie:
+		[{ "_id" : "统计名1", "value" : 1000 },
+		 { "_id" : "统计名2", "value" : 1001 }]
+	bar:	
+		[{ "_id" : "统计名1", "value" : 1000 },
+		 { "_id" : "统计名2", "value" : 1001 }]
+		
+	line:
+		
+	single:
+	
+	dict:[{ "_id" : "统计名1", "value" : 1000 },
+		 { "_id" : "统计名2", "value" : 1001 }]
+	
+	tree:
+
+aggregate可以根据需要自由配置pipe 
+	 map-reduce必需要有map,reduce两个标签,其它可以自由配置
+	 find ????
+
+日期格式的定义方法 
+	datetime(2017-12-26 16:27:34)
+
+一个完整的map-reduce写法 
+	<mongo.map-reduce>
+		<query></query>
+		<map>
+		<![CDATA[
+		]]>
+		</map>
+		<reduce>
+		<![CDATA[
+		]]>
+		</reduce>
+		<finalize>
+		<![CDATA[
+		]]>
+		</finalize>
+	</mongo.map-reduce>
+-->
+	<query name="统计排名前10的AP的总流量" collection="pie_ap_traffic" out_collection="" result_type="pie" url="">
+		<variable name="test1"/>
+		<variable name="test2"/>
+		<mongo.aggregate>
+			<match>"capwap_apip":{"$exists":"true"}</match>
+			<group>"_id" : "$capwap_apip", "value" : {"$sum":"$stream_len"}</group>
+			<sort>"value":-1</sort>
+			<limit>10</limit>
+			<project>"value":{"$divide":["$value",@traffic_unit@]}</project>
+		</mongo.aggregate>
+	</query> 
+
+	<query name="按每小时统计上下行流量" collection="line_traffic" result_type="line">
+		<mongo.map-reduce>
+			<query>"stream_starttime":{"$gte": {"cls_name_xyz":"d.datetime","value":"@start_date@"}}</query>
+			<map>
+			<![CDATA[
+			function(){
+			var time = this.stream_starttime;
+			//time.setFullYear(this.stream_starttime.getFullYear(),this.stream_starttime.getMonth(),time.day=this.stream_starttime.getDate());
+			//time.setHours(this.stream_starttime.getHours());
+			time.setMinutes(0);
+			time.setSeconds(0);
+			time.setMilliseconds(0);
+			emit(time,{"上行流量" : this.stream_uplen, "下行流量" : this.stream_downlen});
+			}
+			]]>
+			</map>
+			<reduce>
+			<![CDATA[
+			function(key,values){
+				var ret={上行流量:0,下行流量:0};
+				var i = values.length;
+				while(i--){
+				ret.上行流量 += values[i].上行流量;
+				ret.下行流量 += values[i].下行流量;
+				}
+				return ret;
+			}	
+			]]>
+			</reduce>
+			<finalize>
+			<![CDATA[
+			function(key,reduce_values){
+			reduce_values.上行流量 = reduce_values.上行流量 / @traffic_unit@;
+			reduce_values.下行流量 = reduce_values.下行流量 / @traffic_unit@;
+			return reduce_values;
+			}
+			]]>
+			</finalize>
+			<!-- sort>"stream_starttime":1</sort -->
+		</mongo.map-reduce>
+	</query>
+	
+	<!-- 
+	<cond>代表过滤条件，多个条件之间会用是并集关系 
+	<column>代表需要选择的列名，可以有多个 
+	-->
+	<query name="test_find" collection="test_data" result_type="pie">
+		<mongo.find>
+			<cond></cond>
+			<cond>"_id":1</cond>
+			<column>_id</column>
+			<column>name</column>
+		</mongo.find>
+	</query>   
+</root>
+
+
+

@@ -1,0 +1,400 @@
+[CRITICAL]2021-04-01 15:40:12,795: agvApi step callback cause a error: 'dict' object is not callable
+pid=4216, ppid=5084, tid=7932
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 15:40:20,643: agvApi step callback cause a error: 'dict' object is not callable
+pid=4216, ppid=5084, tid=7932
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 15:40:31,572: agvApi step callback cause a error: 'dict' object is not callable
+pid=4216, ppid=5084, tid=7932
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 15:40:38,381: agvApi step callback cause a error: 'dict' object is not callable
+pid=4216, ppid=5084, tid=7932
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-01 15:43:10,207: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: index out of range
+pid=4216, ppid=5084, tid=18428
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 116, in parseResult
+    inFloor = ret[8]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 15:43:10,208: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: index out of range
+pid=4216, ppid=5084, tid=9720
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 116, in parseResult
+    inFloor = ret[8]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 15:43:16,851: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: timed out
+pid=4216, ppid=5084, tid=6352
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 15:43:16,866: invoke <function urlElevatorgo at 0x000001688AD05DC0> cause a error: timed out
+pid=4216, ppid=5084, tid=11244
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "..\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "..\elevator\elevatorControlFuzhou.py", line 200, in goFloor
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 15:43:25,296: invoke <function urlElevatoropen at 0x000001688AD04430> cause a error: timed out
+pid=4216, ppid=5084, tid=9944
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 15:43:37,872: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: index out of range
+pid=4216, ppid=5084, tid=18428
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 116, in parseResult
+    inFloor = ret[8]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 15:43:37,873: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: index out of range
+pid=4216, ppid=5084, tid=9720
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 169, in sendData
+    res = parseResult(result)
+  File "..\elevator\elevatorControlFuzhou.py", line 116, in parseResult
+    inFloor = ret[8]
+IndexError: index out of range
+
+[CRITICAL]2021-04-01 15:43:58,880: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: timed out
+pid=4216, ppid=5084, tid=9944
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 15:43:59,194: invoke <function urlElevatorstatus at 0x000001688AD04040> cause a error: timed out
+pid=4216, ppid=5084, tid=9984
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 25, in urlElevatorstatus
+    ret= elevatorInfo.status()
+  File "..\elevator\elevatorMgr.py", line 114, in status
+    return elevatorControl.getStatus(self.ip,self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 180, in getStatus
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 15:44:13,531: agvApi send task, agvId=AGV03 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=13972
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 204, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:46:49,007: invoke <function urlJackdown at 0x000001688AE399D0> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=6380
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "E:\安捷利电梯项目\AKMfloor\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 298, in jackDown
+    setOperation(agvId,22,True)
+  File "..\driver\seerAgv\agvCtrl.py", line 214, in setOperation
+    agvApi.other(agvId, "robot_other_setdo_req", {"id":20, "status":False})
+  File "..\driver\seerAgv\agvApi.py", line 225, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:46:49,450: task[606578cf3857b3fad2959781][AGV03] AP32(LM34) -> AP308(LM305) [dropPayloadJackdown] jackDown cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=11056
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\pharmapackCtrl\runTasks.py", line 908, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:46:54,251: invoke <function urlJackdown at 0x000001688AE399D0> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=4612
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\agvDevice\main_agvDevice.py", line 30, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "E:\安捷利电梯项目\AKMfloor\agvDevice\jackMgr.py", line 28, in jackDown
+    agvCtrl.jackDown(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 299, in jackDown
+    agvApi.conf(agvId, "robot_config_clear_goodsshape_req", None)
+  File "..\driver\seerAgv\agvApi.py", line 215, in conf
+    return _handle(agvId, API_PORT_CONFIG, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:46:54,848: task[606578cf3857b3fad2959781][AGV03] AP32(LM34) -> AP308(LM305) [dropPayloadJackdown] jackDown cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=11056
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\pharmapackCtrl\runTasks.py", line 908, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:49:13,877: invoke <function urlElevatoropen at 0x000001688AD04430> cause a error: timed out
+pid=4216, ppid=5084, tid=4612
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-01 15:49:19,377: handle AGV03,error:[WinError 10054] 远程主机强迫关闭了一个现有的连接。 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=13972
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 624, in handle
+    ret = obj.callback(obj.params)
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvControl.py", line 713, in oncheck
+    if not agvInfo.switchMap(newMapId,newLoc):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvList.py", line 1049, in switchMap
+    agvCtrl.switchMap(self.agvId,mapId)
+  File "..\driver\seerAgv\agvCtrl.py", line 607, in switchMap
+    agvApi.ctrl(agvId, "robot_control_loadmap_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 192, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:50:02,014: agvApi send task, agvId=AGV03 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=4216, ppid=5084, tid=13972
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 204, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 147, in send
+    raise e
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 142, in send
+    c.send(sendData)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-04-01 15:50:08,512: invoke <function urlElevatoropen at 0x000001688AD04430> cause a error: timed out
+pid=4216, ppid=5084, tid=3116
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\elevator\main_elevator.py", line 32, in urlElevatoropen
+    ret = elevatorInfo.open()
+  File "..\elevator\elevatorMgr.py", line 118, in open
+    return elevatorControl.open(self.ip,port=self.port,id=0)
+  File "..\elevator\elevatorControlFuzhou.py", line 220, in open
+    res = sendData(ip, port, buf)
+  File "..\elevator\elevatorControlFuzhou.py", line 168, in sendData
+    result = sendViaTcp(ip, port, buf, recvLen)
+  File "..\elevator\elevatorControlFuzhou.py", line 45, in sendViaTcp
+    raise e
+  File "..\elevator\elevatorControlFuzhou.py", line 41, in sendViaTcp
+    recData = client.recv(recvLen)
+  File "E:\安捷利电梯项目\AKMfloor\common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+

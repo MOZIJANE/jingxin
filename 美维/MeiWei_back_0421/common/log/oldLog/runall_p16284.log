@@ -1,0 +1,197 @@
+[INFO]2021-03-25 13:45:15,767: log files at D:\python_work\AKMfloor\common\log
+[INFO]2021-03-25 13:45:15,767: find module account.main_account
+[INFO]2021-03-25 13:45:15,768: find module agvCtrl.main_agv
+[INFO]2021-03-25 13:45:15,768: find module agvDevice.main_agvDevice
+[INFO]2021-03-25 13:45:15,768: find module alarm.main_alarm
+[INFO]2021-03-25 13:45:15,769: find module auth.main_auth
+[INFO]2021-03-25 13:45:15,770: find module door.main_door
+[INFO]2021-03-25 13:45:15,770: find module elevator.main_elevator
+[INFO]2021-03-25 13:45:15,771: find module feed.main_feed
+[INFO]2021-03-25 13:45:15,771: find module menu.main_menu
+[INFO]2021-03-25 13:45:15,772: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-25 13:45:15,772: find module webFront.main_web
+[INFO]2021-03-25 13:45:15,773: find module wmqtt.main_wmqtt
+[INFO]2021-03-25 13:45:15,773: import account.main_account
+[INFO]2021-03-25 13:45:15,979: import agvCtrl.main_agv
+[INFO]2021-03-25 13:45:16,759: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F0738E1AE0>>
+[INFO]2021-03-25 13:45:16,763: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F0738F1420>>
+[INFO]2021-03-25 13:45:17,129: create lock <lock name:timer.lock_2132245843344,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F073C18ED0>>
+[ERROR]2021-03-25 13:45:17,210: mqtt is disabled
+[INFO]2021-03-25 13:45:17,211: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-25 13:45:17,211: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-25 13:45:20,365: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-25 13:45:20,426: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F073E78510>>
+[INFO]2021-03-25 13:45:20,428: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F073E6C8D0>>
+[INFO]2021-03-25 13:45:21,146: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F073E83480>>
+[INFO]2021-03-25 13:45:21,944: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F073F624B0>>
+[INFO]2021-03-25 13:45:21,950: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F0740042D0>>
+[INFO]2021-03-25 13:45:22,049: charge policy 1 , fix time
+[INFO]2021-03-25 13:45:22,091: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F074004E70>>
+[INFO]2021-03-25 13:45:22,420: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-03-25 13:45:25,238: create aliveObj ELEVATOR01 电梯离线异常 timeout 30
+[DEBUG]2021-03-25 13:45:25,242: elevator thread start
+[INFO]2021-03-25 13:45:25,901: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 3492 ms
+[INFO]2021-03-25 13:45:25,910: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[CRITICAL]2021-03-25 13:45:27,436: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=16284, ppid=9204, tid=16668
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-25 13:45:29,097: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 3196 ms
+[WARNING]2021-03-25 13:45:29,097: MainThread[tid:12160] <lock name:mapMgr.lock,<locked _thread.RLock object owner=12160 count=1 at 0x000001F073E83480>> ,hold 7006 ms
+[INFO]2021-03-25 13:45:29,098: name=MainThread, pid=16284, tid=12160
+[01] File "D:/python_work/AKMfloor/common/run_all.py", line 57, in <module>() 
+[02] File "D:/python_work/AKMfloor/common/run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 991, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 671, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 783, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "D:/python_work/AKMfloor/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "D:/python_work/AKMfloor/common/lock.py", line 122, in _call() 
+[10] File "D:/python_work/AKMfloor/common/lock.py", line 100, in release() 
+[11] File "D:/python_work/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[12] File "D:/python_work/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-25 13:45:29,102: import agvDevice.main_agvDevice
+[INFO]2021-03-25 13:45:29,103: import alarm.main_alarm
+[INFO]2021-03-25 13:45:29,103: import auth.main_auth
+[INFO]2021-03-25 13:45:29,115: import door.main_door
+[INFO]2021-03-25 13:45:29,118: import elevator.main_elevator
+[INFO]2021-03-25 13:45:29,118: import feed.main_feed
+[INFO]2021-03-25 13:45:29,131: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F07465D3F0>>
+[INFO]2021-03-25 13:45:29,133: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F07465DDE0>>
+[INFO]2021-03-25 13:45:29,370: import menu.main_menu
+[INFO]2021-03-25 13:45:29,373: import pharmapackCtrl.main_scadaCtrl
+[CRITICAL]2021-03-25 13:45:31,197: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=16284, ppid=9204, tid=16668
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-25 13:45:31,494: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F0741EA3C0>>
+[INFO]2021-03-25 13:45:31,494: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F0753F4D80>>
+[INFO]2021-03-25 13:45:31,532: recover can release agv *task[605b0b130ec4da80b657ee3b][AGV01] AP27(LM19) -> AP2(LM3) [finish]
+[INFO]2021-03-25 13:45:31,536: import webFront.main_web
+[INFO]2021-03-25 13:45:31,549: import wmqtt.main_wmqtt
+[SUCC]2021-03-25 13:45:31,569: utility start, pid=16284, ppid=9204
+[DEBUG]2021-03-25 13:45:31,569: start timer
+[INFO]2021-03-25 13:45:31,585: load agv file: D:\python_work\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-03-25 13:45:31,586: create lock <lock name:agvList.AGV03.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F07541EF00>>
+[DEBUG]2021-03-25 13:45:31,588: create aliveObj AGV03 AGV离线异常 timeout 300
+[INFO]2021-03-25 13:45:31,589: AGV03 start agvList run thread
+[INFO]2021-03-25 13:45:31,589: create lock <lock name:agv.AGV03.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F075423AE0>>
+[DEBUG]2021-03-25 13:45:31,589: try connect AGV03 192.168.20.182:19204
+[INFO]2021-03-25 13:45:31,591: AGV03 start agvList run2 thread
+[INFO]2021-03-25 13:45:31,594: add_ignore: taskStatus
+[INFO]2021-03-25 13:45:31,594: add_ignore: api/elevator/status
+[INFO]2021-03-25 13:45:31,594: add_ignore: scada/getTask
+[INFO]2021-03-25 13:45:31,605: AGV03 connected 192.168.20.182 19204
+[INFO]2021-03-25 13:45:31,605: create lock <lock name:agv.AGV03.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F075423B10>>
+[DEBUG]2021-03-25 13:45:31,606: try connect AGV03 192.168.20.182:19205
+[INFO]2021-03-25 13:45:31,676: AGV03 connected 192.168.20.182 19205
+[INFO]2021-03-25 13:45:31,677: create lock <lock name:agv.AGV03.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F075423B40>>
+[DEBUG]2021-03-25 13:45:31,678: try connect AGV03 192.168.20.182:19206
+[INFO]2021-03-25 13:45:31,684: AGV03 connected 192.168.20.182 19206
+[INFO]2021-03-25 13:45:31,685: create lock <lock name:agv.AGV03.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F075423BA0>>
+[DEBUG]2021-03-25 13:45:31,685: try connect AGV03 192.168.20.182:19207
+[INFO]2021-03-25 13:45:31,692: AGV03 connected 192.168.20.182 19207
+[INFO]2021-03-25 13:45:31,693: create lock <lock name:agv.AGV03.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F075607240>>
+[DEBUG]2021-03-25 13:45:31,695: try connect AGV03 192.168.20.182:19208
+[INFO]2021-03-25 13:45:31,713: AGV03 connected 192.168.20.182 19208
+[INFO]2021-03-25 13:45:31,714: create lock <lock name:agv.AGV03.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x000001F0756072D0>>
+[DEBUG]2021-03-25 13:45:31,715: try connect AGV03 192.168.20.182:19210
+[INFO]2021-03-25 13:45:31,753: AGV03 connected 192.168.20.182 19210
+[INFO]2021-03-25 13:45:31,783: AGV03 current map AKM4F
+[INFO]2021-03-25 13:45:31,835: AGV03 is online
+[INFO]2021-03-25 13:45:32,578: startCharge is false

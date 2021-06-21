@@ -1,0 +1,14 @@
+[CRITICAL]2021-04-20 16:07:34,881: import main_akmCtrl failed, path: akmCtrl cause a error: [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\akmCtrl\\agvCtrl\\projects\\test\\agv.cfg'
+pid=13200, ppid=10888, tid=18036
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "E:\projects_by_myself\MeiWei\akmCtrl\main_akmCtrl.py", line 18, in <module>
+    import runTasks,runTasks01
+  File "E:\projects_by_myself\MeiWei\akmCtrl\runTasks01.py", line 30, in <module>
+    g_agvList = toolsUtil.loadAgvList()
+  File "E:\projects_by_myself\MeiWei\akmCtrl\utils\toolsUtil.py", line 30, in loadAgvList
+    with open(os.path.abspath(os.path.dirname(__file__) + file), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\akmCtrl\\agvCtrl\\projects\\test\\agv.cfg'
+
+[CRITICAL]2021-04-20 16:07:34,883: import main_akmCtrl failed, path: akmCtrl ,cause [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\akmCtrl\\agvCtrl\\projects\\test\\agv.cfg'

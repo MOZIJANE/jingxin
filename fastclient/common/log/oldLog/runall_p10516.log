@@ -1,0 +1,73 @@
+[INFO]2021-03-17 10:57:03,615: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 10:57:03,616: find module account.main_account
+[INFO]2021-03-17 10:57:03,617: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 10:57:03,617: find module alarm.main_alarm
+[INFO]2021-03-17 10:57:03,617: find module auth.main_auth
+[INFO]2021-03-17 10:57:03,618: find module feed.main_feed
+[INFO]2021-03-17 10:57:03,618: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:57:03,618: import account.main_account
+[INFO]2021-03-17 10:57:03,703: import agvDevice.main_agvDevice
+[INFO]2021-03-17 10:57:03,705: import alarm.main_alarm
+[INFO]2021-03-17 10:57:03,800: create lock <lock name:timer.lock_1351455962280,<unlocked _thread.RLock object owner=0 count=0 at 0x0000013AA908B620>>
+[ERROR]2021-03-17 10:57:03,811: mqtt is disabled
+[INFO]2021-03-17 10:57:03,812: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 10:57:03,812: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 10:57:06,863: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-17 10:57:06,881: import auth.main_auth
+[INFO]2021-03-17 10:57:06,886: import feed.main_feed
+[INFO]2021-03-17 10:57:06,892: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000013AA930B260>>
+[INFO]2021-03-17 10:57:06,895: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000013AA930B6C0>>
+[INFO]2021-03-17 10:57:06,955: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:57:06,962: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000013AA93D3440>>
+[INFO]2021-03-17 10:57:07,004: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000013AA93D34E0>>
+[INFO]2021-03-17 10:57:07,007: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000013AA93D31E8>>
+[SUCC]2021-03-17 10:57:07,083: utility start, pid=10516, ppid=15128
+[DEBUG]2021-03-17 10:57:07,085: start timer
+[INFO]2021-03-17 10:57:07,088: add_ignore: taskStatus
+[INFO]2021-03-17 10:57:07,090: add_ignore: api/elevator/status
+[INFO]2021-03-17 10:57:07,091: add_ignore: scada/getTask
+[DEBUG]2021-03-17 10:57:14,186: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[CRITICAL]2021-03-17 10:57:54,146: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', 'timed out')
+pid=10516, ppid=15128, tid=7000
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', 'timed out')
+
+[DEBUG]2021-03-17 10:58:08,926: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[DEBUG]2021-03-17 10:58:47,674: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[DEBUG]2021-03-17 10:59:30,426: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[DEBUG]2021-03-17 10:59:33,333: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[DEBUG]2021-03-17 11:00:59,527: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-02&payloadId=&priority=1 addr: 127.0.0.1
+[DEBUG]2021-03-17 11:01:25,960: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1

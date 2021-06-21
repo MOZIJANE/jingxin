@@ -1,0 +1,14 @@
+[CRITICAL]2020-09-18 15:58:07,305: import main_agv failed, path: agvCtrl cause a error: can only concatenate str (not "NoneType") to str
+pid=51408, ppid=51156, tid=37732
+Traceback (most recent call last):
+  File "C:\akmLine\common\run_all.py", line 39, in findModule
+    __import__(m[1])
+  File ".\agvCtrl\main_agv.py", line 10, in <module>
+  File ".\agvCtrl\mapMgr.py", line 25, in <module>
+  File "..\driver\seerAgv\agvCtrl.py", line 33, in <module>
+    g_agvType = _loadAgvType()
+  File "..\driver\seerAgv\agvCtrl.py", line 25, in _loadAgvType
+    file = "/../../agvCtrl/projects/"+proName+"/" + local.get("project","agvType")
+TypeError: can only concatenate str (not "NoneType") to str
+
+[CRITICAL]2020-09-18 15:58:07,311: import main_agv failed, path: agvCtrl ,cause can only concatenate str (not "NoneType") to str

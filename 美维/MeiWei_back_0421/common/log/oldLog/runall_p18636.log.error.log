@@ -1,0 +1,13 @@
+[CRITICAL]2021-03-18 11:05:02,052: invoke <function urlStatus at 0x0000027B0B53DB80> cause a error: 'AGV03'
+pid=18636, ppid=22016, tid=17204
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\main_agv.py", line 201, in urlStatus
+    info = agvControl.getAgvStatue(agvId=agvId)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1327, in getAgvStatue
+    return agvList.getAgv(agvId).status
+  File "D:\python_work\AKMfloor\agvCtrl\agvList.py", line 62, in getAgv
+    return getAgvList()[agvId]
+KeyError: 'AGV03'
+

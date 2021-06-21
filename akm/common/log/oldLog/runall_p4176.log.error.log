@@ -1,0 +1,240 @@
+[CRITICAL]2021-03-05 15:16:23,879: checkMap diniu01 cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+
+[CRITICAL]2021-03-05 15:16:23,880: checkMap Guntong cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+
+[CRITICAL]2021-03-05 15:16:23,932: readStatus1, agvId:diniu01 cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:23,945: readStatus1, agvId:Guntong cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:24,472: checkMap diniu01 cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+
+[CRITICAL]2021-03-05 15:16:24,509: checkMap Guntong cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+
+[CRITICAL]2021-03-05 15:16:24,531: readStatus1, agvId:diniu01 cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:24,563: readStatus1, agvId:Guntong cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:25,082: checkMap diniu01 cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+
+[CRITICAL]2021-03-05 15:16:25,116: checkMap Guntong cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+
+[CRITICAL]2021-03-05 15:16:25,127: readStatus1, agvId:diniu01 cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:25,159: readStatus1, agvId:Guntong cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:25,682: checkMap diniu01 cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+
+[CRITICAL]2021-03-05 15:16:25,718: checkMap Guntong cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+
+[CRITICAL]2021-03-05 15:16:25,739: readStatus1, agvId:diniu01 cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:25,785: readStatus1, agvId:Guntong cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:26,278: checkMap diniu01 cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305.smap'
+
+[CRITICAL]2021-03-05 15:16:26,312: checkMap Guntong cause a error: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 1077, in checkMap
+    mm = mapMgr.getMap(data['current_map']) #check map file
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "D:\akm\agvCtrl\mapMgr.py", line 327, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'D:\\akm\\agvCtrl\\projects\\jacktest\\test0305_2.smap'
+
+[CRITICAL]2021-03-05 15:16:26,328: readStatus1, agvId:diniu01 cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=4652
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+[CRITICAL]2021-03-05 15:16:26,342: readStatus1, agvId:Guntong cause a error: unsupported operand type(s) for +: 'NoneType' and 'str'
+pid=4176, ppid=6088, tid=2584
+Traceback (most recent call last):
+  File "D:\akm\agvCtrl\agvList.py", line 860, in readStatus1
+    self._checkLocation(status)
+  File "D:\akm\agvCtrl\agvList.py", line 924, in _checkLocation
+    pos = mapMgr.getMap(self.mapId).getPosByPoint(x, y)
+  File "D:\akm\agvCtrl\mapMgr.py", line 55, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+

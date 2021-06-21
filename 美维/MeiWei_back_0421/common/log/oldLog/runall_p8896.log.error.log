@@ -1,0 +1,1286 @@
+[CRITICAL]2021-03-26 13:55:32,854: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=8896, ppid=20496, tid=7644
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:55:35,989: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=8896, ppid=20496, tid=7644
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 13:56:19,941: agvApi step callback cause a error: 'dict' object is not callable
+pid=8896, ppid=20496, tid=21064
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-03-26 13:56:21,517: agvApi step callback cause a error: 'dict' object is not callable
+pid=8896, ppid=20496, tid=21064
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-03-26 13:56:35,432: agvApi step callback cause a error: 'dict' object is not callable
+pid=8896, ppid=20496, tid=21064
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-03-26 13:56:36,487: agvApi step callback cause a error: 'dict' object is not callable
+pid=8896, ppid=20496, tid=21064
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-03-26 13:57:29,096: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:29,795: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=25848
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:30,478: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:31,150: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:31,884: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=23872
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:32,550: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:33,204: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=25848
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:33,844: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:34,501: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:35,172: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=15932
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:35,909: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:36,559: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:37,214: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=23872
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:37,937: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:38,613: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=15932
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:39,273: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:39,915: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:40,568: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:41,224: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:41,894: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=25848
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:42,547: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:43,190: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=18972
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:43,953: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:44,646: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:45,291: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=25848
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:45,946: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:46,592: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:47,268: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:47,912: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14364
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:48,563: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:49,232: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:49,900: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:50,630: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=15932
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:51,282: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:51,926: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:52,522: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:53,182: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:53,913: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=15932
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:54,567: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:55,216: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=18972
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:55,858: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=23872
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:56,538: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:57,163: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:57,848: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:58,519: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=18972
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:59,190: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=23872
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:57:59,918: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14364
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:00,564: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:01,247: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:01,946: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:02,647: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=20656
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:03,312: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:03,933: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=18972
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:04,546: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=23872
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:05,202: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:05,843: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14128
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:06,489: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:07,154: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=25848
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:07,908: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=23872
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:08,633: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:09,240: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=15932
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:09,845: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14364
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:10,494: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=25848
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:11,155: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=12472
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:11,909: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=1408
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:12,593: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=18972
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:13,265: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=14364
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+
+[CRITICAL]2021-03-26 13:58:13,889: invoke <function urlElevatorgo at 0x000002B3D6443430> cause a error: 'str' object cannot be interpreted as an integer
+pid=8896, ppid=20496, tid=21112
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 197, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 75, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 160, in setByte
+    self._buf.append(value)
+TypeError: 'str' object cannot be interpreted as an integer
+

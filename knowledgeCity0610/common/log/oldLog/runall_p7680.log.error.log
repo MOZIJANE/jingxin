@@ -1,0 +1,161 @@
+[CRITICAL]2021-05-28 13:50:56,092: [modbusApi: 172.16.166.182] execute fcode=5, addr=16 exception:  cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=7680, ppid=4256, tid=13652
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-28 13:50:56,101: 3FLamp writeDO fail cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=7680, ppid=4256, tid=13652
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr_old.py", line 109, in writeDO
+    self._write(ioAddr, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 186, in _write
+    s = self.master.write(mdef.WRITE_SINGLE_COIL,addr,value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-28 13:50:56,107: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002C91BD17F28> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=7680, ppid=4256, tid=13652
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 188, in checkLampStatus
+    ioMgr.writeDO('3FLamp', 1, 0)
+  File "..\remoteio\remoteioMgr_old.py", line 65, in writeDO
+    remoteioInfo.writeDO(index,value)
+  File "..\remoteio\remoteioMgr_old.py", line 109, in writeDO
+    self._write(ioAddr, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 186, in _write
+    s = self.master.write(mdef.WRITE_SINGLE_COIL,addr,value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-28 13:55:11,734: [modbusApi: 172.16.166.182] execute fcode=5, addr=16 exception:  cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=7680, ppid=4256, tid=13652
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-28 13:55:11,956: 3FLamp writeDO fail cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=7680, ppid=4256, tid=13652
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr_old.py", line 109, in writeDO
+    self._write(ioAddr, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 186, in _write
+    s = self.master.write(mdef.WRITE_SINGLE_COIL,addr,value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-28 13:55:12,166: invoke timer func<function lock.<locals>.call.<locals>._call at 0x000002C91BD17F28> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=7680, ppid=4256, tid=13652
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 188, in checkLampStatus
+    ioMgr.writeDO('3FLamp', 1, 0)
+  File "..\remoteio\remoteioMgr_old.py", line 65, in writeDO
+    remoteioInfo.writeDO(index,value)
+  File "..\remoteio\remoteioMgr_old.py", line 109, in writeDO
+    self._write(ioAddr, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 186, in _write
+    s = self.master.write(mdef.WRITE_SINGLE_COIL,addr,value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-28 14:00:06,323: checkFinish cause a error: Expecting value: line 1 column 1 (char 0)
+pid=7680, ppid=4256, tid=14140
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 243, in _checkFinish
+    status = getTaskStatus(ids)
+  File "..\agvCtrl\agvApi.py", line 74, in getTaskStatus
+    return _http_get(url + '/api/agv/taskStatus',{"taskId": taskId})["taskList"]
+  File "..\agvCtrl\agvApi.py", line 62, in _http_get
+    result = json.load(r)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\json_codec.py", line 229, in load
+    r = json.loads(text)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+

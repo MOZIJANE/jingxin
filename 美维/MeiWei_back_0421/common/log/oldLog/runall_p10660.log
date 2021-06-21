@@ -1,0 +1,915 @@
+[INFO]2021-04-06 11:38:04,133: log files at E:\安捷利电梯项目\AKMfloor\common\log
+[INFO]2021-04-06 11:38:04,134: find module account.main_account
+[INFO]2021-04-06 11:38:04,135: find module agvCtrl.main_agv
+[INFO]2021-04-06 11:38:04,136: find module agvDevice.main_agvDevice
+[INFO]2021-04-06 11:38:04,137: find module alarm.main_alarm
+[INFO]2021-04-06 11:38:04,138: find module auth.main_auth
+[INFO]2021-04-06 11:38:04,140: find module door.main_door
+[INFO]2021-04-06 11:38:04,141: find module elevator.main_elevator
+[INFO]2021-04-06 11:38:04,142: find module feed.main_feed
+[INFO]2021-04-06 11:38:04,143: find module menu.main_menu
+[INFO]2021-04-06 11:38:04,146: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-06 11:38:04,147: find module webFront.main_web
+[INFO]2021-04-06 11:38:04,149: find module wmqtt.main_wmqtt
+[INFO]2021-04-06 11:38:04,149: import account.main_account
+[INFO]2021-04-06 11:38:04,240: import agvCtrl.main_agv
+[INFO]2021-04-06 11:38:04,591: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF7897F60>>
+[INFO]2021-04-06 11:38:05,599: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF78AB4E0>>
+[INFO]2021-04-06 11:38:05,717: create lock <lock name:timer.lock_1636247184096,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF7EEA450>>
+[ERROR]2021-04-06 11:38:05,731: mqtt is disabled
+[INFO]2021-04-06 11:38:05,732: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-06 11:38:05,733: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-06 11:38:08,783: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-06 11:38:08,819: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF90D9B10>>
+[INFO]2021-04-06 11:38:08,838: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF90CEE70>>
+[INFO]2021-04-06 11:38:09,078: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF90E3AB0>>
+[INFO]2021-04-06 11:38:09,413: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF920B2A0>>
+[INFO]2021-04-06 11:38:09,418: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF923C450>>
+[INFO]2021-04-06 11:38:09,502: charge policy 1 , fix time
+[INFO]2021-04-06 11:38:09,559: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF9248030>>
+[INFO]2021-04-06 11:38:09,911: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-04-06 11:38:10,015: create aliveObj DOOR_01 门控离线异常 timeout 60
+[DEBUG]2021-04-06 11:38:10,016: create aliveObj DOOR_02 门控离线异常 timeout 60
+[DEBUG]2021-04-06 11:38:10,046: elevator thread start
+[INFO]2021-04-06 11:38:10,081: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 181 ms
+[INFO]2021-04-06 11:38:10,094: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[INFO]2021-04-06 11:38:10,179: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 96 ms
+[INFO]2021-04-06 11:38:10,190: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\akmsmtMap.smap
+[INFO]2021-04-06 11:38:10,435: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\akmsmtMap.smap ,used 255 ms
+[INFO]2021-04-06 11:38:10,439: import agvDevice.main_agvDevice
+[INFO]2021-04-06 11:38:10,440: import alarm.main_alarm
+[INFO]2021-04-06 11:38:10,441: import auth.main_auth
+[INFO]2021-04-06 11:38:10,452: import door.main_door
+[INFO]2021-04-06 11:38:10,456: import elevator.main_elevator
+[INFO]2021-04-06 11:38:10,457: import feed.main_feed
+[INFO]2021-04-06 11:38:10,470: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF95324B0>>
+[INFO]2021-04-06 11:38:10,477: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CF953F420>>
+[INFO]2021-04-06 11:38:11,095: import menu.main_menu
+[INFO]2021-04-06 11:38:11,102: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-06 11:38:11,240: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFA05C0F0>>
+[INFO]2021-04-06 11:38:11,242: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC7A2D0>>
+[INFO]2021-04-06 11:38:11,249: import webFront.main_web
+[INFO]2021-04-06 11:38:11,254: import wmqtt.main_wmqtt
+[SUCC]2021-04-06 11:38:11,268: utility start, pid=10660, ppid=17336
+[DEBUG]2021-04-06 11:38:11,269: start timer
+[INFO]2021-04-06 11:38:11,283: load agv file: E:\安捷利电梯项目\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-04-06 11:38:11,285: create lock <lock name:agvList.AGV30.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC8E8D0>>
+[DEBUG]2021-04-06 11:38:11,290: create aliveObj AGV30 AGV离线异常 timeout 300
+[INFO]2021-04-06 11:38:11,291: AGV30 start agvList run thread
+[INFO]2021-04-06 11:38:11,292: AGV30 start agvList run2 thread
+[INFO]2021-04-06 11:38:11,292: create lock <lock name:agv.AGV30.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC91C90>>
+[DEBUG]2021-04-06 11:38:11,294: try connect AGV30 192.168.20.183:19204
+[INFO]2021-04-06 11:38:11,296: add_ignore: taskStatus
+[INFO]2021-04-06 11:38:11,297: add_ignore: api/elevator/status
+[INFO]2021-04-06 11:38:11,299: add_ignore: scada/getTask
+[INFO]2021-04-06 11:38:11,300: AGV30 connected 192.168.20.183 19204
+[INFO]2021-04-06 11:38:11,301: create lock <lock name:agv.AGV30.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC91BD0>>
+[DEBUG]2021-04-06 11:38:11,305: try connect AGV30 192.168.20.183:19205
+[INFO]2021-04-06 11:38:11,310: AGV30 connected 192.168.20.183 19205
+[INFO]2021-04-06 11:38:11,311: create lock <lock name:agv.AGV30.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC91B10>>
+[DEBUG]2021-04-06 11:38:11,312: try connect AGV30 192.168.20.183:19206
+[INFO]2021-04-06 11:38:11,319: AGV30 connected 192.168.20.183 19206
+[INFO]2021-04-06 11:38:11,321: create lock <lock name:agv.AGV30.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC91CF0>>
+[DEBUG]2021-04-06 11:38:11,322: try connect AGV30 192.168.20.183:19207
+[INFO]2021-04-06 11:38:11,333: AGV30 connected 192.168.20.183 19207
+[INFO]2021-04-06 11:38:11,334: create lock <lock name:agv.AGV30.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBC91C30>>
+[DEBUG]2021-04-06 11:38:11,335: try connect AGV30 192.168.20.183:19208
+[INFO]2021-04-06 11:38:11,348: AGV30 connected 192.168.20.183 19208
+[INFO]2021-04-06 11:38:11,352: create lock <lock name:agv.AGV30.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000017CFBA2CD50>>
+[DEBUG]2021-04-06 11:38:11,354: try connect AGV30 192.168.20.183:19210
+[INFO]2021-04-06 11:38:11,359: AGV30 connected 192.168.20.183 19210
+[INFO]2021-04-06 11:38:11,379: AGV30 current map AKM2F
+[INFO]2021-04-06 11:38:11,400: AGV30 is online
+[WARNING]2021-04-06 11:38:11,417: clear alarm obj=AGV30, typeId=54231, id=606bd53a7b43eb40d2cb4352
+[WARNING]2021-04-06 11:38:11,425: clear alarm obj=AGV30, typeId=52200, id=606bd53c7b43eb40d2cb435a
+[DEBUG]2021-04-06 11:38:13,328: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-04-06 11:38:13,332: scadaTask init client agvApi
+[DEBUG]2021-04-06 11:38:13,336: used 7ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[DEBUG]2021-04-06 11:38:16,446: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-04-06 11:38:16,553: used 107ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-04-06 11:38:16,635: timer_thread[tid:2220] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=2220 count=1 at 0x0000017CFA05C0F0>> ,hold 3339 ms
+[INFO]2021-04-06 11:38:16,791: name=timer_thread, pid=10660, tid=2220
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/mytimer.py", line 113, in _loop() 
+[03] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:38:30,846: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-06 11:38:30,880: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-06 11:38:30,881: GET: http://192.168.20.250:5551/api/manual/tasklist addr: 192.168.20.60
+[DEBUG]2021-04-06 11:38:30,881: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-06 11:38:31,063: used 63ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/manual/seat
+[DEBUG]2021-04-06 11:38:31,604: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-06 11:38:31,684: used 80ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap
+[DEBUG]2021-04-06 11:38:38,573: GET: http://192.168.20.250:5551/api/scada/addTask?source=%E4%BA%8C%E6%A5%BC%E5%B7%A5%E4%BD%8D_02&target=%E4%BA%8C%E6%A5%BC%E6%B5%8B%E8%AF%95%E7%82%B9 addr: 192.168.20.60
+[INFO]2021-04-06 11:38:38,680: Scada send a task to the server from 二楼工位_02 to 二楼测试点 payloadId: None
+[INFO]2021-04-06 11:38:38,804: create task[606bd7be5a1730ed3ac84ce1]: type= scadaTask , 从二楼工位_02运送货架到二楼测试点 {'source': '二楼工位_02', 'target': '二楼测试点', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从二楼工位_02运送货架到二楼测试点', 'createTime': datetime.datetime(2021, 4, 6, 11, 38, 38, 757304), 'updateTime': datetime.datetime(2021, 4, 6, 11, 38, 38, 757304), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('606bd7be5a1730ed3ac84ce1')}
+[INFO]2021-04-06 11:38:38,976: task[606bd7be5a1730ed3ac84ce1][-] AP32(LM34) -> LM9(LM40) [waiting] is inside False
+[INFO]2021-04-06 11:38:39,069: task cmd: got a task from scada task[606bd7be5a1730ed3ac84ce1][-] AP32(LM34) -> LM9(LM40) [waiting]
+[DEBUG]2021-04-06 11:38:39,147: used 574ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/scada/addTask?source=%E4%BA%8C%E6%A5%BC%E5%B7%A5%E4%BD%8D_02&target=%E4%BA%8C%E6%A5%BC%E6%B5%8B%E8%AF%95%E7%82%B9
+[INFO]2021-04-06 11:38:39,540: task[606bd7be5a1730ed3ac84ce1]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 4, 6, 11, 38, 39, 539633), 'updateTime': datetime.datetime(2021, 4, 6, 11, 38, 39, 539633), 'status': 'running'}
+[INFO]2021-04-06 11:38:39,665: task: start task[606bd7be5a1730ed3ac84ce1][-] AP32(LM34) -> LM9(LM40) [waiting]
+[INFO]2021-04-06 11:38:39,790: task[606bd7be5a1730ed3ac84ce1] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 4, 6, 11, 38, 39, 759140)}
+[DEBUG]2021-04-06 11:38:39,883: task[606bd7be5a1730ed3ac84ce1][-] AP32(LM34) -> LM9(LM40) [waitForAgv] waiting -> waitForAgv
+[DEBUG]2021-04-06 11:38:41,303: GET: http://127.0.0.1:5551/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM34&mapId=AKM2F&taskId=606bd7be5a1730ed3ac84ce1&timeout=10 addr: 127.0.0.1
+[INFO]2021-04-06 11:38:43,657: apply AGV30 ,taskId: 606bd7be5a1730ed3ac84ce1 ,loc AKM2F.LM34 ,autoLock False , used 2308 ms
+[DEBUG]2021-04-06 11:38:43,987: GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV30&appName=scadaTask&taskId=606bd7be5a1730ed3ac84ce1 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:38:44,051: lock:  AGV30 taskId 606bd7be5a1730ed3ac84ce1 app scadaTask
+[WARNING]2021-04-06 11:38:45,261: AGV30 clear task finish, cur= AKM2F.AP29 task_status= 4
+[DEBUG]2021-04-06 11:38:45,369: used 1382ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV30&appName=scadaTask&taskId=606bd7be5a1730ed3ac84ce1
+[INFO]2021-04-06 11:38:45,450: task[606bd7be5a1730ed3ac84ce1][-] AP32(LM34) -> LM9(LM40) [waitForAgv] apply AGV30
+[INFO]2021-04-06 11:38:45,492: task[606bd7be5a1730ed3ac84ce1] update info: {'agvId': 'AGV30', 'failMsg': '成功分配小车AGV30,检测顶升下降', 'updateTime': datetime.datetime(2021, 4, 6, 11, 38, 45, 464205)}
+[WARNING]2021-04-06 11:38:45,570: scada.606bd7be5a1730ed3ac84ce1[tid:18028] <locked _thread.RLock object owner=18028 count=1 at 0x0000017CFBDA8AE0> ,hold 4442 ms
+[INFO]2021-04-06 11:38:45,743: name=scada.606bd7be5a1730ed3ac84ce1, pid=10660, tid=18028
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:38:45,807: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [initJackdown] waitForAgv -> initJackdown
+[INFO]2021-04-06 11:38:46,243: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [initJackdown] _jackDown
+[DEBUG]2021-04-06 11:38:46,319: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:38:46,443: GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-04-06 11:38:47,870: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:38:47,996: AGV30 jack down status:  True
+[DEBUG]2021-04-06 11:38:48,059: used 1616ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:38:48,152: [return] use 1833 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[INFO]2021-04-06 11:38:48,247: task[606bd7be5a1730ed3ac84ce1] update info: {'failMsg': '前往二楼工位_02工位点拉取货架', 'updateTime': datetime.datetime(2021, 4, 6, 11, 38, 48, 246400)}
+[DEBUG]2021-04-06 11:38:48,309: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [startMoveJackup] initJackdown -> startMoveJackup
+[DEBUG]2021-04-06 11:38:48,786: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV30&agvId=AGV30&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.AP32&location=AP32&p_direction=0.0&pgv_type=1&recognize=False&seer_jackup=JackLoad&taskId=606bd7be5a1730ed3ac84ce1_2&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-04-06 11:38:48,806: Begin: AGV30 move from AKM2F.AP29 to AKM2F.AP32 by paths: [('AKM2F', ['AP29', 'LM31', 'LM30', 'LM34', 'AP32'], 4.568999999999999)] task: 606bd7be5a1730ed3ac84ce1_2 timeout 86400 used 14 ms
+[DEBUG]2021-04-06 11:38:48,810: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload] startMoveJackup -> loadPlayload
+[DEBUG]2021-04-06 11:38:49,748: agvInfo: AGV30 AKM2F.AP29 move to AKM2F.LM31 ,taskId 606bd7be5a1730ed3ac84ce1_2
+[INFO]2021-04-06 11:38:49,753: goTarget {'id': 'LM31'}
+[CRITICAL]2021-04-06 11:38:49,859: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:38:51,089: AGV30 turn to wait check cur AP29 next LM30 0.992 False
+[DEBUG]2021-04-06 11:38:51,655: agvInfo: AGV30 AKM2F.AP29 move to AKM2F.LM30 ,taskId 606bd7be5a1730ed3ac84ce1_2
+[INFO]2021-04-06 11:38:51,658: goTarget {'id': 'LM30'}
+[CRITICAL]2021-04-06 11:38:51,934: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:38:55,864: AGV30 set loc AKM2F.LM31 ,old AP29 (-13.67,-15.14)
+[DEBUG]2021-04-06 11:39:02,236: AGV30 turn to wait check cur LM31 next LM34 0.792 False
+[DEBUG]2021-04-06 11:39:02,787: agvInfo: AGV30 AKM2F.LM31 move to AKM2F.LM34 ,taskId 606bd7be5a1730ed3ac84ce1_2
+[INFO]2021-04-06 11:39:02,789: goTarget {'id': 'LM34'}
+[CRITICAL]2021-04-06 11:39:02,910: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:39:03,592: AGV30 set loc AKM2F.LM30 ,old LM31 (-13.85,-14.08)
+[ERROR]2021-04-06 11:39:11,124: raise alarm obj=AGV30, typeId=54231, desc=AGV异常, id=606bd7df7b43eb40d2cb4677
+[ERROR]2021-04-06 11:39:12,818: raise alarm obj=AGV30, typeId=52200, desc=AGV异常, id=606bd7e07b43eb40d2cb467e
+[WARNING]2021-04-06 11:39:16,139: clear alarm obj=AGV30, typeId=54231, id=606bd7df7b43eb40d2cb4677
+[DEBUG]2021-04-06 11:39:16,848: AGV30 turn to wait check cur LM30 next AP32 0.918 False
+[DEBUG]2021-04-06 11:39:17,402: agvInfo: AGV30 AKM2F.LM30 move jackup to AKM2F.AP32 ,taskId 606bd7be5a1730ed3ac84ce1_2
+[CRITICAL]2021-04-06 11:39:17,432: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[WARNING]2021-04-06 11:39:18,736: AGV30 waitFinish: loc is diff LM30 AP32 task_status= 2
+[DEBUG]2021-04-06 11:39:18,971: AGV30 set loc AKM2F.LM34 ,old LM30 (-15.05,-13.99)
+[WARNING]2021-04-06 11:39:19,253: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:19,764: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:20,280: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:20,792: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:21,308: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:21,821: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:22,338: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:22,850: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:23,365: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:23,881: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:24,393: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:24,910: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:25,423: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:25,936: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:26,446: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:26,971: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:27,539: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:28,053: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:28,569: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:39:29,081: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[DEBUG]2021-04-06 11:39:29,165: AGV30 set loc AKM2F.AP32 ,old LM34 (-15.15,-13.11)
+[SUCC]2021-04-06 11:39:32,142: Finish:  AGV30 arrived AKM2F.AP32 ,task: 606bd7be5a1730ed3ac84ce1_2
+[INFO]2021-04-06 11:39:32,398: task: move finish callback task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload]
+[INFO]2021-04-06 11:39:32,410: task[606bd7be5a1730ed3ac84ce1] update info: {'failMsg': 'AGV顶升', 'updateTime': datetime.datetime(2021, 4, 6, 11, 39, 32, 406257)}
+[DEBUG]2021-04-06 11:39:32,592: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload_jackup] loadPlayload_readqr -> loadPlayload_jackup
+[INFO]2021-04-06 11:39:32,937: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload_jackup] _jackUp
+[DEBUG]2021-04-06 11:39:33,029: send http_get: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:39:33,295: GET: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-04-06 11:39:36,352: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': True}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:39:37,751: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:39:39,089: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:39:40,480: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:39:40,559: AGV30 jack up status:  True
+[DEBUG]2021-04-06 11:39:40,670: [return] use 7641 ms,http_get: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90
+[INFO]2021-04-06 11:39:40,778: task[606bd7be5a1730ed3ac84ce1] update info: {'failMsg': '等待二楼测试点工位点锁', 'updateTime': datetime.datetime(2021, 4, 6, 11, 39, 40, 731180)}
+[WARNING]2021-04-06 11:39:40,889: scada.606bd7be5a1730ed3ac84ce1[tid:18028] <locked _thread.RLock object owner=18028 count=1 at 0x0000017CFBDA8AE0> ,hold 7952 ms
+[INFO]2021-04-06 11:39:41,078: name=scada.606bd7be5a1730ed3ac84ce1, pid=10660, tid=18028
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:39:41,204: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [waitDestPreLoc] loadPlayload_jackup -> waitDestPreLoc
+[INFO]2021-04-06 11:39:41,752: task: prepoint locked  606bd7be5a1730ed3ac84ce1 AKM2F.LM9
+[INFO]2021-04-06 11:39:41,861: task[606bd7be5a1730ed3ac84ce1] update info: {'failMsg': '前往LM9工位点放下货架', 'updateTime': datetime.datetime(2021, 4, 6, 11, 39, 41, 845661)}
+[DEBUG]2021-04-06 11:39:41,957: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadMove] waitDestPreLoc -> dropPayloadMove
+[DEBUG]2021-04-06 11:39:42,444: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV30&agvId=AGV30&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.LM9&location=LM9&p_direction=0.0&pgv_type=1&recognize=False&result=True&resultDesc=None&seer_jackup=JackUnload&taskId=606bd7be5a1730ed3ac84ce1_4&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-04-06 11:39:42,501: Begin: AGV30 move from AKM2F.AP32 to AKM2F.LM9 by paths: [('AKM2F', ['AP32', 'LM34', 'LM39', 'LM37', 'LM18', 'LM40', 'LM17', 'LM16', 'LM44', 'LM43', 'LM14', 'LM13', 'LM12', 'LM11', 'LM9'], 51.33450817088753)] task: 606bd7be5a1730ed3ac84ce1_4 timeout 86400 used 51 ms
+[INFO]2021-04-06 11:39:42,506: task[606bd7be5a1730ed3ac84ce1] update info: {'step': 'dropPayload', 'updateTime': datetime.datetime(2021, 4, 6, 11, 39, 42, 504461)}
+[DEBUG]2021-04-06 11:39:42,508: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [dropPayload] dropPayloadMove -> dropPayload
+[DEBUG]2021-04-06 11:39:43,210: agvInfo: AGV30 AKM2F.AP32 move to AKM2F.LM34 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:39:43,214: goTarget {'id': 'LM34'}
+[DEBUG]2021-04-06 11:39:44,962: AGV30 turn to wait check cur AP32 next LM39 0.908 False
+[DEBUG]2021-04-06 11:39:45,519: agvInfo: AGV30 AKM2F.AP32 move to AKM2F.LM39 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:39:45,521: goTarget {'id': 'LM39'}
+[DEBUG]2021-04-06 11:39:46,841: AGV30 set loc AKM2F.LM34 ,old AP32 (-15.15,-13.86)
+[DEBUG]2021-04-06 11:39:47,271: AGV30 choise next pos cur LM34 next LM37 pre LM39 2.755 False
+[DEBUG]2021-04-06 11:39:47,273: AGV30 turn to wait check cur LM34 next LM37 2.755 False
+[DEBUG]2021-04-06 11:39:47,867: agvInfo: AGV30 AKM2F.LM34 move to AKM2F.LM37 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:39:47,869: goTarget {'id': 'LM37'}
+[DEBUG]2021-04-06 11:39:55,895: AGV30 set loc AKM2F.LM39 ,old LM34 (-15.15,-15.21)
+[DEBUG]2021-04-06 11:39:57,347: AGV30 turn to wait check cur LM39 next LM18 0.691 False
+[DEBUG]2021-04-06 11:39:57,911: agvInfo: AGV30 AKM2F.LM39 move to AKM2F.LM18 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:39:57,914: goTarget {'id': 'LM18'}
+[DEBUG]2021-04-06 11:39:58,182: AGV30 set loc AKM2F.LM37 ,old LM39 (-15.14,-16.60)
+[DEBUG]2021-04-06 11:40:07,367: AGV30 turn to wait check cur LM37 next LM40 0.702 False
+[DEBUG]2021-04-06 11:40:07,940: agvInfo: AGV30 AKM2F.LM37 move to AKM2F.LM40 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:40:07,942: goTarget {'id': 'LM40'}
+[DEBUG]2021-04-06 11:40:08,300: AGV30 set loc AKM2F.LM18 ,old LM37 (-18.20,-16.73)
+[DEBUG]2021-04-06 11:40:08,664: AGV30 choise next pos cur LM18 next LM17 pre LM40 14.419 True
+[DEBUG]2021-04-06 11:40:08,667: AGV30 turn to wait check cur LM18 next LM17 14.419 True
+[DEBUG]2021-04-06 11:40:09,253: agvInfo: AGV30 AKM2F.LM18 move to AKM2F.LM17 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:40:09,259: goTarget {'id': 'LM17'}
+[DEBUG]2021-04-06 11:40:19,745: AGV30 choise next pos cur LM18 next LM16 pre LM17 11.951 False
+[DEBUG]2021-04-06 11:40:19,748: AGV30 turn to wait check cur LM18 next LM16 11.951 False
+[DEBUG]2021-04-06 11:40:20,186: AGV30 set loc AKM2F.LM40 ,old LM18 (-18.36,-22.03)
+[INFO]2021-04-06 11:40:20,279: try open door DOOR_01
+[WARNING]2021-04-06 11:40:20,282: AGV30 check failed [] AP32,LM34,LM39,LM37,LM18,LM40,LM17,LM16,LM44,LM43,LM14,LM13,LM12,LM11,LM9 ,map: AKM2F
+[INFO]2021-04-06 11:40:20,766: open door DOOR_01
+[DEBUG]2021-04-06 11:40:20,771: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[DEBUG]2021-04-06 11:40:20,777: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_01 addr: 127.0.0.1
+[INFO]2021-04-06 11:40:20,817: try open door DOOR_01
+[DEBUG]2021-04-06 11:40:21,326: [return] use 555 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[INFO]2021-04-06 11:40:21,351: try open door DOOR_01
+[INFO]2021-04-06 11:40:21,880: try open door DOOR_01
+[DEBUG]2021-04-06 11:40:22,458: agvInfo: AGV30 AKM2F.LM40 move to AKM2F.LM16 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:40:22,460: goTarget {'id': 'LM16'}
+[DEBUG]2021-04-06 11:40:29,894: AGV30 set loc AKM2F.LM17 ,old LM40 (-18.37,-31.07)
+[ERROR]2021-04-06 11:40:32,147: raise alarm obj=AGV30, typeId=54231, desc=AGV异常, id=606bd8307b43eb40d2cb4899
+[WARNING]2021-04-06 11:40:35,475: clear alarm obj=AGV30, typeId=54231, id=606bd8307b43eb40d2cb4899
+[DEBUG]2021-04-06 11:40:38,686: AGV30 turn to wait check cur LM17 next LM44 0.766 False
+[DEBUG]2021-04-06 11:40:39,276: agvInfo: AGV30 AKM2F.LM17 move to AKM2F.LM44 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:40:39,278: goTarget {'id': 'LM44'}
+[DEBUG]2021-04-06 11:40:39,580: AGV30 set loc AKM2F.LM16 ,old LM17 (-18.37,-33.26)
+[DEBUG]2021-04-06 11:40:40,051: AGV30 choise next pos cur LM16 next LM43 pre LM44 5.449 True
+[DEBUG]2021-04-06 11:40:40,057: AGV30 choise next pos cur LM16 next LM14 pre LM43 7.285 False
+[DEBUG]2021-04-06 11:40:40,060: AGV30 turn to wait check cur LM16 next LM14 7.285 False
+[DEBUG]2021-04-06 11:40:40,617: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM14 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:40:40,618: goTarget {'id': 'LM14'}
+[INFO]2021-04-06 11:40:44,186: try close door DOOR_01
+[INFO]2021-04-06 11:40:44,578: close door DOOR_01
+[DEBUG]2021-04-06 11:40:44,578: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:40:44,583: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_01 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:40:45,127: [return] use 549 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[ERROR]2021-04-06 11:40:45,555: raise alarm obj=AGV30, typeId=54231, desc=AGV异常, id=606bd83d7b43eb40d2cb48e1
+[WARNING]2021-04-06 11:40:54,863: clear alarm obj=AGV30, typeId=54231, id=606bd83d7b43eb40d2cb48e1
+[DEBUG]2021-04-06 11:41:01,486: AGV30 set loc AKM2F.LM44 ,old LM16 (-16.35,-33.43)
+[DEBUG]2021-04-06 11:41:06,145: AGV30 set loc AKM2F.LM43 ,old LM44 (-12.83,-33.44)
+[DEBUG]2021-04-06 11:41:07,616: AGV30 turn to wait check cur LM43 next LM13 0.918 False
+[INFO]2021-04-06 11:41:08,146: try open door DOOR_02
+[INFO]2021-04-06 11:41:08,373: open door DOOR_02
+[DEBUG]2021-04-06 11:41:08,384: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[DEBUG]2021-04-06 11:41:08,406: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_02 addr: 127.0.0.1
+[INFO]2021-04-06 11:41:08,671: try open door DOOR_02
+[DEBUG]2021-04-06 11:41:08,958: [return] use 574 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[DEBUG]2021-04-06 11:41:09,160: AGV30 set loc AKM2F.LM14 ,old LM43 (-11.15,-33.40)
+[INFO]2021-04-06 11:41:09,192: try open door DOOR_02
+[INFO]2021-04-06 11:41:09,764: try open door DOOR_02
+[DEBUG]2021-04-06 11:41:10,293: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM13 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:41:10,294: goTarget {'id': 'LM13'}
+[DEBUG]2021-04-06 11:41:11,028: AGV30 choise next pos cur LM14 next LM12 pre LM13 7.933 True
+[DEBUG]2021-04-06 11:41:11,030: AGV30 choise next pos cur LM14 next LM11 pre LM12 12.547 True
+[DEBUG]2021-04-06 11:41:11,031: AGV30 turn to wait check cur LM14 next LM11 12.547 True
+[DEBUG]2021-04-06 11:41:11,571: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM11 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:41:11,574: goTarget {'id': 'LM11'}
+[DEBUG]2021-04-06 11:41:18,934: AGV30 set loc AKM2F.LM13 ,old LM14 (-11.09,-30.46)
+[DEBUG]2021-04-06 11:41:19,017: AGV30 choise next pos cur LM13 next LM9 pre LM11 17.335 False
+[DEBUG]2021-04-06 11:41:19,028: AGV30 turn to wait check cur LM13 next LM9 17.335 False
+[DEBUG]2021-04-06 11:41:19,635: agvInfo: AGV30 AKM2F.LM13 move jackdown to AKM2F.LM9 ,taskId 606bd7be5a1730ed3ac84ce1_4
+[WARNING]2021-04-06 11:41:20,932: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:21,462: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:21,976: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:22,488: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:23,015: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:23,531: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:24,047: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[DEBUG]2021-04-06 11:41:24,155: AGV30 set loc AKM2F.LM12 ,old LM13 (-11.08,-25.32)
+[WARNING]2021-04-06 11:41:24,568: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[INFO]2021-04-06 11:41:24,702: try close door DOOR_02
+[WARNING]2021-04-06 11:41:25,077: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[INFO]2021-04-06 11:41:25,156: close door DOOR_02
+[DEBUG]2021-04-06 11:41:25,157: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:41:25,161: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_02 addr: 127.0.0.1
+[WARNING]2021-04-06 11:41:25,591: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[DEBUG]2021-04-06 11:41:25,707: [return] use 550 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[WARNING]2021-04-06 11:41:26,101: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:26,614: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:27,128: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:27,642: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:28,157: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:28,666: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:29,182: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:29,697: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:30,211: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:30,719: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:31,235: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:31,751: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:32,267: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:32,781: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:33,299: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:33,812: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:34,325: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:34,840: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:35,352: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:35,863: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:36,377: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:41:36,888: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[DEBUG]2021-04-06 11:41:37,036: AGV30 set loc AKM2F.LM9 ,old LM12 (-11.08,-13.16)
+[SUCC]2021-04-06 11:41:39,449: Finish:  AGV30 arrived AKM2F.LM9 ,task: 606bd7be5a1730ed3ac84ce1_4
+[INFO]2021-04-06 11:41:39,841: task: move finish callback task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [dropPayload]
+[INFO]2021-04-06 11:41:39,847: task[606bd7be5a1730ed3ac84ce1] update info: {'failMsg': '放下货架，旋转顶升机构初始化', 'updateTime': datetime.datetime(2021, 4, 6, 11, 41, 39, 845388)}
+[INFO]2021-04-06 11:41:40,130: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadJackdown] _jackDown
+[DEBUG]2021-04-06 11:41:40,136: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:41:40,142: GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-04-06 11:41:42,776: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': True}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:41:45,223: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:41:47,162: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:41:49,219: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:41:49,280: AGV30 jack down status:  True
+[DEBUG]2021-04-06 11:41:49,344: used 31ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:41:49,420: [return] use 9284 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[WARNING]2021-04-06 11:41:49,480: scada.606bd7be5a1730ed3ac84ce1[tid:18028] <locked _thread.RLock object owner=18028 count=1 at 0x0000017CFBDA8AE0> ,hold 9350 ms
+[INFO]2021-04-06 11:41:49,558: name=scada.606bd7be5a1730ed3ac84ce1, pid=10660, tid=18028
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:41:49,666: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadReset] dropPayloadJackdown -> dropPayloadReset
+[INFO]2021-04-06 11:41:50,073: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadReset] rotationClear
+[DEBUG]2021-04-06 11:41:50,150: send http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30
+[DEBUG]2021-04-06 11:41:50,261: GET: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30 addr: 127.0.0.1
+[INFO]2021-04-06 11:41:52,586: _rotation in rotationMgr: AGV30 None [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:41:52,757: AGV30 rotation clear status: True
+[DEBUG]2021-04-06 11:41:52,833: used 2572ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30
+[DEBUG]2021-04-06 11:41:52,901: [return] use 2751 ms,http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30
+[INFO]2021-04-06 11:41:52,989: task[606bd7be5a1730ed3ac84ce1]:  successed {'step': 'finish', 'failMsg': '任务成功', 'endTime': datetime.datetime(2021, 4, 6, 11, 41, 52, 972995), 'status': 'success'}
+[DEBUG]2021-04-06 11:41:53,067: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [finish] dropPayloadReset -> finish
+[INFO]2021-04-06 11:41:53,428: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [finish] AGV30 release task, release agv True True False
+[DEBUG]2021-04-06 11:41:53,630: GET: http://127.0.0.1:5551/api/agv/isLocked?agv=AGV30&appName=scadaTask&taskId=606bd7be5a1730ed3ac84ce1 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:41:53,739: used 109ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/isLocked?agv=AGV30&appName=scadaTask&taskId=606bd7be5a1730ed3ac84ce1
+[DEBUG]2021-04-06 11:41:54,006: GET: http://127.0.0.1:5551/api/agv/release?agv=AGV30&appName=scadaTask&force=False&taskId=606bd7be5a1730ed3ac84ce1 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:41:54,134: unlock: AGV30 taskId 606bd7be5a1730ed3ac84ce1 app scadaTask force False
+[DEBUG]2021-04-06 11:41:54,212: used 206ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/release?agv=AGV30&appName=scadaTask&force=False&taskId=606bd7be5a1730ed3ac84ce1
+[INFO]2021-04-06 11:41:54,413: task[606bd7be5a1730ed3ac84ce1][AGV30] AP32(LM34) -> LM9(LM40) [finish] let AGV30 gohome
+[DEBUG]2021-04-06 11:41:54,646: GET: http://127.0.0.1:5551/api/agv/goHome?agv=AGV30&appName=scadaTask&force=False&timeout=10800 addr: 127.0.0.1
+[INFO]2021-04-06 11:41:54,708: AGV30 gohome home_1 force False taskId home_1 : AGV30.LM9 -> AKM2F.AP29
+[INFO]2021-04-06 11:41:55,866: Begin: AGV30 move from AKM2F.LM9 to AKM2F.AP29 by paths: [('AKM2F', ['LM9', 'LM11', 'LM12', 'LM13', 'LM14', 'LM43', 'LM44', 'LM16', 'LM17', 'LM40', 'LM18', 'LM37', 'LM39', 'LM31', 'AP29'], 51.445508170887535)] task: home_1 timeout 10800 used 1049 ms
+[DEBUG]2021-04-06 11:41:55,945: used 1299ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/goHome?agv=AGV30&appName=scadaTask&force=False&timeout=10800
+[INFO]2021-04-06 11:41:56,152: task: prepoint released2  606bd7be5a1730ed3ac84ce1 AKM2F.LM9
+[INFO]2021-04-06 11:41:56,232: task: stop task[606bd7be5a1730ed3ac84ce1][-] AP32(LM34) -> LM9(LM40) [finish]
+[DEBUG]2021-04-06 11:41:56,232: task: delete task 606bd7be5a1730ed3ac84ce1
+[DEBUG]2021-04-06 11:41:57,680: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM11 ,taskId home_1
+[INFO]2021-04-06 11:41:57,774: goTarget {'id': 'LM11'}
+[DEBUG]2021-04-06 11:41:58,654: AGV30 choise next pos cur LM9 next LM12 pre LM11 12.420 True
+[DEBUG]2021-04-06 11:41:58,729: AGV30 turn to wait check cur LM9 next LM12 12.420 True
+[DEBUG]2021-04-06 11:42:00,600: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM12 ,taskId home_1
+[INFO]2021-04-06 11:42:00,662: goTarget {'id': 'LM12'}
+[DEBUG]2021-04-06 11:42:09,236: AGV30 choise next pos cur LM9 next LM13 pre LM12 14.683 True
+[DEBUG]2021-04-06 11:42:09,314: AGV30 turn to wait check cur LM9 next LM13 14.683 True
+[DEBUG]2021-04-06 11:42:11,393: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM13 ,taskId home_1
+[INFO]2021-04-06 11:42:11,452: goTarget {'id': 'LM13'}
+[DEBUG]2021-04-06 11:42:13,946: AGV30 choise next pos cur LM9 next LM14 pre LM13 12.997 False
+[DEBUG]2021-04-06 11:42:14,055: AGV30 turn to wait check cur LM9 next LM14 12.997 False
+[INFO]2021-04-06 11:42:15,327: try open door DOOR_02
+[INFO]2021-04-06 11:42:16,292: open door DOOR_02
+[DEBUG]2021-04-06 11:42:16,387: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[DEBUG]2021-04-06 11:42:16,550: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_02 addr: 127.0.0.1
+[INFO]2021-04-06 11:42:16,631: try open door DOOR_02
+[DEBUG]2021-04-06 11:42:17,362: used 812ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[DEBUG]2021-04-06 11:42:17,440: [return] use 1052 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[INFO]2021-04-06 11:42:17,934: try open door DOOR_02
+[DEBUG]2021-04-06 11:42:20,044: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM14 ,taskId home_1
+[INFO]2021-04-06 11:42:20,166: goTarget {'id': 'LM14'}
+[DEBUG]2021-04-06 11:42:25,857: AGV30 turn to wait check cur LM9 next LM43 0.855 False
+[DEBUG]2021-04-06 11:42:27,262: AGV30 set loc AKM2F.LM14 ,old LM9 (-11.10,-33.31)
+[DEBUG]2021-04-06 11:42:28,630: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM43 ,taskId home_1
+[INFO]2021-04-06 11:42:28,740: goTarget {'id': 'LM43'}
+[INFO]2021-04-06 11:42:29,570: try close door DOOR_02
+[DEBUG]2021-04-06 11:42:29,958: AGV30 choise next pos cur LM14 next LM44 pre LM43 5.274 True
+[INFO]2021-04-06 11:42:30,037: close door DOOR_02
+[DEBUG]2021-04-06 11:42:30,101: AGV30 choise next pos cur LM14 next LM16 pre LM44 7.234 False
+[DEBUG]2021-04-06 11:42:30,258: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:42:30,320: AGV30 turn to wait check cur LM14 next LM16 7.234 False
+[DEBUG]2021-04-06 11:42:30,603: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_02 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:42:31,399: used 796ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:42:31,446: [return] use 1188 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:42:32,012: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM16 ,taskId home_1
+[INFO]2021-04-06 11:42:32,087: goTarget {'id': 'LM16'}
+[DEBUG]2021-04-06 11:42:40,565: AGV30 set loc AKM2F.LM44 ,old LM14 (-16.43,-33.44)
+[DEBUG]2021-04-06 11:42:42,113: AGV30 turn to wait check cur LM44 next LM17 0.722 False
+[INFO]2021-04-06 11:42:43,059: try open door DOOR_01
+[DEBUG]2021-04-06 11:42:43,612: AGV30 set loc AKM2F.LM16 ,old LM44 (-18.28,-33.43)
+[INFO]2021-04-06 11:42:44,000: open door DOOR_01
+[DEBUG]2021-04-06 11:42:44,079: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[INFO]2021-04-06 11:42:44,191: try open door DOOR_01
+[DEBUG]2021-04-06 11:42:44,268: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_01 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:42:44,969: used 701ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[DEBUG]2021-04-06 11:42:45,081: [return] use 1002 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[INFO]2021-04-06 11:42:45,696: try open door DOOR_01
+[DEBUG]2021-04-06 11:42:47,072: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM17 ,taskId home_1
+[INFO]2021-04-06 11:42:47,180: goTarget {'id': 'LM17'}
+[DEBUG]2021-04-06 11:42:48,091: AGV30 choise next pos cur LM16 next LM40 pre LM17 11.249 True
+[DEBUG]2021-04-06 11:42:48,179: AGV30 turn to wait check cur LM16 next LM40 11.249 True
+[DEBUG]2021-04-06 11:42:49,771: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM40 ,taskId home_1
+[INFO]2021-04-06 11:42:49,860: goTarget {'id': 'LM40'}
+[DEBUG]2021-04-06 11:42:54,576: AGV30 choise next pos cur LM16 next LM18 pre LM40 14.776 False
+[DEBUG]2021-04-06 11:42:54,651: AGV30 turn to wait check cur LM16 next LM18 14.776 False
+[DEBUG]2021-04-06 11:42:56,318: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM18 ,taskId home_1
+[INFO]2021-04-06 11:42:56,411: goTarget {'id': 'LM18'}
+[DEBUG]2021-04-06 11:43:08,030: AGV30 turn to wait check cur LM16 next LM37 0.953 False
+[DEBUG]2021-04-06 11:43:09,687: AGV30 set loc AKM2F.LM18 ,old LM16 (-18.38,-16.83)
+[DEBUG]2021-04-06 11:43:09,871: agvInfo: AGV30 AKM2F.LM18 move to AKM2F.LM37 ,taskId home_1
+[INFO]2021-04-06 11:43:10,014: goTarget {'id': 'LM37'}
+[INFO]2021-04-06 11:43:11,817: try close door DOOR_01
+[INFO]2021-04-06 11:43:12,019: close door DOOR_01
+[DEBUG]2021-04-06 11:43:12,127: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:43:12,329: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_01 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:43:13,346: used 1017ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:43:13,500: [return] use 1373 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:43:18,486: AGV30 turn to wait check cur LM18 next LM39 0.451 False
+[DEBUG]2021-04-06 11:43:18,973: AGV30 set loc AKM2F.LM37 ,old LM18 (-15.27,-16.74)
+[DEBUG]2021-04-06 11:43:19,834: agvInfo: AGV30 AKM2F.LM37 move to AKM2F.LM39 ,taskId home_1
+[INFO]2021-04-06 11:43:19,912: goTarget {'id': 'LM39'}
+[DEBUG]2021-04-06 11:43:25,729: AGV30 turn to wait check cur LM37 next LM31 0.691 False
+[DEBUG]2021-04-06 11:43:26,755: agvInfo: AGV30 AKM2F.LM37 move to AKM2F.LM31 ,taskId home_1
+[INFO]2021-04-06 11:43:26,835: goTarget {'id': 'LM31'}
+[DEBUG]2021-04-06 11:43:26,837: AGV30 set loc AKM2F.LM39 ,old LM37 (-15.16,-15.24)
+[DEBUG]2021-04-06 11:43:27,792: AGV30 choise next pos cur LM39 next AP29 pre LM31 2.340 False
+[DEBUG]2021-04-06 11:43:27,866: AGV30 turn to wait check cur LM39 next AP29 2.340 False
+[DEBUG]2021-04-06 11:43:29,413: agvInfo: AGV30 AKM2F.LM39 move to AKM2F.AP29 ,taskId home_1
+[INFO]2021-04-06 11:43:29,523: goTarget {'id': 'AP29'}
+[WARNING]2021-04-06 11:43:30,909: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:31,482: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:32,112: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:32,853: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:33,514: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:34,131: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:34,786: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[DEBUG]2021-04-06 11:43:35,083: AGV30 set loc AKM2F.LM31 ,old LM39 (-13.95,-15.14)
+[WARNING]2021-04-06 11:43:35,542: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:36,165: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:36,795: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:37,453: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:38,108: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:38,746: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:43:39,389: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[DEBUG]2021-04-06 11:43:39,895: AGV30 set loc AKM2F.AP29 ,old LM31 (-12.97,-15.13)
+[SUCC]2021-04-06 11:43:42,788: Finish:  AGV30 arrived AKM2F.AP29 ,task: home_1
+[DEBUG]2021-04-06 11:43:42,832: unlock: AGV30 taskId None app None force False
+[DEBUG]2021-04-06 11:48:43,167: GET: http://192.168.20.250:5551/api/scada/addTask?source=%E4%BA%8C%E6%A5%BC%E5%B7%A5%E4%BD%8D_02&target=%E4%BA%8C%E6%A5%BC%E6%B5%8B%E8%AF%95%E7%82%B9 addr: 192.168.20.60
+[INFO]2021-04-06 11:48:43,243: Scada send a task to the server from 二楼工位_02 to 二楼测试点 payloadId: None
+[INFO]2021-04-06 11:48:43,323: create task[606bda1b5a1730ed3ac84ce5]: type= scadaTask , 从二楼工位_02运送货架到二楼测试点 {'source': '二楼工位_02', 'target': '二楼测试点', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从二楼工位_02运送货架到二楼测试点', 'createTime': datetime.datetime(2021, 4, 6, 11, 48, 43, 292266), 'updateTime': datetime.datetime(2021, 4, 6, 11, 48, 43, 292266), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('606bda1b5a1730ed3ac84ce5')}
+[INFO]2021-04-06 11:48:43,497: task[606bda1b5a1730ed3ac84ce5][-] AP32(LM34) -> LM9(LM40) [waiting] is inside False
+[INFO]2021-04-06 11:48:43,540: task cmd: got a task from scada task[606bda1b5a1730ed3ac84ce5][-] AP32(LM34) -> LM9(LM40) [waiting]
+[DEBUG]2021-04-06 11:48:43,594: used 427ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/scada/addTask?source=%E4%BA%8C%E6%A5%BC%E5%B7%A5%E4%BD%8D_02&target=%E4%BA%8C%E6%A5%BC%E6%B5%8B%E8%AF%95%E7%82%B9
+[INFO]2021-04-06 11:48:43,636: task[606bda1b5a1730ed3ac84ce5]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 4, 6, 11, 48, 43, 603314), 'updateTime': datetime.datetime(2021, 4, 6, 11, 48, 43, 603314), 'status': 'running'}
+[INFO]2021-04-06 11:48:43,716: task: start task[606bda1b5a1730ed3ac84ce5][-] AP32(LM34) -> LM9(LM40) [waiting]
+[INFO]2021-04-06 11:48:43,823: task[606bda1b5a1730ed3ac84ce5] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 4, 6, 11, 48, 43, 792143)}
+[DEBUG]2021-04-06 11:48:43,917: task[606bda1b5a1730ed3ac84ce5][-] AP32(LM34) -> LM9(LM40) [waitForAgv] waiting -> waitForAgv
+[DEBUG]2021-04-06 11:48:45,415: GET: http://127.0.0.1:5551/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM34&mapId=AKM2F&taskId=606bda1b5a1730ed3ac84ce5&timeout=10 addr: 127.0.0.1
+[INFO]2021-04-06 11:48:46,873: apply AGV30 ,taskId: 606bda1b5a1730ed3ac84ce5 ,loc AKM2F.LM34 ,autoLock False , used 1378 ms
+[DEBUG]2021-04-06 11:48:46,983: used 1568ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM34&mapId=AKM2F&taskId=606bda1b5a1730ed3ac84ce5&timeout=10
+[DEBUG]2021-04-06 11:48:47,124: GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV30&appName=scadaTask&taskId=606bda1b5a1730ed3ac84ce5 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:48:47,217: lock:  AGV30 taskId 606bda1b5a1730ed3ac84ce5 app scadaTask
+[WARNING]2021-04-06 11:48:48,363: AGV30 clear task finish, cur= AKM2F.AP29 task_status= 4
+[DEBUG]2021-04-06 11:48:48,456: used 1332ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV30&appName=scadaTask&taskId=606bda1b5a1730ed3ac84ce5
+[INFO]2021-04-06 11:48:48,581: task[606bda1b5a1730ed3ac84ce5][-] AP32(LM34) -> LM9(LM40) [waitForAgv] apply AGV30
+[INFO]2021-04-06 11:48:48,630: task[606bda1b5a1730ed3ac84ce5] update info: {'agvId': 'AGV30', 'failMsg': '成功分配小车AGV30,检测顶升下降', 'updateTime': datetime.datetime(2021, 4, 6, 11, 48, 48, 612964)}
+[WARNING]2021-04-06 11:48:48,675: scada.606bda1b5a1730ed3ac84ce5[tid:17816] <locked _thread.RLock object owner=17816 count=1 at 0x0000017CFBEDB7B0> ,hold 3448 ms
+[INFO]2021-04-06 11:48:48,801: name=scada.606bda1b5a1730ed3ac84ce5, pid=10660, tid=17816
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:48:48,940: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [initJackdown] waitForAgv -> initJackdown
+[INFO]2021-04-06 11:48:49,456: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [initJackdown] _jackDown
+[DEBUG]2021-04-06 11:48:49,549: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:48:49,834: GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-04-06 11:48:51,407: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:48:51,456: AGV30 jack down status:  True
+[DEBUG]2021-04-06 11:48:51,516: used 1682ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:48:51,593: [return] use 2044 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[INFO]2021-04-06 11:48:51,652: task[606bda1b5a1730ed3ac84ce5] update info: {'failMsg': '前往二楼工位_02工位点拉取货架', 'updateTime': datetime.datetime(2021, 4, 6, 11, 48, 51, 639895)}
+[DEBUG]2021-04-06 11:48:51,733: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [startMoveJackup] initJackdown -> startMoveJackup
+[DEBUG]2021-04-06 11:48:52,111: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV30&agvId=AGV30&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.AP32&location=AP32&p_direction=0.0&pgv_type=1&recognize=False&seer_jackup=JackLoad&taskId=606bda1b5a1730ed3ac84ce5_2&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-04-06 11:48:52,134: Begin: AGV30 move from AKM2F.AP29 to AKM2F.AP32 by paths: [('AKM2F', ['AP29', 'LM31', 'LM30', 'LM34', 'AP32'], 4.568999999999999)] task: 606bda1b5a1730ed3ac84ce5_2 timeout 86400 used 19 ms
+[DEBUG]2021-04-06 11:48:52,137: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload] startMoveJackup -> loadPlayload
+[DEBUG]2021-04-06 11:48:52,745: agvInfo: AGV30 AKM2F.AP29 move to AKM2F.LM31 ,taskId 606bda1b5a1730ed3ac84ce5_2
+[INFO]2021-04-06 11:48:52,748: goTarget {'id': 'LM31'}
+[CRITICAL]2021-04-06 11:48:53,193: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:48:54,521: AGV30 turn to wait check cur AP29 next LM30 0.992 False
+[DEBUG]2021-04-06 11:48:55,162: agvInfo: AGV30 AKM2F.AP29 move to AKM2F.LM30 ,taskId 606bda1b5a1730ed3ac84ce5_2
+[INFO]2021-04-06 11:48:55,164: goTarget {'id': 'LM30'}
+[CRITICAL]2021-04-06 11:48:55,264: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:48:58,873: AGV30 set loc AKM2F.LM31 ,old AP29 (-13.68,-15.14)
+[DEBUG]2021-04-06 11:49:05,235: AGV30 turn to wait check cur LM31 next LM34 0.739 False
+[DEBUG]2021-04-06 11:49:05,797: agvInfo: AGV30 AKM2F.LM31 move to AKM2F.LM34 ,taskId 606bda1b5a1730ed3ac84ce5_2
+[INFO]2021-04-06 11:49:05,803: goTarget {'id': 'LM34'}
+[CRITICAL]2021-04-06 11:49:06,134: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:49:06,707: AGV30 set loc AKM2F.LM30 ,old LM31 (-13.86,-14.08)
+[DEBUG]2021-04-06 11:49:12,683: AGV30 turn to wait check cur LM30 next AP32 0.756 False
+[DEBUG]2021-04-06 11:49:13,209: agvInfo: AGV30 AKM2F.LM30 move jackup to AKM2F.AP32 ,taskId 606bda1b5a1730ed3ac84ce5_2
+[CRITICAL]2021-04-06 11:49:13,415: agvApi step callback cause a error: 'dict' object is not callable
+pid=10660, ppid=17336, tid=208
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[DEBUG]2021-04-06 11:49:14,135: AGV30 set loc AKM2F.LM34 ,old LM30 (-15.07,-13.99)
+[WARNING]2021-04-06 11:49:14,447: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:14,972: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:15,495: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:16,023: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:16,538: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:17,055: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:17,583: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:18,097: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:18,617: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:19,128: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:19,643: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:20,155: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:20,670: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:21,183: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:21,699: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:22,214: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:22,725: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:23,241: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:23,753: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[WARNING]2021-04-06 11:49:24,264: AGV30 waitFinish: loc is diff LM34 AP32 task_status= 2
+[DEBUG]2021-04-06 11:49:24,378: AGV30 set loc AKM2F.AP32 ,old LM34 (-15.15,-13.09)
+[SUCC]2021-04-06 11:49:27,339: Finish:  AGV30 arrived AKM2F.AP32 ,task: 606bda1b5a1730ed3ac84ce5_2
+[INFO]2021-04-06 11:49:27,439: task: move finish callback task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload]
+[INFO]2021-04-06 11:49:27,443: task[606bda1b5a1730ed3ac84ce5] update info: {'failMsg': 'AGV顶升', 'updateTime': datetime.datetime(2021, 4, 6, 11, 49, 27, 441793)}
+[DEBUG]2021-04-06 11:49:27,648: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload_jackup] loadPlayload_readqr -> loadPlayload_jackup
+[INFO]2021-04-06 11:49:27,975: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [loadPlayload_jackup] _jackUp
+[DEBUG]2021-04-06 11:49:28,056: send http_get: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:49:28,241: GET: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-04-06 11:49:30,386: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': True}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:49:31,869: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': True}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:49:33,279: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:49:34,606: _jack in jackMgr: AGV30 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:49:34,685: AGV30 jack up status:  True
+[DEBUG]2021-04-06 11:49:34,730: used 30ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:49:34,811: [return] use 6755 ms,http_get: http://127.0.0.1:5551/api/agv/jackup?agv=AGV30&loc=None&timeoutSec=90
+[INFO]2021-04-06 11:49:34,872: task[606bda1b5a1730ed3ac84ce5] update info: {'failMsg': '等待二楼测试点工位点锁', 'updateTime': datetime.datetime(2021, 4, 6, 11, 49, 34, 870774)}
+[WARNING]2021-04-06 11:49:34,995: scada.606bda1b5a1730ed3ac84ce5[tid:17816] <locked _thread.RLock object owner=17816 count=1 at 0x0000017CFBEDB7B0> ,hold 7020 ms
+[INFO]2021-04-06 11:49:35,059: name=scada.606bda1b5a1730ed3ac84ce5, pid=10660, tid=17816
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:49:35,152: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [waitDestPreLoc] loadPlayload_jackup -> waitDestPreLoc
+[INFO]2021-04-06 11:49:35,640: task: prepoint locked  606bda1b5a1730ed3ac84ce5 AKM2F.LM9
+[INFO]2021-04-06 11:49:35,713: task[606bda1b5a1730ed3ac84ce5] update info: {'failMsg': '前往LM9工位点放下货架', 'updateTime': datetime.datetime(2021, 4, 6, 11, 49, 35, 703112)}
+[DEBUG]2021-04-06 11:49:35,796: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadMove] waitDestPreLoc -> dropPayloadMove
+[DEBUG]2021-04-06 11:49:36,253: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV30&agvId=AGV30&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.LM9&location=LM9&p_direction=0.0&pgv_type=1&recognize=False&result=True&resultDesc=None&seer_jackup=JackUnload&taskId=606bda1b5a1730ed3ac84ce5_4&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-04-06 11:49:36,273: Begin: AGV30 move from AKM2F.AP32 to AKM2F.LM9 by paths: [('AKM2F', ['AP32', 'LM34', 'LM39', 'LM37', 'LM18', 'LM40', 'LM17', 'LM16', 'LM44', 'LM43', 'LM14', 'LM13', 'LM12', 'LM11', 'LM9'], 51.33450817088753)] task: 606bda1b5a1730ed3ac84ce5_4 timeout 86400 used 17 ms
+[DEBUG]2021-04-06 11:49:36,274: used 22ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV30&agvId=AGV30&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.LM9&location=LM9&p_direction=0.0&pgv_type=1&recognize=False&result=True&resultDesc=None&seer_jackup=JackUnload&taskId=606bda1b5a1730ed3ac84ce5_4&taskType=scadaTask&timeoutSec=86400&use_pgv=False
+[INFO]2021-04-06 11:49:36,278: task[606bda1b5a1730ed3ac84ce5] update info: {'step': 'dropPayload', 'updateTime': datetime.datetime(2021, 4, 6, 11, 49, 36, 277207)}
+[DEBUG]2021-04-06 11:49:36,279: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [dropPayload] dropPayloadMove -> dropPayload
+[DEBUG]2021-04-06 11:49:36,900: agvInfo: AGV30 AKM2F.AP32 move to AKM2F.LM34 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:49:36,905: goTarget {'id': 'LM34'}
+[DEBUG]2021-04-06 11:49:38,649: AGV30 turn to wait check cur AP32 next LM39 0.854 False
+[DEBUG]2021-04-06 11:49:39,204: agvInfo: AGV30 AKM2F.AP32 move to AKM2F.LM39 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:49:39,205: goTarget {'id': 'LM39'}
+[DEBUG]2021-04-06 11:49:40,773: AGV30 set loc AKM2F.LM34 ,old AP32 (-15.15,-13.90)
+[DEBUG]2021-04-06 11:49:41,082: AGV30 choise next pos cur LM34 next LM37 pre LM39 2.755 False
+[DEBUG]2021-04-06 11:49:41,101: AGV30 turn to wait check cur LM34 next LM37 2.755 False
+[DEBUG]2021-04-06 11:49:41,655: agvInfo: AGV30 AKM2F.LM34 move to AKM2F.LM37 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:49:41,658: goTarget {'id': 'LM37'}
+[DEBUG]2021-04-06 11:49:49,496: AGV30 set loc AKM2F.LM39 ,old LM34 (-15.15,-15.13)
+[DEBUG]2021-04-06 11:49:51,170: AGV30 turn to wait check cur LM39 next LM18 0.638 False
+[DEBUG]2021-04-06 11:49:51,778: agvInfo: AGV30 AKM2F.LM39 move to AKM2F.LM18 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:49:51,785: goTarget {'id': 'LM18'}
+[DEBUG]2021-04-06 11:49:51,793: AGV30 set loc AKM2F.LM37 ,old LM39 (-15.14,-16.59)
+[DEBUG]2021-04-06 11:50:01,249: AGV30 turn to wait check cur LM37 next LM40 0.702 False
+[DEBUG]2021-04-06 11:50:01,890: agvInfo: AGV30 AKM2F.LM37 move to AKM2F.LM40 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:01,892: goTarget {'id': 'LM40'}
+[DEBUG]2021-04-06 11:50:02,208: AGV30 set loc AKM2F.LM18 ,old LM37 (-18.24,-16.73)
+[DEBUG]2021-04-06 11:50:02,652: AGV30 choise next pos cur LM18 next LM17 pre LM40 14.419 True
+[DEBUG]2021-04-06 11:50:02,654: AGV30 turn to wait check cur LM18 next LM17 14.419 True
+[DEBUG]2021-04-06 11:50:03,212: agvInfo: AGV30 AKM2F.LM18 move to AKM2F.LM17 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:03,214: goTarget {'id': 'LM17'}
+[DEBUG]2021-04-06 11:50:13,711: AGV30 choise next pos cur LM18 next LM16 pre LM17 11.851 False
+[DEBUG]2021-04-06 11:50:13,714: AGV30 turn to wait check cur LM18 next LM16 11.851 False
+[DEBUG]2021-04-06 11:50:14,222: AGV30 set loc AKM2F.LM40 ,old LM18 (-18.36,-22.09)
+[INFO]2021-04-06 11:50:14,243: try open door DOOR_01
+[INFO]2021-04-06 11:50:14,735: open door DOOR_01
+[DEBUG]2021-04-06 11:50:14,738: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[DEBUG]2021-04-06 11:50:14,744: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_01 addr: 127.0.0.1
+[INFO]2021-04-06 11:50:14,790: try open door DOOR_01
+[DEBUG]2021-04-06 11:50:15,302: [return] use 564 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[INFO]2021-04-06 11:50:15,331: try open door DOOR_01
+[INFO]2021-04-06 11:50:15,875: try open door DOOR_01
+[DEBUG]2021-04-06 11:50:16,456: agvInfo: AGV30 AKM2F.LM40 move to AKM2F.LM16 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:16,459: goTarget {'id': 'LM16'}
+[DEBUG]2021-04-06 11:50:23,045: AGV30 set loc AKM2F.LM17 ,old LM40 (-18.36,-30.99)
+[DEBUG]2021-04-06 11:50:24,913: AGV30 turn to wait check cur LM17 next LM44 0.766 False
+[DEBUG]2021-04-06 11:50:25,523: agvInfo: AGV30 AKM2F.LM17 move to AKM2F.LM44 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:25,526: goTarget {'id': 'LM44'}
+[DEBUG]2021-04-06 11:50:25,912: AGV30 set loc AKM2F.LM16 ,old LM17 (-18.36,-33.22)
+[DEBUG]2021-04-06 11:50:26,260: AGV30 choise next pos cur LM16 next LM43 pre LM44 5.449 True
+[DEBUG]2021-04-06 11:50:26,263: AGV30 choise next pos cur LM16 next LM14 pre LM43 7.285 False
+[DEBUG]2021-04-06 11:50:26,265: AGV30 turn to wait check cur LM16 next LM14 7.285 False
+[DEBUG]2021-04-06 11:50:26,816: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM14 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:26,819: goTarget {'id': 'LM14'}
+[DEBUG]2021-04-06 11:50:34,918: AGV30 set loc AKM2F.LM44 ,old LM16 (-16.21,-33.43)
+[INFO]2021-04-06 11:50:35,091: try close door DOOR_01
+[INFO]2021-04-06 11:50:35,527: close door DOOR_01
+[DEBUG]2021-04-06 11:50:35,532: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:50:35,561: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_01 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:50:36,109: [return] use 578 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:50:39,074: AGV30 set loc AKM2F.LM43 ,old LM44 (-12.98,-33.44)
+[DEBUG]2021-04-06 11:50:40,893: AGV30 turn to wait check cur LM43 next LM13 0.918 False
+[INFO]2021-04-06 11:50:41,425: try open door DOOR_02
+[INFO]2021-04-06 11:50:41,950: try open door DOOR_02
+[DEBUG]2021-04-06 11:50:42,125: AGV30 set loc AKM2F.LM14 ,old LM43 (-11.17,-33.41)
+[INFO]2021-04-06 11:50:42,181: open door DOOR_02
+[DEBUG]2021-04-06 11:50:42,193: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[DEBUG]2021-04-06 11:50:42,213: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_02 addr: 127.0.0.1
+[INFO]2021-04-06 11:50:42,494: try open door DOOR_02
+[DEBUG]2021-04-06 11:50:42,765: [return] use 572 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[INFO]2021-04-06 11:50:43,144: try open door DOOR_02
+[INFO]2021-04-06 11:50:43,680: try open door DOOR_02
+[DEBUG]2021-04-06 11:50:44,229: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM13 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:44,235: goTarget {'id': 'LM13'}
+[DEBUG]2021-04-06 11:50:45,055: AGV30 choise next pos cur LM14 next LM12 pre LM13 7.933 True
+[DEBUG]2021-04-06 11:50:45,059: AGV30 choise next pos cur LM14 next LM11 pre LM12 12.547 True
+[DEBUG]2021-04-06 11:50:45,061: AGV30 turn to wait check cur LM14 next LM11 12.547 True
+[DEBUG]2021-04-06 11:50:45,625: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM11 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:50:45,629: goTarget {'id': 'LM11'}
+[DEBUG]2021-04-06 11:50:52,914: AGV30 set loc AKM2F.LM13 ,old LM14 (-11.09,-30.36)
+[DEBUG]2021-04-06 11:50:53,065: AGV30 choise next pos cur LM13 next LM9 pre LM11 17.285 False
+[DEBUG]2021-04-06 11:50:53,081: AGV30 turn to wait check cur LM13 next LM9 17.285 False
+[DEBUG]2021-04-06 11:50:53,647: agvInfo: AGV30 AKM2F.LM13 move jackdown to AKM2F.LM9 ,taskId 606bda1b5a1730ed3ac84ce5_4
+[WARNING]2021-04-06 11:50:54,891: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[INFO]2021-04-06 11:50:55,373: try close door DOOR_02
+[WARNING]2021-04-06 11:50:55,405: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:50:55,922: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[INFO]2021-04-06 11:50:55,922: close door DOOR_02
+[DEBUG]2021-04-06 11:50:55,931: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:50:55,937: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_02 addr: 127.0.0.1
+[WARNING]2021-04-06 11:50:56,434: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[DEBUG]2021-04-06 11:50:56,484: [return] use 553 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[WARNING]2021-04-06 11:50:56,944: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:50:57,460: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[WARNING]2021-04-06 11:50:57,974: AGV30 waitFinish: loc is diff LM13 LM9 task_status= 2
+[DEBUG]2021-04-06 11:50:58,042: AGV30 set loc AKM2F.LM12 ,old LM13 (-11.08,-25.30)
+[WARNING]2021-04-06 11:50:58,510: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:50:59,035: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:50:59,545: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:00,061: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:00,574: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:01,089: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:01,606: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:02,119: AGV30 waitFinish: loc is diff LM12 LM9 task_status= 2
+[DEBUG]2021-04-06 11:51:02,610: AGV30 set loc AKM2F.LM11 ,old LM12 (-11.09,-20.68)
+[WARNING]2021-04-06 11:51:02,638: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:03,153: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:03,665: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:04,178: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:04,692: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:05,206: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:05,720: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:06,238: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:06,752: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:07,265: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:07,783: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:08,297: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:08,811: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:09,326: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:09,840: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[WARNING]2021-04-06 11:51:10,353: AGV30 waitFinish: loc is diff LM11 LM9 task_status= 2
+[DEBUG]2021-04-06 11:51:10,649: AGV30 set loc AKM2F.LM9 ,old LM11 (-11.08,-13.23)
+[SUCC]2021-04-06 11:51:12,907: Finish:  AGV30 arrived AKM2F.LM9 ,task: 606bda1b5a1730ed3ac84ce5_4
+[INFO]2021-04-06 11:51:12,932: task: move finish callback task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [dropPayload]
+[INFO]2021-04-06 11:51:12,939: task[606bda1b5a1730ed3ac84ce5] update info: {'failMsg': '放下货架，旋转顶升机构初始化', 'updateTime': datetime.datetime(2021, 4, 6, 11, 51, 12, 934922)}
+[INFO]2021-04-06 11:51:13,053: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadJackdown] _jackDown
+[DEBUG]2021-04-06 11:51:13,072: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[DEBUG]2021-04-06 11:51:13,104: GET: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90 addr: 127.0.0.1
+[INFO]2021-04-06 11:51:16,129: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': True}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:51:18,244: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:51:20,413: _jack in jackMgr: AGV30 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:51:20,476: AGV30 jack down status:  True
+[DEBUG]2021-04-06 11:51:20,537: [return] use 7465 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV30&loc=None&timeoutSec=90
+[WARNING]2021-04-06 11:51:20,602: scada.606bda1b5a1730ed3ac84ce5[tid:17816] <locked _thread.RLock object owner=17816 count=1 at 0x0000017CFBEDB7B0> ,hold 7549 ms
+[INFO]2021-04-06 11:51:20,801: name=scada.606bda1b5a1730ed3ac84ce5, pid=10660, tid=17816
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:51:20,926: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadReset] dropPayloadJackdown -> dropPayloadReset
+[INFO]2021-04-06 11:51:21,535: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [dropPayloadReset] rotationClear
+[DEBUG]2021-04-06 11:51:21,609: send http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30
+[DEBUG]2021-04-06 11:51:21,753: GET: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30 addr: 127.0.0.1
+[INFO]2021-04-06 11:51:24,479: _rotation in rotationMgr: AGV30 None [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-06 11:51:24,525: AGV30 rotation clear status: True
+[DEBUG]2021-04-06 11:51:24,638: [return] use 3029 ms,http_get: http://127.0.0.1:5551/api/agv/rotationclear?agv=AGV30&timeoutSec=30
+[INFO]2021-04-06 11:51:24,745: task[606bda1b5a1730ed3ac84ce5]:  successed {'step': 'finish', 'failMsg': '任务成功', 'endTime': datetime.datetime(2021, 4, 6, 11, 51, 24, 714368), 'status': 'success'}
+[WARNING]2021-04-06 11:51:24,853: scada.606bda1b5a1730ed3ac84ce5[tid:17816] <locked _thread.RLock object owner=17816 count=1 at 0x0000017CFBEDB7B0> ,hold 3318 ms
+[INFO]2021-04-06 11:51:24,977: name=scada.606bda1b5a1730ed3ac84ce5, pid=10660, tid=17816
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 167, in __call() 
+[03] File "E:/安捷利电梯项目/AKMfloor/pharmapackCtrl/runTasks.py", line 726, in _taskFunc() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:51:25,057: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [finish] dropPayloadReset -> finish
+[INFO]2021-04-06 11:51:25,433: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [finish] AGV30 release task, release agv True True False
+[DEBUG]2021-04-06 11:51:25,633: GET: http://127.0.0.1:5551/api/agv/isLocked?agv=AGV30&appName=scadaTask&taskId=606bda1b5a1730ed3ac84ce5 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:51:25,696: used 62ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/isLocked?agv=AGV30&appName=scadaTask&taskId=606bda1b5a1730ed3ac84ce5
+[DEBUG]2021-04-06 11:51:25,836: GET: http://127.0.0.1:5551/api/agv/release?agv=AGV30&appName=scadaTask&force=False&taskId=606bda1b5a1730ed3ac84ce5 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:51:25,913: unlock: AGV30 taskId 606bda1b5a1730ed3ac84ce5 app scadaTask force False
+[DEBUG]2021-04-06 11:51:25,960: used 124ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/release?agv=AGV30&appName=scadaTask&force=False&taskId=606bda1b5a1730ed3ac84ce5
+[INFO]2021-04-06 11:51:26,101: task[606bda1b5a1730ed3ac84ce5][AGV30] AP32(LM34) -> LM9(LM40) [finish] let AGV30 gohome
+[DEBUG]2021-04-06 11:51:26,273: GET: http://127.0.0.1:5551/api/agv/goHome?agv=AGV30&appName=scadaTask&force=False&timeout=10800 addr: 127.0.0.1
+[INFO]2021-04-06 11:51:26,382: AGV30 gohome home_2 force False taskId home_2 : AGV30.LM9 -> AKM2F.AP29
+[INFO]2021-04-06 11:51:27,584: Begin: AGV30 move from AKM2F.LM9 to AKM2F.AP29 by paths: [('AKM2F', ['LM9', 'LM11', 'LM12', 'LM13', 'LM14', 'LM43', 'LM44', 'LM16', 'LM17', 'LM40', 'LM18', 'LM37', 'LM39', 'LM31', 'AP29'], 51.445508170887535)] task: home_2 timeout 10800 used 1080 ms
+[INFO]2021-04-06 11:51:27,691: task: prepoint released2  606bda1b5a1730ed3ac84ce5 AKM2F.LM9
+[INFO]2021-04-06 11:51:27,752: task: stop task[606bda1b5a1730ed3ac84ce5][-] AP32(LM34) -> LM9(LM40) [finish]
+[DEBUG]2021-04-06 11:51:27,759: task: delete task 606bda1b5a1730ed3ac84ce5
+[DEBUG]2021-04-06 11:51:29,302: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM11 ,taskId home_2
+[INFO]2021-04-06 11:51:29,485: goTarget {'id': 'LM11'}
+[DEBUG]2021-04-06 11:51:30,380: AGV30 choise next pos cur LM9 next LM12 pre LM11 12.420 True
+[DEBUG]2021-04-06 11:51:30,456: AGV30 turn to wait check cur LM9 next LM12 12.420 True
+[DEBUG]2021-04-06 11:51:32,231: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM12 ,taskId home_2
+[INFO]2021-04-06 11:51:32,273: goTarget {'id': 'LM12'}
+[DEBUG]2021-04-06 11:51:38,557: AGV30 choise next pos cur LM9 next LM13 pre LM12 14.483 True
+[DEBUG]2021-04-06 11:51:38,634: AGV30 turn to wait check cur LM9 next LM13 14.483 True
+[DEBUG]2021-04-06 11:51:41,232: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM13 ,taskId home_2
+[INFO]2021-04-06 11:51:41,283: goTarget {'id': 'LM13'}
+[DEBUG]2021-04-06 11:51:44,226: AGV30 choise next pos cur LM9 next LM14 pre LM13 12.096 False
+[DEBUG]2021-04-06 11:51:44,317: AGV30 turn to wait check cur LM9 next LM14 12.096 False
+[INFO]2021-04-06 11:51:45,590: try open door DOOR_02
+[INFO]2021-04-06 11:51:45,838: open door DOOR_02
+[DEBUG]2021-04-06 11:51:45,931: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[DEBUG]2021-04-06 11:51:46,164: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_02 addr: 127.0.0.1
+[INFO]2021-04-06 11:51:46,855: try open door DOOR_02
+[DEBUG]2021-04-06 11:51:47,238: [return] use 1307 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_02
+[INFO]2021-04-06 11:51:48,136: try open door DOOR_02
+[WARNING]2021-04-06 11:51:51,879: agvThread2.AGV30[tid:15432] <lock name:mapMgr.lock,<locked _thread.RLock object owner=15432 count=1 at 0x0000017CF90E3AB0>> ,hold 3123 ms
+[INFO]2021-04-06 11:51:52,050: name=agvThread2.AGV30, pid=10660, tid=15432
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvList.py", line 598, in run2() 
+[03] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvList.py", line 624, in handle() 
+[04] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvControl.py", line 629, in oncheck() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 120, in _call() 
+[06] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvControl.py", line 424, in checkAgv() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[08] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[09] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-06 11:51:52,187: agvInfo: AGV30 AKM2F.LM9 move to AKM2F.LM14 ,taskId home_2
+[INFO]2021-04-06 11:51:52,294: goTarget {'id': 'LM14'}
+[DEBUG]2021-04-06 11:51:56,803: AGV30 turn to wait check cur LM9 next LM43 0.503 False
+[DEBUG]2021-04-06 11:51:57,511: AGV30 set loc AKM2F.LM14 ,old LM9 (-11.09,-33.25)
+[DEBUG]2021-04-06 11:52:00,185: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM43 ,taskId home_2
+[INFO]2021-04-06 11:52:00,265: goTarget {'id': 'LM43'}
+[DEBUG]2021-04-06 11:52:01,345: AGV30 choise next pos cur LM14 next LM44 pre LM43 5.325 True
+[DEBUG]2021-04-06 11:52:01,407: AGV30 choise next pos cur LM14 next LM16 pre LM44 7.285 False
+[DEBUG]2021-04-06 11:52:01,471: AGV30 turn to wait check cur LM14 next LM16 7.285 False
+[INFO]2021-04-06 11:52:01,866: try close door DOOR_02
+[INFO]2021-04-06 11:52:02,439: close door DOOR_02
+[DEBUG]2021-04-06 11:52:02,501: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:52:02,693: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_02 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:52:03,638: agvInfo: AGV30 AKM2F.LM14 move to AKM2F.LM16 ,taskId home_2
+[DEBUG]2021-04-06 11:52:03,682: used 990ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[INFO]2021-04-06 11:52:03,790: goTarget {'id': 'LM16'}
+[DEBUG]2021-04-06 11:52:03,915: [return] use 1414 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_02
+[DEBUG]2021-04-06 11:52:07,473: AGV30 set loc AKM2F.LM43 ,old LM14 (-12.95,-33.43)
+[DEBUG]2021-04-06 11:52:14,514: AGV30 turn to wait check cur LM43 next LM17 0.464 False
+[DEBUG]2021-04-06 11:52:15,171: AGV30 set loc AKM2F.LM16 ,old LM43 (-18.23,-33.43)
+[INFO]2021-04-06 11:52:15,796: try open door DOOR_01
+[INFO]2021-04-06 11:52:16,151: open door DOOR_01
+[DEBUG]2021-04-06 11:52:16,244: send http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[DEBUG]2021-04-06 11:52:16,511: GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_01 addr: 127.0.0.1
+[INFO]2021-04-06 11:52:17,246: try open door DOOR_01
+[DEBUG]2021-04-06 11:52:17,589: used 1078ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[DEBUG]2021-04-06 11:52:17,717: [return] use 1473 ms,http_get: http://127.0.0.1:5551/api/switch/on?id=DOOR_01
+[INFO]2021-04-06 11:52:18,605: try open door DOOR_01
+[DEBUG]2021-04-06 11:52:20,219: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM17 ,taskId home_2
+[INFO]2021-04-06 11:52:20,312: goTarget {'id': 'LM17'}
+[DEBUG]2021-04-06 11:52:21,236: AGV30 choise next pos cur LM16 next LM40 pre LM17 11.249 True
+[DEBUG]2021-04-06 11:52:21,327: AGV30 turn to wait check cur LM16 next LM40 11.249 True
+[DEBUG]2021-04-06 11:52:23,071: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM40 ,taskId home_2
+[INFO]2021-04-06 11:52:23,146: goTarget {'id': 'LM40'}
+[DEBUG]2021-04-06 11:52:27,212: AGV30 choise next pos cur LM16 next LM18 pre LM40 14.725 False
+[DEBUG]2021-04-06 11:52:27,306: AGV30 turn to wait check cur LM16 next LM18 14.725 False
+[DEBUG]2021-04-06 11:52:29,118: agvInfo: AGV30 AKM2F.LM16 move to AKM2F.LM18 ,taskId home_2
+[INFO]2021-04-06 11:52:29,194: goTarget {'id': 'LM18'}
+[DEBUG]2021-04-06 11:52:41,468: AGV30 turn to wait check cur LM16 next LM37 0.752 False
+[DEBUG]2021-04-06 11:52:42,983: AGV30 set loc AKM2F.LM18 ,old LM16 (-18.37,-16.79)
+[DEBUG]2021-04-06 11:52:43,308: agvInfo: AGV30 AKM2F.LM18 move to AKM2F.LM37 ,taskId home_2
+[INFO]2021-04-06 11:52:43,416: goTarget {'id': 'LM37'}
+[INFO]2021-04-06 11:52:44,428: try close door DOOR_01
+[INFO]2021-04-06 11:52:45,272: close door DOOR_01
+[DEBUG]2021-04-06 11:52:45,396: send http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:52:45,613: GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_01 addr: 127.0.0.1
+[DEBUG]2021-04-06 11:52:46,721: used 1108ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:52:46,861: [return] use 1465 ms,http_get: http://127.0.0.1:5551/api/switch/off?id=DOOR_01
+[DEBUG]2021-04-06 11:52:51,458: AGV30 turn to wait check cur LM18 next LM39 0.652 False
+[DEBUG]2021-04-06 11:52:52,288: AGV30 set loc AKM2F.LM37 ,old LM18 (-15.25,-16.75)
+[DEBUG]2021-04-06 11:52:52,799: agvInfo: AGV30 AKM2F.LM37 move to AKM2F.LM39 ,taskId home_2
+[INFO]2021-04-06 11:52:52,904: goTarget {'id': 'LM39'}
+[DEBUG]2021-04-06 11:52:58,769: AGV30 turn to wait check cur LM37 next LM31 0.584 False
+[DEBUG]2021-04-06 11:52:59,890: AGV30 set loc AKM2F.LM39 ,old LM37 (-15.16,-15.23)
+[DEBUG]2021-04-06 11:53:00,046: agvInfo: AGV30 AKM2F.LM39 move to AKM2F.LM31 ,taskId home_2
+[INFO]2021-04-06 11:53:00,107: goTarget {'id': 'LM31'}
+[DEBUG]2021-04-06 11:53:01,035: AGV30 choise next pos cur LM39 next AP29 pre LM31 2.340 False
+[DEBUG]2021-04-06 11:53:01,085: AGV30 turn to wait check cur LM39 next AP29 2.340 False
+[DEBUG]2021-04-06 11:53:02,426: agvInfo: AGV30 AKM2F.LM39 move to AKM2F.AP29 ,taskId home_2
+[INFO]2021-04-06 11:53:02,519: goTarget {'id': 'AP29'}
+[WARNING]2021-04-06 11:53:04,074: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:04,700: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:05,326: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:05,977: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:06,568: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:07,238: AGV30 waitFinish: loc is diff LM39 AP29 task_status= 2
+[DEBUG]2021-04-06 11:53:07,599: AGV30 set loc AKM2F.LM31 ,old LM39 (-14.04,-15.14)
+[WARNING]2021-04-06 11:53:07,865: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:08,459: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:09,135: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:09,759: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:10,336: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:10,943: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:11,583: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:12,174: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-06 11:53:12,799: AGV30 waitFinish: loc is diff LM31 AP29 task_status= 2
+[DEBUG]2021-04-06 11:53:12,926: AGV30 set loc AKM2F.AP29 ,old LM31 (-12.95,-15.13)
+[SUCC]2021-04-06 11:53:15,673: Finish:  AGV30 arrived AKM2F.AP29 ,task: home_2
+[DEBUG]2021-04-06 11:53:15,736: unlock: AGV30 taskId None app None force False
+[WARNING]2021-04-06 11:57:18,545: runTask:stop save file
+[ERROR]2021-04-06 11:57:18,548: process exited, living 0:19:14.482944 seconds

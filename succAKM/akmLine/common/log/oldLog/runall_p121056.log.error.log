@@ -1,0 +1,59 @@
+[CRITICAL]2020-09-21 14:42:55,600: invoke <function urlStopAudio at 0x00000000082FA620> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=121056, ppid=120600, tid=120992
+Traceback (most recent call last):
+  File "C:\akmLine\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\akmLine\agvDevice\main_agvDevice.py", line 301, in urlStopAudio
+    return audioMgr.stopaudio(agvId)
+  File "C:\akmLine\agvDevice\audioMgr.py", line 26, in stopaudio
+    ret = agvCtrl.stopAudio(agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 519, in stopAudio
+    agvApi.other(agvId, "robot_other_stop_audio_req", None)
+  File "..\driver\seerAgv\agvApi.py", line 214, in other
+    return _handle(agvId, API_PORT_OTHER, type, data, "lock_other")
+  File "..\driver\seerAgv\agvApi.py", line 241, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 278, in _request
+    result = GetDataLong(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 283, in GetDataLong
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 373, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\akmLine\common\tcpSocketLong.py", line 124, in send
+    raise e
+  File "C:\akmLine\common\tcpSocketLong.py", line 119, in send
+    c.send(sendData)
+  File "C:\akmLine\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2020-09-21 14:42:55,839: 5f684b10b0e2e9ffceac8545 stopAudio cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=121056, ppid=120600, tid=125784
+Traceback (most recent call last):
+  File "C:\akmLine\feed\runTasknanqu.py", line 422, in _stopAudio
+    ret = audioApi.stopAudio(self.agvId)
+  File "..\agvDevice\audioApi.py", line 32, in stopAudio
+    return _req('/api/agv/stopaudio', agvId)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2020-09-21 14:42:56,018: taskFunc2:<runTasknanqu.feed object at 0x000000000C0E07B8> cause a error: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=121056, ppid=120600, tid=125784
+Traceback (most recent call last):
+  File "C:\akmLine\feed\runTasknanqu.py", line 212, in _taskFunc
+    elif not self.handle():
+  File "C:\akmLine\feed\runTasknanqu.py", line 277, in handle
+    self._stopAudio()
+  File "C:\akmLine\feed\runTasknanqu.py", line 422, in _stopAudio
+    ret = audioApi.stopAudio(self.agvId)
+  File "..\agvDevice\audioApi.py", line 32, in stopAudio
+    return _req('/api/agv/stopaudio', agvId)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

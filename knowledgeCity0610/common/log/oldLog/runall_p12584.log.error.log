@@ -1,0 +1,1629 @@
+[CRITICAL]2021-05-27 17:14:17,772: invoke <function urlPlayAudio at 0x000001BBA92A2730> cause a error: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=12584, ppid=11928, tid=12928
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 372, in urlPlayAudio
+    return audioMgr.playAudio(agvId, name, loop)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\audioMgr.py", line 18, in playAudio
+    ret = agvCtrl.playAudio(agvId,name,loop)
+  File "..\driver\seerAgv\agvCtrl.py", line 658, in playAudio
+    agvApi.other(agvId, "robot_other_speaker_req", data)
+  File "..\driver\seerAgv\agvApi.py", line 224, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 252, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 289, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 315, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 366, in _checkError
+    raise IOError(agvId + "执行" + str(type) + "错误" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-27 17:14:17,940: 60af61f973dabd3128a5b886 playAudio cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=12584, ppid=11928, tid=12896
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1528, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-27 17:14:18,000: taskFunc2:从上工序设备运送框至下工序设备 cause a error: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+pid=12584, ppid=11928, tid=12896
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1193, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1451, in handle
+    self._audioPlay()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1528, in _audioPlay
+    audioApi.playAudio(self.agvId, name = "feedingAlarm", loop = False)
+  File "..\agvDevice\audioApi.py", line 24, in playAudio
+    return _req('/api/agv/playaudio', agvId, name=name, loop=loop)
+  File "..\agvDevice\audioApi.py", line 38, in _req
+    return http_get(url + apiurl, param)
+  File "..\agvDevice\audioApi.py", line 19, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV01执行6000错误,code=40061,msg=play audio error, audio not exist or illegal
+
+[CRITICAL]2021-05-27 17:21:38,979: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:21:38,983: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:21:38,987: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:21:38,991: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:21:38,995: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:21:38,998: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:21:49,034: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:21:49,038: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:21:49,044: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:21:49,049: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:21:49,054: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:21:49,058: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:21:59,102: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:21:59,107: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:21:59,112: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:21:59,116: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:21:59,120: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:21:59,124: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:05,414: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:05,420: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:05,425: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:05,429: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:05,433: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:05,437: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:09,160: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:22:09,165: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:22:09,169: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:22:09,173: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:22:09,177: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:22:09,180: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:22:15,468: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:22:15,480: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:22:15,488: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:22:15,493: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:22:15,498: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:22:15,501: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=12660
+
+[CRITICAL]2021-05-27 17:22:19,229: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:19,233: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:19,238: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:19,242: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:19,245: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:19,249: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:25,528: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:25,532: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:25,537: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:25,541: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:25,546: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:25,549: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:29,296: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:29,301: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:29,305: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:29,309: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:29,313: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:29,316: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:35,594: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:35,598: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:35,602: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:35,607: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:35,611: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:35,614: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:39,383: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:22:39,387: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:22:39,391: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:22:39,395: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:22:39,398: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:22:39,402: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:22:45,642: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:45,646: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:45,651: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:45,655: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:45,659: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:45,662: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=5816
+
+[CRITICAL]2021-05-27 17:22:49,455: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:49,459: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:49,464: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:49,468: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:49,471: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:49,475: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:22:55,687: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:55,692: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:55,699: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:55,703: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:55,707: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:55,712: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:22:59,525: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:59,529: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:59,533: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:59,537: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:59,541: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:22:59,544: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:05,748: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:05,753: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:05,758: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:05,763: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:05,767: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:05,770: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:09,618: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:09,623: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:09,627: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:09,633: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:09,637: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:09,640: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:15,813: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:15,819: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:15,824: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:15,828: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:15,832: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:15,835: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:19,679: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:19,683: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:19,688: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:19,692: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:19,696: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:19,700: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:25,881: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:25,888: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:25,892: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:25,896: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:25,900: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:25,903: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=12556
+
+[CRITICAL]2021-05-27 17:23:29,763: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:29,769: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:29,774: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:29,778: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:29,782: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:29,785: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:35,935: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:35,941: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:35,948: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:35,953: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:35,958: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:35,962: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=12364
+
+[CRITICAL]2021-05-27 17:23:39,858: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:23:39,863: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:23:39,867: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:23:39,871: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:23:39,875: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:23:39,878: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10556
+
+[CRITICAL]2021-05-27 17:23:46,002: apply agv failed, count=0 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:46,006: apply agv failed, count=1 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:46,011: apply agv failed, count=2 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:46,014: apply agv failed, count=3 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:46,019: apply agv failed, count=4 cause a error: comba-ZXC-3F.AP666找不到可用的小车
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:46,022: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64bb73dabd3128a5b8c4', 'loc', 'AP666')
+pid=12584, ppid=11928, tid=9444
+
+[CRITICAL]2021-05-27 17:23:51,848: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:52,145: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:52,353: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:52,655: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:52,841: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:23:52,991: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5760
+
+[CRITICAL]2021-05-27 17:24:04,838: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:24:04,939: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:24:05,061: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:24:05,265: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:24:05,401: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:24:05,440: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:24:15,675: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:24:15,679: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:24:15,683: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:24:15,687: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:24:15,691: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:24:15,694: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:24:25,763: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:24:25,768: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:24:25,773: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:24:25,776: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:24:25,780: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:24:25,784: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:24:35,841: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:24:35,845: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:24:35,849: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:24:35,853: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:24:35,857: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:24:35,860: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:24:45,900: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:24:45,905: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:24:45,909: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:24:45,913: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:24:45,916: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:24:45,920: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:24:55,976: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:24:55,980: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:24:55,984: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:24:55,988: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:24:55,992: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:24:55,995: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:25:06,043: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:25:06,047: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:25:06,052: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:25:06,056: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:25:06,061: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:25:06,064: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:25:16,104: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:25:16,109: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:25:16,113: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:25:16,118: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:25:16,122: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:25:16,125: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=13216
+
+[CRITICAL]2021-05-27 17:25:26,180: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:25:26,185: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:25:26,189: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:25:26,193: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:25:26,197: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:25:26,200: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:25:36,241: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=3912
+
+[CRITICAL]2021-05-27 17:25:36,245: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=3912
+
+[CRITICAL]2021-05-27 17:25:36,249: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=3912
+
+[CRITICAL]2021-05-27 17:25:36,253: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=3912
+
+[CRITICAL]2021-05-27 17:25:36,257: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=3912
+
+[CRITICAL]2021-05-27 17:25:36,261: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=3912
+
+[CRITICAL]2021-05-27 17:25:46,309: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:25:46,314: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:25:46,318: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:25:46,321: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:25:46,325: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:25:46,328: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:25:56,409: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:25:56,413: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:25:56,417: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:25:56,422: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:25:56,428: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:25:56,431: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:06,488: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:26:06,492: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:26:06,497: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:26:06,501: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:26:06,505: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:26:06,508: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:26:16,565: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:26:16,569: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:26:16,573: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:26:16,577: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:26:16,581: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:26:16,584: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:26:26,632: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:26:26,636: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:26:26,641: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:26:26,645: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:26:26,649: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:26:26,652: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:26:36,675: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:26:36,680: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:26:36,685: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:26:36,689: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:26:36,693: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:26:36,696: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:26:46,742: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:46,746: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:46,751: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:46,754: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:46,758: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:46,762: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:26:56,831: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:26:56,836: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:26:56,840: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:26:56,863: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:26:56,868: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:26:56,871: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:06,920: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:27:06,925: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:27:06,929: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:27:06,933: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:27:06,937: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:27:06,940: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5056
+
+[CRITICAL]2021-05-27 17:27:16,973: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:27:16,977: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:27:16,980: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:27:16,984: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:27:16,988: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:27:16,991: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:27:27,040: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:27:27,044: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:27:27,048: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:27:27,052: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:27:27,056: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:27:27,060: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:27:37,102: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:37,106: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:37,111: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:37,115: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:37,119: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:37,123: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:27:47,161: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:27:47,165: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:27:47,169: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:27:47,173: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:27:47,178: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:27:47,182: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:27:57,238: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:27:57,242: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:27:57,246: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:27:57,250: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:27:57,254: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:27:57,257: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:28:07,308: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:07,312: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:07,317: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:07,320: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:07,324: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:07,328: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:17,370: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:28:17,374: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:28:17,378: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:28:17,382: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:28:17,386: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:28:17,389: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8616
+
+[CRITICAL]2021-05-27 17:28:27,437: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:28:27,442: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:28:27,446: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:28:27,450: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:28:27,454: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:28:27,457: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:28:37,517: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:28:37,522: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:28:37,526: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:28:37,531: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:28:37,535: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:28:37,539: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:28:47,575: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:47,580: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:47,584: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:47,588: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:47,592: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:47,595: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12892
+
+[CRITICAL]2021-05-27 17:28:57,641: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:28:57,646: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:28:57,650: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:28:57,654: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:28:57,658: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:28:57,662: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=2752
+
+[CRITICAL]2021-05-27 17:29:07,707: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:29:07,711: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:29:07,715: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:29:07,720: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:29:07,723: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:29:07,727: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12240
+
+[CRITICAL]2021-05-27 17:29:17,790: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:29:17,794: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:29:17,798: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:29:17,803: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:29:17,806: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:29:17,809: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8544
+
+[CRITICAL]2021-05-27 17:29:27,857: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:29:27,862: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:29:27,867: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:29:27,871: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:29:27,875: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:29:27,879: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=7620
+
+[CRITICAL]2021-05-27 17:29:37,913: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:29:37,917: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:29:37,922: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:29:37,926: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:29:37,930: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:29:37,933: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:29:47,979: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:29:47,984: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:29:47,988: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:29:47,993: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:29:47,996: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:29:48,000: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:29:58,033: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:29:58,037: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:29:58,041: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:29:58,045: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:29:58,049: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:29:58,053: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:30:08,101: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:30:08,106: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:30:08,115: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:30:08,119: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:30:08,124: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:30:08,127: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=8788
+
+[CRITICAL]2021-05-27 17:30:18,171: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:30:18,175: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:30:18,179: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:30:18,183: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:30:18,187: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:30:18,190: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:30:28,232: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:30:28,236: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:30:28,241: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:30:28,246: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:30:28,250: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:30:28,254: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:30:38,307: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:30:38,311: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:30:38,316: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:30:38,321: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:30:38,325: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:30:38,330: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:30:48,378: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:30:48,382: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:30:48,390: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:30:48,394: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:30:48,399: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:30:48,402: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:31:16,290: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:31:16,297: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:31:16,302: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:31:16,307: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:31:16,312: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:31:16,316: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:31:26,379: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:31:26,387: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:31:26,393: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:31:26,398: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:31:26,402: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:31:26,406: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:31:36,460: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:31:36,465: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:31:36,469: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:31:36,474: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:31:36,478: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:31:36,482: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:31:46,522: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:31:46,528: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:31:46,548: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:31:46,590: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:31:46,595: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:31:46,599: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:32:01,015: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:32:01,020: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:32:01,024: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:32:01,029: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:32:01,033: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:32:01,037: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=11912
+
+[CRITICAL]2021-05-27 17:32:11,121: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:32:11,127: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:32:11,133: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:32:11,136: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:32:11,142: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:32:11,146: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10952
+
+[CRITICAL]2021-05-27 17:32:21,230: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:21,234: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:21,239: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:21,243: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:21,247: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:21,251: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af64a073dabd3128a5b8bf', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:31,278: invoke <function urlrollerRobotStop at 0x000001BBA929BBF8> cause a error: 'None'
+pid=12584, ppid=11928, tid=12480
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 323, in urlrollerRobotStop
+    return rollerPlusMgr.rollerRobotStop(agvId)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\rollerPlusMgr.py", line 190, in rollerRobotStop
+    rollertype = getRollerType(agvId)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\rollerPlusMgr.py", line 20, in getRollerType
+    agvType = agvCtrl._getAgvType(agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 20, in _getAgvType
+    type_ = g_agvList[agvId]["type"]
+KeyError: 'None'
+
+[CRITICAL]2021-05-27 17:32:31,285: task [None] [60af64a073dabd3128a5b8bf] rollerStop failed cause a error: KeyError: 'None'
+pid=12584, ppid=11928, tid=10048
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1649, in rollerStop
+    ret = rollerPlusApi.rollerRobotStop(self.agvId)
+  File "..\agvDevice\rollerPlusApi.py", line 57, in rollerRobotStop
+    return _roller('/api/agv/rollerRobotStop', agvId)
+  File "..\agvDevice\rollerPlusApi.py", line 83, in _roller
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\rollerPlusApi.py", line 17, in http_get
+    raise Exception(result["errormsg"])
+Exception: KeyError: 'None'
+
+[CRITICAL]2021-05-27 17:32:35,851: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:32:35,857: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:32:35,864: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:32:35,869: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:32:35,874: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:32:35,877: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:32:45,947: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:32:45,952: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:32:45,957: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:32:45,961: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:32:45,966: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:32:45,970: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:32:56,032: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:56,037: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:56,041: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:56,046: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:56,051: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:32:56,055: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=4820
+
+[CRITICAL]2021-05-27 17:33:06,100: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:06,104: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:06,109: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:06,112: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:06,123: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:06,126: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:16,192: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:33:16,201: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:33:16,206: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:33:16,211: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:33:16,215: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:33:16,224: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:33:26,272: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:33:26,277: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:33:26,282: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:33:26,286: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:33:26,291: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:33:26,294: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:33:36,333: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:33:36,338: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:33:36,343: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:33:36,349: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:33:36,362: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:33:36,366: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10476
+
+[CRITICAL]2021-05-27 17:33:46,430: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:33:46,435: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:33:46,439: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:33:46,443: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:33:46,448: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:33:46,452: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:33:56,522: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:56,526: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:56,531: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:56,535: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:56,539: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:33:56,575: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12480
+
+[CRITICAL]2021-05-27 17:34:06,658: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:34:06,663: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:34:06,667: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:34:06,672: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:34:06,676: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:34:06,680: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12016
+
+[CRITICAL]2021-05-27 17:34:16,732: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:34:16,736: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:34:16,741: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:34:16,745: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:34:16,750: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:34:16,753: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=12436
+
+[CRITICAL]2021-05-27 17:34:26,812: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:34:26,817: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:34:26,822: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:34:26,827: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:34:26,831: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:34:26,836: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=5672
+
+[CRITICAL]2021-05-27 17:34:36,894: apply agv failed, count=0 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:34:36,899: apply agv failed, count=1 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:34:36,904: apply agv failed, count=2 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:34:36,908: apply agv failed, count=3 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:34:36,912: apply agv failed, count=4 cause a error: comba-ZXC-F3.AP12找不到可用的小车
+pid=12584, ppid=11928, tid=10684
+
+[CRITICAL]2021-05-27 17:34:36,916: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60af673173dabd3128a5b8d5', 'loc', 'comba-ZXC-F3.AP12')
+pid=12584, ppid=11928, tid=10684
+

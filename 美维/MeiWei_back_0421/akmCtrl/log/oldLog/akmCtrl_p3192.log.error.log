@@ -1,0 +1,97 @@
+[CRITICAL]2020-04-29 17:58:50,419: update task error: cause a error: 192.168.5.137:27017: timed out
+pid=3192, ppid=9592, tid=10572
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 299, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 277, in updateTaskBydb
+    tasks = akmArarm()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 337, in akmArarm
+    ds = db.find("r_alarm", {"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 190, in find
+    self.stat.add(ds)
+  File "../common\mongodb.py", line 30, in add
+    ee = obj.explain()
+  File "../common\mongodb.py", line 335, in __call
+    r = func(*p,**pp)
+  File "D:\Python\Python38\lib\site-packages\pymongo\cursor.py", line 837, in explain
+    return next(c)
+  File "D:\Python\Python38\lib\site-packages\pymongo\cursor.py", line 1156, in next
+    if len(self.__data) or self._refresh():
+  File "D:\Python\Python38\lib\site-packages\pymongo\cursor.py", line 1073, in _refresh
+    self.__send_message(q)
+  File "D:\Python\Python38\lib\site-packages\pymongo\cursor.py", line 953, in __send_message
+    response = client._run_operation_with_response(
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 1343, in _run_operation_with_response
+    return self._retryable_read(
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 1458, in _retryable_read
+    with self._slaveok_for_server(read_pref, server, session,
+  File "D:\Python\Python38\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 1283, in _slaveok_for_server
+    with self._get_socket(server, session, exhaust=exhaust) as sock_info:
+  File "D:\Python\Python38\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 1222, in _get_socket
+    with server.get_socket(
+  File "D:\Python\Python38\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\Python\Python38\lib\site-packages\pymongo\pool.py", line 1125, in get_socket
+    sock_info = self._get_socket_no_auth()
+  File "D:\Python\Python38\lib\site-packages\pymongo\pool.py", line 1177, in _get_socket_no_auth
+    sock_info = self.connect()
+  File "D:\Python\Python38\lib\site-packages\pymongo\pool.py", line 1088, in connect
+    _raise_connection_failure(self.address, error)
+  File "D:\Python\Python38\lib\site-packages\pymongo\pool.py", line 281, in _raise_connection_failure
+    raise NetworkTimeout(msg)
+pymongo.errors.NetworkTimeout: 192.168.5.137:27017: timed out
+
+[CRITICAL]2020-04-29 17:59:20,894: update task error: cause a error: 192.168.5.137:27017: timed out
+pid=3192, ppid=9592, tid=10572
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 187, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 165, in updateTaskBydb
+    tasks = getAkmTask()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 310, in getAkmTask
+    ds = db.find("u_scada_task", {"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 186, in find
+    db = self._get_db()
+  File "../common\mongodb.py", line 262, in _get_db
+    if self.conn.is_primary:
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 1006, in is_primary
+    return self._server_property('is_writable')
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 830, in _server_property
+    server = self._topology.select_server(
+  File "D:\Python\Python38\lib\site-packages\pymongo\topology.py", line 229, in select_server
+    return random.choice(self.select_servers(selector,
+  File "D:\Python\Python38\lib\site-packages\pymongo\topology.py", line 188, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "D:\Python\Python38\lib\site-packages\pymongo\topology.py", line 204, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 192.168.5.137:27017: timed out
+
+[CRITICAL]2020-04-29 18:00:20,898: update task error: cause a error: 192.168.5.137:27017: timed out
+pid=3192, ppid=9592, tid=10572
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 299, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 277, in updateTaskBydb
+    tasks = akmArarm()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 337, in akmArarm
+    ds = db.find("r_alarm", {"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 186, in find
+    db = self._get_db()
+  File "../common\mongodb.py", line 262, in _get_db
+    if self.conn.is_primary:
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 1006, in is_primary
+    return self._server_property('is_writable')
+  File "D:\Python\Python38\lib\site-packages\pymongo\mongo_client.py", line 830, in _server_property
+    server = self._topology.select_server(
+  File "D:\Python\Python38\lib\site-packages\pymongo\topology.py", line 229, in select_server
+    return random.choice(self.select_servers(selector,
+  File "D:\Python\Python38\lib\site-packages\pymongo\topology.py", line 188, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "D:\Python\Python38\lib\site-packages\pymongo\topology.py", line 204, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 192.168.5.137:27017: timed out
+

@@ -1,0 +1,20 @@
+[CRITICAL]2020-09-18 15:57:13,457: import main_agv failed, path: agvCtrl cause a error: 'NoneType' object has no attribute 'x'
+pid=51464, ppid=51436, tid=51468
+Traceback (most recent call last):
+  File "C:\akmLine\common\run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\akmLine\agvCtrl\main_agv.py", line 22, in <module>
+    mapMgr.loadAllMap()
+  File "C:\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\akmLine\agvCtrl\mapMgr.py", line 78, in loadAllMap
+    getMap(m["id"])
+  File "C:\akmLine\agvCtrl\mapMgr.py", line 54, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "C:\akmLine\agvCtrl\mapMgr.py", line 349, in load
+    p = o.ptrList #≥ı ºªØbezier
+  File "C:\akmLine\agvCtrl\mapElement.py", line 644, in ptrList
+    pp = [(self.startPos.x, self.startPos.y), (self.ctrlPoint1.x, self.ctrlPoint1.y),(self.ctrlPoint2.x, self.ctrlPoint2.y), (self.endPos.x,self.endPos.y)]
+AttributeError: 'NoneType' object has no attribute 'x'
+
+[CRITICAL]2020-09-18 15:57:13,463: import main_agv failed, path: agvCtrl ,cause 'NoneType' object has no attribute 'x'

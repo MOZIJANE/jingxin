@@ -1,0 +1,102 @@
+[CRITICAL]2021-03-18 09:43:27,664: invoke <function urlMove at 0x0000019545C71A60> cause a error: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+pid=25008, ppid=12724, tid=22960
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\main_agv.py", line 123, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1241, in move
+    _func()
+  File "D:\python_work\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1207, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+
+[CRITICAL]2021-03-18 09:43:27,677: taskFunc2:task[6052b039e73748e754a6f0ad][AGV01] AP140(LM137) -> AP61(LM14) [startMoveJackup] cause a error: Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+pid=25008, ppid=12724, tid=9120
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 725, in _taskFunc
+    elif not self.handle():
+  File "D:\python_work\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 601, in handle
+    self._moveJackup()
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 825, in _moveJackup
+    agvApi.moveJackup(self.agvId, self.param["floorId"]+'.'+self.param["location"], self.onFinish, self.param, use_pgv=True,pgv_type=1)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 182, in moveJackup
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 170, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+
+[CRITICAL]2021-03-18 09:45:06,547: invoke <function urlMove at 0x0000019545C71A60> cause a error: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+pid=25008, ppid=12724, tid=17456
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\main_agv.py", line 123, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1241, in move
+    _func()
+  File "D:\python_work\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1207, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+
+[CRITICAL]2021-03-18 09:45:06,568: taskFunc2:task[6052b09ce73748e754a6f0ae][AGV01] AP140(LM137) -> AP139(LM133) [startMoveJackup] cause a error: Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+pid=25008, ppid=12724, tid=668
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 725, in _taskFunc
+    elif not self.handle():
+  File "D:\python_work\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 601, in handle
+    self._moveJackup()
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 825, in _moveJackup
+    agvApi.moveJackup(self.agvId, self.param["floorId"]+'.'+self.param["location"], self.onFinish, self.param, use_pgv=True,pgv_type=1)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 182, in moveJackup
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 170, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+
+[CRITICAL]2021-03-18 09:49:35,498: invoke <function urlMove at 0x0000019545C71A60> cause a error: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+pid=25008, ppid=12724, tid=7348
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\main_agv.py", line 123, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1241, in move
+    _func()
+  File "D:\python_work\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\python_work\AKMfloor\agvCtrl\agvControl.py", line 1207, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+
+[CRITICAL]2021-03-18 09:49:35,513: taskFunc2:task[6052b1aae73748e754a6f0af][AGV01] AP140(LM137) -> AP50(LM5) [startMoveJackup] cause a error: Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+pid=25008, ppid=12724, tid=17008
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 725, in _taskFunc
+    elif not self.handle():
+  File "D:\python_work\AKMfloor\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 601, in handle
+    self._moveJackup()
+  File "D:\python_work\AKMfloor\pharmapackCtrl\runTasks.py", line 825, in _moveJackup
+    agvApi.moveJackup(self.agvId, self.param["floorId"]+'.'+self.param["location"], self.onFinish, self.param, use_pgv=True,pgv_type=1)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 182, in moveJackup
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 170, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: famajia.AP34->famajia.AP140 路径不存在1,agvId=AGV01
+

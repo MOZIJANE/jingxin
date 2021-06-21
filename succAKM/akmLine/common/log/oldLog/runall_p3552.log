@@ -1,0 +1,39 @@
+[INFO]2021-03-08 16:03:14,143: log files at C:\Users\WINDOWS\Desktop\akmLine\common\log
+[INFO]2021-03-08 16:03:14,144: find module agvCtrl.main_agv
+[INFO]2021-03-08 16:03:14,147: find module agvDevice.main_agvDevice
+[INFO]2021-03-08 16:03:14,148: find module alarm.main_alarm
+[INFO]2021-03-08 16:03:14,149: find module auth.main_auth
+[INFO]2021-03-08 16:03:14,151: find module door.main_door
+[INFO]2021-03-08 16:03:14,152: find module elevator.main_elevator
+[INFO]2021-03-08 16:03:14,153: find module elevator.main_elevator
+[INFO]2021-03-08 16:03:14,153: find module feed.main_feed
+[INFO]2021-03-08 16:03:14,154: import agvCtrl.main_agv
+[ERROR]2021-03-08 16:03:14,391: mongo db is disabled
+[INFO]2021-03-08 16:03:14,734: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000179BAA305F8>>
+[INFO]2021-03-08 16:03:14,738: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000179BAA307B0>>
+[INFO]2021-03-08 16:03:14,908: create lock <lock name:timer.lock_1622336002424,<unlocked _thread.RLock object owner=0 count=0 at 0x00000179BABFFFD0>>
+[ERROR]2021-03-08 16:03:15,036: mqtt is disabled
+[INFO]2021-03-08 16:03:15,038: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-08 16:03:15,039: mqtt: subscribe [alarm/clear/+]
+[CRITICAL]2021-03-08 16:03:15,342: import main_agv failed, path: agvCtrl cause a error: No module named 'crcmod'
+pid=3552, ppid=14896, tid=13264
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\mapMgr.py", line 20, in <module>
+    import elevatorMgr
+  File "C:\Users\WINDOWS\Desktop\akmLine\agvCtrl\elevatorMgr.py", line 22, in <module>
+    import elevator.elevatorApi as elevatorApi
+  File "..\elevator\elevatorApi.py", line 12, in <module>
+    import main_elevator
+  File "C:\Users\WINDOWS\Desktop\akmLine\elevator\main_elevator.py", line 10, in <module>
+    import elevator.elevatorMgr as elevatorMgr
+  File "..\elevator\elevatorMgr.py", line 16, in <module>
+    import elevator.elevatorControlNanqu as elevatorControl
+  File "..\elevator\elevatorControlNanqu.py", line 21, in <module>
+    from crcmod import *
+ModuleNotFoundError: No module named 'crcmod'
+
+[CRITICAL]2021-03-08 16:03:15,346: import main_agv failed, path: agvCtrl ,cause No module named 'crcmod'

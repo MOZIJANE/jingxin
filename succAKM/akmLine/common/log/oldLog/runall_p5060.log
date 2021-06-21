@@ -1,0 +1,621 @@
+[INFO]2021-03-12 16:42:43,934: log files at D:\akmLine\common\log
+[INFO]2021-03-12 16:42:43,936: find module agvCtrl.main_agv
+[INFO]2021-03-12 16:42:43,937: find module agvDevice.main_agvDevice
+[INFO]2021-03-12 16:42:43,939: find module alarm.main_alarm
+[INFO]2021-03-12 16:42:43,941: find module auth.main_auth
+[INFO]2021-03-12 16:42:43,942: find module button.main_button
+[INFO]2021-03-12 16:42:43,944: find module door.main_door
+[INFO]2021-03-12 16:42:43,945: find module elevator.main_elevator
+[INFO]2021-03-12 16:42:43,947: import agvCtrl.main_agv
+[ERROR]2021-03-12 16:42:44,136: mongo db is disabled
+[INFO]2021-03-12 16:42:44,664: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EAF15F58>>
+[INFO]2021-03-12 16:42:44,670: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EAF3D148>>
+[INFO]2021-03-12 16:42:44,833: create lock <lock name:timer.lock_171450171912,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EB3826E8>>
+[ERROR]2021-03-12 16:42:44,848: mqtt is disabled
+[INFO]2021-03-12 16:42:44,850: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-12 16:42:44,852: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-12 16:42:44,937: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EB5043C8>>
+[INFO]2021-03-12 16:42:44,940: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EB4B3530>>
+[INFO]2021-03-12 16:42:45,472: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027E96BB990>>
+[INFO]2021-03-12 16:42:46,199: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EB6F5328>>
+[INFO]2021-03-12 16:42:46,205: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EB76B558>>
+[INFO]2021-03-12 16:42:46,387: charge policy 0 , fix time
+[INFO]2021-03-12 16:42:46,508: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EB76B8A0>>
+[INFO]2021-03-12 16:42:46,863: start load map D:\akmLine\agvCtrl\projects\akmLine\akmsmt.smap
+[DEBUG]2021-03-12 16:42:47,025: elevator thread start
+[INFO]2021-03-12 16:42:47,082: load map D:\akmLine\agvCtrl\projects\akmLine\akmsmt.smap ,used 242 ms
+[INFO]2021-03-12 16:42:47,111: start load map D:\akmLine\agvCtrl\projects\akmLine\akmsmtMap.smap
+[INFO]2021-03-12 16:42:47,408: load map D:\akmLine\agvCtrl\projects\akmLine\akmsmtMap.smap ,used 325 ms
+[INFO]2021-03-12 16:42:47,437: start load map D:\akmLine\agvCtrl\projects\akmLine\shiyanshi.smap
+[INFO]2021-03-12 16:42:47,573: load map D:\akmLine\agvCtrl\projects\akmLine\shiyanshi.smap ,used 162 ms
+[INFO]2021-03-12 16:42:47,582: import agvDevice.main_agvDevice
+[INFO]2021-03-12 16:42:47,584: import alarm.main_alarm
+[INFO]2021-03-12 16:42:47,586: import auth.main_auth
+[INFO]2021-03-12 16:42:47,602: import button.main_button
+[INFO]2021-03-12 16:42:47,647: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EC39ADF0>>
+[INFO]2021-03-12 16:42:47,708: import door.main_door
+[INFO]2021-03-12 16:42:47,716: import elevator.main_elevator
+[SUCC]2021-03-12 16:42:47,720: utility start, pid=5060, ppid=2884
+[DEBUG]2021-03-12 16:42:47,723: start timer
+[INFO]2021-03-12 16:42:47,748: load agv file: D:\akmLine\agvCtrl/projects/akmLine/agv.cfg
+[INFO]2021-03-12 16:42:47,750: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EBB2F6C0>>
+[DEBUG]2021-03-12 16:42:47,756: create aliveObj AGV01 AGV离线异常 timeout 300
+[INFO]2021-03-12 16:42:47,761: AGV01 start agvList run thread
+[INFO]2021-03-12 16:42:47,761: AGV01 start agvList run2 thread
+[INFO]2021-03-12 16:42:47,764: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027ECAD5940>>
+[DEBUG]2021-03-12 16:42:47,774: try connect AGV01 192.168.252.111:19204
+[WARNING]2021-03-12 16:42:47,779: Local server start! version 3.6.6, path D:\akmLine\common, pid 5060
+[INFO]2021-03-12 16:42:47,782: add_ignore: taskStatus
+[INFO]2021-03-12 16:42:48,122: tcp server [0.0.0.0][8899] ,connectedLen: 1, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59793
+[INFO]2021-03-12 16:42:48,432: AGV01 connected 192.168.252.111 19204
+[INFO]2021-03-12 16:42:48,437: tcp server [0.0.0.0][8899] ,connectedLen: 2, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60164
+[INFO]2021-03-12 16:42:48,438: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027ECAD5990>>
+[INFO]2021-03-12 16:42:48,465: tcp server [0.0.0.0][8899] ,connectedLen: 3, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63611
+[DEBUG]2021-03-12 16:42:48,496: try connect AGV01 192.168.252.111:19205
+[INFO]2021-03-12 16:42:48,624: tcp server [0.0.0.0][8899] ,connectedLen: 4, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55110
+[INFO]2021-03-12 16:42:48,769: AGV01 connected 192.168.252.111 19205
+[INFO]2021-03-12 16:42:48,771: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EED924B8>>
+[DEBUG]2021-03-12 16:42:48,774: try connect AGV01 192.168.252.111:19206
+[INFO]2021-03-12 16:42:48,900: AGV01 connected 192.168.252.111 19206
+[INFO]2021-03-12 16:42:48,902: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EF0CD238>>
+[DEBUG]2021-03-12 16:42:48,904: try connect AGV01 192.168.252.111:19207
+[INFO]2021-03-12 16:42:49,009: AGV01 connected 192.168.252.111 19207
+[INFO]2021-03-12 16:42:49,011: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EF0CD198>>
+[DEBUG]2021-03-12 16:42:49,014: try connect AGV01 192.168.252.111:19208
+[INFO]2021-03-12 16:42:49,261: AGV01 connected 192.168.252.111 19208
+[INFO]2021-03-12 16:42:49,264: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x00000027EF0CD1C0>>
+[DEBUG]2021-03-12 16:42:49,266: try connect AGV01 192.168.252.111:19210
+[INFO]2021-03-12 16:42:49,482: AGV01 connected 192.168.252.111 19210
+[INFO]2021-03-12 16:42:49,723: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61942
+[INFO]2021-03-12 16:42:50,093: AGV01 current map shiyanshi
+[INFO]2021-03-12 16:42:50,800: AGV01 is online
+[DEBUG]2021-03-12 16:42:53,297: GET: http://127.0.0.1:8999/api/agv/init?appName=button addr: 127.0.0.1
+[INFO]2021-03-12 16:42:53,300: button init client agvApi
+[DEBUG]2021-03-12 16:42:53,304: used 7ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/init?appName=button
+[DEBUG]2021-03-12 16:42:53,315: GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=button&taskId=AGV01564d1c35-5937-4704-8de1-b0bf06e9a036 addr: 127.0.0.1
+[DEBUG]2021-03-12 16:42:53,320: used 5ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=button&taskId=AGV01564d1c35-5937-4704-8de1-b0bf06e9a036
+[DEBUG]2021-03-12 16:42:53,403: GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=button&taskId=AGV01564d1c35-5937-4704-8de1-b0bf06e9a036 addr: 127.0.0.1
+[DEBUG]2021-03-12 16:42:53,432: lock:  AGV01 taskId AGV01564d1c35-5937-4704-8de1-b0bf06e9a036 app button
+[WARNING]2021-03-12 16:42:54,453: AGV01 clear task finish, cur= shiyanshi.AP2 task_status= 4
+[DEBUG]2021-03-12 16:42:54,470: used 1067ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=button&taskId=AGV01564d1c35-5937-4704-8de1-b0bf06e9a036
+[DEBUG]2021-03-12 16:42:54,512: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&appName=button&devID=19&loc=AP4&taskId=2021-03-12%2016%3A42%3A54AGV01&timeoutSec=600 addr: 127.0.0.1
+[INFO]2021-03-12 16:42:54,557: Begin: AGV01 move from shiyanshi.AP2 to shiyanshi.AP4 by paths: [('shiyanshi', ['AP2', 'LM3', 'AP4'], 5.205)] task: 2021-03-12 16:42:54AGV01 timeout 600 used 35 ms
+[INFO]2021-03-12 16:42:54,564: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,566: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,568: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,570: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,572: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,574: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,576: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,578: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,581: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,582: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,585: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,587: +++++loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:42:54,589: +++++loc: {'loc': 'AP4'}
+[DEBUG]2021-03-12 16:42:55,497: agvInfo: AGV01 shiyanshi.AP2 move to shiyanshi.LM3 ,taskId 2021-03-12 16:42:54AGV01
+[CRITICAL]2021-03-12 16:42:58,439: : 192.168.252.90:8899 <--> 192.168.252.15:59793 time out cause a error: <tcpSocket.client object at 0x00000027EF026940>
+pid=5060, ppid=2884, tid=2296
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-03-12 16:42:58,447: : 192.168.252.90:8899 <--> 192.168.252.14:60164 time out cause a error: <tcpSocket.client object at 0x00000027EF00B0F0>
+pid=5060, ppid=2884, tid=4268
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:42:58,448: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59793
+[INFO]2021-03-12 16:42:58,458: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60164
+[WARNING]2021-03-12 16:42:58,463: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59793
+[WARNING]2021-03-12 16:42:58,467: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60164
+[INFO]2021-03-12 16:42:58,520: tcp server [0.0.0.0][8899] ,connectedLen: 4, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59794
+[CRITICAL]2021-03-12 16:42:58,632: : 192.168.252.90:8899 <--> 192.168.252.16:55110 time out cause a error: <tcpSocket.client object at 0x00000027EEFFC0F0>
+pid=5060, ppid=2884, tid=1924
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:42:58,642: tcp server [0.0.0.0][8899] ,connectedLen: 4, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55110
+[WARNING]2021-03-12 16:42:58,646: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55110
+[DEBUG]2021-03-12 16:42:58,925: AGV01 turn to wait check cur AP2 next AP4 0.961 False
+[INFO]2021-03-12 16:42:58,964: tcp server [0.0.0.0][8899] ,connectedLen: 4, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55111
+[INFO]2021-03-12 16:42:59,389: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60165
+[DEBUG]2021-03-12 16:42:59,483: agvInfo: AGV01 shiyanshi.AP2 move to shiyanshi.AP4 ,taskId 2021-03-12 16:42:54AGV01
+[CRITICAL]2021-03-12 16:42:59,731: : 192.168.252.90:8899 <--> 192.168.252.17:61942 time out cause a error: <tcpSocket.client object at 0x00000027EEFFA128>
+pid=5060, ppid=2884, tid=5052
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:42:59,742: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61942
+[WARNING]2021-03-12 16:42:59,746: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61942
+[INFO]2021-03-12 16:42:59,810: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61943
+[DEBUG]2021-03-12 16:43:01,546: AGV01 set loc shiyanshi.LM3 ,old AP2 (1.43,-0.15)
+[WARNING]2021-03-12 16:43:01,739: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:02,246: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:02,753: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:03,261: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:03,767: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:04,273: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[CRITICAL]2021-03-12 16:43:04,596: : 192.168.252.90:8899 <--> 192.168.252.13:63611 time out cause a error: <tcpSocket.client object at 0x00000027EF008EF0>
+pid=5060, ppid=2884, tid=4104
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:04,618: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63611
+[WARNING]2021-03-12 16:43:04,622: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63611
+[INFO]2021-03-12 16:43:04,649: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63612
+[WARNING]2021-03-12 16:43:04,780: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:05,290: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:05,805: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:06,319: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:06,826: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:07,334: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:07,841: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:08,348: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[CRITICAL]2021-03-12 16:43:08,529: : 192.168.252.90:8899 <--> 192.168.252.15:59794 time out cause a error: <tcpSocket.client object at 0x00000027EF008FD0>
+pid=5060, ppid=2884, tid=4368
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:08,549: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59794
+[WARNING]2021-03-12 16:43:08,554: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59794
+[INFO]2021-03-12 16:43:08,575: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59795
+[WARNING]2021-03-12 16:43:08,853: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[CRITICAL]2021-03-12 16:43:08,977: : 192.168.252.90:8899 <--> 192.168.252.16:55111 time out cause a error: <tcpSocket.client object at 0x00000027EEFB4048>
+pid=5060, ppid=2884, tid=4520
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:08,998: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55111
+[WARNING]2021-03-12 16:43:09,004: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55111
+[INFO]2021-03-12 16:43:09,029: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55112
+[WARNING]2021-03-12 16:43:09,360: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[CRITICAL]2021-03-12 16:43:09,396: : 192.168.252.90:8899 <--> 192.168.252.14:60165 time out cause a error: <tcpSocket.client object at 0x00000027EEFA30B8>
+pid=5060, ppid=2884, tid=3464
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:09,414: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60165
+[WARNING]2021-03-12 16:43:09,419: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60165
+[INFO]2021-03-12 16:43:09,450: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60166
+[CRITICAL]2021-03-12 16:43:09,819: : 192.168.252.90:8899 <--> 192.168.252.17:61943 time out cause a error: <tcpSocket.client object at 0x00000027EEFFA0B8>
+pid=5060, ppid=2884, tid=2308
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:09,848: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61943
+[WARNING]2021-03-12 16:43:09,854: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61943
+[WARNING]2021-03-12 16:43:09,866: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:10,376: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[INFO]2021-03-12 16:43:10,739: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61944
+[WARNING]2021-03-12 16:43:10,880: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:11,385: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:11,897: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[WARNING]2021-03-12 16:43:12,419: AGV01 waitFinish: loc is diff LM3 AP4 task_status= 2
+[DEBUG]2021-03-12 16:43:12,593: AGV01 set loc shiyanshi.AP4 ,old LM3 (5.49,-0.12)
+[CRITICAL]2021-03-12 16:43:14,659: : 192.168.252.90:8899 <--> 192.168.252.13:63612 time out cause a error: <tcpSocket.client object at 0x00000027EEFFE438>
+pid=5060, ppid=2884, tid=4444
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:14,687: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63612
+[WARNING]2021-03-12 16:43:14,692: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63612
+[INFO]2021-03-12 16:43:14,714: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63613
+[CRITICAL]2021-03-12 16:43:18,586: : 192.168.252.90:8899 <--> 192.168.252.15:59795 time out cause a error: <tcpSocket.client object at 0x00000027EF00B0F0>
+pid=5060, ppid=2884, tid=2416
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:18,604: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59795
+[WARNING]2021-03-12 16:43:18,609: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59795
+[INFO]2021-03-12 16:43:18,636: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59796
+[CRITICAL]2021-03-12 16:43:19,039: : 192.168.252.90:8899 <--> 192.168.252.16:55112 time out cause a error: <tcpSocket.client object at 0x00000027EEFE3EF0>
+pid=5060, ppid=2884, tid=4364
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:19,058: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55112
+[WARNING]2021-03-12 16:43:19,064: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55112
+[INFO]2021-03-12 16:43:19,117: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55113
+[SUCC]2021-03-12 16:43:19,451: Finish:  AGV01 arrived shiyanshi.AP4 ,task: 2021-03-12 16:42:54AGV01
+[CRITICAL]2021-03-12 16:43:19,461: : 192.168.252.90:8899 <--> 192.168.252.14:60166 time out cause a error: <tcpSocket.client object at 0x00000027EEFDBBE0>
+pid=5060, ppid=2884, tid=2756
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:19,478: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60166
+[WARNING]2021-03-12 16:43:19,484: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60166
+[INFO]2021-03-12 16:43:19,507: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60167
+[CRITICAL]2021-03-12 16:43:20,759: : 192.168.252.90:8899 <--> 192.168.252.17:61944 time out cause a error: <tcpSocket.client object at 0x00000027EEFB6358>
+pid=5060, ppid=2884, tid=2448
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:20,785: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61944
+[WARNING]2021-03-12 16:43:20,807: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61944
+[INFO]2021-03-12 16:43:20,871: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61945
+[CRITICAL]2021-03-12 16:43:23,954: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=5060, ppid=2884, tid=4512
+
+[CRITICAL]2021-03-12 16:43:24,112: invoke timer func<function msubscribe at 0x00000027EB41D268> cause a error: mongodb is not connected
+pid=5060, ppid=2884, tid=4512
+Traceback (most recent call last):
+  File "D:\akmLine\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "D:\akmLine\alarm\alarmThreshold.py", line 65, in msubscribe
+    for key in _loadInfo():
+  File "D:\akmLine\alarm\alarmThreshold.py", line 51, in _loadInfo
+    ds = db.find("c_alarm_threshold")
+  File "D:\akmLine\common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
+[CRITICAL]2021-03-12 16:43:24,730: : 192.168.252.90:8899 <--> 192.168.252.13:63613 time out cause a error: <tcpSocket.client object at 0x00000027EEFFE3C8>
+pid=5060, ppid=2884, tid=4612
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:24,770: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63613
+[WARNING]2021-03-12 16:43:24,795: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63613
+[INFO]2021-03-12 16:43:24,981: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63614
+[CRITICAL]2021-03-12 16:43:28,655: : 192.168.252.90:8899 <--> 192.168.252.15:59796 time out cause a error: <tcpSocket.client object at 0x00000027EF008F28>
+pid=5060, ppid=2884, tid=5104
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:28,698: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59796
+[WARNING]2021-03-12 16:43:28,719: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59796
+[INFO]2021-03-12 16:43:28,760: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59797
+[CRITICAL]2021-03-12 16:43:29,131: : 192.168.252.90:8899 <--> 192.168.252.16:55113 time out cause a error: <tcpSocket.client object at 0x00000027EEFE3EF0>
+pid=5060, ppid=2884, tid=4088
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:29,163: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55113
+[WARNING]2021-03-12 16:43:29,183: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55113
+[INFO]2021-03-12 16:43:29,237: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55114
+[CRITICAL]2021-03-12 16:43:29,527: : 192.168.252.90:8899 <--> 192.168.252.14:60167 time out cause a error: <tcpSocket.client object at 0x00000027EEFDBD68>
+pid=5060, ppid=2884, tid=2420
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:29,565: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60167
+[WARNING]2021-03-12 16:43:29,586: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60167
+[INFO]2021-03-12 16:43:29,681: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60168
+[CRITICAL]2021-03-12 16:43:30,918: : 192.168.252.90:8899 <--> 192.168.252.17:61945 time out cause a error: <tcpSocket.client object at 0x00000027EEFFA080>
+pid=5060, ppid=2884, tid=3520
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:30,956: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61945
+[WARNING]2021-03-12 16:43:30,980: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61945
+[INFO]2021-03-12 16:43:31,034: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61946
+[INFO]2021-03-12 16:43:32,597: -----loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:43:32,618: -----loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:43:32,638: -----loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:43:32,659: -----loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:43:32,679: -----loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:43:32,700: -----loc: {'loc': 'AP4'}
+[INFO]2021-03-12 16:43:32,727: -----loc: home
+[INFO]2021-03-12 16:43:32,764: -----loc: home
+[INFO]2021-03-12 16:43:32,785: -----loc: home
+[INFO]2021-03-12 16:43:32,805: -----loc: home
+[INFO]2021-03-12 16:43:32,827: -----loc: home
+[INFO]2021-03-12 16:43:32,842: -----loc: home
+[CRITICAL]2021-03-12 16:43:35,019: : 192.168.252.90:8899 <--> 192.168.252.13:63614 time out cause a error: <tcpSocket.client object at 0x00000027EEFB4048>
+pid=5060, ppid=2884, tid=404
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:35,045: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63614
+[WARNING]2021-03-12 16:43:35,067: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63614
+[INFO]2021-03-12 16:43:35,164: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63615
+[CRITICAL]2021-03-12 16:43:38,797: : 192.168.252.90:8899 <--> 192.168.252.15:59797 time out cause a error: <tcpSocket.client object at 0x00000027EF00B0F0>
+pid=5060, ppid=2884, tid=2692
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:38,828: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59797
+[WARNING]2021-03-12 16:43:38,849: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59797
+[INFO]2021-03-12 16:43:38,891: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59798
+[CRITICAL]2021-03-12 16:43:39,274: : 192.168.252.90:8899 <--> 192.168.252.16:55114 time out cause a error: <tcpSocket.client object at 0x00000027EEFDBE48>
+pid=5060, ppid=2884, tid=4216
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:39,306: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55114
+[WARNING]2021-03-12 16:43:39,327: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55114
+[INFO]2021-03-12 16:43:39,390: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55115
+[CRITICAL]2021-03-12 16:43:39,719: : 192.168.252.90:8899 <--> 192.168.252.14:60168 time out cause a error: <tcpSocket.client object at 0x00000027EEFDB6A0>
+pid=5060, ppid=2884, tid=3404
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:39,750: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60168
+[WARNING]2021-03-12 16:43:39,772: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60168
+[INFO]2021-03-12 16:43:39,823: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60169
+[CRITICAL]2021-03-12 16:43:42,877: : 192.168.252.90:8899 <--> 192.168.252.17:61946 time out cause a error: <tcpSocket.client object at 0x00000027EEFB6358>
+pid=5060, ppid=2884, tid=3448
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:42,915: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61946
+[WARNING]2021-03-12 16:43:42,936: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61946
+[INFO]2021-03-12 16:43:42,988: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61947
+[CRITICAL]2021-03-12 16:43:45,197: : 192.168.252.90:8899 <--> 192.168.252.13:63615 time out cause a error: <tcpSocket.client object at 0x00000027EEFFE400>
+pid=5060, ppid=2884, tid=4668
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:45,245: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63615
+[WARNING]2021-03-12 16:43:45,267: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63615
+[INFO]2021-03-12 16:43:45,315: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63616
+[CRITICAL]2021-03-12 16:43:48,936: : 192.168.252.90:8899 <--> 192.168.252.15:59798 time out cause a error: <tcpSocket.client object at 0x00000027EF008FD0>
+pid=5060, ppid=2884, tid=984
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:48,988: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59798
+[WARNING]2021-03-12 16:43:49,013: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59798
+[CRITICAL]2021-03-12 16:43:49,431: : 192.168.252.90:8899 <--> 192.168.252.16:55115 time out cause a error: <tcpSocket.client object at 0x00000027EEFDBCF8>
+pid=5060, ppid=2884, tid=3356
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:49,462: tcp server [0.0.0.0][8899] ,connectedLen: 4, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55115
+[WARNING]2021-03-12 16:43:49,484: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55115
+[INFO]2021-03-12 16:43:49,536: tcp server [0.0.0.0][8899] ,connectedLen: 4, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55116
+[INFO]2021-03-12 16:43:49,729: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59799
+[CRITICAL]2021-03-12 16:43:49,868: : 192.168.252.90:8899 <--> 192.168.252.14:60169 time out cause a error: <tcpSocket.client object at 0x00000027EEFB0438>
+pid=5060, ppid=2884, tid=3620
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:49,904: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60169
+[WARNING]2021-03-12 16:43:49,931: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60169
+[INFO]2021-03-12 16:43:50,058: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60170
+[CRITICAL]2021-03-12 16:43:53,032: : 192.168.252.90:8899 <--> 192.168.252.17:61947 time out cause a error: <tcpSocket.client object at 0x00000027EEFB6358>
+pid=5060, ppid=2884, tid=4072
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:53,078: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61947
+[WARNING]2021-03-12 16:43:53,100: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61947
+[INFO]2021-03-12 16:43:53,166: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61948
+[CRITICAL]2021-03-12 16:43:55,358: : 192.168.252.90:8899 <--> 192.168.252.13:63616 time out cause a error: <tcpSocket.client object at 0x00000027EEFFE3C8>
+pid=5060, ppid=2884, tid=4204
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:55,379: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63616
+[WARNING]2021-03-12 16:43:55,399: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63616
+[INFO]2021-03-12 16:43:55,464: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63617
+[CRITICAL]2021-03-12 16:43:58,632: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=5060, ppid=2884, tid=4512
+
+[CRITICAL]2021-03-12 16:43:58,702: invoke timer func<function _load at 0x00000027EB41D048> cause a error: mongodb is not connected
+pid=5060, ppid=2884, tid=4512
+Traceback (most recent call last):
+  File "D:\akmLine\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "D:\akmLine\alarm\alarmForward.py", line 55, in _load
+    ds = db.find("u_alarm_forward")
+  File "D:\akmLine\common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
+[CRITICAL]2021-03-12 16:43:59,580: : 192.168.252.90:8899 <--> 192.168.252.16:55116 time out cause a error: <tcpSocket.client object at 0x00000027EF008FD0>
+pid=5060, ppid=2884, tid=4052
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:59,615: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55116
+[WARNING]2021-03-12 16:43:59,641: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55116
+[INFO]2021-03-12 16:43:59,707: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55117
+[CRITICAL]2021-03-12 16:43:59,776: : 192.168.252.90:8899 <--> 192.168.252.15:59799 time out cause a error: <tcpSocket.client object at 0x00000027EEFA2710>
+pid=5060, ppid=2884, tid=4688
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:43:59,815: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59799
+[WARNING]2021-03-12 16:43:59,837: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59799
+[INFO]2021-03-12 16:43:59,982: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59800
+[CRITICAL]2021-03-12 16:44:00,114: : 192.168.252.90:8899 <--> 192.168.252.14:60170 time out cause a error: <tcpSocket.client object at 0x00000027EEFB0A20>
+pid=5060, ppid=2884, tid=4784
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:44:00,150: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60170
+[WARNING]2021-03-12 16:44:00,169: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60170
+[INFO]2021-03-12 16:44:00,206: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60171
+[CRITICAL]2021-03-12 16:44:03,203: : 192.168.252.90:8899 <--> 192.168.252.17:61948 time out cause a error: <tcpSocket.client object at 0x00000027EEFB2C18>
+pid=5060, ppid=2884, tid=4316
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:44:03,236: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.17:61948
+[WARNING]2021-03-12 16:44:03,264: disconnect : 192.168.252.90:8899 <--> 192.168.252.17:61948
+[INFO]2021-03-12 16:44:03,306: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.17:61949
+[CRITICAL]2021-03-12 16:44:05,498: : 192.168.252.90:8899 <--> 192.168.252.13:63617 time out cause a error: <tcpSocket.client object at 0x00000027EEFFE438>
+pid=5060, ppid=2884, tid=4712
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:44:05,529: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.13:63617
+[WARNING]2021-03-12 16:44:05,549: disconnect : 192.168.252.90:8899 <--> 192.168.252.13:63617
+[INFO]2021-03-12 16:44:05,631: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.13:63618
+[CRITICAL]2021-03-12 16:44:09,751: : 192.168.252.90:8899 <--> 192.168.252.16:55117 time out cause a error: <tcpSocket.client object at 0x00000027EF008FD0>
+pid=5060, ppid=2884, tid=1932
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:44:09,783: tcp server [0.0.0.0][8899] ,connectedLen: 5, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.16:55117
+[WARNING]2021-03-12 16:44:09,805: disconnect : 192.168.252.90:8899 <--> 192.168.252.16:55117
+[CRITICAL]2021-03-12 16:44:10,035: : 192.168.252.90:8899 <--> 192.168.252.15:59800 time out cause a error: <tcpSocket.client object at 0x00000027EEFA0A58>
+pid=5060, ppid=2884, tid=2276
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:44:10,073: tcp server [0.0.0.0][8899] ,connectedLen: 4, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.15:59800
+[WARNING]2021-03-12 16:44:10,094: disconnect : 192.168.252.90:8899 <--> 192.168.252.15:59800
+[INFO]2021-03-12 16:44:10,177: tcp server [0.0.0.0][8899] ,connectedLen: 4, tcp connected : 192.168.252.90:8899 <--> 192.168.252.15:59801
+[CRITICAL]2021-03-12 16:44:10,248: : 192.168.252.90:8899 <--> 192.168.252.14:60171 time out cause a error: <tcpSocket.client object at 0x00000027EEFB02B0>
+pid=5060, ppid=2884, tid=2600
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 39, in _handle
+    data = client.recv(6)
+  File "D:\akmLine\common\tcpSocket.py", line 164, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2021-03-12 16:44:10,289: tcp server [0.0.0.0][8899] ,connectedLen: 4, disconnect:  : 192.168.252.90:8899 <--> 192.168.252.14:60171
+[WARNING]2021-03-12 16:44:10,319: disconnect : 192.168.252.90:8899 <--> 192.168.252.14:60171
+[INFO]2021-03-12 16:44:10,445: tcp server [0.0.0.0][8899] ,connectedLen: 4, tcp connected : 192.168.252.90:8899 <--> 192.168.252.14:60172
+[INFO]2021-03-12 16:44:12,857: tcp server [0.0.0.0][8899] ,connectedLen: 5, tcp connected : 192.168.252.90:8899 <--> 192.168.252.16:55118

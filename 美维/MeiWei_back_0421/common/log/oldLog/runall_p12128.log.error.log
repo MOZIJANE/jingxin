@@ -1,0 +1,22 @@
+[CRITICAL]2021-04-23 10:54:17,206: import main_feed failed, path: feed cause a error: Expecting ',' delimiter: line 4 column 23 (char 226)
+pid=12128, ppid=7612, tid=6956
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 13, in <module>
+    import runTask
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\runTask.py", line 39, in <module>
+    g_agvList = _loadAgvList()
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\runTask.py", line 33, in _loadAgvList
+    aa = json.load(f)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 4 column 23 (char 226)
+
+[CRITICAL]2021-04-23 10:54:17,209: import main_feed failed, path: feed ,cause Expecting ',' delimiter: line 4 column 23 (char 226)

@@ -1,0 +1,438 @@
+[CRITICAL]2021-03-31 16:02:48,728: invoke <function urlRelayopen at 0x00000179012A4430> cause a error: 'DOOR01'
+pid=14984, ppid=10228, tid=16000
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 15, in urlRelayopen
+    switchInfo= switchMgr.getDoor(id)
+  File "..\door\switchMgr.py", line 45, in getDoor
+    return getDoorList()[swichId]
+KeyError: 'DOOR01'
+
+[CRITICAL]2021-03-31 16:05:19,208: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=10948
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 16:05:24,596: invoke <function urlRelayopen at 0x00000179012A4430> cause a error: timed out
+pid=14984, ppid=10228, tid=10948
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 16, in urlRelayopen
+    switchInfo.open()
+  File "..\door\switchMgr.py", line 144, in open
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:12,071: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=10508
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:17,416: invoke <function urlRelayopen at 0x00000179012A4430> cause a error: timed out
+pid=14984, ppid=10228, tid=10508
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 16, in urlRelayopen
+    switchInfo.open()
+  File "..\door\switchMgr.py", line 144, in open
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:24,558: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=7228
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:29,928: invoke <function urlRelayclose at 0x00000179012A4670> cause a error: timed out
+pid=14984, ppid=10228, tid=7228
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 24, in urlRelayclose
+    switchInfo.close()
+  File "..\door\switchMgr.py", line 157, in close
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:37,319: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=12808
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:42,658: invoke <function urlRelayopen at 0x00000179012A4430> cause a error: timed out
+pid=14984, ppid=10228, tid=12808
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 16, in urlRelayopen
+    switchInfo.open()
+  File "..\door\switchMgr.py", line 144, in open
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:49,754: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=2432
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:21:55,105: invoke <function urlRelayclose at 0x00000179012A4670> cause a error: timed out
+pid=14984, ppid=10228, tid=2432
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 24, in urlRelayclose
+    switchInfo.close()
+  File "..\door\switchMgr.py", line 157, in close
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:22:02,355: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=16000
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:22:07,759: invoke <function urlRelayopen at 0x00000179012A4430> cause a error: timed out
+pid=14984, ppid=10228, tid=16000
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 16, in urlRelayopen
+    switchInfo.open()
+  File "..\door\switchMgr.py", line 144, in open
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:22:14,967: [modbusApi: 192.168.252.196] execute fcode=15, addr=16 exception:  cause a error: timed out
+pid=14984, ppid=10228, tid=17620
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-31 17:22:20,253: invoke <function urlRelayclose at 0x00000179012A4670> cause a error: timed out
+pid=14984, ppid=10228, tid=17620
+Traceback (most recent call last):
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 99, in _setList
+    tcpMaster.write(mdef.WRITE_MULTIPLE_COILS, addr, value, len)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 51, in write
+    return self.__execute(fcode, start, num, value)
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\安捷利电梯项目\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\安捷利电梯项目\AKMfloor\door\main_door.py", line 24, in urlRelayclose
+    switchInfo.close()
+  File "..\door\switchMgr.py", line 157, in close
+    ioModbusTcpCtrl.setValues(self.ip, self.port, ioModbusTcpCtrl.D10,l,ioModbusTcpCtrl.IO_LENTH)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 144, in setValues
+    _setList(addr, value, len)
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 101, in _setList
+    reconnect()
+  File "..\driver\serialGatewayDevice\ioModbusTcpCtrl.py", line 43, in reconnect
+    tcpMaster.open()
+  File "E:\安捷利电梯项目\AKMfloor\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+

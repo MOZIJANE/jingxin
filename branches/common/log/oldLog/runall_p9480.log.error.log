@@ -1,0 +1,21 @@
+[CRITICAL]2021-03-31 10:18:36,968: updateagv cause a error: [WinError 2] 系统找不到指定的文件。: 'C:\\Users\\Administrator\\Desktop\\SVN\\branches\\agvCtrl\\projects\\test\\comba-ZXC-F1-F3.smap'
+pid=9480, ppid=9612, tid=11660
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvUI.py", line 397, in autoUpdateAgv
+    agvs = agvList.getAgvList()
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvList.py", line 130, in getAgvList
+    g_agvList = _loadAgvList()
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvList.py", line 105, in _loadAgvList
+    agv.createMock(mapId,homeLoc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvList.py", line 1128, in createMock
+    return agvCtrl.addAgv(self.agvId,mapMgr.getMap(mapId),startPos,self.width,self.height)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\mapMgr.py", line 54, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\mapMgr.py", line 336, in load
+    ctime = str(os.path.getmtime(pp))
+  File "C:\Python37\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'C:\\Users\\Administrator\\Desktop\\SVN\\branches\\agvCtrl\\projects\\test\\comba-ZXC-F1-F3.smap'
+

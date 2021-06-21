@@ -1,0 +1,492 @@
+[INFO]2021-04-01 08:06:15,177: log files at E:\安捷利电梯项目\AKMfloor\common\log
+[INFO]2021-04-01 08:06:15,197: find module account.main_account
+[INFO]2021-04-01 08:06:15,199: find module agvCtrl.main_agv
+[INFO]2021-04-01 08:06:15,201: find module agvDevice.main_agvDevice
+[INFO]2021-04-01 08:06:15,203: find module alarm.main_alarm
+[INFO]2021-04-01 08:06:15,205: find module auth.main_auth
+[INFO]2021-04-01 08:06:15,207: find module door.main_door
+[INFO]2021-04-01 08:06:15,210: find module elevator.main_elevator
+[INFO]2021-04-01 08:06:15,214: find module feed.main_feed
+[INFO]2021-04-01 08:06:15,216: find module menu.main_menu
+[INFO]2021-04-01 08:06:15,220: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-01 08:06:15,222: find module webFront.main_web
+[INFO]2021-04-01 08:06:15,224: find module wmqtt.main_wmqtt
+[INFO]2021-04-01 08:06:15,228: import account.main_account
+[INFO]2021-04-01 08:06:15,593: import agvCtrl.main_agv
+[INFO]2021-04-01 08:06:17,783: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002920FEA7F60>>
+[INFO]2021-04-01 08:06:19,479: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002920FEFB4E0>>
+[INFO]2021-04-01 08:06:19,921: create lock <lock name:timer.lock_2826362336016,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921052B480>>
+[ERROR]2021-04-01 08:06:19,961: mqtt is disabled
+[INFO]2021-04-01 08:06:19,965: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-01 08:06:19,967: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-01 08:06:23,210: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-01 08:06:23,328: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029210748B40>>
+[INFO]2021-04-01 08:06:23,332: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921073EEA0>>
+[INFO]2021-04-01 08:06:23,678: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029210752AE0>>
+[INFO]2021-04-01 08:06:24,035: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921184C420>>
+[INFO]2021-04-01 08:06:24,060: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921187D480>>
+[INFO]2021-04-01 08:06:24,164: charge policy 1 , fix time
+[INFO]2021-04-01 08:06:24,204: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029211887060>>
+[INFO]2021-04-01 08:06:24,557: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-04-01 08:06:26,968: create aliveObj DOOR13 门控离线异常 timeout 60
+[DEBUG]2021-04-01 08:06:26,986: create aliveObj DOOR27 门控离线异常 timeout 60
+[DEBUG]2021-04-01 08:06:27,037: elevator thread start
+[INFO]2021-04-01 08:06:27,368: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 2821 ms
+[INFO]2021-04-01 08:06:27,387: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[INFO]2021-04-01 08:06:29,989: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 2619 ms
+[INFO]2021-04-01 08:06:30,004: start load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\akmsmtMap.smap
+[INFO]2021-04-01 08:06:35,375: load map E:\安捷利电梯项目\AKMfloor\agvCtrl\projects\AKMfloor\akmsmtMap.smap ,used 5384 ms
+[WARNING]2021-04-01 08:06:35,377: MainThread[tid:7832] <lock name:mapMgr.lock,<locked _thread.RLock object owner=7832 count=1 at 0x0000029210752AE0>> ,hold 11171 ms
+[INFO]2021-04-01 08:06:35,379: name=MainThread, pid=8676, tid=7832
+[01] File "run_all.py", line 57, in <module>() 
+[02] File "run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 991, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 671, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 783, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[10] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[11] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[12] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-04-01 08:06:35,385: import agvDevice.main_agvDevice
+[INFO]2021-04-01 08:06:35,386: import alarm.main_alarm
+[INFO]2021-04-01 08:06:35,387: import auth.main_auth
+[WARNING]2021-04-01 08:06:35,463: clear alarm obj=DOOR27, typeId=39998, id=60642cbb7b43eb40d2c926b8
+[INFO]2021-04-01 08:06:35,572: import door.main_door
+[INFO]2021-04-01 08:06:35,583: import elevator.main_elevator
+[INFO]2021-04-01 08:06:35,586: import feed.main_feed
+[INFO]2021-04-01 08:06:35,636: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029212CA3180>>
+[INFO]2021-04-01 08:06:35,640: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029212CA3D80>>
+[INFO]2021-04-01 08:06:35,807: import menu.main_menu
+[INFO]2021-04-01 08:06:35,812: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-04-01 08:06:35,961: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029211932900>>
+[INFO]2021-04-01 08:06:35,964: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029211F3B3F0>>
+[INFO]2021-04-01 08:06:35,970: import webFront.main_web
+[INFO]2021-04-01 08:06:35,977: import wmqtt.main_wmqtt
+[SUCC]2021-04-01 08:06:35,990: utility start, pid=8676, ppid=1156
+[DEBUG]2021-04-01 08:06:35,994: start timer
+[INFO]2021-04-01 08:06:36,136: load agv file: E:\安捷利电梯项目\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-04-01 08:06:36,146: create lock <lock name:agvList.AGV02.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000292126DCB40>>
+[DEBUG]2021-04-01 08:06:36,168: create aliveObj AGV02 AGV离线异常 timeout 300
+[INFO]2021-04-01 08:06:36,177: AGV02 start agvList run thread
+[INFO]2021-04-01 08:06:36,178: AGV02 start agvList run2 thread
+[INFO]2021-04-01 08:06:36,180: create lock <lock name:agv.AGV02.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292D330>>
+[DEBUG]2021-04-01 08:06:36,185: try connect AGV02 192.168.20.182:19204
+[INFO]2021-04-01 08:06:36,192: AGV02 connected 192.168.20.182 19204
+[INFO]2021-04-01 08:06:36,194: create lock <lock name:agv.AGV02.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292D1E0>>
+[INFO]2021-04-01 08:06:36,195: create lock <lock name:agvList.AGV03.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292D3F0>>
+[DEBUG]2021-04-01 08:06:36,196: try connect AGV02 192.168.20.182:19205
+[DEBUG]2021-04-01 08:06:36,201: create aliveObj AGV03 AGV离线异常 timeout 300
+[INFO]2021-04-01 08:06:36,206: AGV03 start agvList run thread
+[INFO]2021-04-01 08:06:36,210: AGV03 start agvList run2 thread
+[INFO]2021-04-01 08:06:36,211: startCharge is false
+[INFO]2021-04-01 08:06:36,211: add_ignore: taskStatus
+[INFO]2021-04-01 08:06:36,211: create lock <lock name:agv.AGV03.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292DB10>>
+[INFO]2021-04-01 08:06:36,219: AGV02 connected 192.168.20.182 19205
+[INFO]2021-04-01 08:06:36,254: add_ignore: api/elevator/status
+[DEBUG]2021-04-01 08:06:36,266: try connect AGV03 192.168.20.183:19204
+[WARNING]2021-04-01 08:06:36,267: clear alarm obj=DOOR13, typeId=39998, id=60643e727b43eb40d2c93a59
+[INFO]2021-04-01 08:06:36,269: create lock <lock name:agv.AGV02.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292D240>>
+[INFO]2021-04-01 08:06:36,529: add_ignore: scada/getTask
+[INFO]2021-04-01 08:06:38,706: AGV03 connected 192.168.20.183 19204
+[DEBUG]2021-04-01 08:06:38,846: try connect AGV02 192.168.20.182:19206
+[WARNING]2021-04-01 08:06:39,504: agvThread.AGV03[tid:7980] <lock name:agv.AGV03.lock_status,<locked _thread.RLock object owner=7980 count=1 at 0x000002921292DB10>> ,hold 3238 ms
+[INFO]2021-04-01 08:06:39,768: name=agvThread.AGV03, pid=8676, tid=7980
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvList.py", line 570, in run() 
+[03] File "../driver/seerAgv/agvCtrl.py", line 36, in checkLink() 
+[04] File "../driver/seerAgv/agvApi.py", line 186, in checkLink() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[07] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-04-01 08:06:39,770: create lock <lock name:agv.AGV03.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292DB70>>
+[DEBUG]2021-04-01 08:06:39,771: try connect AGV03 192.168.20.183:19205
+[INFO]2021-04-01 08:06:39,778: AGV02 connected 192.168.20.182 19206
+[INFO]2021-04-01 08:06:39,781: AGV03 connected 192.168.20.183 19205
+[INFO]2021-04-01 08:06:39,781: create lock <lock name:agv.AGV02.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292D450>>
+[INFO]2021-04-01 08:06:39,782: create lock <lock name:agv.AGV03.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292DBA0>>
+[DEBUG]2021-04-01 08:06:39,783: try connect AGV02 192.168.20.182:19207
+[DEBUG]2021-04-01 08:06:39,785: try connect AGV03 192.168.20.183:19206
+[INFO]2021-04-01 08:06:39,789: AGV02 connected 192.168.20.182 19207
+[INFO]2021-04-01 08:06:39,803: create lock <lock name:agv.AGV02.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x000002921292D390>>
+[INFO]2021-04-01 08:06:39,804: AGV03 connected 192.168.20.183 19206
+[DEBUG]2021-04-01 08:06:39,807: try connect AGV02 192.168.20.182:19208
+[INFO]2021-04-01 08:06:39,813: create lock <lock name:agv.AGV03.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029212B90F30>>
+[DEBUG]2021-04-01 08:06:39,816: try connect AGV03 192.168.20.183:19207
+[INFO]2021-04-01 08:06:39,818: AGV02 connected 192.168.20.182 19208
+[INFO]2021-04-01 08:06:39,819: create lock <lock name:agv.AGV02.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029212B95840>>
+[DEBUG]2021-04-01 08:06:39,822: try connect AGV02 192.168.20.182:19210
+[INFO]2021-04-01 08:06:39,824: AGV03 connected 192.168.20.183 19207
+[INFO]2021-04-01 08:06:39,825: create lock <lock name:agv.AGV03.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029212B99CC0>>
+[DEBUG]2021-04-01 08:06:39,827: try connect AGV03 192.168.20.183:19208
+[INFO]2021-04-01 08:06:39,828: AGV02 connected 192.168.20.182 19210
+[INFO]2021-04-01 08:06:39,836: AGV03 connected 192.168.20.183 19208
+[INFO]2021-04-01 08:06:39,840: create lock <lock name:agv.AGV03.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000029212C62AE0>>
+[DEBUG]2021-04-01 08:06:39,842: try connect AGV03 192.168.20.183:19210
+[INFO]2021-04-01 08:06:39,846: AGV02 current map AKM2F
+[INFO]2021-04-01 08:06:39,849: AGV03 connected 192.168.20.183 19210
+[WARNING]2021-04-01 08:06:39,869: clear alarm obj=AGV03, typeId=49999, id=60642dad7b43eb40d2c927d1
+[INFO]2021-04-01 08:06:39,880: AGV03 current map AKM2F
+[INFO]2021-04-01 08:06:39,883: AGV02 is online
+[INFO]2021-04-01 08:06:39,928: AGV03 is online
+[DEBUG]2021-04-01 08:06:40,386: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-04-01 08:06:40,394: scadaTask init client agvApi
+[DEBUG]2021-04-01 08:06:40,404: used 17ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[DEBUG]2021-04-01 08:06:43,564: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-04-01 08:06:43,658: used 94ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-04-01 08:06:43,817: timer_thread[tid:18240] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=18240 count=1 at 0x0000029211932900>> ,hold 3965 ms
+[INFO]2021-04-01 08:06:44,021: name=timer_thread, pid=8676, tid=18240
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/mytimer.py", line 113, in _loop() 
+[03] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 122, in _call() 
+[04] File "E:/安捷利电梯项目/AKMfloor/common/lock.py", line 100, in release() 
+[05] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[06] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-04-01 08:06:45,633: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:06:45,697: GET: http://192.168.20.250:5551/api/manual/tasklist addr: 192.168.20.60
+[DEBUG]2021-04-01 08:06:45,762: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:06:45,762: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:06:45,981: used 219ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/manual/seat
+[DEBUG]2021-04-01 08:06:49,192: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[ERROR]2021-04-01 08:07:27,621: raise alarm obj=DOOR13, typeId=39998, desc=门控离线异常, id=60650ebf7b43eb40d2c93cc8
+[INFO]2021-04-01 08:09:32,886: user press gohome AGV03 button
+[DEBUG]2021-04-01 08:09:52,009: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:09:52,024: GET: http://192.168.20.250:5551/api/manual/tasklist addr: 192.168.20.60
+[DEBUG]2021-04-01 08:09:52,102: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:09:52,133: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:07,153: lock:  AGV03 taskId force_home_1 app gohomeforce
+[WARNING]2021-04-01 08:10:08,588: AGV03 clear task finish, cur= AKM2F.LM31 task_status= 4
+[INFO]2021-04-01 08:10:08,681: AGV03 gohome force_home_1 force True taskId force_home_1 : AGV03.LM31 -> AKM2F.AP29
+[INFO]2021-04-01 08:10:10,117: Begin: AGV03 move from AKM2F.LM31 to AKM2F.AP29 by paths: [('AKM2F', ['LM31', 'AP29'], 1.0440000000000005)] task: force_home_1 timeout 7200 used 1389 ms
+[DEBUG]2021-04-01 08:10:10,448: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[INFO]2021-04-01 08:10:10,494: user press gohome AGV03 button
+[DEBUG]2021-04-01 08:10:10,527: used 79ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap
+[INFO]2021-04-01 08:10:10,605: AGV03 is in goHome task
+[DEBUG]2021-04-01 08:10:12,552: agvInfo: AGV03 AKM2F.LM31 move to AKM2F.AP29 ,taskId force_home_1
+[INFO]2021-04-01 08:10:12,629: goTarget {'id': 'AP29'}
+[WARNING]2021-04-01 08:10:14,140: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:14,756: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:15,279: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:15,824: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:16,358: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:16,896: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:17,442: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:18,012: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[WARNING]2021-04-01 08:10:18,530: AGV03 waitFinish: loc is diff LM31 AP29 task_status= 2
+[DEBUG]2021-04-01 08:10:18,898: AGV03 set loc AKM2F.AP29 ,old LM31 (-13.03,-14.81)
+[WARNING]2021-04-01 08:10:21,117: AGV03 clearTask: reset lockTaskId force_home_1 app gohomeforce
+[SUCC]2021-04-01 08:10:22,162: Finish:  AGV03 arrived AKM2F.AP29 ,task: force_home_1
+[DEBUG]2021-04-01 08:10:22,197: unlock: AGV03 taskId None app gohomeforce force False
+[DEBUG]2021-04-01 08:10:32,775: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:32,855: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:32,870: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:32,883: used 13ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:32,951: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:33,125: used 174ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:35,644: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:35,719: used 45ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:36,288: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:36,398: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:36,416: used 18ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:36,427: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:36,518: used 91ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:42,318: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:44,360: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:44,423: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:44,497: used 74ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:45,750: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:45,765: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:45,791: used 26ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:49,665: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:49,790: used 92ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:50,949: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:51,026: used 77ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap
+[DEBUG]2021-04-01 08:10:54,592: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:54,714: used 121ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:10:56,574: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=AKM2F addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:56,693: used 119ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=AKM2F
+[DEBUG]2021-04-01 08:10:59,724: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:10:59,882: used 143ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:05,505: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:05,615: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:05,629: used 14ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:05,741: used 94ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02
+[DEBUG]2021-04-01 08:11:07,100: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:07,133: GET: http://192.168.20.250:5551/api/agv/lock?agv=AGV02&appName=FP-PAD-670d3&taskId=8ad32dfa-298f-4afd-8024-1c155766ddef&force=True addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:07,181: used 48ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02
+[DEBUG]2021-04-01 08:11:07,308: lock:  AGV02 taskId 8ad32dfa-298f-4afd-8024-1c155766ddef app FP-PAD-670d3
+[DEBUG]2021-04-01 08:11:07,777: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:07,890: used 113ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02
+[DEBUG]2021-04-01 08:11:08,171: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:08,282: used 110ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02
+[WARNING]2021-04-01 08:11:08,530: AGV02 clear task finish, cur= AKM2F.AP28 task_status= 0
+[DEBUG]2021-04-01 08:11:09,554: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:09,648: used 63ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:10,704: GET: http://192.168.20.250:5551/api/agv/jackup?agv=AGV02 addr: 192.168.20.60
+[INFO]2021-04-01 08:11:13,770: _jack in jackMgr: AGV02 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': True}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[DEBUG]2021-04-01 08:11:14,603: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:14,710: used 61ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[INFO]2021-04-01 08:11:15,562: _jack in jackMgr: AGV02 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:11:16,875: _jack in jackMgr: AGV02 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[DEBUG]2021-04-01 08:11:19,618: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[INFO]2021-04-01 08:11:19,680: _jack in jackMgr: AGV02 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[DEBUG]2021-04-01 08:11:19,708: used 88ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[INFO]2021-04-01 08:11:19,789: AGV02 jack up status:  True
+[DEBUG]2021-04-01 08:11:23,410: GET: http://192.168.20.250:5551/api/agv/jackdown?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:24,755: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:24,939: used 137ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[INFO]2021-04-01 08:11:26,850: _jack in jackMgr: AGV02 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': True}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:11:29,060: _jack in jackMgr: AGV02 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:11:32,307: _jack in jackMgr: AGV02 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:11:32,465: AGV02 jack down status:  True
+[DEBUG]2021-04-01 08:11:34,587: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:34,662: used 59ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:34,802: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:38,105: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:38,106: GET: http://192.168.20.250:5551/api/agv/release?taskId=8ad32dfa-298f-4afd-8024-1c155766ddef&force=False&appName=FP-PAD-670d3&agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:38,234: used 128ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02
+[DEBUG]2021-04-01 08:11:38,310: unlock: AGV02 taskId 8ad32dfa-298f-4afd-8024-1c155766ddef app FP-PAD-670d3 force False
+[DEBUG]2021-04-01 08:11:38,468: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:38,517: used 49ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/release?taskId=8ad32dfa-298f-4afd-8024-1c155766ddef&force=False&appName=FP-PAD-670d3&agv=AGV02
+[DEBUG]2021-04-01 08:11:38,657: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:38,767: used 110ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV02
+[DEBUG]2021-04-01 08:11:40,037: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:40,083: used 45ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:41,248: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:41,563: used 315ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/manual/seat
+[DEBUG]2021-04-01 08:11:44,027: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:44,059: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:44,091: used 32ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap
+[DEBUG]2021-04-01 08:11:46,732: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:46,809: used 45ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:46,988: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:47,206: used 218ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/manual/seat
+[DEBUG]2021-04-01 08:11:48,231: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:48,262: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:48,324: used 62ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap
+[DEBUG]2021-04-01 08:11:49,808: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:49,963: used 91ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:52,324: GET: http://192.168.20.250:5551/api/manual/seat addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:52,560: used 236ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/manual/seat
+[DEBUG]2021-04-01 08:11:52,684: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:52,732: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:52,793: used 61ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=akmsmtMap
+[DEBUG]2021-04-01 08:11:54,812: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:54,903: used 58ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:11:56,395: GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=AKM2F addr: 192.168.20.60
+[DEBUG]2021-04-01 08:11:56,460: used 65ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList?mapId=AKM2F
+[DEBUG]2021-04-01 08:12:00,959: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:01,052: used 60ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:12:02,353: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:02,433: used 79ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03
+[DEBUG]2021-04-01 08:12:04,189: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:04,235: GET: http://192.168.20.250:5551/api/agv/lock?agv=AGV03&appName=FP-PAD-670d3&taskId=bf714998-9a07-4f62-83f4-06bf17678f0e&force=True addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:04,346: used 111ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03
+[DEBUG]2021-04-01 08:12:04,454: lock:  AGV03 taskId bf714998-9a07-4f62-83f4-06bf17678f0e app FP-PAD-670d3
+[DEBUG]2021-04-01 08:12:04,706: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:04,863: used 157ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03
+[DEBUG]2021-04-01 08:12:04,894: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:05,048: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:05,108: used 59ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[WARNING]2021-04-01 08:12:05,601: AGV03 clear task finish, cur= AKM2F.AP29 task_status= 4
+[DEBUG]2021-04-01 08:12:07,412: GET: http://192.168.20.250:5551/api/agv/jackup?agv=AGV03 addr: 192.168.20.60
+[INFO]2021-04-01 08:12:09,642: _jack in jackMgr: AGV03 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': True}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[DEBUG]2021-04-01 08:12:10,084: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:10,134: used 51ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[INFO]2021-04-01 08:12:11,200: _jack in jackMgr: AGV03 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': True}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:12:12,718: _jack in jackMgr: AGV03 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:12:14,442: _jack in jackMgr: AGV03 up [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:12:14,603: AGV03 jack up status:  True
+[DEBUG]2021-04-01 08:12:16,042: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:17,981: GET: http://192.168.20.250:5551/api/agv/jackdown?agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:19,958: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:20,038: used 33ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[INFO]2021-04-01 08:12:21,041: _jack in jackMgr: AGV03 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': True}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': True}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': True}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:12:23,430: _jack in jackMgr: AGV03 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': False}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[DEBUG]2021-04-01 08:12:25,051: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:25,142: used 91ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[INFO]2021-04-01 08:12:26,086: _jack in jackMgr: AGV03 down [{'id': 0, 'source': 'normal', 'status': True}, {'id': 1, 'source': 'normal', 'status': True}, {'id': 2, 'source': 'normal', 'status': True}, {'id': 3, 'source': 'normal', 'status': True}, {'id': 4, 'source': 'normal', 'status': True}, {'id': 5, 'source': 'normal', 'status': True}, {'id': 6, 'source': 'normal', 'status': True}, {'id': 7, 'source': 'normal', 'status': True}, {'id': 9, 'source': 'normal', 'status': True}, {'id': 17, 'source': 'reserve', 'status': False}, {'id': 20, 'source': 'modbus', 'status': False}, {'id': 21, 'source': 'modbus', 'status': False}, {'id': 22, 'source': 'modbus', 'status': False}, {'id': 23, 'source': 'modbus', 'status': False}, {'id': 24, 'source': 'modbus', 'status': False}, {'id': 25, 'source': 'modbus', 'status': False}, {'id': 26, 'source': 'modbus', 'status': False}, {'id': 27, 'source': 'modbus', 'status': False}, {'id': 30, 'source': 'modbus', 'status': False}, {'id': 31, 'source': 'modbus', 'status': False}, {'id': 32, 'source': 'modbus', 'status': True}, {'id': 33, 'source': 'modbus', 'status': True}, {'id': 34, 'source': 'modbus', 'status': False}, {'id': 35, 'source': 'modbus', 'status': False}, {'id': 36, 'source': 'modbus', 'status': False}, {'id': 37, 'source': 'modbus', 'status': True}]
+[INFO]2021-04-01 08:12:26,100: AGV03 jack down status:  True
+[DEBUG]2021-04-01 08:12:29,963: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:30,040: used 44ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:12:30,677: GET: http://192.168.20.250:5551/api/agv/release?taskId=bf714998-9a07-4f62-83f4-06bf17678f0e&force=False&appName=FP-PAD-670d3&agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:30,708: GET: http://192.168.20.250:5551/api/agv/status?agv=AGV03 addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:30,770: unlock: AGV03 taskId bf714998-9a07-4f62-83f4-06bf17678f0e app FP-PAD-670d3 force False
+[DEBUG]2021-04-01 08:12:30,926: used 218ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/release?taskId=bf714998-9a07-4f62-83f4-06bf17678f0e&force=False&appName=FP-PAD-670d3&agv=AGV03
+[DEBUG]2021-04-01 08:12:35,062: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:35,168: used 74ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:12:40,100: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:40,211: used 111ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:12:45,049: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:51,213: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:51,334: used 88ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:12:57,247: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:12:57,321: used 74ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:00,063: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:00,133: used 70ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:05,129: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:05,214: used 85ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:10,152: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:10,275: used 29ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:15,724: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:15,783: used 13ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:20,078: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:20,200: used 76ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:25,191: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:25,278: used 87ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:13:30,147: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:13:30,190: used 42ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:14:58,332: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:14:58,475: used 143ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:15:18,022: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:25,643: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:30,533: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:30,605: used 72ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:15:35,543: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:35,615: used 72ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:15:40,611: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:40,700: used 89ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:15:45,565: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:54,124: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:54,222: used 66ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:15:57,008: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:15:57,146: used 91ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[DEBUG]2021-04-01 08:16:00,623: GET: http://192.168.20.250:5551/api/agv/agvStatusList addr: 192.168.20.60
+[DEBUG]2021-04-01 08:16:00,724: used 9ms 200 OK application/json;charset=utf-8, GET: http://192.168.20.250:5551/api/agv/agvStatusList
+[ERROR]2021-04-01 08:16:06,767: user press Ctrl+C, system quit!
+[INFO]2021-04-01 08:16:07,622: name=agv.hasDeadlock, pid=8676, tid=8672
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvControl.py", line 1013, in _threadFunc() 
+
+name=worker 9, pid=8676, tid=12796
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 8, pid=8676, tid=9984
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 7, pid=8676, tid=13620
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 6, pid=8676, tid=2244
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 5, pid=8676, tid=9892
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 4, pid=8676, tid=10120
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 3, pid=8676, tid=7464
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 2, pid=8676, tid=16024
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 1, pid=8676, tid=1104
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=worker 0, pid=8676, tid=15056
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 891, in worker_thread_callback() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/queue.py", line 170, in get() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 302, in wait() 
+
+name=agvThread.AGV02, pid=8676, tid=14884
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvList.py", line 589, in run() 
+
+name=Thread-1, pid=8676, tid=15128
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/main_agv.py", line 328, in showThread() 
+[03] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/agvControl.py", line 1345, in show() 
+[04] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/mainFrame.py", line 236, in show() 
+
+name=door.akmsmtMap.ping, pid=8676, tid=8972
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/doorMgr.py", line 194, in check() 
+
+name=door.AKM4F.ping, pid=8676, tid=6660
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/agvCtrl/doorMgr.py", line 194, in check() 
+
+name=pymongo_kill_cursors_thread, pid=8676, tid=1976
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/pymongo/periodic_executor.py", line 140, in _run() 
+
+name=pymongo_server_monitor_thread, pid=8676, tid=17296
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/pymongo/periodic_executor.py", line 140, in _run() 
+
+name=tcplisten.port_6789, pid=8676, tid=14416
+[01] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/tcpSocket.py", line 65, in _acceptThread() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/socket.py", line 292, in accept() 
+
+name=MainThread, pid=8676, tid=7832
+[01] File "run_all.py", line 60, in <module>() 
+[02] File "E:/安捷利电梯项目/AKMfloor/common/webutility.py", line 320, in run() 
+[03] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/bottle.py", line 3137, in run() 
+[04] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/bottle.py", line 2829, in run() 
+[05] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 1361, in serve() 
+[06] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 1107, in serve_forever() 
+[07] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/socketserver.py", line 296, in handle_request() 
+[08] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/socketserver.py", line 311, in _handle_request_noblock() 
+[09] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/site-packages/paste/httpserver.py", line 1144, in get_request() 
+[10] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/socketserver.py", line 499, in get_request() 
+[11] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/socket.py", line 292, in accept() 
+[12] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 598, in exit() 
+[13] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 256, in getTrace() 
+[14] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack() 
+[15] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/traceback.py", line 211, in extract_stack() 
+[16] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/traceback.py", line 366, in extract() 
+[17] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/traceback.py", line 288, in line() 
+[18] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/linecache.py", line 16, in getline() 
+[19] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/linecache.py", line 47, in getlines() 
+[20] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/linecache.py", line 136, in updatecache() 
+[21] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/tokenize.py", line 394, in open() 
+[22] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/tokenize.py", line 363, in detect_encoding() 
+[23] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/tokenize.py", line 321, in read_or_stop() 
+[24] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 607, in exit() 
+[25] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 581, in finish() 
+[26] File "E:/安捷利电梯项目/AKMfloor/common/mytimer.py", line 186, in fini() 
+[27] File "E:/安捷利电梯项目/AKMfloor/common/mytimer.py", line 89, in fini() 
+[28] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 1011, in join() 
+[29] File "E:/Users/Administrator/AppData/Local/Programs/Python/Python38/lib/threading.py", line 1027, in _wait_for_tstate_lock() 
+[30] File "E:/安捷利电梯项目/AKMfloor/common/utility.py", line 598, in exit() 
+[31] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 256, in getTrace() 
+[32] File "E:/安捷利电梯项目/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-04-01 08:16:07,640: lock info: count 0
+
+try lock info: count 0
+[ERROR]2021-04-01 08:16:07,645: user press Ctrl+C, print thread stack
+[WARNING]2021-04-01 08:16:07,648: runTask:stop save file
+[ERROR]2021-04-01 08:16:07,651: process exited, living 0:09:53.179262 seconds

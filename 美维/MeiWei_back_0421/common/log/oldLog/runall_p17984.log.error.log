@@ -1,0 +1,9 @@
+[CRITICAL]2021-04-28 09:57:48,356: : 192.168.252.237:10001 <--> 192.168.252.242:54157 time out cause a error: <tcpSocket.client object at 0x0000025F0F49D850>
+pid=17984, ppid=2732, tid=10108
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 53, in _handle
+    data = client.recv(6)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\tcpSocket.py", line 165, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+

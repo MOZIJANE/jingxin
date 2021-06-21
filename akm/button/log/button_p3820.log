@@ -1,0 +1,106 @@
+[INFO]2021-06-07 18:14:28,324: log files at C:\Users\Administrator\Desktop\SVN\akm\button\log
+[INFO]2021-06-07 18:14:28,325: add_ignore: taskStatus
+[INFO]2021-06-07 18:14:33,946: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53536
+[CRITICAL]2021-06-07 18:14:39,651: 192.168.252.159:10001 <--> 192.168.252.159:53536 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=3820, ppid=17440, tid=16952
+Traceback (most recent call last):
+  File "main_button.py", line 45, in _handle
+    addTask(str(devID),str(keyID))
+  File "../common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "main_button.py", line 71, in addTask
+    type,map,loc,agv = getButtonInfo(devID,keyID)
+  File "main_button.py", line 134, in getButtonInfo
+    type,loc = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[INFO]2021-06-07 18:14:39,669: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53536
+[WARN]2021-06-07 18:14:39,671: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53536
+[INFO]2021-06-07 18:14:52,116: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53537
+[CRITICAL]2021-06-07 18:14:54,925: 192.168.252.159:10001 <--> 192.168.252.159:53537 error:  cause a error: 192.168.252.159:10001 <--> 192.168.252.159:53537 tcp recv closed
+pid=3820, ppid=17440, tid=16972
+Traceback (most recent call last):
+  File "main_button.py", line 40, in _handle
+    data = client.recv(5)
+  File "../common\tcpSocket.py", line 179, in recv
+    raise Exception(self.desc+" tcp recv closed")
+Exception: 192.168.252.159:10001 <--> 192.168.252.159:53537 tcp recv closed
+
+[INFO]2021-06-07 18:14:54,930: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53537
+[WARN]2021-06-07 18:14:54,931: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53537
+[INFO]2021-06-07 18:15:04,846: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53538
+[CRITICAL]2021-06-07 18:15:08,801: 192.168.252.159:10001 <--> 192.168.252.159:53538 error:  cause a error: 192.168.252.159:10001 <--> 192.168.252.159:53538 tcp recv closed
+pid=3820, ppid=17440, tid=17656
+Traceback (most recent call last):
+  File "main_button.py", line 40, in _handle
+    data = client.recv(5)
+  File "../common\tcpSocket.py", line 179, in recv
+    raise Exception(self.desc+" tcp recv closed")
+Exception: 192.168.252.159:10001 <--> 192.168.252.159:53538 tcp recv closed
+
+[INFO]2021-06-07 18:15:08,806: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53538
+[WARN]2021-06-07 18:15:08,809: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53538
+[INFO]2021-06-07 18:15:51,737: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53540
+[CRITICAL]2021-06-07 18:15:57,035: 192.168.252.159:10001 <--> 192.168.252.159:53540 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=3820, ppid=17440, tid=11892
+Traceback (most recent call last):
+  File "main_button.py", line 45, in _handle
+    addTask(str(devID),str(keyID))
+  File "../common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "main_button.py", line 71, in addTask
+    type,map,loc,agv = getButtonInfo(devID,keyID)
+  File "main_button.py", line 134, in getButtonInfo
+    type,loc = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[INFO]2021-06-07 18:15:57,070: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53540
+[WARN]2021-06-07 18:15:57,073: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53540
+[INFO]2021-06-07 18:16:03,526: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53541
+[CRITICAL]2021-06-07 18:16:04,070: 192.168.252.159:10001 <--> 192.168.252.159:53541 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=3820, ppid=17440, tid=17728
+Traceback (most recent call last):
+  File "main_button.py", line 45, in _handle
+    addTask(str(devID),str(keyID))
+  File "../common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "main_button.py", line 71, in addTask
+    type,map,loc,agv = getButtonInfo(devID,keyID)
+  File "main_button.py", line 134, in getButtonInfo
+    type,loc = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[INFO]2021-06-07 18:16:04,090: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53541
+[WARN]2021-06-07 18:16:04,091: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53541
+[INFO]2021-06-07 18:16:09,821: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53542
+[CRITICAL]2021-06-07 18:16:10,063: 192.168.252.159:10001 <--> 192.168.252.159:53542 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=3820, ppid=17440, tid=6564
+Traceback (most recent call last):
+  File "main_button.py", line 45, in _handle
+    addTask(str(devID),str(keyID))
+  File "../common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "main_button.py", line 71, in addTask
+    type,map,loc,agv = getButtonInfo(devID,keyID)
+  File "main_button.py", line 134, in getButtonInfo
+    type,loc = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[INFO]2021-06-07 18:16:10,096: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53542
+[WARN]2021-06-07 18:16:10,097: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53542
+[INFO]2021-06-07 18:16:15,521: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected 192.168.252.159:10001 <--> 192.168.252.159:53543
+[CRITICAL]2021-06-07 18:16:16,092: 192.168.252.159:10001 <--> 192.168.252.159:53543 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=3820, ppid=17440, tid=2000
+Traceback (most recent call last):
+  File "main_button.py", line 45, in _handle
+    addTask(str(devID),str(keyID))
+  File "../common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "main_button.py", line 71, in addTask
+    type,map,loc,agv = getButtonInfo(devID,keyID)
+  File "main_button.py", line 134, in getButtonInfo
+    type,loc = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[INFO]2021-06-07 18:16:16,105: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  192.168.252.159:10001 <--> 192.168.252.159:53543
+[WARN]2021-06-07 18:16:16,106: disconnect 192.168.252.159:10001 <--> 192.168.252.159:53543

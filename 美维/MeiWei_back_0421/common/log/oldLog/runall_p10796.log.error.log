@@ -1,0 +1,100 @@
+[CRITICAL]2021-04-21 10:19:40,494: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:40,494: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:42,598: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:42,598: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:44,682: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:44,682: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:46,758: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:19:46,758: agvApi step callback cause a error: 'dict' object is not callable
+pid=10796, ppid=11592, tid=14484
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 261, in _checkFinish
+    t.stepCallback(t.params,t.status)
+TypeError: 'dict' object is not callable
+
+[CRITICAL]2021-04-21 10:21:10,850: invoke <function urlGoHome at 0x0000017724999550> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=10796, ppid=11592, tid=3828
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\main_agv.py", line 103, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvControl.py", line 1300, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-21 10:21:10,850: invoke <function urlGoHome at 0x0000017724999550> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=10796, ppid=11592, tid=3828
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\main_agv.py", line 103, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvControl.py", line 1300, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-21 10:21:11,407: task[607f8bae0dd46e9dc7acfbea][AGV30] AP32(LM34) -> LM9(LM9) [finish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=10796, ppid=11592, tid=10540
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\akmCtrl\beans\scadaTaskBean.py", line 602, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 129, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-21 10:21:11,407: task[607f8bae0dd46e9dc7acfbea][AGV30] AP32(LM34) -> LM9(LM9) [finish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=10796, ppid=11592, tid=10540
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\akmCtrl\beans\scadaTaskBean.py", line 602, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 129, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+

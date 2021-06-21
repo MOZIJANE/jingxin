@@ -1,0 +1,37 @@
+[INFO]2020-09-08 13:25:32,271: log files at E:\python_work\znzz_office\feed\log
+[INFO]2020-09-08 13:25:32,271: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA11E1B70>>
+[INFO]2020-09-08 13:25:32,275: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA11EEC60>>
+[INFO]2020-09-08 13:25:32,459: create lock <lock name:timer.lock_2188842187168,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA12939C0>>
+[INFO]2020-09-08 13:25:32,465: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA12CD180>>
+[WARNING]2020-09-08 13:25:32,476: use mockAgvCtrl
+[INFO]2020-09-08 13:25:32,563: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA130FED0>>
+[INFO]2020-09-08 13:25:32,601: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FD9FADE4B0>>
+[INFO]2020-09-08 13:25:32,652: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA13721E0>>
+[INFO]2020-09-08 13:25:32,657: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FD98486900>>
+[INFO]2020-09-08 13:25:32,666: create lock <lock name:feed.s_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001FDA13A5150>>
+[INFO]2020-09-08 13:25:35,674: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-08 13:25:35,757: create task[5f5715cfcb5c837128005bda]: type= feed , 从loading1-1 运送货架到 drop1 {'taskType': 'feed', 'msg': None, 'type': 'feed', 'taskName': '从loading1-1 运送货架到 drop1', 'createTime': datetime.datetime(2020, 9, 8, 13, 25, 35, 751715), 'updateTime': datetime.datetime(2020, 9, 8, 13, 25, 35, 751715), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'history': [], '_id': ObjectId('5f5715cfcb5c837128005bda')}
+[INFO]2020-09-08 13:25:35,786: task[5f5715cfcb5c837128005bda] update info: {'taskName': '从loading1-1 运送货架到 drop1', 'updateTime': datetime.datetime(2020, 9, 8, 13, 25, 35, 780671)}
+[INFO]2020-09-08 13:25:35,821: task[5f5715cfcb5c837128005bda] update info: {'step': 'waitForAgv', 'msg': '等待分配小车', 'updateTime': datetime.datetime(2020, 9, 8, 13, 25, 35, 816096)}
+[INFO]2020-09-08 13:25:35,821: Got a task from feed Hucais 5f5715cfcb5c837128005bda:s <__main__.feed object at 0x000001FDA13A5040>
+[INFO]2020-09-08 13:25:36,954: task[5f5715cfcb5c837128005bda] update info: {'agvId': 'AGV01', 'msg': '成功分配小车AGV01', 'updateTime': datetime.datetime(2020, 9, 8, 13, 25, 36, 948388)}
+[INFO]2020-09-08 13:25:37,006: task[5f5715cfcb5c837128005bda] update info: {'step': 'initJackdown', 'msg': '检测下降', 'updateTime': datetime.datetime(2020, 9, 8, 13, 25, 36, 994266)}
+[DEBUG]2020-09-08 13:25:37,029: send http_get: http://127.0.0.1:8999/api/agv/jackDownCattle?agv=AGV01&loc=None&timeoutSec=90
+[DEBUG]2020-09-08 13:25:37,105: [return] use 76 ms,http_get: http://127.0.0.1:8999/api/agv/jackDownCattle?agv=AGV01&loc=None&timeoutSec=90
+[CRITICAL]2020-09-08 13:25:37,151: taskFunc2:<__main__.feed object at 0x000001FDA13A5040> cause a error: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'setDOs'
+pid=10500, ppid=16060, tid=13964
+Traceback (most recent call last):
+  File "E:\python_work\znzz_office\feed\runTasknanqu.py", line 208, in _taskFunc
+    elif not self.handle():
+  File "E:\python_work\znzz_office\feed\runTasknanqu.py", line 245, in handle
+    if not self._jackDown():	 ##  seer don't need jackdown
+  File "E:\python_work\znzz_office\feed\runTasknanqu.py", line 423, in _jackDown
+    ret = jackApi.jackDownCattle(self.agvId)
+  File "./..\agvDevice\jackApi.py", line 54, in jackDownCattle
+    return _jack('/api/agv/jackDownCattle', agvId,timeoutSec)
+  File "./..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "./..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'setDOs'
+

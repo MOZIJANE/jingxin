@@ -1,0 +1,30 @@
+[CRITICAL]2021-04-25 10:16:22,089: import main_agv failed, path: agvCtrl cause a error: Expecting property name enclosed in double quotes: line 25 column 1 (char 581)
+pid=1896, ppid=7368, tid=13248
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 11, in <module>
+    import rotationMgr
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\rotationMgr.py", line 52, in <module>
+    g_agvType = _loadAgvType()
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\rotationMgr.py", line 48, in _loadAgvType
+    aa = json.load(f)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 25 column 1 (char 581)
+
+[CRITICAL]2021-04-25 10:16:22,094: import main_agv failed, path: agvCtrl ,cause Expecting property name enclosed in double quotes: line 25 column 1 (char 581)

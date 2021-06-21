@@ -1,0 +1,24 @@
+[CRITICAL]2021-04-07 16:44:55,069: import main_agv failed, path: agvCtrl cause a error: Expecting property name enclosed in double quotes: line 44 column 1 (char 1098)
+pid=12384, ppid=1272, tid=12848
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\mapMgr.py", line 25, in <module>
+    import driver.seerAgv.agvCtrl as agvCtrl
+  File "..\driver\seerAgv\agvCtrl.py", line 35, in <module>
+    g_agvType = _loadAgvType()
+  File "..\driver\seerAgv\agvCtrl.py", line 30, in _loadAgvType
+    aa = json.load(f)
+  File "C:\Python37\lib\json\__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python37\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 44 column 1 (char 1098)
+
+[CRITICAL]2021-04-07 16:44:55,073: import main_agv failed, path: agvCtrl ,cause Expecting property name enclosed in double quotes: line 44 column 1 (char 1098)

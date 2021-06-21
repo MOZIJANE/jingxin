@@ -1,0 +1,9 @@
+[CRITICAL]2021-06-07 18:12:57,240: 192.168.252.159:10001 <--> 192.168.252.159:53533 time out cause a error: <tcpSocket.client object at 0x000002417FA3F898>
+pid=4996, ppid=3600, tid=17816
+Traceback (most recent call last):
+  File "main_button.py", line 40, in _handle
+    data = client.recv(5)
+  File "../common\tcpSocket.py", line 177, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+

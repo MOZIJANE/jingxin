@@ -1,0 +1,44 @@
+[CRITICAL]2021-04-26 16:38:02,218: invoke <function urlJackdownOld at 0x00000248B2F8CF70> cause a error: module 'jackMgr' has no attribute 'jackdownOld'
+pid=16088, ppid=4424, tid=2244
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 32, in urlJackdownOld
+    return jackMgr.jackdownOld(agvId=agvId, timeout=timeout,loc=loc)
+AttributeError: module 'jackMgr' has no attribute 'jackdownOld'
+
+[CRITICAL]2021-04-26 16:38:02,712: task[60867bdeb34ea811199162b7][AGV30] 6(1) -> 7(8) [initJackdown] jackDown cause a error: AttributeError: module 'jackMgr' has no attribute 'jackdownOld'
+pid=16088, ppid=4424, tid=16532
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 729, in _jackDown
+    jackApi.jackDownOld(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDownOld
+    return _jack('/api/agv/jackdownOld', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 70, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: AttributeError: module 'jackMgr' has no attribute 'jackdownOld'
+
+[CRITICAL]2021-04-26 16:38:05,508: invoke <function urlJackdownOld at 0x00000248B2F8CF70> cause a error: module 'jackMgr' has no attribute 'jackdownOld'
+pid=16088, ppid=4424, tid=3256
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 32, in urlJackdownOld
+    return jackMgr.jackdownOld(agvId=agvId, timeout=timeout,loc=loc)
+AttributeError: module 'jackMgr' has no attribute 'jackdownOld'
+
+[CRITICAL]2021-04-26 16:38:05,889: task[60867bdeb34ea811199162b7][AGV30] 6(1) -> 7(8) [initJackdown] jackDown cause a error: AttributeError: module 'jackMgr' has no attribute 'jackdownOld'
+pid=16088, ppid=4424, tid=16532
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 729, in _jackDown
+    jackApi.jackDownOld(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDownOld
+    return _jack('/api/agv/jackdownOld', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 70, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: AttributeError: module 'jackMgr' has no attribute 'jackdownOld'
+

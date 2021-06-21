@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <textarea name="" id="message" cols="50" rows="10"></textarea>
+    </div>
+    <div>
+        <button id="btn">获取地图</button>
+    </div>
+    <div id="imgDiv">
+        <img src="" id="img" alt="">
+    </div>
+    <script>
+        window.onload=function(){
+            var ws=new WebSocket("ws://172.16.73.23:3000");
+            ws.onopen=function(e){
+                wsSendmsg("login",{"psd":2017});
+                var message=document.getElementById('message');
+                message.value="server is open !\n"
+            }
+
+            ws.onmessage=function(e){
+                var data=JSON.parse(e.data);
+                output(data.data.type);
+                if(data.topic=="msg_reply"){
+                    if(data.data.type=="login_reply"){
+                        var content=data.data.content;
+                        console.log(content);
+                        if(content=="login_failure"){
+                            output(content);
+                            // wsSendmsg("login",{"psd":2017});
+                            
+                        }else if(content=="login_success"){
+                            output(content);
+                        }
+                    }else if(data.data.type=="msg_map"){
+                        // console.log(data.data.data);
+                        
+                          
+                        var imgDiv=document.getElementById("img");
+                        imgDiv.style.width='1000px';
+                        imgDiv.style.height="1000px";
+                        console.log(imgDiv);
+                        imgDiv.src=data.data.data;
+                    }
+                }
+            }
+            ws.onclose=function(e){
+                console.log("server is closed !");
+            }
+            ws.onerror=function(e){
+                console.log(e)
+            }
+            function output(data){
+                var message=document.getElementById('message');
+                var last=message.value+'\n';
+                message.value=last+data;
+            }
+            function wsSendmsg(topic,data){
+                if(ws.readyState===WebSocket.OPEN){
+                    ws.send(JSON.stringify({"device":"table","topic":topic,"data":data}))
+                }
+            }
+            var btn=document.getElementById('btn');
+            btn.addEventListener('click',function(){
+                console.log("get map");
+                wsSendmsg("getRobotMap",{"uuid":'T3_001'});
+            })
+            function getmap(){
+                
+                
+            }
+        }
+    </script>
+</body>
+</html>

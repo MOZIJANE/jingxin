@@ -1,0 +1,148 @@
+[INFO]2020-09-21 16:25:51,301: log files at C:\akmLine\common\log
+[INFO]2020-09-21 16:25:51,302: find module agvCtrl.main_agv
+[INFO]2020-09-21 16:25:51,303: find module agvDevice.main_agvDevice
+[INFO]2020-09-21 16:25:51,304: find module alarm.main_alarm
+[INFO]2020-09-21 16:25:51,305: find module auth.main_auth
+[INFO]2020-09-21 16:25:51,307: find module door.main_door
+[INFO]2020-09-21 16:25:51,308: find module elevator.main_elevator
+[INFO]2020-09-21 16:25:51,309: find module feed.main_feed
+[INFO]2020-09-21 16:25:51,309: import agvCtrl.main_agv
+[INFO]2020-09-21 16:25:52,355: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C0328>>
+[INFO]2020-09-21 16:25:52,363: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C0580>>
+[INFO]2020-09-21 16:25:52,634: create lock <lock name:timer.lock_128054944,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000079FBBE8>>
+[ERROR]2020-09-21 16:25:52,661: mqtt is disabled
+[INFO]2020-09-21 16:25:52,663: mqtt: subscribe [alarm/raise/+]
+[INFO]2020-09-21 16:25:52,665: mqtt: subscribe [alarm/clear/+]
+[INFO]2020-09-21 16:25:55,735: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-21 16:25:55,796: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C1B670>>
+[INFO]2020-09-21 16:25:55,798: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C1B2B0>>
+[INFO]2020-09-21 16:25:55,802: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007B95DC8>>
+[INFO]2020-09-21 16:25:56,458: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000005B727B0>>
+[INFO]2020-09-21 16:25:57,544: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007DA79E0>>
+[INFO]2020-09-21 16:25:57,551: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FD5328>>
+[INFO]2020-09-21 16:25:57,817: charge policy 0 , fix time
+[INFO]2020-09-21 16:25:57,956: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FD5E90>>
+[INFO]2020-09-21 16:25:58,446: start load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap
+[DEBUG]2020-09-21 16:26:06,780: elevator thread start
+[INFO]2020-09-21 16:26:07,263: load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap ,used 8854 ms
+[INFO]2020-09-21 16:26:07,301: start load map C:\akmLine\agvCtrl\projects\akmLine\office.smap
+[INFO]2020-09-21 16:26:07,541: load map C:\akmLine\agvCtrl\projects\akmLine\office.smap ,used 276 ms
+[WARNING]2020-09-21 16:26:07,543: MainThread[tid:141200] <lock name:mapMgr.lock,<locked _thread.RLock object owner=141200 count=1 at 0x0000000005B727B0>> ,hold 9585 ms
+[INFO]2020-09-21 16:26:07,546: name=MainThread, pid=140124, tid=141200
+[01] File "C:/akmLine/common/run_all.py", line 57, in <module>() 
+[02] File "C:/akmLine/common/run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "C:/akmLine/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "C:/akmLine/common/lock.py", line 122, in _call() 
+[10] File "C:/akmLine/common/lock.py", line 100, in release() 
+[11] File "C:/akmLine/common/enhance.py", line 258, in getTrace() 
+[12] File "C:/akmLine/common/enhance.py", line 240, in getThreadStack()
+[INFO]2020-09-21 16:26:07,561: import agvDevice.main_agvDevice
+[INFO]2020-09-21 16:26:07,562: import alarm.main_alarm
+[INFO]2020-09-21 16:26:07,565: import auth.main_auth
+[INFO]2020-09-21 16:26:07,583: import door.main_door
+[INFO]2020-09-21 16:26:07,590: import elevator.main_elevator
+[INFO]2020-09-21 16:26:07,593: import feed.main_feed
+[INFO]2020-09-21 16:26:07,611: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008708530>>
+[INFO]2020-09-21 16:26:08,299: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008870B70>>
+[INFO]2020-09-21 16:26:08,306: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008D773F0>>
+[INFO]2020-09-21 16:26:08,476: IP: 0.0.0.0 port: 10001
+[SUCC]2020-09-21 16:26:08,506: utility start, pid=140124, ppid=140132
+[DEBUG]2020-09-21 16:26:08,508: start timer
+[INFO]2020-09-21 16:26:08,549: load agv file: C:\akmLine\agvCtrl/projects/akmLine/agv.cfg
+[INFO]2020-09-21 16:26:08,552: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008870C60>>
+[DEBUG]2020-09-21 16:26:08,562: create aliveObj AGV01 AGV¿Îœﬂ“Ï≥£ timeout 300
+[INFO]2020-09-21 16:26:08,566: AGV01 start agvList run thread
+[INFO]2020-09-21 16:26:08,566: AGV01 start agvList run2 thread
+[INFO]2020-09-21 16:26:08,570: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DD35F8>>
+[DEBUG]2020-09-21 16:26:08,577: try connect AGV01 192.168.20.199:19204
+[WARNING]2020-09-21 16:26:08,580: Local server start! version 3.7.3, path C:\akmLine\common, pid 140124
+[INFO]2020-09-21 16:26:08,582: add_ignore: taskStatus
+[INFO]2020-09-21 16:26:08,583: AGV01 connected
+[INFO]2020-09-21 16:26:08,598: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DD3940>>
+[INFO]2020-09-21 16:26:08,599: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:64535
+[DEBUG]2020-09-21 16:26:08,669: try connect AGV01 192.168.20.199:19205
+[INFO]2020-09-21 16:26:08,828: AGV01 connected
+[INFO]2020-09-21 16:26:08,853: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008EAA260>>
+[DEBUG]2020-09-21 16:26:08,865: try connect AGV01 192.168.20.199:19206
+[INFO]2020-09-21 16:26:08,895: AGV01 connected
+[INFO]2020-09-21 16:26:08,918: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008EAA328>>
+[DEBUG]2020-09-21 16:26:08,937: try connect AGV01 192.168.20.199:19207
+[INFO]2020-09-21 16:26:08,973: AGV01 connected
+[INFO]2020-09-21 16:26:08,978: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DD3C88>>
+[DEBUG]2020-09-21 16:26:08,989: try connect AGV01 192.168.20.199:19208
+[INFO]2020-09-21 16:26:08,998: AGV01 connected
+[INFO]2020-09-21 16:26:09,000: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008EAAA58>>
+[DEBUG]2020-09-21 16:26:09,002: try connect AGV01 192.168.20.199:19210
+[INFO]2020-09-21 16:26:09,011: AGV01 connected
+[INFO]2020-09-21 16:26:09,047: AGV01 current map akmLineMap
+[INFO]2020-09-21 16:26:09,071: AGV01 is online
+[CRITICAL]2020-09-21 16:26:18,767: : 192.168.10.3:10001 <--> 192.168.20.202:64535 time out cause a error: <tcpSocket.client object at 0x0000000008BB4C50>
+pid=140124, ppid=140132, tid=145044
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:26:18,772: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:64535
+[WARNING]2020-09-21 16:26:18,774: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:64535
+[INFO]2020-09-21 16:26:18,792: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:64536
+[DEBUG]2020-09-21 16:26:22,210: GET: http://192.168.10.3:8999/api/agv/seat addr: 192.168.20.4
+[DEBUG]2020-09-21 16:26:22,243: used 34ms 200 OK application/json;charset=utf-8, GET: http://192.168.10.3:8999/api/agv/seat
+[DEBUG]2020-09-21 16:26:23,738: GET: http://192.168.10.3:8999/api/agv/seat addr: 192.168.20.4
+[DEBUG]2020-09-21 16:26:23,772: used 34ms 200 OK application/json;charset=utf-8, GET: http://192.168.10.3:8999/api/agv/seat
+[CRITICAL]2020-09-21 16:26:28,825: : 192.168.10.3:10001 <--> 192.168.20.202:64536 time out cause a error: <tcpSocket.client object at 0x0000000008BB4B70>
+pid=140124, ppid=140132, tid=147868
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:26:28,831: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:64536
+[WARNING]2020-09-21 16:26:28,834: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:64536
+[INFO]2020-09-21 16:26:28,851: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:64537
+[CRITICAL]2020-09-21 16:26:38,897: : 192.168.10.3:10001 <--> 192.168.20.202:64537 time out cause a error: <tcpSocket.client object at 0x000000000A3CC278>
+pid=140124, ppid=140132, tid=151080
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:26:38,902: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:64537
+[WARNING]2020-09-21 16:26:38,904: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:64537
+[INFO]2020-09-21 16:26:38,920: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:64538
+[CRITICAL]2020-09-21 16:26:48,951: : 192.168.10.3:10001 <--> 192.168.20.202:64538 time out cause a error: <tcpSocket.client object at 0x000000000A20A748>
+pid=140124, ppid=140132, tid=155096
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:26:48,963: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:64538
+[WARNING]2020-09-21 16:26:48,966: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:64538
+[INFO]2020-09-21 16:26:48,981: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:64539
+[ERROR]2020-09-21 16:26:56,790: process exited, living 0:01:05.847767 seconds
+[CRITICAL]2020-09-21 16:26:59,012: : 192.168.10.3:10001 <--> 192.168.20.202:64539 time out cause a error: <tcpSocket.client object at 0x000000000A1F29B0>
+pid=140124, ppid=140132, tid=157976
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:26:59,017: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:64539
+[WARNING]2020-09-21 16:26:59,019: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:64539
+[INFO]2020-09-21 16:26:59,036: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:64540

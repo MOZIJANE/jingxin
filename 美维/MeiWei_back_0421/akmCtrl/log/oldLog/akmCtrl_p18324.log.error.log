@@ -1,0 +1,159 @@
+[CRITICAL]2021-04-25 16:37:27,827: agvApi.init cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/init', {'appName': 'feed2'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=18324, ppid=2840, tid=14040
+Traceback (most recent call last):
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1010, in _send_output
+    self.send(msg)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 950, in send
+    self.connect()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 808, in create_connection
+    raise err
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1383, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./..\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "./..\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "../common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/init', {'appName': 'feed2'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-04-25 16:37:30,885: agvApi.init cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/init', {'appName': 'feed2'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=18324, ppid=2840, tid=14040
+Traceback (most recent call last):
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1010, in _send_output
+    self.send(msg)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 950, in send
+    self.connect()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 808, in create_connection
+    raise err
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1383, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./..\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "./..\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "../common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/init', {'appName': 'feed2'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-04-25 16:37:33,971: agvApi.init cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/init', {'appName': 'feed2'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=18324, ppid=2840, tid=14040
+Traceback (most recent call last):
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1010, in _send_output
+    self.send(msg)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 950, in send
+    self.connect()
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 808, in create_connection
+    raise err
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1383, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./..\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "./..\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "../common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/init', {'appName': 'feed2'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+

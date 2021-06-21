@@ -1,0 +1,11 @@
+[CRITICAL]2021-05-07 12:00:34,575: agvApi finish callback cause a error: list indices must be integers or slices, not str
+pid=13448, ppid=5932, tid=11928
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 279, in _checkFinish
+    t.finishCallback(t.params)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 367, in onFinish
+    if values["status"][0] == 1:  # 根据现场实际信号修改
+TypeError: list indices must be integers or slices, not str
+

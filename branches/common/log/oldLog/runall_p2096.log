@@ -1,0 +1,831 @@
+[INFO]2021-03-29 15:49:21,853: log files at C:\Users\Administrator\Desktop\SVN\branches\common\log
+[INFO]2021-03-29 15:49:21,856: find module account.main_account
+[INFO]2021-03-29 15:49:21,857: find module agvCtrl.main_agv
+[INFO]2021-03-29 15:49:21,859: find module agvDevice.main_agvDevice
+[INFO]2021-03-29 15:49:21,861: find module alarm.main_alarm
+[INFO]2021-03-29 15:49:21,863: find module auth.main_auth
+[INFO]2021-03-29 15:49:21,869: find module door.main_door
+[INFO]2021-03-29 15:49:21,871: find module elevator.main_elevator
+[INFO]2021-03-29 15:49:21,874: find module feed.main_feed
+[INFO]2021-03-29 15:49:21,878: find module menu.main_menu
+[INFO]2021-03-29 15:49:21,882: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-29 15:49:21,884: find module webFront.main_web
+[INFO]2021-03-29 15:49:21,886: find module wmqtt.main_wmqtt
+[INFO]2021-03-29 15:49:21,888: import account.main_account
+[INFO]2021-03-29 15:49:22,110: import agvCtrl.main_agv
+[INFO]2021-03-29 15:49:22,489: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000276731458F0>>
+[INFO]2021-03-29 15:49:22,494: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027673145AA8>>
+[INFO]2021-03-29 15:49:22,616: create lock <lock name:timer.lock_2707763900144,<unlocked _thread.RLock object owner=0 count=0 at 0x00000276734A0508>>
+[ERROR]2021-03-29 15:49:22,628: mqtt is disabled
+[INFO]2021-03-29 15:49:22,629: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-29 15:49:22,630: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-29 15:49:25,667: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-29 15:49:25,739: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000276738A11E8>>
+[INFO]2021-03-29 15:49:25,742: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000276717B3DF0>>
+[INFO]2021-03-29 15:49:25,744: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000276717B3878>>
+[INFO]2021-03-29 15:49:25,971: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027671B157D8>>
+[INFO]2021-03-29 15:49:26,213: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000276739D8AF8>>
+[INFO]2021-03-29 15:49:26,218: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027673A06BC0>>
+[INFO]2021-03-29 15:49:26,275: charge policy 1 , fix time
+[INFO]2021-03-29 15:49:26,307: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027673A069E0>>
+[INFO]2021-03-29 15:49:26,410: start load map C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\projects\test\comba-ZXC-F3.smap
+[DEBUG]2021-03-29 15:49:26,519: elevator thread start
+[INFO]2021-03-29 15:49:26,539: load map C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\projects\test\comba-ZXC-F3.smap ,used 138 ms
+[INFO]2021-03-29 15:49:26,542: import agvDevice.main_agvDevice
+[INFO]2021-03-29 15:49:26,543: import alarm.main_alarm
+[INFO]2021-03-29 15:49:26,544: import auth.main_auth
+[INFO]2021-03-29 15:49:26,553: import door.main_door
+[INFO]2021-03-29 15:49:26,555: import elevator.main_elevator
+[INFO]2021-03-29 15:49:26,558: import feed.main_feed
+[INFO]2021-03-29 15:49:26,569: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674BDA2D8>>
+[INFO]2021-03-29 15:49:26,574: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674BF5698>>
+[INFO]2021-03-29 15:49:26,636: import menu.main_menu
+[INFO]2021-03-29 15:49:26,639: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-29 15:49:26,724: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBE4B8>>
+[INFO]2021-03-29 15:49:26,726: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBE210>>
+[INFO]2021-03-29 15:49:28,390: {'_id': 'ZXC05', 'location': '17', 'prepoint': '', 'floorId': 'comba-ZXC-F3', 'p_direction': 0.0, 'isWorkPlace': 'true'}
+{'_id': 'ZXC06', 'location': '39', 'prepoint': '', 'floorId': 'comba-ZXC-F3', 'p_direction': 0.0, 'isWorkPlace': 'true'}
+[INFO]2021-03-29 15:49:28,403: recover can release agv *task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown]
+[INFO]2021-03-29 15:49:28,404: load task: *task[6061830292418b3cce630b6f][-] 17() -> 39() [waiting]
+[INFO]2021-03-29 15:49:28,406: import webFront.main_web
+[INFO]2021-03-29 15:49:28,411: import wmqtt.main_wmqtt
+[SUCC]2021-03-29 15:49:28,423: utility start, pid=2096, ppid=5576
+[DEBUG]2021-03-29 15:49:28,424: start timer
+[INFO]2021-03-29 15:49:28,437: load agv file: C:\Users\Administrator\Desktop\SVN\branches\agvCtrl/projects/test/agv.cfg
+[INFO]2021-03-29 15:49:28,439: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBE990>>
+[DEBUG]2021-03-29 15:49:28,442: create aliveObj AGV01 AGV离线异常 timeout 300
+[INFO]2021-03-29 15:49:28,443: AGV01 start agvList run thread
+[INFO]2021-03-29 15:49:28,445: AGV01 start agvList run2 thread
+[INFO]2021-03-29 15:49:28,446: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBEE68>>
+[INFO]2021-03-29 15:49:28,448: add_ignore: taskStatus
+[DEBUG]2021-03-29 15:49:28,451: try connect AGV01 172.16.217.121:19204
+[INFO]2021-03-29 15:49:28,452: add_ignore: api/elevator/status
+[INFO]2021-03-29 15:49:28,453: add_ignore: scada/getTask
+[INFO]2021-03-29 15:49:28,474: AGV01 connected 172.16.217.121 19204
+[INFO]2021-03-29 15:49:28,476: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBEAA8>>
+[DEBUG]2021-03-29 15:49:28,479: try connect AGV01 172.16.217.121:19205
+[INFO]2021-03-29 15:49:28,549: AGV01 connected 172.16.217.121 19205
+[INFO]2021-03-29 15:49:28,551: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBE850>>
+[DEBUG]2021-03-29 15:49:28,554: try connect AGV01 172.16.217.121:19206
+[INFO]2021-03-29 15:49:28,650: AGV01 connected 172.16.217.121 19206
+[INFO]2021-03-29 15:49:28,652: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBEB70>>
+[DEBUG]2021-03-29 15:49:28,655: try connect AGV01 172.16.217.121:19207
+[INFO]2021-03-29 15:49:28,762: AGV01 connected 172.16.217.121 19207
+[INFO]2021-03-29 15:49:28,766: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027674CBEB98>>
+[DEBUG]2021-03-29 15:49:28,769: try connect AGV01 172.16.217.121:19208
+[INFO]2021-03-29 15:49:28,796: AGV01 connected 172.16.217.121 19208
+[INFO]2021-03-29 15:49:28,799: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000027675DA4FA8>>
+[DEBUG]2021-03-29 15:49:28,803: try connect AGV01 172.16.217.121:19210
+[INFO]2021-03-29 15:49:28,836: AGV01 connected 172.16.217.121 19210
+[INFO]2021-03-29 15:49:28,982: AGV01 current map comba-ZXC-F3
+[INFO]2021-03-29 15:49:29,070: AGV01 is online
+[ERROR]2021-03-29 15:49:29,077: raise alarm obj=AGV01, typeId=70001, desc=AGV异常
+[ERROR]2021-03-29 15:49:29,080: raise alarm obj=AGV01, typeId=52300, desc=AGV异常
+[ERROR]2021-03-29 15:49:29,091: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.45797335870599426
+[DEBUG]2021-03-29 15:49:29,452: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-03-29 15:49:29,458: scadaTask init client agvApi
+[DEBUG]2021-03-29 15:49:29,463: used 11ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[INFO]2021-03-29 15:49:29,470: task recover: add task *task[6061830292418b3cce630b6f][-] 17() -> 39() [waiting]
+[DEBUG]2021-03-29 15:49:32,599: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-29 15:49:32,687: used 88ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[INFO]2021-03-29 15:49:32,823: task[6061830292418b3cce630b6f]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 3, 29, 15, 49, 32, 761809), 'updateTime': datetime.datetime(2021, 3, 29, 15, 49, 32, 761809), 'status': 'running'}
+[INFO]2021-03-29 15:49:32,956: task: start *task[6061830292418b3cce630b6f][-] 17() -> 39() [waiting]
+[INFO]2021-03-29 15:49:32,987: this is taskStep=============>waiting
+[INFO]2021-03-29 15:49:33,077: 1
+[INFO]2021-03-29 15:49:33,122: task[6061830292418b3cce630b6f] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 3, 29, 15, 49, 33, 121786)}
+[DEBUG]2021-03-29 15:49:33,196: *task[6061830292418b3cce630b6f][-] 17() -> 39() [waitForAgv] waiting -> waitForAgv
+[WARNING]2021-03-29 15:49:33,960: timer_thread[tid:12268] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=12268 count=1 at 0x0000027674CBE4B8>> ,hold 4524 ms
+[INFO]2021-03-29 15:49:34,140: name=timer_thread, pid=2096, tid=12268
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/branches/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-29 15:49:34,619: this is taskStep=============>waitForAgv
+[DEBUG]2021-03-29 15:49:34,860: GET: http://127.0.0.1:5551/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=17&mapId=comba-ZXC-F3&taskId=6061830292418b3cce630b6f&timeout=10 addr: 127.0.0.1
+[INFO]2021-03-29 15:49:37,046: apply AGV01 ,taskId: 6061830292418b3cce630b6f ,loc comba-ZXC-F3.17 ,autoLock False , used 2096 ms
+[DEBUG]2021-03-29 15:49:37,107: used 2247ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=17&mapId=comba-ZXC-F3&taskId=6061830292418b3cce630b6f&timeout=10
+[DEBUG]2021-03-29 15:49:37,339: GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=6061830292418b3cce630b6f addr: 127.0.0.1
+[DEBUG]2021-03-29 15:49:37,407: lock:  AGV01 taskId 6061830292418b3cce630b6f app scadaTask
+[WARNING]2021-03-29 15:49:38,559: AGV01 clear task finish, cur= comba-ZXC-F3.25 task_status= 4
+[DEBUG]2021-03-29 15:49:38,664: used 1325ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=6061830292418b3cce630b6f
+[INFO]2021-03-29 15:49:38,828: *task[6061830292418b3cce630b6f][-] 17() -> 39() [waitForAgv] apply AGV01
+[INFO]2021-03-29 15:49:38,978: task[6061830292418b3cce630b6f] update info: {'agvId': 'AGV01', 'failMsg': '成功分配小车AGV01,检测顶升下降', 'updateTime': datetime.datetime(2021, 3, 29, 15, 49, 38, 949013)}
+[WARNING]2021-03-29 15:49:39,040: scada.6061830292418b3cce630b6f[tid:6668] <locked _thread.RLock object owner=6668 count=1 at 0x0000027674CBE558> ,hold 4421 ms
+[INFO]2021-03-29 15:49:39,190: name=scada.6061830292418b3cce630b6f, pid=2096, tid=6668
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/branches/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/branches/pharmapackCtrl/runTasks.py", line 733, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/branches/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/branches/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-29 15:49:39,265: *task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] waitForAgv -> initJackdown
+[INFO]2021-03-29 15:49:39,743: this is taskStep=============>initJackdown
+[INFO]2021-03-29 15:49:39,803: =========================>>>>>>>>>initJackdown
+[INFO]2021-03-29 15:49:39,893: *task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [initJackdown] _jackDown
+[INFO]2021-03-29 15:49:39,968: task[6061830292418b3cce630b6f] update info: {'failMsg': '前往ZXC05工位点拉取货架', 'updateTime': datetime.datetime(2021, 3, 29, 15, 49, 39, 953193)}
+[DEBUG]2021-03-29 15:49:40,102: *task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [startMoveJackup] initJackdown -> startMoveJackup
+[INFO]2021-03-29 15:49:40,596: this is taskStep=============>startMoveJackup
+[DEBUG]2021-03-29 15:49:40,688: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=true&agv=AGV01&agvId=AGV01&appName=scadaTask&direction=None&floorId=comba-ZXC-F3&isRotate&loc=comba-ZXC-F3.17&location=17&p_direction=0.0&pgv_type=1&recognize=False&seer_jackup=JackLoad&taskId=6061830292418b3cce630b6f_2&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-03-29 15:49:40,697: Begin: AGV01 move from comba-ZXC-F3.25 to comba-ZXC-F3.17 by paths: [('comba-ZXC-F3', ['25', '24', '22', '17'], 16.529990836603304)] task: 6061830292418b3cce630b6f_2 timeout 86400 used 6 ms
+[DEBUG]2021-03-29 15:49:40,699: *task[6061830292418b3cce630b6f][AGV01] 17() -> 39() [loadPlayload] startMoveJackup -> loadPlayload
+[INFO]2021-03-29 15:49:41,002: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:41,317: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:49:41,387: agvInfo: AGV01 comba-ZXC-F3.25 move to comba-ZXC-F3.24 ,taskId 6061830292418b3cce630b6f_2
+[INFO]2021-03-29 15:49:41,393: goTarget {'id': '24', 'ignoreAngle': True}
+[INFO]2021-03-29 15:49:41,633: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:41,947: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:42,262: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:42,578: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:42,894: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:43,209: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:43,524: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:49:43,613: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=60618697502fc70814fe22d7
+[INFO]2021-03-29 15:49:43,839: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:44,154: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:44,470: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:44,785: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:45,101: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:49:45,366: clear alarm obj=AGV01, typeId=52400, id=60618697502fc70814fe22d7
+[INFO]2021-03-29 15:49:45,417: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:45,733: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:46,048: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:46,364: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:46,678: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:46,994: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:47,310: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:47,656: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:47,971: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:49:48,044: clear alarm obj=AGV01, typeId=52300, id=60618289502fc70814fe1f1d
+[INFO]2021-03-29 15:49:48,286: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:48,601: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:48,915: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:49,229: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:49,543: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:49,859: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:50,173: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:50,489: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:50,803: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:51,119: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:51,432: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:51,747: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:52,061: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:52,376: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:52,690: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:53,004: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:53,320: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:53,634: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:53,949: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:49:54,199: raise alarm obj=AGV01, typeId=52300, desc=AGV异常, id=606186a2502fc70814fe2323
+[INFO]2021-03-29 15:49:54,264: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:54,578: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:54,892: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:55,207: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:49:55,492: clear alarm obj=AGV01, typeId=52300, id=606186a2502fc70814fe2323
+[INFO]2021-03-29 15:49:55,522: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:55,837: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:56,152: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:56,466: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:56,780: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:57,094: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:49:57,230: AGV01 turn to wait check cur 25 next 22 0 False
+[INFO]2021-03-29 15:49:57,410: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:57,724: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:49:57,763: agvInfo: AGV01 comba-ZXC-F3.25 move to comba-ZXC-F3.22 ,taskId 6061830292418b3cce630b6f_2
+[INFO]2021-03-29 15:49:57,767: goTarget {'id': '22', 'ignoreAngle': True}
+[INFO]2021-03-29 15:49:58,039: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:49:58,294: AGV01 turn to wait check cur 25 next 17 0 False
+[INFO]2021-03-29 15:49:58,354: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:58,668: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:49:58,838: agvInfo: AGV01 comba-ZXC-F3.25 move jackup to comba-ZXC-F3.17 ,taskId 6061830292418b3cce630b6f_2
+[INFO]2021-03-29 15:49:58,982: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:59,297: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:49:59,640: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:49:59,880: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:49:59,955: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:00,270: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:00,389: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:50:00,584: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:00,900: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:00,900: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:50:01,214: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:01,409: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:50:01,529: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:01,844: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:01,919: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:50:02,159: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:02,429: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:50:02,475: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:02,789: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:02,939: AGV01 waitFinish: loc is diff 25 17 task_status= 2
+[INFO]2021-03-29 15:50:03,104: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:50:03,379: AGV01 set loc comba-ZXC-F3.24 ,old 25 (-1.22,1.83)
+[INFO]2021-03-29 15:50:03,419: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:03,454: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:03,734: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:03,959: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:04,048: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:04,363: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:04,468: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:04,679: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:04,979: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:04,994: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:05,308: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:05,489: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:05,624: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:05,938: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:05,999: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:06,254: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:06,513: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:06,572: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:06,887: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:07,026: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:07,205: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:07,522: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:07,536: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:07,836: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:08,048: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:08,152: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:08,456: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:08,561: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:08,770: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:09,071: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:09,085: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:09,401: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:09,580: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:09,715: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:10,032: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:10,092: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[ERROR]2021-03-29 15:50:10,233: raise alarm obj=AGV01, typeId=52300, desc=AGV异常, id=606186b2502fc70814fe237a
+[INFO]2021-03-29 15:50:10,347: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:10,604: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:10,664: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:10,979: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:11,114: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:11,297: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:11,609: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:11,624: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:11,923: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:12,132: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:12,237: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:12,552: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:12,642: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:12,867: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:13,151: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:13,181: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:13,496: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:13,662: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:13,811: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:14,125: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:14,170: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:14,440: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:14,679: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:14,754: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:15,069: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:15,189: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:15,383: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:15,698: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:15,698: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:16,012: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:16,208: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:16,328: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:16,643: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:16,718: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:16,959: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:17,229: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:17,275: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:17,589: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:17,739: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:17,903: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:18,218: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:18,248: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:18,534: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:18,759: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:18,848: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:19,162: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:19,267: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:19,477: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:19,776: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:19,791: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:20,106: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:20,285: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:20,420: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:20,736: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:20,796: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:21,050: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:21,305: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:21,364: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:21,679: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:21,829: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:21,994: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:22,309: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:22,339: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:22,624: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:22,848: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:22,938: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:23,253: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:23,362: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:23,567: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:23,882: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:23,883: AGV01 waitFinish: loc is diff 24 17 task_status= 2
+[INFO]2021-03-29 15:50:24,196: this is taskStep=============>loadPlayload
+[DEBUG]2021-03-29 15:50:24,258: AGV01 set loc comba-ZXC-F3.22 ,old 24 (-2.06,8.32)
+[WARNING]2021-03-29 15:50:24,410: AGV01 waitFinish: loc is diff 22 17 task_status= 2
+[INFO]2021-03-29 15:50:24,512: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:24,827: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:24,918: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:25,144: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:25,431: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:25,461: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:25,775: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:25,940: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:26,090: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:26,405: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:26,450: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:26,719: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:50:26,822: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=606186c2502fc70814fe23ce
+[WARNING]2021-03-29 15:50:26,959: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:27,036: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:27,350: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:27,471: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:27,665: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:27,983: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:27,984: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:28,297: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:28,507: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:28,612: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:28,927: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:29,018: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:29,243: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:29,529: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:29,559: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:29,874: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:30,042: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:30,191: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:30,506: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:30,552: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:30,822: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:31,065: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:31,139: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:31,455: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:31,576: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[WARNING]2021-03-29 15:50:31,727: clear alarm obj=AGV01, typeId=52400, id=606186c2502fc70814fe23ce
+[INFO]2021-03-29 15:50:31,770: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:32,086: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:32,086: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:32,401: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:32,598: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:32,716: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:33,032: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:33,107: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:33,356: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:33,616: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:33,691: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:34,008: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:34,129: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:34,323: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:34,638: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:34,638: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:50:34,828: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=606186ca502fc70814fe23e7
+[INFO]2021-03-29 15:50:34,952: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:35,147: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:35,267: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:35,581: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:35,656: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:35,897: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:36,166: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:36,211: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:36,525: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:36,675: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:36,839: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:37,153: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:37,183: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[WARNING]2021-03-29 15:50:37,285: clear alarm obj=AGV01, typeId=52400, id=606186ca502fc70814fe23e7
+[INFO]2021-03-29 15:50:37,467: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:37,692: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:37,781: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:38,096: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:38,202: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:38,412: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:38,711: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:38,726: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:39,043: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:39,222: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:39,357: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:39,671: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:39,731: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:39,985: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:40,240: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:40,300: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:50:40,538: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=606186d0502fc70814fe2406
+[INFO]2021-03-29 15:50:40,614: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:40,750: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:40,929: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:41,244: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:41,259: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:41,561: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:41,771: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:41,875: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:42,190: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:42,280: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:42,505: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:42,789: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:42,819: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:43,135: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:43,299: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:43,449: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:43,666: clear alarm obj=AGV01, typeId=52400, id=606186d0502fc70814fe2406
+[INFO]2021-03-29 15:50:43,764: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:43,810: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:44,079: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:44,319: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:44,394: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:44,708: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:44,828: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:45,023: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:45,337: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:45,338: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:45,651: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:45,847: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:45,967: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:46,281: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:46,356: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:46,596: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:46,865: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:46,910: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:47,227: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:47,377: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:47,543: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:47,857: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:47,887: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:48,171: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:48,396: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:48,486: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:48,802: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:48,908: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:49,119: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:49,418: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:49,434: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:49,748: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:49,928: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:50,063: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:50,378: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:50,438: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:50,693: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:50,949: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:51,009: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:51,327: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:51,461: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:51,641: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:51,957: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:51,971: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:52,272: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:52,484: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:52,588: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:52,902: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:52,992: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:53,216: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:53,502: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:53,546: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:50:53,591: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=606186dd502fc70814fe243e
+[INFO]2021-03-29 15:50:53,861: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:54,013: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:54,176: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:54,491: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:54,520: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:54,805: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:55,029: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:55,119: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:55,433: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:55,538: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:55,747: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:56,047: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:56,062: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:56,377: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:56,556: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:56,691: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:57,006: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:57,066: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:57,321: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:57,576: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:57,680: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:57,995: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:58,085: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:58,310: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:58,609: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:58,624: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:58,938: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:59,119: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:59,254: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:50:59,568: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:50:59,628: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:50:59,882: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:00,136: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:00,196: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:00,511: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:00,646: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:00,825: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:01,141: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:01,157: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:01,456: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:01,666: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:01,771: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:02,085: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:02,189: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:02,399: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:02,698: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:02,713: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:03,027: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:03,222: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:03,343: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:03,715: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:03,730: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:04,029: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:04,239: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:04,344: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:04,658: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:04,748: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:04,972: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:05,257: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:05,286: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:05,600: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:05,766: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:05,914: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:06,229: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:06,274: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:06,543: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:06,783: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:06,857: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:07,171: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:07,291: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:07,485: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:07,800: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:07,800: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:08,114: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:08,309: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:08,428: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:08,742: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:08,818: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:09,057: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:09,327: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:09,376: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:09,715: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:09,851: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:10,030: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:10,344: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:10,359: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:10,658: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:10,868: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:10,974: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:11,288: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:11,378: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:11,603: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:11,887: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:11,917: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:12,232: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:12,397: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:12,546: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:12,860: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:12,905: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:13,174: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:13,415: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:13,489: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:13,803: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:13,923: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:14,118: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:14,433: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:14,435: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:14,749: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:14,959: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:15,064: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:15,378: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:15,468: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:15,692: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:15,977: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:16,006: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:16,320: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:16,486: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:16,635: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:16,949: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:16,994: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:17,264: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:17,503: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:17,578: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:17,892: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:18,012: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:18,206: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:18,520: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:18,521: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:18,834: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:19,045: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:19,149: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:19,463: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:19,552: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:19,778: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:20,062: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:20,092: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:20,406: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:20,571: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:20,720: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:21,050: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:21,079: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:21,373: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:21,588: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:21,693: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:22,007: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:22,097: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:22,321: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:22,607: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:22,637: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:22,951: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:23,115: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:23,265: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:23,580: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:23,625: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:23,894: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:24,134: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:24,208: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:24,523: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:24,642: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:24,837: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:25,151: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:25,151: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:25,466: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:25,544: clear alarm obj=AGV01, typeId=52400, id=606186dd502fc70814fe243e
+[WARNING]2021-03-29 15:51:25,661: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:25,781: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:26,095: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:26,170: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:26,409: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:26,678: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:26,723: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:27,038: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:27,189: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:27,367: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:27,698: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:27,728: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:28,042: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:28,207: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:28,356: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:28,670: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:28,730: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:28,985: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:29,239: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:29,299: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:29,613: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:29,747: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:29,927: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:30,241: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:30,256: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:30,555: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:30,765: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:30,869: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:31,184: this is taskStep=============>loadPlayload
+[ERROR]2021-03-29 15:51:31,193: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=60618703502fc70814fe2485
+[WARNING]2021-03-29 15:51:31,273: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:31,498: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:31,783: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:31,813: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:32,127: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:32,292: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:32,441: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:32,756: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:32,802: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:33,071: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:33,281: clear alarm obj=AGV01, typeId=52400, id=60618703502fc70814fe2485
+[WARNING]2021-03-29 15:51:33,311: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:33,389: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:33,700: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:33,820: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[ERROR]2021-03-29 15:51:33,825: raise alarm obj=AGV01, typeId=52400, desc=AGV异常, id=60618705502fc70814fe2494
+[INFO]2021-03-29 15:51:34,015: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:34,329: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:34,329: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:34,643: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:34,838: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:34,958: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:35,272: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:35,347: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:35,586: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:35,855: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:35,900: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:36,215: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:36,365: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:36,530: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:36,846: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:36,876: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:37,160: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:37,385: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:37,475: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:37,788: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:37,894: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:38,104: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:38,403: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:38,418: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:38,732: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:38,912: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:39,046: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:39,360: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:39,420: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:39,674: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:39,930: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:39,989: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:40,303: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:40,438: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:40,617: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:40,931: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:40,947: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:41,245: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:41,455: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:41,560: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:41,874: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:41,964: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:42,189: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:42,475: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:42,505: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:42,819: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:42,984: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:43,133: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:43,448: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:43,493: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:43,761: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:44,001: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:44,076: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:44,390: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:44,511: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:44,704: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:45,018: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:45,019: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:45,347: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:45,542: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:45,692: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:46,006: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:46,052: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:46,335: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:46,574: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:46,649: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:46,964: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:47,084: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:47,279: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:47,593: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:47,593: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:47,907: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:48,102: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:48,221: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:48,535: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:48,625: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:48,850: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:49,135: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:49,164: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:49,479: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:49,645: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:49,794: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:50,108: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:50,153: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:50,423: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:50,663: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:50,738: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:51,053: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:51,173: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:51,368: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:51,684: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:51,685: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:52,013: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:52,194: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:52,328: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:52,643: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:52,719: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:52,958: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:53,243: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:53,274: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:53,588: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:53,752: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:53,902: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:54,216: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:54,263: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:54,531: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:54,786: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:54,846: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:55,160: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:55,294: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:55,475: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:55,790: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:55,805: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:56,104: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:56,314: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:56,419: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:56,736: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:56,826: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:57,051: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:57,340: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:57,366: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:57,682: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:57,862: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[INFO]2021-03-29 15:51:57,998: this is taskStep=============>loadPlayload
+[INFO]2021-03-29 15:51:58,315: this is taskStep=============>loadPlayload
+[WARNING]2021-03-29 15:51:58,376: AGV01 waitFinish: loc is diff 22 17 task_status= 4
+[WARNING]2021-03-29 15:52:02,745: clear alarm obj=AGV01, typeId=52400, id=60618705502fc70814fe2494
+[ERROR]2021-03-29 15:57:05,548: raise alarm obj=AGV01, typeId=49999, desc=AGV离线异常, id=60618851502fc70814fe260f
+[INFO]2021-03-29 16:12:17,288: user press cancel AGV01 button

@@ -1,0 +1,13 @@
+[CRITICAL]2021-03-12 14:54:43,908: : 192.168.252.90:8899 <--> 192.168.252.13:62433 error:  cause a error: get() missing 1 required positional argument: 'key'
+pid=4280, ppid=3992, tid=4788
+Traceback (most recent call last):
+  File "D:\akmLine\button\main_button.py", line 52, in _handle
+    addTask(str(devID),str(keyID))
+  File "D:\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "D:\akmLine\button\main_button.py", line 77, in addTask
+    type,map,loc,agv = getButtonInfo(devID,keyID)
+  File "D:\akmLine\button\main_button.py", line 139, in getButtonInfo
+    rr = local.get(devID)
+TypeError: get() missing 1 required positional argument: 'key'
+

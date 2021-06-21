@@ -1,0 +1,42 @@
+[CRITICAL]2021-04-27 17:08:17,656: : 192.168.252.237:10001 <--> 192.168.252.242:60412 time out cause a error: <tcpSocket.client object at 0x000002530E374760>
+pid=3132, ppid=17380, tid=996
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 51, in _handle
+    data = client.recv(128)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\tcpSocket.py", line 165, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-27 17:08:36,195: : 192.168.252.237:10001 <--> 192.168.252.242:60413 error:  cause a error: 'int' object has no attribute 'lower'
+pid=3132, ppid=17380, tid=10724
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 60, in _handle
+    getButtonInfo(devID,keyID)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 132, in getButtonInfo
+    type,source,target = local.get(devID,keyID).split(",")
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\local.py", line 84, in get
+    return _get_cfg().get(section,key,default)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\config.py", line 103, in get
+    if self.has_key(section,key):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\config.py", line 93, in has_key
+    if not self.has_section(section.lower()):
+AttributeError: 'int' object has no attribute 'lower'
+
+[CRITICAL]2021-04-27 17:08:48,122: : 192.168.252.237:10001 <--> 192.168.252.242:60414 time out cause a error: <tcpSocket.client object at 0x000002530E5075E0>
+pid=3132, ppid=17380, tid=1888
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 51, in _handle
+    data = client.recv(128)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\tcpSocket.py", line 165, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-04-27 17:08:58,577: : 192.168.252.237:10001 <--> 192.168.252.242:60415 time out cause a error: <tcpSocket.client object at 0x000002530E514FD0>
+pid=3132, ppid=17380, tid=4312
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\feed\main_feed.py", line 51, in _handle
+    data = client.recv(128)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\tcpSocket.py", line 165, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+

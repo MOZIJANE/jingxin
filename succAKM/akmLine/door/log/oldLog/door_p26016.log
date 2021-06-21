@@ -1,0 +1,145 @@
+[INFO]2020-07-16 10:45:02,388: log files at E:\python_work\akm_office\door\log
+[SUCC]2020-07-16 10:45:02,405: utility start, pid=26016, ppid=16424
+[INFO]2020-07-16 10:45:02,408: create lock <lock name:timer.lock_1828539314768,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A9BD6FB270>>
+[DEBUG]2020-07-16 10:45:02,410: start timer
+[INFO]2020-07-16 10:45:02,412: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:45:04,450: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:06,515: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:45:08,540: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:10,559: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:45:12,585: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:19,021: open the door 192.168.252.195
+[INFO]2020-07-16 10:45:21,147: name=timer_thread, pid=26016, tid=25964
+[01] File "D:/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "../common/mytimer.py", line 117, in _loop() 
+
+name=MainThread, pid=26016, tid=9228
+[01] File "E:/python_work/akm_office/door/switchControl2.py", line 199, in <module>() 
+[02] File "E:/python_work/akm_office/door/switchControl2.py", line 188, in test_action() 
+[03] File "../common/utility.py", line 594, in exit() 
+[04] File "../common/enhance.py", line 256, in getTrace() 
+[05] File "../common/enhance.py", line 240, in getThreadStack()
+[INFO]2020-07-16 10:45:21,156: lock info: count 0
+
+try lock info: count 0
+[ERROR]2020-07-16 10:45:21,159: user press Ctrl+C, print thread stack
+[CRITICAL]2020-07-16 10:45:21,167: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:21,842: name=timer_thread, pid=26016, tid=25964
+[01] File "D:/Python/Python38/lib/threading.py", line 870, in run() 
+[02] File "../common/mytimer.py", line 117, in _loop() 
+
+name=MainThread, pid=26016, tid=9228
+[01] File "E:/python_work/akm_office/door/switchControl2.py", line 199, in <module>() 
+[02] File "E:/python_work/akm_office/door/switchControl2.py", line 194, in test_action() 
+[03] File "../common/utility.py", line 594, in exit() 
+[04] File "../common/enhance.py", line 256, in getTrace() 
+[05] File "../common/enhance.py", line 240, in getThreadStack()
+[INFO]2020-07-16 10:45:21,856: lock info: count 0
+
+try lock info: count 0
+[ERROR]2020-07-16 10:45:21,861: user press Ctrl+C, print thread stack
+[INFO]2020-07-16 10:45:23,198: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:45:25,226: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:27,242: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:45:29,262: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:31,272: open the door 192.168.252.195
+[CRITICAL]2020-07-16 10:45:33,301: setSwitch cause a error: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=26016, ppid=16424, tid=9228
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 188, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 39, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 80, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 98, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "../common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+[INFO]2020-07-16 10:45:35,313: open the door 192.168.252.195

@@ -1,0 +1,44 @@
+[CRITICAL]2021-04-21 09:58:08,341: invoke <function urlGoHome at 0x000002303C46A550> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=3320, ppid=11000, tid=10184
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\main_agv.py", line 103, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvControl.py", line 1300, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-21 09:58:08,341: invoke <function urlGoHome at 0x000002303C46A550> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=3320, ppid=11000, tid=10184
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\main_agv.py", line 103, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvControl.py", line 1300, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-21 09:58:08,832: task[607f8632a76af912e7d12a08][AGV30] AP29(AP29) -> LM9(LM9) [finish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=3320, ppid=11000, tid=1056
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\akmCtrl\beans\scadaTaskBean.py", line 601, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 129, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-21 09:58:08,832: task[607f8632a76af912e7d12a08][AGV30] AP29(AP29) -> LM9(LM9) [finish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=3320, ppid=11000, tid=1056
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\akmCtrl\beans\scadaTaskBean.py", line 601, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 129, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+

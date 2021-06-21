@@ -1,0 +1,9 @@
+[CRITICAL]2021-04-27 11:27:48,596: agv thread cause a error: moveJackup() got an unexpected keyword argument 'pgv_type'
+pid=14700, ppid=12552, tid=2940
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvList.py", line 617, in handle
+    ret = obj.callback(obj.params)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvControl.py", line 646, in oncheck
+    agvInfo.moveJackup(agvElement.nextTargetPosName,timeout=params["timeout"],taskId=taskId,use_pgv=params['use_pgv'],ignoreAngle=ignoreDir,pgv_type=params['pgv_type'],recognize=params['recognize'])
+TypeError: moveJackup() got an unexpected keyword argument 'pgv_type'
+

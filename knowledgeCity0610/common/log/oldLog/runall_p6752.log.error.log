@@ -1,0 +1,11 @@
+[CRITICAL]2021-05-28 10:15:49,197: taskFunc2:task[60b0521773dabd1a603b70ea][AGVwuliao] AP25(LM24) -> AP22(LM17) [loadPlayload_readqr] cause a error: 'scadaTask' object has no attribute 'rollerFrontload'
+pid=6752, ppid=8952, tid=12176
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1040, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 682, in handle
+    if not self.rollerFrontload(2): #这样写死了小车首先让二层滚筒进料
+AttributeError: 'scadaTask' object has no attribute 'rollerFrontload'
+

@@ -1,0 +1,46 @@
+[CRITICAL]2021-05-20 19:09:12,306: readStatus1, agvId:Wuliao-AGV cause a error: 127.0.0.1:27017: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=2300, ppid=9452, tid=8436
+Traceback (most recent call last):
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\pool.py", line 599, in send_message
+    self.sock.sendall(message)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 876, in readStatus1
+    self._checkAlarm()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\agvList.py", line 1017, in _checkAlarm
+    alarm.alarmApi.clearRange(self.agvId, clearTypeIds, "agv",force=True)
+  File "..\alarm\alarmApi.py", line 106, in clearRange
+    ids = getAlarmRange(moid,typeIds,domain)
+  File "..\alarm\alarmApi.py", line 95, in getAlarmRange
+    ds = db.find("r_alarm",{"moid":moid,"typeId":{"$in":list(typeIds)},"domain":domain})
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\mongodb.py", line 190, in find
+    self.stat.add(ds)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\mongodb.py", line 30, in add
+    ee = obj.explain()
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\mongodb.py", line 335, in __call
+    r = func(*p,**pp)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 812, in explain
+    return next(c)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 1189, in next
+    if len(self.__data) or self._refresh():
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 1104, in _refresh
+    self.__send_message(q)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 931, in __send_message
+    operation, exhaust=self.__exhaust, address=self.__address)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1145, in _send_message_with_response
+    exhaust)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1156, in _reset_on_error
+    return func(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\server.py", line 105, in send_message_with_response
+    sock_info.send_message(data, max_doc_size)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\pool.py", line 601, in send_message
+    self._raise_connection_failure(error)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\pool.py", line 743, in _raise_connection_failure
+    _raise_connection_failure(self.address, error)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\pool.py", line 283, in _raise_connection_failure
+    raise AutoReconnect(msg)
+pymongo.errors.AutoReconnect: 127.0.0.1:27017: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

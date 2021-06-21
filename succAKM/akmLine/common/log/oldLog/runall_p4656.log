@@ -1,0 +1,70 @@
+[INFO]2021-03-12 16:16:38,019: log files at D:\akmLine\common\log
+[INFO]2021-03-12 16:16:38,020: find module agvCtrl.main_agv
+[INFO]2021-03-12 16:16:38,021: find module agvDevice.main_agvDevice
+[INFO]2021-03-12 16:16:38,023: find module alarm.main_alarm
+[INFO]2021-03-12 16:16:38,024: find module auth.main_auth
+[INFO]2021-03-12 16:16:38,026: find module button.main_button
+[INFO]2021-03-12 16:16:38,027: find module door.main_door
+[INFO]2021-03-12 16:16:38,029: find module elevator.main_elevator
+[INFO]2021-03-12 16:16:38,030: import agvCtrl.main_agv
+[ERROR]2021-03-12 16:16:38,236: mongo db is disabled
+[INFO]2021-03-12 16:16:38,885: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010864D5F58>>
+[INFO]2021-03-12 16:16:38,890: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010864FD148>>
+[INFO]2021-03-12 16:16:39,045: create lock <lock name:timer.lock_70977454488,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010869416E8>>
+[ERROR]2021-03-12 16:16:39,060: mqtt is disabled
+[INFO]2021-03-12 16:16:39,062: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-12 16:16:39,065: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-12 16:16:39,150: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000001086AC43C8>>
+[INFO]2021-03-12 16:16:39,154: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000001086A73530>>
+[INFO]2021-03-12 16:16:39,734: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010FEC5B990>>
+[INFO]2021-03-12 16:16:40,555: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000001086CB5328>>
+[INFO]2021-03-12 16:16:40,561: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000001086D2B558>>
+[INFO]2021-03-12 16:16:40,801: charge policy 0 , fix time
+[INFO]2021-03-12 16:16:40,907: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000001086D2B8A0>>
+[INFO]2021-03-12 16:16:41,277: start load map D:\akmLine\agvCtrl\projects\akmLine\akmsmt.smap
+[DEBUG]2021-03-12 16:16:41,448: elevator thread start
+[INFO]2021-03-12 16:16:41,511: load map D:\akmLine\agvCtrl\projects\akmLine\akmsmt.smap ,used 261 ms
+[INFO]2021-03-12 16:16:41,544: start load map D:\akmLine\agvCtrl\projects\akmLine\akmsmtMap.smap
+[INFO]2021-03-12 16:16:41,866: load map D:\akmLine\agvCtrl\projects\akmLine\akmsmtMap.smap ,used 352 ms
+[INFO]2021-03-12 16:16:41,894: start load map D:\akmLine\agvCtrl\projects\akmLine\shiyanshi.smap
+[INFO]2021-03-12 16:16:42,048: load map D:\akmLine\agvCtrl\projects\akmLine\shiyanshi.smap ,used 180 ms
+[INFO]2021-03-12 16:16:42,056: import agvDevice.main_agvDevice
+[INFO]2021-03-12 16:16:42,057: import alarm.main_alarm
+[INFO]2021-03-12 16:16:42,059: import auth.main_auth
+[INFO]2021-03-12 16:16:42,075: import button.main_button
+[CRITICAL]2021-03-12 16:16:42,113: import main_button failed, path: button cause a error: name 'Current_loc' is used prior to global declaration (main_button.py, line 83)
+pid=4656, ppid=1800, tid=5008
+Traceback (most recent call last):
+  File "D:\akmLine\common\run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "D:\akmLine\button\main_button.py", line 83
+    global Current_loc
+    ^
+SyntaxError: name 'Current_loc' is used prior to global declaration
+
+[CRITICAL]2021-03-12 16:16:42,121: import main_button failed, path: button ,cause name 'Current_loc' is used prior to global declaration (main_button.py, line 83)
+[INFO]2021-03-12 16:16:45,830: load agv file: D:\akmLine\agvCtrl/projects/akmLine/agv.cfg
+[INFO]2021-03-12 16:16:45,834: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000108802DD78>>
+[DEBUG]2021-03-12 16:16:45,842: create aliveObj AGV01 AGV¿Îœﬂ“Ï≥£ timeout 300
+[INFO]2021-03-12 16:16:45,846: AGV01 start agvList run thread
+[INFO]2021-03-12 16:16:45,847: AGV01 start agvList run2 thread
+[INFO]2021-03-12 16:16:45,849: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x000000108802DFA8>>
+[DEBUG]2021-03-12 16:16:45,854: try connect AGV01 192.168.252.111:19204
+[INFO]2021-03-12 16:16:46,037: AGV01 connected 192.168.252.111 19204
+[INFO]2021-03-12 16:16:46,039: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x000000108802DF30>>
+[DEBUG]2021-03-12 16:16:46,043: try connect AGV01 192.168.252.111:19205
+[INFO]2021-03-12 16:16:46,055: AGV01 connected 192.168.252.111 19205
+[INFO]2021-03-12 16:16:46,057: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000001089354120>>
+[DEBUG]2021-03-12 16:16:46,063: try connect AGV01 192.168.252.111:19206
+[INFO]2021-03-12 16:16:46,087: AGV01 connected 192.168.252.111 19206
+[INFO]2021-03-12 16:16:46,089: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010893540A8>>
+[DEBUG]2021-03-12 16:16:46,092: try connect AGV01 192.168.252.111:19207
+[INFO]2021-03-12 16:16:46,108: AGV01 connected 192.168.252.111 19207
+[INFO]2021-03-12 16:16:46,127: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010893549B8>>
+[DEBUG]2021-03-12 16:16:46,155: try connect AGV01 192.168.252.111:19208
+[INFO]2021-03-12 16:16:46,253: AGV01 connected 192.168.252.111 19208
+[INFO]2021-03-12 16:16:46,269: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x00000010893828A0>>
+[DEBUG]2021-03-12 16:16:46,271: try connect AGV01 192.168.252.111:19210
+[INFO]2021-03-12 16:16:46,282: AGV01 connected 192.168.252.111 19210
+[INFO]2021-03-12 16:16:46,294: AGV01 current map shiyanshi
+[INFO]2021-03-12 16:16:46,342: AGV01 is online

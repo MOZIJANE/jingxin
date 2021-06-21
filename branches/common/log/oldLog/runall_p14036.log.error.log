@@ -1,0 +1,15 @@
+[CRITICAL]2021-03-17 10:25:22,387: invoke <function urlMove at 0x0000017D4D48E400> cause a error: fp20190712-1.AP88->fp20190712-1.LM242 路径不存在1,agvId=AGV04
+pid=14036, ppid=8372, tid=10280
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\main_agv.py", line 123, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvControl.py", line 1240, in move
+    _func()
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvControl.py", line 1206, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: fp20190712-1.AP88->fp20190712-1.LM242 路径不存在1,agvId=AGV04
+

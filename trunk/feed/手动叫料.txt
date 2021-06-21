@@ -1,0 +1,37 @@
+http://127.0.0.1:8999
+接口1：/api/agv/seat 查询工位
+参数值：
+返回值：
+	info: [
+			{"id": "工位","floorId": "地图", "location": "LM1","direction": "方向"}
+		]
+接口2： /api/agv/feed 手动叫料
+参数：
+	"seat1": 起始工位
+	"location1": 
+	"floorId1":
+	"direction1": 
+	"seat2": 结束工位
+	"location2": 
+	"floorId2": 
+	"direction2"
+返回值：result True/False
+
+接口3： /api/agv/tasklist 任务列表
+返回值：
+	list: [{
+			"taskId": "",
+			"taskName": "",
+			"taskType": "",
+			"userId": "",
+			"starttime": datetime.datetime,
+			"status": -2,
+			"msg": "",
+			"updatetime": datetime.datetime, 
+			"floorId": "",
+			"agvId": "agv01",
+			"endtime": datetime.datetime
+		}]
+接口4： /api/agv/agvList agv列表
+返回值：
+	list: ["agv02","agv01"]

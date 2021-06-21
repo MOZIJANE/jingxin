@@ -1,0 +1,44 @@
+; This is sample .ini files containing connection definitons.
+; Modify values to suit your needs.
+; Any connection parameter recognized by SAP connection string may be used as key
+
+; To connect to system defined as 'Connection 1' use:
+; conn=pysap.Rfc_connection(conn_file='/path/to/this/file',conn_name='Connection 1')
+; conn.open()
+
+[DEFAULT]
+;Default values shared by all connections
+;(unless explicitily overriden)
+LCHECK=1
+
+[Connection 1]
+; connect over SAP router
+ASHOST=/H/router1/H/router2/H/system1
+CLIENT=001
+SYSNR=10
+USER=me
+PASSWD=poorme
+
+[my_connection]
+; direct connection
+ASHOST=192.168.0.80
+CLIENT=600
+SYSNR=00
+USER=COMBAMES
+PASSWD=C3B6E9F3
+
+[logger]
+enable_console = True
+#CRITICAL=50,ERROR=40,WARNING=30,INFO=20,DEBUG=10,NOTSET=-1
+level = -1
+logger_path = /logger 
+
+[bottle]
+debug = True
+reload = True
+host = 0.0.0.0
+port = 80
+#service = wsgiref
+service = paste
+#ssl_cert= ../webmgr/server.crt
+#ssl_key = ../webmgr/server.key

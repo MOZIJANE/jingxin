@@ -1,0 +1,33 @@
+[INFO]2020-09-18 15:58:01,975: log files at C:\akmLine\common\log
+[INFO]2020-09-18 15:58:01,976: find module agvCtrl.main_agv
+[INFO]2020-09-18 15:58:01,977: find module agvDevice.main_agvDevice
+[INFO]2020-09-18 15:58:01,978: find module alarm.main_alarm
+[INFO]2020-09-18 15:58:01,979: find module auth.main_auth
+[INFO]2020-09-18 15:58:01,980: find module door.main_door
+[INFO]2020-09-18 15:58:01,981: find module elevator.main_elevator
+[INFO]2020-09-18 15:58:01,982: find module feed.main_feed
+[INFO]2020-09-18 15:58:01,983: import agvCtrl.main_agv
+[INFO]2020-09-18 15:58:03,063: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C1300>>
+[INFO]2020-09-18 15:58:03,070: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C1558>>
+[INFO]2020-09-18 15:58:03,347: create lock <lock name:timer.lock_127923760,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000079DCAF8>>
+[ERROR]2020-09-18 15:58:03,376: mqtt is disabled
+[INFO]2020-09-18 15:58:03,377: mqtt: subscribe [alarm/raise/+]
+[INFO]2020-09-18 15:58:03,379: mqtt: subscribe [alarm/clear/+]
+[INFO]2020-09-18 15:58:06,453: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-18 15:58:06,511: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007BFD580>>
+[INFO]2020-09-18 15:58:06,513: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007BFD1C0>>
+[INFO]2020-09-18 15:58:06,517: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007B78C10>>
+[CRITICAL]2020-09-18 15:58:07,305: import main_agv failed, path: agvCtrl cause a error: can only concatenate str (not "NoneType") to str
+pid=51408, ppid=51156, tid=37732
+Traceback (most recent call last):
+  File "C:\akmLine\common\run_all.py", line 39, in findModule
+    __import__(m[1])
+  File ".\agvCtrl\main_agv.py", line 10, in <module>
+  File ".\agvCtrl\mapMgr.py", line 25, in <module>
+  File "..\driver\seerAgv\agvCtrl.py", line 33, in <module>
+    g_agvType = _loadAgvType()
+  File "..\driver\seerAgv\agvCtrl.py", line 25, in _loadAgvType
+    file = "/../../agvCtrl/projects/"+proName+"/" + local.get("project","agvType")
+TypeError: can only concatenate str (not "NoneType") to str
+
+[CRITICAL]2020-09-18 15:58:07,311: import main_agv failed, path: agvCtrl ,cause can only concatenate str (not "NoneType") to str

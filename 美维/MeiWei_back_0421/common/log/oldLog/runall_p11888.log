@@ -1,0 +1,646 @@
+[INFO]2021-03-26 14:13:04,254: log files at D:\python_work\AKMfloor\common\log
+[INFO]2021-03-26 14:13:04,254: find module account.main_account
+[INFO]2021-03-26 14:13:04,255: find module agvCtrl.main_agv
+[INFO]2021-03-26 14:13:04,255: find module agvDevice.main_agvDevice
+[INFO]2021-03-26 14:13:04,256: find module alarm.main_alarm
+[INFO]2021-03-26 14:13:04,257: find module auth.main_auth
+[INFO]2021-03-26 14:13:04,257: find module door.main_door
+[INFO]2021-03-26 14:13:04,258: find module elevator.main_elevator
+[INFO]2021-03-26 14:13:04,258: find module feed.main_feed
+[INFO]2021-03-26 14:13:04,259: find module menu.main_menu
+[INFO]2021-03-26 14:13:04,259: find module pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-26 14:13:04,261: find module webFront.main_web
+[INFO]2021-03-26 14:13:04,261: find module wmqtt.main_wmqtt
+[INFO]2021-03-26 14:13:04,261: import account.main_account
+[INFO]2021-03-26 14:13:04,448: import agvCtrl.main_agv
+[INFO]2021-03-26 14:13:04,922: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE38DB70>>
+[INFO]2021-03-26 14:13:04,925: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE386420>>
+[INFO]2021-03-26 14:13:05,085: create lock <lock name:timer.lock_2039813807552,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE609F00>>
+[ERROR]2021-03-26 14:13:05,109: mqtt is disabled
+[INFO]2021-03-26 14:13:05,109: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-26 14:13:05,109: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-26 14:13:08,162: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-26 14:13:08,227: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE86A540>>
+[INFO]2021-03-26 14:13:08,230: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE85D900>>
+[INFO]2021-03-26 14:13:09,024: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE8744E0>>
+[INFO]2021-03-26 14:13:09,712: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE952510>>
+[INFO]2021-03-26 14:13:09,726: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEE9F65A0>>
+[INFO]2021-03-26 14:13:09,846: charge policy 1 , fix time
+[INFO]2021-03-26 14:13:09,942: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEEA03180>>
+[INFO]2021-03-26 14:13:10,429: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap
+[DEBUG]2021-03-26 14:13:10,573: create aliveObj ELEVATOR01 电梯离线异常 timeout 30
+[DEBUG]2021-03-26 14:13:10,575: elevator thread start
+[INFO]2021-03-26 14:13:10,661: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM2F.smap ,used 243 ms
+[INFO]2021-03-26 14:13:10,703: start load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap
+[INFO]2021-03-26 14:13:10,830: load map D:\python_work\AKMfloor\agvCtrl\projects\AKMfloor\AKM4F.smap ,used 168 ms
+[INFO]2021-03-26 14:13:10,841: import agvDevice.main_agvDevice
+[INFO]2021-03-26 14:13:10,842: import alarm.main_alarm
+[INFO]2021-03-26 14:13:10,844: import auth.main_auth
+[INFO]2021-03-26 14:13:10,884: import door.main_door
+[INFO]2021-03-26 14:13:10,895: import elevator.main_elevator
+[INFO]2021-03-26 14:13:10,896: import feed.main_feed
+[INFO]2021-03-26 14:13:10,946: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEECC0150>>
+[INFO]2021-03-26 14:13:10,956: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAEECCF030>>
+[INFO]2021-03-26 14:13:12,934: import menu.main_menu
+[CRITICAL]2021-03-26 14:13:12,943: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=11888, ppid=20496, tid=8224
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-26 14:13:12,959: import pharmapackCtrl.main_scadaCtrl
+[INFO]2021-03-26 14:13:13,306: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED63CE10>>
+[INFO]2021-03-26 14:13:13,307: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED66C8D0>>
+[INFO]2021-03-26 14:13:13,328: load task: *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayloadMove]
+[INFO]2021-03-26 14:13:13,330: import webFront.main_web
+[INFO]2021-03-26 14:13:13,339: import wmqtt.main_wmqtt
+[SUCC]2021-03-26 14:13:13,375: utility start, pid=11888, ppid=20496
+[DEBUG]2021-03-26 14:13:13,376: start timer
+[INFO]2021-03-26 14:13:13,397: load agv file: D:\python_work\AKMfloor\agvCtrl/projects/AKMfloor/agv.cfg
+[INFO]2021-03-26 14:13:13,398: create lock <lock name:agvList.AGV03.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED68C3C0>>
+[DEBUG]2021-03-26 14:13:13,404: create aliveObj AGV03 AGV离线异常 timeout 300
+[INFO]2021-03-26 14:13:13,405: AGV03 start agvList run thread
+[INFO]2021-03-26 14:13:13,406: create lock <lock name:agv.AGV03.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED6A6120>>
+[INFO]2021-03-26 14:13:13,406: AGV03 start agvList run2 thread
+[DEBUG]2021-03-26 14:13:13,407: try connect AGV03 192.168.20.183:19204
+[INFO]2021-03-26 14:13:13,414: AGV03 connected 192.168.20.183 19204
+[INFO]2021-03-26 14:13:13,415: create lock <lock name:agv.AGV03.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED6A6150>>
+[INFO]2021-03-26 14:13:13,416: add_ignore: taskStatus
+[DEBUG]2021-03-26 14:13:13,416: try connect AGV03 192.168.20.183:19205
+[INFO]2021-03-26 14:13:13,417: add_ignore: api/elevator/status
+[INFO]2021-03-26 14:13:13,417: add_ignore: scada/getTask
+[INFO]2021-03-26 14:13:13,433: AGV03 connected 192.168.20.183 19205
+[INFO]2021-03-26 14:13:13,435: create lock <lock name:agv.AGV03.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED68C870>>
+[DEBUG]2021-03-26 14:13:13,435: try connect AGV03 192.168.20.183:19206
+[INFO]2021-03-26 14:13:13,445: AGV03 connected 192.168.20.183 19206
+[INFO]2021-03-26 14:13:13,446: create lock <lock name:agv.AGV03.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED6A6180>>
+[DEBUG]2021-03-26 14:13:13,447: try connect AGV03 192.168.20.183:19207
+[INFO]2021-03-26 14:13:13,458: AGV03 connected 192.168.20.183 19207
+[INFO]2021-03-26 14:13:13,459: create lock <lock name:agv.AGV03.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED6A62A0>>
+[DEBUG]2021-03-26 14:13:13,459: try connect AGV03 192.168.20.183:19208
+[INFO]2021-03-26 14:13:13,468: AGV03 connected 192.168.20.183 19208
+[INFO]2021-03-26 14:13:13,469: create lock <lock name:agv.AGV03.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x000001DAED6BC8A0>>
+[DEBUG]2021-03-26 14:13:13,469: try connect AGV03 192.168.20.183:19210
+[INFO]2021-03-26 14:13:13,475: AGV03 connected 192.168.20.183 19210
+[INFO]2021-03-26 14:13:13,492: AGV03 current map AKM4F
+[INFO]2021-03-26 14:13:13,539: AGV03 is online
+[CRITICAL]2021-03-26 14:13:16,058: elevatorApi cause a error: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=11888, ppid=20496, tid=8224
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\elevator\elevatorApi.py", line 19, in http_get
+    r = webutility.http_get(url, param,timeout=10,writelog=writelog)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/elevator/status', {'id': 'ELEVATOR01'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-26 14:13:17,429: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=11888, ppid=20496, tid=20492
+Traceback (most recent call last):
+  File "C:\Python38\lib\urllib\request.py", line 1317, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "C:\Python38\lib\http\client.py", line 915, in connect
+    self.sock = self._create_connection(
+  File "C:\Python38\lib\socket.py", line 807, in create_connection
+    raise err
+  File "C:\Python38\lib\socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python38\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python38\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python38\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Python38\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "C:\Python38\lib\urllib\request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python38\lib\urllib\request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "D:\python_work\AKMfloor\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "D:\python_work\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[INFO]2021-03-26 14:13:17,583: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:17,646: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:17,648: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[DEBUG]2021-03-26 14:13:18,446: GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2021-03-26 14:13:18,447: scadaTask init client agvApi
+[DEBUG]2021-03-26 14:13:18,453: used 6ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/init?appName=scadaTask
+[INFO]2021-03-26 14:13:18,460: task: start *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayloadMove]
+[DEBUG]2021-03-26 14:13:18,495: GET: http://127.0.0.1:5551/api/agv/isAvailable?agv=AGV03&appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-26 14:13:18,519: used 24ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/isAvailable?agv=AGV03&appName=scadaTask
+[DEBUG]2021-03-26 14:13:18,581: GET: http://127.0.0.1:5551/api/agv/lock?agv=AGV03&appName=scadaTask&taskId=605d7774c95becbca68e7959 addr: 127.0.0.1
+[DEBUG]2021-03-26 14:13:18,593: lock:  AGV03 taskId 605d7774c95becbca68e7959 app scadaTask
+[INFO]2021-03-26 14:13:18,722: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:18,852: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:18,864: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:13:19,611: AGV03 clear task finish, cur= AKM4F.LM12 task_status= 4
+[INFO]2021-03-26 14:13:19,637: *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayloadMove] recover lock AGV03
+[DEBUG]2021-03-26 14:13:19,679: GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV03&agvId=AGV03&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.AP35&location=AP35&p_direction=0.0&pgv_type=1&recognize=False&result=True&resultDesc=None&seer_jackup=JackUnload&taskId=605d7774c95becbca68e7959_4&taskType=scadaTask&timeoutSec=86400&use_pgv=False addr: 127.0.0.1
+[INFO]2021-03-26 14:13:19,693: AGV03 use elevator: ELEVATOR01 ,('AKM4F', ['LM12', 'AP1'], 4.761),('AKM2F', ['AP1', 'LM2', 'LM3', 'AP35'], 7.696999999999999)
+[INFO]2021-03-26 14:13:19,803: Begin: AGV03 move from AKM4F.LM12 to AKM2F.AP35 by paths: [('AKM4F', ['LM12', 'AP1'], 4.761), ('AKM2F', ['AP1', 'LM2', 'LM3', 'AP35'], 7.696999999999999)] task: 605d7774c95becbca68e7959_4 timeout 86400 used 122 ms
+[DEBUG]2021-03-26 14:13:19,805: used 125ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/move?WorkPlace=None&agv=AGV03&agvId=AGV03&appName=scadaTask&direction=None&floorId=AKM2F&isRotate&loc=AKM2F.AP35&location=AP35&p_direction=0.0&pgv_type=1&recognize=False&result=True&resultDesc=None&seer_jackup=JackUnload&taskId=605d7774c95becbca68e7959_4&taskType=scadaTask&timeoutSec=86400&use_pgv=False
+[INFO]2021-03-26 14:13:19,811: task[605d7774c95becbca68e7959] update info: {'step': 'dropPayload', 'updateTime': datetime.datetime(2021, 3, 26, 14, 13, 19, 807750)}
+[DEBUG]2021-03-26 14:13:19,811: *task[605d7774c95becbca68e7959][AGV03] AP13(LM15) -> AP35(LM3) [dropPayload] dropPayloadMove -> dropPayload
+[INFO]2021-03-26 14:13:19,920: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:20,032: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:20,033: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:20,466: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:20,487: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:20,509: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:20,656: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:20,656: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:20,660: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:20,661: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:20,662: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:20,676: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:20,677: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:20,715: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=16832
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:20,720: [return] use 58 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:20,721: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:21,042: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:21,109: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:21,110: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:21,242: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:21,246: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:21,261: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:21,321: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:21,322: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:21,327: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:21,328: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:21,330: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:21,335: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:21,337: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:21,366: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=26184
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:21,368: used 34ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:21,371: [return] use 42 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:21,372: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[DEBUG]2021-03-26 14:13:21,475: GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask addr: 127.0.0.1
+[DEBUG]2021-03-26 14:13:21,477: used 2ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/agv/startCharge?appName=scadaTask
+[WARNING]2021-03-26 14:13:21,486: timer_thread[tid:20492] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=20492 count=1 at 0x000001DAED63CE10>> ,hold 6096 ms
+[INFO]2021-03-26 14:13:21,489: name=timer_thread, pid=11888, tid=20492
+[01] File "C:/Python38/lib/threading.py", line 870, in run() 
+[02] File "D:/python_work/AKMfloor/common/mytimer.py", line 113, in _loop() 
+[03] File "D:/python_work/AKMfloor/common/lock.py", line 122, in _call() 
+[04] File "D:/python_work/AKMfloor/common/lock.py", line 100, in release() 
+[05] File "D:/python_work/AKMfloor/common/enhance.py", line 258, in getTrace() 
+[06] File "D:/python_work/AKMfloor/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-26 14:13:21,894: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:21,897: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:21,910: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:21,997: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:22,000: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:22,024: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:22,025: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:22,026: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:22,031: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:22,032: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:22,050: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=21312
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:22,051: used 20ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:22,052: [return] use 26 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:22,053: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:22,118: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:22,178: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:22,179: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[WARNING]2021-03-26 14:13:22,529: AGV03 low battery charge,batteryLevel= 0.424 start charge level= 0.500
+[WARNING]2021-03-26 14:13:22,549: AGV03 battery 0.424 check failed: isLocked
+[INFO]2021-03-26 14:13:22,639: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:22,645: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:22,652: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:22,718: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:22,718: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:22,722: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:22,723: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:22,724: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:22,738: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:22,739: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:22,770: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=25640
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:22,781: [return] use 57 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:22,782: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:23,187: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:23,247: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:23,248: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:23,317: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:23,326: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:23,333: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:23,397: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:23,398: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:23,403: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:23,404: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:23,405: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:23,411: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:23,414: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:23,451: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=25924
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:23,453: used 42ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:23,456: [return] use 51 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:23,457: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:24,022: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:24,053: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:24,095: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:24,197: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:24,205: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:24,209: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:24,210: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:24,211: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:24,218: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:24,219: +++type: <class 'str'>
+[INFO]2021-03-26 14:13:24,261: +++type: <class 'int'>
+[CRITICAL]2021-03-26 14:13:24,262: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=16832
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:24,264: used 3ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:24,266: [return] use 55 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:24,267: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:24,326: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:24,326: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:24,801: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:24,807: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:24,824: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:24,887: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:24,888: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:24,894: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:24,895: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:24,896: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:24,903: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:24,905: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:24,943: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=25432
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:24,945: used 42ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:24,950: [return] use 54 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:24,951: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:25,334: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:25,395: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:25,396: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:25,477: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:25,484: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:25,491: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:25,558: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:25,563: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:25,571: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:25,572: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:25,574: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:25,590: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:25,592: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:25,619: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=25608
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:25,620: used 31ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:25,623: [return] use 49 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:25,623: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:26,152: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:26,158: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:26,174: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:26,248: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:26,249: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:26,254: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:26,255: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:26,256: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:26,261: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:26,263: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:26,289: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=13224
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:26,290: used 29ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:26,293: [return] use 37 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:26,294: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:26,407: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:26,489: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:26,500: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:26,807: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:26,810: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:26,815: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:26,882: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:26,884: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:26,889: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:26,890: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:26,890: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:26,906: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:26,907: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:26,942: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=25924
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:26,943: used 37ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:26,946: [return] use 56 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:26,948: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:27,475: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:27,483: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:27,504: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:27,545: +++type: <class 'int'>
+[INFO]2021-03-26 14:13:27,568: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:27,569: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:27,572: result: inbuf[12] AB 66 00 00 05 81 00 00 02 04 74 03
+[INFO]2021-03-26 14:13:27,588: lift status: {'isMaintain': 'normal', 'isOpening': 0, 'isClosing': 0, 'isFinishOpen': 0, 'inFloor': 2, 'isRunning': 0, 'reachFloorStatus': 1, 'openDoorStatus': None, 'cancelStatus': None, 'reachTargetFloor': None, 'downStatus': 0, 'upStatus': 0}
+[INFO]2021-03-26 14:13:27,590: ELEVATOR01 go floor AGV03 4[AKM4F.AP1]
+[INFO]2021-03-26 14:13:27,600: go floor 4 by ELEVATOR01
+[DEBUG]2021-03-26 14:13:27,604: send http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:27,611: GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01 addr: 127.0.0.1
+[INFO]2021-03-26 14:13:27,612: +++type: <class 'str'>
+[CRITICAL]2021-03-26 14:13:27,643: invoke <function urlElevatorgo at 0x000001DAEE871160> cause a error: '<' not supported between instances of 'str' and 'int'
+pid=11888, ppid=20496, tid=7636
+Traceback (most recent call last):
+  File "D:\python_work\AKMfloor\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_work\AKMfloor\elevator\main_elevator.py", line 17, in urlElevatorgo
+    ret = elevatorInfo.gofloor(f)
+  File "D:\python_work\AKMfloor\elevator\elevatorMgr.py", line 111, in gofloor
+    return elevatorControl.goFloor(self.ip,self.port,id=0,floor=floor)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 199, in goFloor
+    buf = getSendBuffer(BNK, NOD, data)
+  File "D:\python_work\AKMfloor\elevator\elevatorControlFuzhou.py", line 76, in getSendBuffer
+    buf.setByte(x)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 159, in setByte
+    self._checkRange(value,0,255)
+  File "D:\python_work\AKMfloor\common\buffer.py", line 210, in _checkRange
+    if value < min:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[DEBUG]2021-03-26 14:13:27,645: used 35ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[DEBUG]2021-03-26 14:13:27,651: [return] use 46 ms,http_get: http://127.0.0.1:5551/api/elevator/go?floor=4&id=ELEVATOR01
+[ERROR]2021-03-26 14:13:27,652: elevatorApi failed: TypeError: '<' not supported between instances of 'str' and 'int'
+[INFO]2021-03-26 14:13:28,164: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:28,167: AGV03 block ELEVATOR01
+[INFO]2021-03-26 14:13:28,170: +++type: <class 'int'>

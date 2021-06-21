@@ -1,0 +1,34 @@
+[CRITICAL]2021-03-31 10:37:10,596: invoke <function urlMove at 0x000001A500EA6AE8> cause a error: comba-ZSC-F1-F3.LM121->comba-ZSC-F1-F3.CP143 路径不存在1,agvId=AGV02
+pid=3812, ppid=7976, tid=10996
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\main_agv.py", line 123, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvControl.py", line 1240, in move
+    _func()
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvControl.py", line 1206, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: comba-ZSC-F1-F3.LM121->comba-ZSC-F1-F3.CP143 路径不存在1,agvId=AGV02
+
+[CRITICAL]2021-03-31 10:37:10,610: taskFunc2:task[6063e04f0510adc5d5b72f24][AGV02] CP143(LM118) -> AP101(LM145) [startMoveJackup] cause a error: Exception: comba-ZSC-F1-F3.LM121->comba-ZSC-F1-F3.CP143 路径不存在1,agvId=AGV02
+pid=3812, ppid=7976, tid=13148
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 731, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 607, in handle
+    self._moveJackup()
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 826, in _moveJackup
+    agvApi.moveJackup(self.agvId, self.param["floorId"]+'.'+self.param["location"], self.onFinish, self.param, use_pgv=False)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 182, in moveJackup
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 170, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: comba-ZSC-F1-F3.LM121->comba-ZSC-F1-F3.CP143 路径不存在1,agvId=AGV02
+

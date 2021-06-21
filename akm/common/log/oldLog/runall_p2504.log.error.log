@@ -1,0 +1,21 @@
+[CRITICAL]2021-02-26 10:01:24,694: agvApi send task, agvId=diniu01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=2504, ppid=3168, tid=2728
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 204, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 253, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 291, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "D:\akm\common\tcpSocketLong.py", line 150, in send
+    raise e
+  File "D:\akm\common\tcpSocketLong.py", line 145, in send
+    c.send(sendData)
+  File "D:\akm\common\tcpSocketLong.py", line 81, in send
+    self._socket.send(sendData)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

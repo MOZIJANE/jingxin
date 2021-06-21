@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>串口通讯的python模块——pySerial - starspace - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./pySerial_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./pySerial_files/bundle-AnotherEon001.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./pySerial_files/bundle-AnotherEon001-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/starspace/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/starspace/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/starspace/wlwmanifest.xml">
+<script async="" src="./pySerial_files/analytics.js.下载"></script><script src="./pySerial_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'starspace', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./pySerial_files/blog-common.js.下载" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<div id="wrapper">
+<div id="header">
+
+<div id="top">
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/starspace/">星星的天空</a></h1>
+<div id="subtitle">放飞翅膀</div>
+</div>
+<div id="sub"><div id="blog_stats">
+<div class="BlogStats">随笔 - 472, 文章 - 1, 评论 - 33, 引用 - 2</div>
+</div></div>
+
+
+
+</div>
+<div id="main_container">
+<div id="main_content">
+<div id="content">
+	
+<div id="post_detail">
+	<div class="post">
+		<h2>
+			<a id="cb_post_title_url" href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html">串口通讯的python模块——pySerial</a>
+		</h2>
+		<div class="postbody">
+		<div id="cnblogs_post_body"><h1 id="tocpySerial0">pySerial</h1>
+<h2 id="tocpySerial1">Overview</h2>
+This module encapsulates the access for the serial port. It provides backends for Python running on Windows, Linux, BSD (possibly any POSIX compliant system), Jython and IronPython (.NET and Mono). The module named "serial" automatically selects the appropriate backend.<br>
+<br>
+It is released under a free software license, see <a class="wiki_link_ext" href="http://pyserial.svn.sourceforge.net/viewvc/*checkout*/pyserial/trunk/pyserial/LICENSE.txt" rel="nofollow">LICENSE.txt</a> for more details.<br>
+(C) 2001-2008 Chris Liechti <a class="wiki_link_ext" href="mailto:cliechti@gmx.net" rel="nofollow">cliechti@gmx.net</a><br>
+<br>
+The <a class="wiki_link_ext" href="http://sourceforge.net/projects/pyserial/" rel="nofollow">project page on SourceForge</a> and here is the <a class="wiki_link_ext" href="http://sourceforge.net/svn/?group_id=46487" rel="nofollow">SVN repository</a> and the <a class="wiki_link_ext" href="http://sourceforge.net/project/showfiles.php?group_id=46487" rel="nofollow">Download Page</a>.<br>
+The homepage is on <a class="wiki_link_ext" href="http://pyserial.sf.net/" rel="nofollow">http://pyserial.sf.net/</a><br>
+<br>
+<h2 id="tocpySerial2">Features</h2>
+<ul>
+    <li>same class based interface on all supported platforms</li>
+    <li>access to the port settings through Python 2.2+ properties</li>
+    <li>port numbering starts at zero, no need to know the port name in the user program</li>
+    <li>port string (device name) can be specified if access through numbering is inappropriate</li>
+    <li>support for different bytesizes, stopbits, parity and flow control with RTS/CTS and/or Xon/Xoff</li>
+    <li>working with or without receive timeout</li>
+    <li>file like API with "read" and "write" ("readline" etc. also supported)</li>
+    <li>The files in this package are 100% pure Python. They depend on non standard but common packages on Windows (pywin32) and Jython (JavaComm). POSIX (Linux, BSD) uses only modules from the standard Python distribution)</li>
+    <li>The port is set up for binary transmission. No NULL byte stripping, CR-LF translation etc. (which are many times enabled for POSIX.) This makes this module universally useful. </li>
+</ul>
+<br>
+<h2 id="tocpySerial3">Requirements</h2>
+<ul>
+    <li>Python 2.2 or newer</li>
+    <li>pywin32 extensions on Windows</li>
+    <li>"Java Communications" (JavaComm) or compatible extension for Java/Jython </li>
+</ul>
+<br>
+<h2 id="tocpySerial4">Installation</h2>
+<br>
+<h3 id="tocpySerial5">from source</h3>
+Extract files from the archive, open a shell/console in that directory and let Distutils do the rest:<br>
+<tt>python setup.py install</tt><br>
+<br>
+The files get installed in the "Lib/site-packages" directory.<br>
+<br>
+<h3 id="tocpySerial6">easy_install</h3>
+An EGG is available from the Python Package Index: <a class="wiki_link_ext" href="http://pypi.python.org/pypi/pyserial" rel="nofollow">http://pypi.python.org/pypi/pyserial</a><br>
+<tt>easy_install pyserial</tt><br>
+<br>
+<h3 id="tocpySerial7">windows installer</h3>
+There is also a Windows installer for end users. It is located in the <a class="wiki_link_ext" href="http://sourceforge.net/project/showfiles.php?group_id=46487" rel="nofollow">Download Page</a><br>
+Developers may be interested to get the source archive, because it contains examples and the readme.<br>
+<br>
+<h2 id="tocpySerial8">Short introduction</h2>
+Open port 0 at "9600,8,N,1", no timeout<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">&gt;&gt;&gt; import serial
+&gt;&gt;&gt; ser = serial.Serial(0)  # open first serial port
+&gt;&gt;&gt; print ser.portstr       # check which port was really used
+&gt;&gt;&gt; ser.write("hello")      # write a string
+&gt;&gt;&gt; ser.close()             # close port</pre>
+Open named port at "19200,8,N,1", 1s timeout<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">&gt;&gt;&gt; ser = serial.Serial('/dev/ttyS1', 19200, timeout=1)
+&gt;&gt;&gt; x = ser.read()          # read one byte
+&gt;&gt;&gt; s = ser.read(10)        # read up to ten bytes (timeout)
+&gt;&gt;&gt; line = ser.readline()   # read a '\n' terminated line
+&gt;&gt;&gt; ser.close()</pre>
+Open second port at "38400,8,E,1", non blocking HW handshaking<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">&gt;&gt;&gt; ser = serial.Serial(1, 38400, timeout=0,
+...                     parity=serial.PARITY_EVEN, rtscts=1)
+&gt;&gt;&gt; s = ser.read(100)       # read up to one hundred bytes
+...                         # or as much is in the buffer</pre>
+Get a Serial instance and configure/open it later<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">&gt;&gt;&gt; ser = serial.Serial()
+&gt;&gt;&gt; ser.baudrate = 19200
+&gt;&gt;&gt; ser.port = 0
+&gt;&gt;&gt; ser
+Serial&lt;id=0xa81c10, open=False&gt;(port='COM1', baudrate=19200, bytesize=8, parity='N', stopbits=1, timeout=None, xonxoff=0, rtscts=0)
+&gt;&gt;&gt; ser.open()
+&gt;&gt;&gt; ser.isOpen()
+True
+&gt;&gt;&gt; ser.close()
+&gt;&gt;&gt; ser.isOpen()
+False</pre>
+Be carefully when using "readline". Do specify a timeout when opening the serial port otherwise it could block forever if no newline character is received. Also note that "readlines" only works with a timeout. "readlines" depends on having a timeout and interprets that as EOF (end of file). It raises an exception if the port is not opened correctly.<br>
+Do also have a look at the example files in the examples directory in the source distribution or online.<br>
+<br>
+<h2 id="tocpySerial9">Examples</h2>
+Please look in the SVN Repository. There is an example directory where you can find a simple terminal and more.<br>
+<a class="wiki_link_ext" href="http://pyserial.svn.sourceforge.net/viewvc/pyserial/trunk/pyserial/examples/" rel="nofollow">http://pyserial.svn.sourceforge.net/viewvc/pyserial/trunk/pyserial/examples/</a><br>
+<br>
+<h2 id="tocpySerial10">Parameters for the Serial class</h2>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">ser = serial.Serial(
+port=None,              # number of device, numbering starts at
+# zero. if everything fails, the user
+# can specify a device string, note
+# that this isn't portable anymore
+# if no port is specified an unconfigured
+# an closed serial port object is created
+baudrate=9600,          # baud rate
+bytesize=EIGHTBITS,     # number of databits
+parity=PARITY_NONE,     # enable parity checking
+stopbits=STOPBITS_ONE,  # number of stopbits
+timeout=None,           # set a timeout value, None for waiting forever
+xonxoff=0,              # enable software flow control
+rtscts=0,               # enable RTS/CTS flow control
+interCharTimeout=None   # Inter-character timeout, None to disable
+)</pre>
+The port is immediately opened on object creation, if a port is given. It is not opened if port is None.<br>
+Options for read timeout:<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">timeout=None            # wait forever
+timeout=0               # non-blocking mode (return immediately on read)
+timeout=x               # set timeout to x seconds (float allowed)</pre>
+<br>
+<h2 id="tocpySerial11">Methods of Serial instances</h2>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">open()                  # open port
+close()                 # close port immediately
+setBaudrate(baudrate)   # change baud rate on an open port
+inWaiting()             # return the number of chars in the receive buffer
+read(size=1)            # read "size" characters
+write(s)                # write the string s to the port
+flushInput()            # flush input buffer, discarding all it's contents
+flushOutput()           # flush output buffer, abort output
+sendBreak()             # send break condition
+setRTS(level=1)         # set RTS line to specified logic level
+setDTR(level=1)         # set DTR line to specified logic level
+getCTS()                # return the state of the CTS line
+getDSR()                # return the state of the DSR line
+getRI()                 # return the state of the RI line
+getCD()                 # return the state of the CD line</pre>
+<br>
+<h2 id="tocpySerial12">Attributes of Serial instances</h2>
+Read Only:<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">portstr                 # device name
+BAUDRATES               # list of valid baudrates
+BYTESIZES               # list of valid byte sizes
+PARITIES                # list of valid parities
+STOPBITS                # list of valid stop bit widths</pre>
+New values can be assigned to the following attributes, the port will be reconfigured, even if it's opened at that time:<br>
+<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">port                    # port name/number as set by the user
+baudrate                # current baud rate setting
+bytesize                # byte size in bits
+parity                  # parity setting
+stopbits                # stop bit with (1,2)
+timeout                 # timeout setting
+xonxoff                 # if Xon/Xoff flow control is enabled
+rtscts                  # if hardware flow control is enabled</pre>
+<br>
+<h2 id="tocpySerial13">Exceptions</h2>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">serial.SerialException</pre>
+<br>
+<h2 id="tocpySerial14">Constants</h2>
+parity:<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">    serial.PARITY_NONE
+serial.PARITY_EVEN
+serial.PARITY_ODD</pre>
+stopbits:<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">    serial.STOPBITS_ONE
+serial.STOPBITS_TWO</pre>
+bytesize:<br>
+<style type="text/css"><!-- /* GeSHi (c) Nigel McNie 2004 (http://qbnz.com/highlighter) */
+.text .imp {font-weight: bold; color: red;}
+
+-->
+</style>
+<pre class="text">    serial.FIVEBITS
+serial.SIXBITS
+serial.SEVENBITS
+serial.EIGHTBITS</pre></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/starspace/category/158671.html" target="_blank">网络编程</a>,<a href="http://www.cnblogs.com/starspace/category/159624.html" target="_blank">python</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(1394603,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;4bf8460b-63cf-dd11-9e4d-001cf0cd104b&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./pySerial_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./pySerial_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/starspace/" target="_blank"><img src="./pySerial_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/starspace/">starspace</a><br>
+            <a href="http://home.cnblogs.com/u/starspace/followees">关注 - 0</a><br>
+            <a href="http://home.cnblogs.com/u/starspace/followers">粉丝 - 28</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;4bf8460b-63cf-dd11-9e4d-001cf0cd104b&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(1394603,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">1</span>
+    </div>
+    <div class="buryit" onclick="votePost(1394603,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394595.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394595.html" title="发布于2009-02-20 10:32">perl串口通信实例 </a><br><a href="http://www.cnblogs.com/starspace/archive/2009/02/21/1395382.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/starspace/archive/2009/02/21/1395382.html" title="发布于2009-02-21 12:57">linux PS1 提示符定义</a><br></div>
+</div>
+
+
+		</div>
+		<p class="postfoot">
+			posted on <span id="post-date">2009-02-20 10:36</span> <a href="http://www.cnblogs.com/starspace/">starspace</a> 阅读(<span id="post_view_count">15051</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=1394603" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html#" onclick="AddToWz(1394603);return false;">收藏</a>
+		</p>
+	</div>
+	<script type="text/javascript">var allowComments=false,cb_blogId=45433,cb_entryId=1394603,cb_blogApp=currentBlogApp,cb_blogUserGuid='4bf8460b-63cf-dd11-9e4d-001cf0cd104b',cb_entryCreatedDate='2009/2/20 10:36:00';loadViewCount(cb_entryId);</script>
+	
+	</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html#top">返回顶部</a></div>
+<div id="comment_form_container">（评论功能已被禁用）</div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/576868/" target="_blank">乐视系公司重新站队 金融体育业务或相继被转让</a><br> ·  <a href="http://news.cnblogs.com/n/576870/" target="_blank">谷歌开源语音命令数据集，帮助开发者搭建基础的语音交互</a><br> ·  <a href="http://news.cnblogs.com/n/576871/" target="_blank">Magic Leap与前员工秘密和解，但真正的考验是技术开发</a><br> ·  <a href="http://news.cnblogs.com/n/576872/" target="_blank">Facebook最具吸引力的视频主题竟是食品</a><br> ·  <a href="http://news.cnblogs.com/n/576869/" target="_blank">Uber将向非营利性组织Girls Who Code捐赠120万美元</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/575829/" target="_blank">做到这一点，你也可以成为优秀的程序员</a><br> ·  <a href="http://kb.cnblogs.com/page/566880/" target="_blank">写给立志做码农的大学生</a><br> ·  <a href="http://kb.cnblogs.com/page/569057/" target="_blank">架构腐化之谜</a><br> ·  <a href="http://kb.cnblogs.com/page/572854/" target="_blank">学会思考，而不只是编程</a><br> ·  <a href="http://kb.cnblogs.com/page/574767/" target="_blank">编写Shell脚本的最佳实践</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+</div>
+</div>
+<div id="leftmenu">
+
+
+<h3>导航</h3>
+<ul>
+<li>
+<a id="blog_nav_sitehome" href="http://www.cnblogs.com/">博客园</a></li>
+<li>
+<a id="blog_nav_myhome" class="two_words" href="http://www.cnblogs.com/starspace/">首页</a></li>
+<li>
+<a id="blog_nav_newpost" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li>
+<a id="blog_nav_contact" accesskey="9" class="two_words" rel="nofollow" href="https://msg.cnblogs.com/send/starspace">联系</a></li>
+<li>
+<a id="blog_nav_rss" class="two_words" href="http://www.cnblogs.com/starspace/rss">订阅</a>
+<a id="blog_nav_rss_image" href="http://www.cnblogs.com/starspace/rss"><img src="./pySerial_files/xml.gif" alt="订阅"></a>
+</li>
+<li>
+<a id="blog_nav_admin" class="two_words" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+
+<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2009/01/01&#39;);return false;">&lt;</a></td><td align="center">2009年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2009/03/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td></tr><tr><td class="CalWeekendDay" align="center">1</td><td align="center">2</td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/03.html"><u>3</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/04.html"><u>4</u></a></td><td align="center">5</td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/06.html"><u>6</u></a></td><td class="CalWeekendDay" align="center">7</td></tr><tr><td class="CalWeekendDay" align="center">8</td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/09.html"><u>9</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/10.html"><u>10</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/11.html"><u>11</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/12.html"><u>12</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/13.html"><u>13</u></a></td><td class="CalWeekendDay" align="center">14</td></tr><tr><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/15.html"><u>15</u></a></td><td align="center">16</td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/17.html"><u>17</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/18.html"><u>18</u></a></td><td align="center">19</td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/20.html"><u>20</u></a></td><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/21.html"><u>21</u></a></td></tr><tr><td class="CalWeekendDay" align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/22.html"><u>22</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/23.html"><u>23</u></a></td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/24.html"><u>24</u></a></td><td align="center">25</td><td align="center">26</td><td align="center"><a href="http://www.cnblogs.com/starspace/archive/2009/02/27.html"><u>27</u></a></td><td class="CalWeekendDay" align="center">28</td></tr><tr><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+<meta name="vs_showGrid" content="False">
+
+<h3>公告</h3>
+<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/starspace/">starspace</a><br>园龄：<a href="http://home.cnblogs.com/u/starspace/" title="入园时间：2008-10-13">8年10个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/starspace/followers/">28</a><br>关注：<a href="http://home.cnblogs.com/u/starspace/followees/">0</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;4bf8460b-63cf-dd11-9e4d-001cf0cd104b&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+
+<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/starspace/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/starspace/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/starspace/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/starspace/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/starspace/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+		<h3>随笔分类</h3>
+		
+				<ul>
+			
+				<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/starspace/category/158672.html">.net新技术(63)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/starspace/category/158843.html">asp.net(44)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/starspace/category/162169.html">Javasript(18)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/starspace/category/158098.html">linux学习(114)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/starspace/category/162281.html">perl(37)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/starspace/category/166674.html">php(4)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/starspace/category/159624.html">python(29)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/starspace/category/158104.html">UI设计(9)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/starspace/category/158103.html">常用软件(52)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/starspace/category/158102.html">代码工厂(1)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/starspace/category/158260.html">批处理(57)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/starspace/category/158100.html">权限访问控制</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/starspace/category/158274.html">数据库相关(12)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/starspace/category/158671.html">网络编程(105)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/starspace/category/158101.html">系统架构(22)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/starspace/category/158126.html">正则表达式(3)</a></li>
+			
+				<li><a id="CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/starspace/category/158099.html">自动化测试(45)</a></li>
+			
+				</ul>
+			
+	
+		<h3>随笔档案</h3>
+		
+				<ul>
+			
+				<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/starspace/archive/2009/05.html">2009年5月 (16)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/starspace/archive/2009/04.html">2009年4月 (28)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/starspace/archive/2009/03.html">2009年3月 (42)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/starspace/archive/2009/02.html">2009年2月 (46)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/starspace/archive/2009/01.html">2009年1月 (71)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/starspace/archive/2008/12.html">2008年12月 (84)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/starspace/archive/2008/11.html">2008年11月 (83)</a></li>
+			
+				<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/starspace/archive/2008/10.html">2008年10月 (102)</a></li>
+			
+				</ul>
+			
+	</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/starspace/archive/2009/02/24/1397039.html#3035707">1. Re:CURL --- 命令行浏览器</a></li>
+        <li class="recent_comment_body">好 ~</li>
+        <li class="recent_comment_author">--柳qing</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/starspace/archive/2008/12/10/1351926.html#2864335">2. Re:Perl Unicode全攻略</a></li>
+        <li class="recent_comment_body">写的太棒了，谢谢</li>
+        <li class="recent_comment_author">--beilei</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/starspace/archive/2009/02/24/1397039.html#2806501">3. Re:CURL --- 命令行浏览器</a></li>
+        <li class="recent_comment_body">这个好</li>
+        <li class="recent_comment_author">--SmallDong</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/starspace/archive/2009/05/15/1458038.html#2393685">4. Re:用VIM做PHP开发环境</a></li>
+        <li class="recent_comment_body">博主，我装好taglist之后，然后在写好配置文件之后保存的时候，会有这个提示，很头疼，不知道该如何解决</li>
+        <li class="recent_comment_author">--淡定的502</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/starspace/archive/2009/02/04/1383612.html#2297625">5. Re:perl网络编程学习笔记(二)</a></li>
+        <li class="recent_comment_body">哥们，我弱问个问题，我最近在学perl编程，但我始终感觉不到perl进行网络编程的优势在哪里啊。。。？ 同样的东西我为什么要用perl来写呢？ 它连多线程都不支持。。。 不知道你有没有什么好的建议。。......</li>
+        <li class="recent_comment_author">--王帅901</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html">1. 串口通讯的python模块——pySerial(15051)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/02/24/1397043.html">2. 在Windows下使用curl命令(10407)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/02/13/1390062.html">3. shell中获取本机ip地址(8671)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/01/05/1368828.html">4. 批处理中的变量与命令set的用法(7824)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/02/23/1396250.html">5. 初识Linux　.bash_profile, .bash_logout, and .bashrc 文件(7769)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/starspace/archive/2009/01/19/1378546.html">1. C#编写简单的聊天程序(4)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/02/24/1397039.html">2. CURL --- 命令行浏览器(2)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2008/11/06/1328393.html">3. Hook钩子攻略 (2)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/05/15/1458038.html">4. 用VIM做PHP开发环境(2)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/04/17/1438345.html">5. XML-RPC(2)</a></li></ul></div>
+</div></div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/starspace/archive/2009/01/15/1376288.html">1. netcat使用指南(2)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/01/04/1368261.html">2. Rexec命令(1)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2009/02/20/1394603.html">3. 串口通讯的python模块——pySerial(1)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2008/10/20/1315380.html">4. find查找文件的时候排除某个或几个文件或目录(1)</a></li><li><a href="http://www.cnblogs.com/starspace/archive/2008/12/08/1350323.html">5. python中eval, exec, execfile,和compile(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+
+</div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+
+<p id="footer">
+	Powered by: 
+	<br>
+	
+	<a id="Footer1_Hyperlink3" name="Hyperlink1" href="http://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br>
+	Copyright © starspace
+</p>
+</div>
+</div>
+
+
+
+</body></html>

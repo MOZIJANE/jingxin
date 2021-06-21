@@ -1,0 +1,11 @@
+[CRITICAL]2021-04-22 11:01:51,300: taskFunc2:task[6080e71436b6f45cd862c7b1][AGV30] LM16(LM17) -> LM9(LM12) [moveToPreSrc_onfinish] cause a error: not enough arguments for format string
+pid=6252, ppid=17100, tid=16496
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 578, in _taskFunc
+    elif not self.handle():
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 401, in handle
+    log.info("移动到 %s的前置点 %s" % self.source % self.s_info["prepoint"])
+TypeError: not enough arguments for format string
+

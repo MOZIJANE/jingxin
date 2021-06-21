@@ -1,0 +1,33 @@
+[CRITICAL]2021-06-11 15:52:21,901: 192.168.252.159:10001 <--> 192.168.252.147:62446 error:  cause a error: 'int' object has no attribute 'strip'
+pid=10196, ppid=21516, tid=12576
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 179, in _handle
+    addTaskByButton(target=target)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 218, in addTaskByButton
+    taskId = runTasks01.addTaskByButton(source, target, payloadId, priority, btTag, taskKind)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\runTasks01.py", line 87, in addTaskByButton
+    task = scadaTaskBean.scadaTask(source, target, payloadId, int(priority),btTag,taskKind)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 56, in __init__
+    self.target = target.strip()
+AttributeError: 'int' object has no attribute 'strip'
+
+[CRITICAL]2021-06-11 15:52:32,429: 192.168.252.159:10001 <--> 192.168.252.147:62447 time out cause a error: <tcpSocket.client object at 0x0000018DC2C6DD30>
+pid=10196, ppid=21516, tid=19600
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 131, in _handle
+    data = client.recv(6)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 179, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2021-06-11 15:52:42,894: 192.168.252.159:10001 <--> 192.168.252.147:62448 time out cause a error: <tcpSocket.client object at 0x0000018DC2C6DCF8>
+pid=10196, ppid=21516, tid=12860
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 131, in _handle
+    data = client.recv(6)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 179, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+

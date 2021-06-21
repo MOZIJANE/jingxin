@@ -1,0 +1,14 @@
+[CRITICAL]2021-06-11 12:51:17,362: import main_feed failed, path: feed cause a error: [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+pid=18148, ppid=10024, tid=12616
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 300, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 195, in main
+    buttonSer = tcpSocket.server(ip, port, connectLen=200, acceptCallback=response)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 35, in __init__
+    self._socket.bind(self._addr)
+OSError: [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+
+[CRITICAL]2021-06-11 12:51:17,368: import main_feed failed, path: feed ,cause [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。

@@ -1,0 +1,1876 @@
+[CRITICAL]2021-06-04 15:27:40,578: upStation01 init failed cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\deviceCtrl.py", line 175, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 15:27:46,599: [modbusApi: 172.16.167.221] execute fcode=1, addr=8256 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=8824
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:27:47,282: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=8824
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 318, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:27:47,413: invoke <function urlReadDOList at 0x00000231EC74F8C8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=8824
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 109, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 162, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 318, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:27:56,718: downStation01 init failed cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'downStation01'}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\deviceCtrl.py", line 175, in _checkInit
+    s = ioApi.readDOList(devices[d][ioId])["status"]
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'downStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 15:28:07,498: [modbusApi: 172.16.167.220] execute fcode=1, addr=8256 exception:  cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=12116
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:28:07,740: downStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=12116
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 318, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:28:07,882: invoke <function urlReadDOList at 0x00000231EC74F8C8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=12116
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 109, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 162, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 318, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:28:12,882: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 15:28:19,116: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=8724
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:28:19,196: invoke <function urlReadDOList at 0x00000231EC74F8C8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=8724
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 109, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 162, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:28:30,647: readDIList error cause a error: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\deviceCtrl.py", line 71, in _monitorDevices
+    s1 = ioApi.readDOList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 73, in readDOList
+    return _remoteio('/api/remoteio/readDOList', id, param)
+  File "..\remoteio\remoteioApi.py", line 100, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/remoteio/readDOList', {'id': 'upStation01'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 15:28:40,367: upStation01 readDIList fail cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=12120
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:28:40,479: invoke <function urlReadDOList at 0x00000231EC74F8C8> cause a error: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+pid=12208, ppid=4956, tid=12120
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\remoteio\main_remoteio.py", line 109, in urlReadDOList
+    return ioMgr.readDOList(id)
+  File "..\remoteio\remoteioMgr.py", line 162, in readDOList
+    result=remoteioInfo.readDOList()
+  File "..\remoteio\remoteioMgr.py", line 266, in readDOList
+    return self._read(M30, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr.py", line 315, in _read
+    self.master.open()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+[CRITICAL]2021-06-04 15:37:19,431: invoke <function urlGoHome at 0x00000231EDA769D8> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGVchache
+pid=12208, ppid=4956, tid=8824
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 99, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1322, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGVchache
+
+[CRITICAL]2021-06-04 15:37:19,537: task[60b9d65d73dabd2fb0178965][AGVchache] AP142(LM120) -> LM146(LM145) [finish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGVchache
+pid=12208, ppid=4956, tid=5916
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1153, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 131, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGVchache
+
+[CRITICAL]2021-06-04 16:02:24,637: [modbusApi: 172.16.166.181] execute fcode=1, addr=0 exception:  cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-04 16:02:24,827: 3FElevarot readDIList fail cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr_old.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-04 16:02:25,105: invoke timer func<function lock.<locals>.call.<locals>._call at 0x00000231EDCFCF28> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDIList('3FElevarot')['status'][4]
+  File "..\remoteio\remoteioMgr_old.py", line 87, in readDIList
+    result=remoteioInfo.readDIList()
+  File "..\remoteio\remoteioMgr_old.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-04 16:03:17,290: [modbusApi: 172.16.166.181] execute fcode=1, addr=0 exception:  cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-04 16:03:17,491: 3FElevarot readDIList fail cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "..\remoteio\remoteioMgr_old.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-04 16:03:17,666: invoke timer func<function lock.<locals>.call.<locals>._call at 0x00000231EDCFCF28> cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=12208, ppid=4956, tid=12160
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 257, in run
+    checkLampStatus()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 183, in checkLampStatus
+    status = ioMgr.readDIList('3FElevarot')['status'][4]
+  File "..\remoteio\remoteioMgr_old.py", line 87, in readDIList
+    result=remoteioInfo.readDIList()
+  File "..\remoteio\remoteioMgr_old.py", line 138, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "..\remoteio\remoteioMgr_old.py", line 172, in _read
+    s = self.master.read(mdef.READ_COILS,addr, length)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-06-04 16:09:33,721: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:09:33,814: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:09:33,920: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:09:34,019: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:09:34,172: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:09:34,235: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:09:44,885: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:09:45,327: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:09:45,438: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:09:45,551: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:09:45,704: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:09:45,750: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:09:56,249: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:09:56,362: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:09:56,461: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:09:56,642: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:09:56,745: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:09:56,794: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:07,614: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:10:07,743: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:10:07,833: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:10:07,945: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:10:08,081: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:10:08,159: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:10:10,260: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:10,342: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:10,436: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:10,572: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:10,696: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:10,759: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:18,724: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:10:18,813: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:10:18,999: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:10:19,183: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:10:19,291: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:10:19,361: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:10:21,453: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:21,553: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:21,658: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:21,795: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:21,902: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:21,947: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:22,792: task[60b9df8b73dabd2fb017897e][AGVchache] AP142(LM120) -> LM146(LM145) [startMoveAGV] jackDown cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1080, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 15, in http_get
+    r = webutility.http_get(url, param,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 16:10:29,839: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:29,970: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:30,111: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:30,251: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:30,572: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:30,714: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:32,886: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:32,986: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:33,099: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:33,217: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:33,345: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:33,386: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:10:35,159: invoke <function urlJackdown at 0x00000231ED7F4950> cause a error: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+pid=12208, ppid=4956, tid=10984
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 73, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 29, in jackDown
+    return _jack(agvId=agvId, timeout=timeout, action="down", successfulNum=1)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 119, in _jack
+    raise Exception(error)
+Exception: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+
+[CRITICAL]2021-06-04 16:10:41,261: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:10:41,412: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:10:41,507: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:10:41,691: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:10:41,892: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:10:41,925: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:10:44,038: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:44,142: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:44,239: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:44,411: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:44,638: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:44,730: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:10:52,425: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:52,527: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:52,616: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:52,750: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:52,844: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:52,890: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:10:55,335: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:10:55,434: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:10:55,547: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:10:55,666: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:10:55,826: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:10:55,883: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:03,379: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:03,516: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:03,616: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:03,718: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:03,826: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:03,883: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:06,400: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:06,509: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:06,665: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:06,803: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:06,896: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:06,937: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:14,431: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:14,592: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:14,705: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:14,791: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:14,892: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:14,933: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:17,449: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:17,577: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:17,688: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:17,806: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:17,917: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:17,957: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:25,536: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:25,684: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:25,810: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:25,916: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:26,033: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:26,103: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:11:28,671: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:11:28,801: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:11:28,894: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:11:29,026: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:11:29,139: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:11:29,173: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:11:36,733: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:11:36,852: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:11:36,940: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:11:37,046: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:11:37,154: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:11:37,225: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:11:39,750: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:39,861: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:39,967: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:40,055: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:40,204: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:40,250: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:11:47,833: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:47,986: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:48,087: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:48,200: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:48,357: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:48,440: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:11:51,114: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:51,220: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:51,372: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:51,542: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:51,617: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:51,710: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:11:57,294: task[60b9df8b73dabd2fb017897e][AGVchache] AP142(LM120) -> LM146(LM145) [startMoveAGV] jackDown cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1080, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 15, in http_get
+    r = webutility.http_get(url, param,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 16:11:59,209: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:59,356: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:59,454: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:59,674: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:59,844: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:11:59,926: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:02,348: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:02,415: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:02,538: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:02,650: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:02,737: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:02,774: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:10,574: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:10,778: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:10,942: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:11,091: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:11,268: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:11,301: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:13,613: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:13,754: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:13,873: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:13,979: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:14,102: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:14,178: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:18,442: invoke <function urlJackdown at 0x00000231ED7F4950> cause a error: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+pid=12208, ppid=4956, tid=11228
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 73, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 29, in jackDown
+    return _jack(agvId=agvId, timeout=timeout, action="down", successfulNum=1)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 119, in _jack
+    raise Exception(error)
+Exception: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+
+[CRITICAL]2021-06-04 16:12:21,968: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:22,085: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:22,233: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:22,395: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:22,581: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:22,632: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:24,832: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:12:24,937: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:12:25,037: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:12:25,159: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:12:25,313: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:12:25,418: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:12:33,233: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:33,378: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:33,514: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:33,655: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:33,899: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:33,945: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:12:36,080: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:12:36,179: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:12:36,315: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:12:36,519: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:12:36,652: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:12:36,735: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:12:44,499: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:44,614: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:44,702: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:44,781: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:44,861: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:44,895: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:12:47,297: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:47,434: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:47,610: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:47,864: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:48,010: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:48,080: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:12:55,489: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:55,610: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:55,722: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:55,810: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:55,927: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:55,997: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:12:58,702: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:58,820: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:58,944: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:59,023: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:59,207: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:12:59,320: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:06,619: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:06,748: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:06,846: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:06,945: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:07,044: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:07,089: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:09,907: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:13:10,000: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:13:10,087: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:13:10,297: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:13:10,435: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:13:10,446: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:13:17,764: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:17,951: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:18,051: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:18,182: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:18,309: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:18,360: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:21,063: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:13:21,295: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:13:21,409: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:13:21,604: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:13:21,704: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:13:21,761: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:13:28,954: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:13:29,062: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:13:29,208: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:13:29,304: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:13:29,409: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:13:29,442: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:13:31,871: task[60b9df8b73dabd2fb017897e][AGVchache] AP142(LM120) -> LM146(LM145) [startMoveAGV] jackDown cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1080, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 15, in http_get
+    r = webutility.http_get(url, param,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 16:13:32,417: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:13:32,510: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:13:32,760: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:13:32,901: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:13:33,016: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:13:33,043: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:13:40,163: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:13:40,290: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:13:40,407: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:13:40,467: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:13:40,581: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:13:40,634: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:13:43,753: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:44,009: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:44,095: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:44,279: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:44,393: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:44,479: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:13:47,092: invoke <function urlJackdown at 0x00000231ED7F4950> cause a error: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+pid=12208, ppid=4956, tid=2836
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 73, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 29, in jackDown
+    return _jack(agvId=agvId, timeout=timeout, action="down", successfulNum=1)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 119, in _jack
+    raise Exception(error)
+Exception: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+
+[CRITICAL]2021-06-04 16:13:51,318: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:51,453: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:51,702: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:51,934: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:52,132: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:52,233: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:13:54,920: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:55,109: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:55,342: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:55,550: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:55,672: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:13:55,740: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:02,756: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:02,893: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:03,041: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:03,151: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:03,303: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:03,342: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:06,206: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:06,369: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:06,675: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:06,904: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:06,997: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:07,049: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:14,100: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:14,216: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:14,395: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:14,501: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:14,606: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:14,692: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:17,592: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:14:17,697: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:14:17,827: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:14:18,039: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:14:18,119: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:14:18,183: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:14:25,339: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:14:25,425: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:14:25,543: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:14:25,654: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:14:25,759: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:14:25,821: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=2836
+
+[CRITICAL]2021-06-04 16:14:28,825: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:14:29,112: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:14:29,385: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:14:29,468: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:14:29,573: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:14:29,648: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:14:36,541: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:14:36,644: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:14:36,738: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:14:36,861: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:14:37,001: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:14:37,034: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:14:40,305: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:40,512: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:40,588: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:40,671: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:40,826: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:40,879: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:14:47,685: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:47,785: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:47,879: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:47,990: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:48,091: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:48,171: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=10984
+
+[CRITICAL]2021-06-04 16:14:51,498: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:51,604: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:51,709: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:51,798: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:51,886: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:51,919: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11584
+
+[CRITICAL]2021-06-04 16:14:58,756: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:58,887: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:59,039: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:59,151: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:59,239: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:14:59,284: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3612
+
+[CRITICAL]2021-06-04 16:15:02,530: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:15:02,764: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:15:03,008: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:15:03,168: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:15:03,302: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:15:03,360: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=7644
+
+[CRITICAL]2021-06-04 16:15:06,301: task[60b9df8b73dabd2fb017897e][AGVchache] AP142(LM120) -> LM146(LM145) [startMoveAGV] jackDown cause a error: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+pid=12208, ppid=4956, tid=12060
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1080, in _jackDown
+    jackApi.jackDown(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDown
+    return _jack('/api/agv/jackdown', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 73, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 15, in http_get
+    r = webutility.http_get(url, param,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:8999/api/agv/jackdown', {'agv': 'AGVchache', 'timeoutSec': 90, 'loc': None}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-04 16:15:09,926: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:15:10,025: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:15:10,130: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:15:10,191: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:15:10,336: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:15:10,377: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=1612
+
+[CRITICAL]2021-06-04 16:15:14,118: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:15:14,222: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:15:14,344: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:15:14,466: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:15:14,545: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:15:14,585: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=11068
+
+[CRITICAL]2021-06-04 16:15:20,936: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:15:21,037: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:15:21,083: invoke <function urlJackdown at 0x00000231ED7F4950> cause a error: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+pid=12208, ppid=4956, tid=11228
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\main_agvDevice.py", line 73, in urlJackdown
+    return jackMgr.jackDown(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 29, in jackDown
+    return _jack(agvId=agvId, timeout=timeout, action="down", successfulNum=1)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvDevice\jackMgr.py", line 119, in _jack
+    raise Exception(error)
+Exception: AGVchache执行顶升机构 动作：down,命令超时 timeout=90
+
+[CRITICAL]2021-06-04 16:15:21,195: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:15:21,366: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:15:21,471: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:15:21,523: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfbb73dabd2fb017897f', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=3568
+
+[CRITICAL]2021-06-04 16:15:25,199: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:15:25,298: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:15:25,397: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:15:25,505: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:15:25,580: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=12208, ppid=4956, tid=4048
+
+[CRITICAL]2021-06-04 16:15:25,620: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '60b9dfdf73dabd2fb0178980', 'loc', 'AP142')
+pid=12208, ppid=4956, tid=4048
+

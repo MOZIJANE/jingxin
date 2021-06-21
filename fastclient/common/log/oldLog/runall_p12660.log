@@ -1,0 +1,211 @@
+[INFO]2021-03-17 10:41:23,915: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 10:41:23,916: find module account.main_account
+[INFO]2021-03-17 10:41:23,917: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 10:41:23,918: find module alarm.main_alarm
+[INFO]2021-03-17 10:41:23,918: find module auth.main_auth
+[INFO]2021-03-17 10:41:23,918: find module feed.main_feed
+[INFO]2021-03-17 10:41:23,919: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:41:23,919: import account.main_account
+[INFO]2021-03-17 10:41:24,000: import agvDevice.main_agvDevice
+[INFO]2021-03-17 10:41:24,002: import alarm.main_alarm
+[INFO]2021-03-17 10:41:24,098: create lock <lock name:timer.lock_1827230283144,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A96F64C5F8>>
+[ERROR]2021-03-17 10:41:24,109: mqtt is disabled
+[INFO]2021-03-17 10:41:24,110: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 10:41:24,110: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 10:41:27,165: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-17 10:41:27,183: import auth.main_auth
+[INFO]2021-03-17 10:41:27,189: import feed.main_feed
+[INFO]2021-03-17 10:41:27,194: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A96F8C8238>>
+[INFO]2021-03-17 10:41:27,198: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A96F8C8698>>
+[INFO]2021-03-17 10:41:27,265: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:41:27,272: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A96F994418>>
+[INFO]2021-03-17 10:41:27,314: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A96F9944B8>>
+[INFO]2021-03-17 10:41:27,315: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001A96F9941C0>>
+[SUCC]2021-03-17 10:41:27,403: utility start, pid=12660, ppid=12520
+[DEBUG]2021-03-17 10:41:27,405: start timer
+[INFO]2021-03-17 10:41:27,409: add_ignore: taskStatus
+[INFO]2021-03-17 10:41:27,410: add_ignore: api/elevator/status
+[INFO]2021-03-17 10:41:27,412: add_ignore: scada/getTask
+[CRITICAL]2021-03-17 10:41:31,463: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=12660, ppid=12520, tid=1660
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[CRITICAL]2021-03-17 10:41:34,525: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+pid=12660, ppid=12520, tid=1660
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../agvCtrl\agvApi.py", line 39, in init
+    _http_get(url + '/api/agv/init', param)
+  File "../agvCtrl\agvApi.py", line 60, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>')
+
+[WARNING]2021-03-17 10:42:49,906: timer_thread[tid:1660] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=1660 count=1 at 0x000001A96F9944B8>> ,hold 80492 ms
+[INFO]2021-03-17 10:42:50,168: name=timer_thread, pid=12660, tid=1660
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:43:17,017: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[INFO]2021-03-17 10:43:17,094: Scada send a task to the server from ZZ-AI-DG-05 to ZZ-AI-DG-03 payloadId: None
+[INFO]2021-03-17 10:43:17,185: create task[60516cc56c05b148fff58795]: type= scadaTask , 从ZZ-AI-DG-05运送货架None到ZZ-AI-DG-03 {'source': 'ZZ-AI-DG-05', 'target': 'ZZ-AI-DG-03', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从ZZ-AI-DG-05运送货架None到ZZ-AI-DG-03', 'createTime': datetime.datetime(2021, 3, 17, 10, 43, 17, 170669), 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 17, 170669), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('60516cc56c05b148fff58795')}
+[INFO]2021-03-17 10:43:17,356: task[60516cc56c05b148fff58795][-] AP188(LM190) -> AP185(LM186) [waiting] is inside False
+[INFO]2021-03-17 10:43:17,402: task cmd: got a task from scada task[60516cc56c05b148fff58795][-] AP188(LM190) -> AP185(LM186) [waiting]
+[DEBUG]2021-03-17 10:43:17,463: used 446ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-AI-DG-05&target=ZZ-AI-DG-03&payloadId=&priority=1
+[INFO]2021-03-17 10:43:18,709: task[60516cc56c05b148fff58795]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 3, 17, 10, 43, 18, 694489), 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 18, 694489), 'status': 'running'}
+[INFO]2021-03-17 10:43:18,786: task: start task[60516cc56c05b148fff58795][-] AP188(LM190) -> AP185(LM186) [waiting]
+[INFO]2021-03-17 10:43:18,862: task[60516cc56c05b148fff58795] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 18, 847217)}
+[DEBUG]2021-03-17 10:43:18,922: task[60516cc56c05b148fff58795][-] AP188(LM190) -> AP185(LM186) [waitForAgv] waiting -> waitForAgv
+[DEBUG]2021-03-17 10:43:23,935: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV01&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:43:24,305: [return] use 370 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:43:25,684: task[60516cc56c05b148fff58795][-] AP188(LM190) -> AP185(LM186) [waitForAgv] apply AGV01
+[INFO]2021-03-17 10:43:25,760: task[60516cc56c05b148fff58795] update info: {'agvId': 'AGV01', 'failMsg': '成功分配小车AGV01,检测顶升下降', 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 25, 744106)}
+[WARNING]2021-03-17 10:43:25,820: scada.60516cc56c05b148fff58795[tid:12176] <locked _thread.RLock object owner=12176 count=1 at 0x000001A96FA3B4B8> ,hold 5598 ms
+[INFO]2021-03-17 10:43:26,021: name=scada.60516cc56c05b148fff58795, pid=12660, tid=12176
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:43:26,096: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [waitSrcPreLoc] waitForAgv -> waitSrcPreLoc
+[INFO]2021-03-17 10:43:26,594: task: prepoint locked  60516cc56c05b148fff58795 fp20190712-1.LM190
+[INFO]2021-03-17 10:43:26,658: task[60516cc56c05b148fff58795] update info: {'failMsg': '等待前置点LM190与工位点AP188处无小车', 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 26, 642703)}
+[DEBUG]2021-03-17 10:43:26,720: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [initJackdown] waitSrcPreLoc -> initJackdown
+[INFO]2021-03-17 10:43:27,152: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [initJackdown] _jackDown
+[DEBUG]2021-03-17 10:43:27,232: send http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV01&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:43:27,912: [return] use 680 ms,http_get: http://127.0.0.1:5551/api/agv/jackdown?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:43:28,037: task[60516cc56c05b148fff58795] update info: {'failMsg': '等待ZZ-AI-DG-05前置点锁', 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 27, 989101)}
+[DEBUG]2021-03-17 10:43:28,099: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [waitSrcPreLoc1] initJackdown -> waitSrcPreLoc1
+[INFO]2021-03-17 10:43:29,007: task[60516cc56c05b148fff58795] update info: {'failMsg': '前往ZZ-AI-DG-05前置点', 'updateTime': datetime.datetime(2021, 3, 17, 10, 43, 28, 976462)}
+[DEBUG]2021-03-17 10:43:29,069: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [startMovePreSrc] waitSrcPreLoc1 -> startMovePreSrc
+[CRITICAL]2021-03-17 10:43:30,011: taskFunc2:task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [startMovePreSrc] cause a error: Exception: fp20190712-1.AP788->fp20190712-1.LM190 路径不存在1,agvId=AGV01
+pid=12660, ppid=12520, tid=12176
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 745, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 590, in handle
+    if not self._moveAgvPrepoint():
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 847, in _moveAgvPrepoint
+    raise e
+  File "C:\Users\Administrator\Desktop\SVN\fastclient\scadaCtrl\runTasks.py", line 842, in _moveAgvPrepoint
+    agvApi.moveJackdown(self.agvId, self.param["floorId"]+'.'+self.param["location"], self.onFinish, self.param,stepCallback=stepCallback)
+  File "../agvCtrl\agvApi.py", line 187, in moveJackdown
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "../agvCtrl\agvApi.py", line 169, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "../agvCtrl\agvApi.py", line 63, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: fp20190712-1.AP788->fp20190712-1.LM190 路径不存在1,agvId=AGV01
+
+[WARNING]2021-03-17 10:43:30,018: task[60516cc56c05b148fff58795]:  error {'failMsg': 'Exception: fp20190712-1.AP788->fp20190712-1.LM190 路径不存在1,agvId=AGV01', 'endTime': datetime.datetime(2021, 3, 17, 10, 43, 30, 17678), 'status': 'error'}
+[INFO]2021-03-17 10:43:30,019: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [startMovePreSrc] AGV01 release task, release agv True True False
+[INFO]2021-03-17 10:43:30,641: task[60516cc56c05b148fff58795][AGV01] AP188(LM190) -> AP185(LM186) [startMovePreSrc] let AGV01 gohome
+[INFO]2021-03-17 10:43:31,215: task: prepoint released2  60516cc56c05b148fff58795 fp20190712-1.LM190
+[INFO]2021-03-17 10:43:31,275: task: stop task[60516cc56c05b148fff58795][-] AP188(LM190) -> AP185(LM186) [startMovePreSrc]
+[DEBUG]2021-03-17 10:43:31,352: task: delete task 60516cc56c05b148fff58795
+[WARNING]2021-03-17 10:44:42,056: timer_thread[tid:1660] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=1660 count=1 at 0x000001A96F9944B8>> ,hold 70704 ms
+[INFO]2021-03-17 10:44:42,194: name=timer_thread, pid=12660, tid=1660
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()

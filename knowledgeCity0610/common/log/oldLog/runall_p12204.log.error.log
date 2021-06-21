@@ -1,0 +1,65 @@
+[CRITICAL]2021-05-27 16:28:22,528: agv thread cause a error: AGVwuliao执行move CP7取消,taskId:charge_1
+pid=12204, ppid=10832, tid=7924
+
+[CRITICAL]2021-05-27 16:36:28,444: invoke <function urlMove at 0x000001D3E8764AE8> cause a error: comba-ZXC-F3.CP7->comba-ZXC-F3.AP25 路径不存在1,agvId=AGVwuliao
+pid=12204, ppid=10832, tid=9800
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 121, in urlMove
+    agvControl.move(target=target, agvId=agvId, taskId=taskId, timeout=timeout,paramObj=paramObj)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1266, in move
+    _func()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1232, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: comba-ZXC-F3.CP7->comba-ZXC-F3.AP25 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-27 16:36:28,451: taskFunc2:task[60af5a0473dabd2fac5c22a1][AGVwuliao] AP25(LM24) -> AP22(LM17) [startMoveAGV] cause a error: Exception: comba-ZXC-F3.CP7->comba-ZXC-F3.AP25 路径不存在1,agvId=AGVwuliao
+pid=12204, ppid=10832, tid=6272
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 935, in _taskFunc
+    elif not self.handle():
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 673, in handle
+    self._moveJackup()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 1057, in _moveJackup
+    self.param)
+  File "..\agvCtrl\agvApi.py", line 185, in moveJackup
+    return move(agvId,loc,finishCallback,paramObj,stepCallback)
+  File "..\agvCtrl\agvApi.py", line 172, in move
+    _http_get(url + '/api/agv/move', paramObj)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: comba-ZXC-F3.CP7->comba-ZXC-F3.AP25 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-27 16:36:28,489: invoke <function urlGoHome at 0x000001D3E4B5E158> cause a error: comba-ZXC-F3.CP7->comba-ZXC-F3.LM20 路径不存在1,agvId=AGVwuliao
+pid=12204, ppid=10832, tid=2688
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\main_agv.py", line 99, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1331, in goHome
+    move(agvId=agvId, target=agv.homeLoc, taskId=taskId, timeout=timeout,finishCallback=goHomeFinish)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1266, in move
+    _func()
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\agvCtrl\agvControl.py", line 1232, in _func
+    raise Exception(mapMgr.formatLoc(agv.mapId,agv.curTarget)+"->"+target+" 路径不存在1,agvId="+agv.agvId)
+Exception: comba-ZXC-F3.CP7->comba-ZXC-F3.LM20 路径不存在1,agvId=AGVwuliao
+
+[CRITICAL]2021-05-27 16:36:28,495: task[60af5a0473dabd2fac5c22a1][AGVwuliao] AP25(LM24) -> AP22(LM17) [startMoveAGV]task release cause a error: Exception: comba-ZXC-F3.CP7->comba-ZXC-F3.LM20 路径不存在1,agvId=AGVwuliao
+pid=12204, ppid=10832, tid=6272
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\KLC\knowledgeCity\autoCtrl\runTasks.py", line 973, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 131, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: comba-ZXC-F3.CP7->comba-ZXC-F3.LM20 路径不存在1,agvId=AGVwuliao
+

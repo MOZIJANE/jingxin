@@ -1,0 +1,1042 @@
+[INFO]2021-03-17 10:11:35,444: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 10:11:35,445: find module account.main_account
+[INFO]2021-03-17 10:11:35,445: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 10:11:35,446: find module alarm.main_alarm
+[INFO]2021-03-17 10:11:35,446: find module auth.main_auth
+[INFO]2021-03-17 10:11:35,447: find module feed.main_feed
+[INFO]2021-03-17 10:11:35,447: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:11:35,447: find module scadaCtrlEle.main_scadaCtrl
+[INFO]2021-03-17 10:11:35,448: import account.main_account
+[INFO]2021-03-17 10:11:35,524: import agvDevice.main_agvDevice
+[INFO]2021-03-17 10:11:35,526: import alarm.main_alarm
+[INFO]2021-03-17 10:11:35,616: create lock <lock name:timer.lock_2394987918504,<unlocked _thread.RLock object owner=0 count=0 at 0x0000022DA062C670>>
+[ERROR]2021-03-17 10:11:35,627: mqtt is disabled
+[INFO]2021-03-17 10:11:35,628: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 10:11:35,628: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 10:11:38,676: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-17 10:11:38,695: import auth.main_auth
+[INFO]2021-03-17 10:11:38,701: import feed.main_feed
+[INFO]2021-03-17 10:11:38,706: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000022DA08A92B0>>
+[INFO]2021-03-17 10:11:38,710: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000022DA08A9710>>
+[INFO]2021-03-17 10:11:38,770: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 10:11:38,778: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000022DA096C490>>
+[INFO]2021-03-17 10:11:38,826: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000022DA096C530>>
+[INFO]2021-03-17 10:11:38,826: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000022DA096C1C0>>
+[INFO]2021-03-17 10:11:38,914: load task: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]
+[INFO]2021-03-17 10:11:38,917: import scadaCtrlEle.main_scadaCtrl
+[SUCC]2021-03-17 10:11:38,924: utility start, pid=6904, ppid=15164
+[DEBUG]2021-03-17 10:11:38,925: start timer
+[INFO]2021-03-17 10:11:38,928: add_ignore: taskStatus
+[INFO]2021-03-17 10:11:38,929: add_ignore: api/elevator/status
+[INFO]2021-03-17 10:11:38,932: add_ignore: scada/getTask
+[DEBUG]2021-03-17 10:11:39,381: GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-SZ-DG-01&target=ZZ-SZ-DG-03&payloadId=&priority=1 addr: 127.0.0.1
+[INFO]2021-03-17 10:11:39,384: Scada send a task to the server from ZZ-SZ-DG-01 to ZZ-SZ-DG-03 payloadId: None
+[INFO]2021-03-17 10:11:39,386: create task[6051655b9427f7a63e5aa6f7]: type= scadaTask , 从ZZ-SZ-DG-01运送货架None到ZZ-SZ-DG-03 {'source': 'ZZ-SZ-DG-01', 'target': 'ZZ-SZ-DG-03', 'payloadId': None, 'priority': 1, 'type': 'scadaTask', 'taskName': '从ZZ-SZ-DG-01运送货架None到ZZ-SZ-DG-03', 'createTime': datetime.datetime(2021, 3, 17, 10, 11, 39, 385342), 'updateTime': datetime.datetime(2021, 3, 17, 10, 11, 39, 385342), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'failMsg': None, 'history': [], '_id': ObjectId('6051655b9427f7a63e5aa6f7')}
+[INFO]2021-03-17 10:11:39,391: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waiting] is inside False
+[INFO]2021-03-17 10:11:39,392: task cmd: got a task from scada task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waiting]
+[DEBUG]2021-03-17 10:11:39,393: used 12ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:5550/api/scada/addTask?source=ZZ-SZ-DG-01&target=ZZ-SZ-DG-03&payloadId=&priority=1
+[INFO]2021-03-17 10:11:41,426: task: start *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]
+[INFO]2021-03-17 10:11:41,427: task recover: add task task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waiting]
+[DEBUG]2021-03-17 10:11:43,753: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:11:44,435: [return] use 682 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:11:44,512: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:11:44,857: task[6051655b9427f7a63e5aa6f7]:  start {'failMsg': '任务等待执行', 'startTime': datetime.datetime(2021, 3, 17, 10, 11, 44, 826218), 'updateTime': datetime.datetime(2021, 3, 17, 10, 11, 44, 826218), 'status': 'running'}
+[INFO]2021-03-17 10:11:44,936: task: start task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waiting]
+[INFO]2021-03-17 10:11:45,029: task[6051655b9427f7a63e5aa6f7] update info: {'failMsg': '等待分配小车', 'updateTime': datetime.datetime(2021, 3, 17, 10, 11, 45, 14316)}
+[DEBUG]2021-03-17 10:11:45,090: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waiting -> waitForAgv
+[WARNING]2021-03-17 10:11:47,016: timer_thread[tid:7832] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=7832 count=1 at 0x0000022DA096C530>> ,hold 6067 ms
+[INFO]2021-03-17 10:11:47,342: name=timer_thread, pid=6904, tid=7832
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:11:49,306: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:11:49,658: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 8216 ms
+[DEBUG]2021-03-17 10:11:49,827: [return] use 521 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:11:49,888: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:11:49,888: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:11:50,089: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:11:54,022: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:11:54,533: [return] use 511 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:11:54,595: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:11:55,013: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7169 ms
+[INFO]2021-03-17 10:11:55,139: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:11:55,233: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:11:59,005: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:11:59,564: [return] use 559 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:11:59,626: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:11:59,671: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7492 ms
+[INFO]2021-03-17 10:11:59,856: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:11:59,951: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:03,866: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:04,359: [return] use 493 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:04,421: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:12:04,727: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7412 ms
+[INFO]2021-03-17 10:12:04,880: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:05,007: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:09,073: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:09,581: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7539 ms
+[DEBUG]2021-03-17 10:12:09,734: [return] use 661 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:12:09,811: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[WARNING]2021-03-17 10:12:09,826: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:12:09,905: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:13,550: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:14,016: [return] use 466 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:14,094: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:12:14,998: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7895 ms
+[INFO]2021-03-17 10:12:15,151: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:15,229: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:12:19,189: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7130 ms
+[INFO]2021-03-17 10:12:19,332: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:12:19,380: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:12:19,426: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:20,148: [return] use 768 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:20,211: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:12:23,274: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:23,721: [return] use 447 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:23,783: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:12:25,277: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7962 ms
+[INFO]2021-03-17 10:12:25,416: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:25,494: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:12:28,860: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7184 ms
+[INFO]2021-03-17 10:12:29,015: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:29,091: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:29,168: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:29,691: [return] use 523 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:29,770: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:12:33,336: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:33,925: [return] use 589 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:33,987: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:12:34,876: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7276 ms
+[INFO]2021-03-17 10:12:34,999: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:35,075: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:12:39,076: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7861 ms
+[DEBUG]2021-03-17 10:12:39,184: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:12:39,262: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:39,370: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:39,791: [return] use 607 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:39,853: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:12:43,453: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:44,105: [return] use 652 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:44,153: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:12:44,949: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7792 ms
+[INFO]2021-03-17 10:12:45,090: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:45,228: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:12:49,235: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7765 ms
+[INFO]2021-03-17 10:12:49,407: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:49,499: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:49,890: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:50,561: [return] use 671 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:50,639: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:12:53,433: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:12:54,092: [return] use 659 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:12:54,156: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:12:55,735: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8414 ms
+[INFO]2021-03-17 10:12:55,906: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:55,999: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:12:59,246: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7656 ms
+[INFO]2021-03-17 10:12:59,401: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:12:59,493: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:12:59,977: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:00,618: [return] use 641 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:00,680: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:13:03,378: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:03,865: [return] use 487 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:03,927: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:05,767: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7694 ms
+[INFO]2021-03-17 10:13:05,906: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:05,983: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:13:09,034: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7419 ms
+[INFO]2021-03-17 10:13:09,188: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:09,264: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:10,021: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:10,436: [return] use 415 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:10,481: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:13:13,567: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:14,030: [return] use 463 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:14,092: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:15,545: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7457 ms
+[INFO]2021-03-17 10:13:15,734: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:15,812: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:13:19,183: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7824 ms
+[INFO]2021-03-17 10:13:19,292: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:19,370: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:19,636: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:20,264: [return] use 628 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:20,325: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:13:23,301: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:23,794: [return] use 493 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:23,857: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:25,414: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7519 ms
+[INFO]2021-03-17 10:13:25,554: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:25,632: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:28,652: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:28,947: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7480 ms
+[DEBUG]2021-03-17 10:13:28,994: [return] use 342 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:13:29,090: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[WARNING]2021-03-17 10:13:29,106: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:13:29,202: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:32,536: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:32,863: [return] use 327 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:32,940: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:34,316: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 6598 ms
+[INFO]2021-03-17 10:13:34,455: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:34,533: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:37,672: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:38,005: [return] use 333 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:38,005: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 6611 ms
+[WARNING]2021-03-17 10:13:38,069: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:13:38,242: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:38,353: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:41,295: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:41,636: [return] use 341 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:41,714: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:43,282: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 6617 ms
+[INFO]2021-03-17 10:13:43,406: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:43,514: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:46,386: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:46,672: [return] use 286 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:46,736: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:46,767: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 6342 ms
+[INFO]2021-03-17 10:13:47,020: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:47,130: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:50,809: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:13:51,366: [return] use 557 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:51,427: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:13:51,858: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 6275 ms
+[INFO]2021-03-17 10:13:52,010: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:13:52,087: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:13:56,084: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:13:56,516: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7325 ms
+[DEBUG]2021-03-17 10:13:56,670: [return] use 586 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:13:56,686: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[WARNING]2021-03-17 10:13:56,734: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:13:56,810: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:01,071: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:01,605: [return] use 534 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:01,669: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:14:01,958: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7770 ms
+[INFO]2021-03-17 10:14:02,098: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:02,176: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:06,151: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:06,732: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7688 ms
+[DEBUG]2021-03-17 10:14:06,732: [return] use 581 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:14:06,823: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[WARNING]2021-03-17 10:14:06,871: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[INFO]2021-03-17 10:14:06,963: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:11,203: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:11,492: [return] use 289 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:11,584: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:14:12,056: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7795 ms
+[INFO]2021-03-17 10:14:12,270: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:12,348: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:16,241: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:16,721: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7552 ms
+[INFO]2021-03-17 10:14:16,848: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:16,922: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:16,983: [return] use 742 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:17,061: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:14:21,114: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:21,627: [return] use 513 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:21,705: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:14:22,152: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7740 ms
+[INFO]2021-03-17 10:14:22,290: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:22,367: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:14:26,803: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7813 ms
+[DEBUG]2021-03-17 10:14:26,849: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:14:26,956: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:27,063: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:27,523: [return] use 674 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:27,586: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:14:30,791: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:31,305: [return] use 514 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:31,384: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:14:32,691: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8235 ms
+[INFO]2021-03-17 10:14:32,848: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:32,941: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:14:36,464: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7291 ms
+[INFO]2021-03-17 10:14:36,618: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:36,714: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:37,285: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:37,986: [return] use 701 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:38,093: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:14:40,877: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:41,580: [return] use 703 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:41,644: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:14:43,201: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8151 ms
+[INFO]2021-03-17 10:14:43,374: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:43,453: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:14:46,738: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7930 ms
+[INFO]2021-03-17 10:14:46,894: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:46,987: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:47,455: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:48,136: [return] use 681 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:48,215: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:14:51,104: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:51,799: [return] use 695 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:51,893: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:14:53,297: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7759 ms
+[INFO]2021-03-17 10:14:53,452: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:53,546: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:14:56,977: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7867 ms
+[INFO]2021-03-17 10:14:57,116: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:14:57,211: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:14:57,335: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:14:57,944: [return] use 609 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:14:58,051: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:15:01,459: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:01,880: [return] use 421 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:01,942: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:15:03,182: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7544 ms
+[INFO]2021-03-17 10:15:03,384: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:03,463: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:15:07,010: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7711 ms
+[INFO]2021-03-17 10:15:07,150: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 10:15:07,181: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:15:07,229: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:15:07,748: [return] use 567 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:07,812: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:15:11,254: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:11,647: [return] use 393 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:11,724: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:15:12,920: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7360 ms
+[INFO]2021-03-17 10:15:13,074: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:13,153: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:15:16,808: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7425 ms
+[INFO]2021-03-17 10:15:16,963: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:17,041: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:15:17,197: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:17,946: [return] use 749 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:18,008: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:15:20,987: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:21,548: [return] use 561 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:21,627: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:15:23,118: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7873 ms
+[INFO]2021-03-17 10:15:23,276: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:23,355: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:15:26,753: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7629 ms
+[INFO]2021-03-17 10:15:26,906: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:26,985: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:15:27,438: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:28,018: [return] use 580 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:28,081: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:15:31,291: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:31,953: [return] use 662 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:32,016: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:15:33,162: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7730 ms
+[INFO]2021-03-17 10:15:33,333: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:33,396: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:15:37,095: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 8023 ms
+[INFO]2021-03-17 10:15:37,237: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:37,314: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:15:37,608: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:38,053: [return] use 445 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:38,116: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:15:41,587: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:41,915: [return] use 328 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:41,976: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:15:43,192: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7702 ms
+[INFO]2021-03-17 10:15:43,362: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:43,439: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:15:47,069: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7675 ms
+[INFO]2021-03-17 10:15:47,209: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:47,287: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:15:47,504: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:48,040: [return] use 536 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:48,102: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:15:51,289: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:15:51,838: [return] use 549 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:51,900: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:15:53,174: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7612 ms
+[INFO]2021-03-17 10:15:53,347: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:53,423: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:15:57,012: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7632 ms
+[DEBUG]2021-03-17 10:15:57,074: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[INFO]2021-03-17 10:15:57,149: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:15:57,213: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:15:57,620: [return] use 546 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:15:57,684: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:16:01,207: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:01,620: [return] use 413 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:01,682: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:16:02,787: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7272 ms
+[INFO]2021-03-17 10:16:02,926: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:03,001: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:16:06,750: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7445 ms
+[INFO]2021-03-17 10:16:06,889: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:06,965: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:16:07,214: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:07,677: [return] use 463 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:07,741: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:16:11,364: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:11,829: [return] use 465 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:11,906: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:16:12,824: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7727 ms
+[INFO]2021-03-17 10:16:12,999: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:13,079: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:16:16,980: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7949 ms
+[INFO]2021-03-17 10:16:17,124: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:17,201: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:16:17,625: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:18,136: [return] use 511 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:18,214: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:16:21,337: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:21,874: [return] use 537 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:21,936: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:16:23,337: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8165 ms
+[INFO]2021-03-17 10:16:23,492: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:23,586: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:16:27,017: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7725 ms
+[INFO]2021-03-17 10:16:27,171: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:27,265: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:16:28,236: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:28,686: [return] use 450 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:28,762: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:16:31,348: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:31,801: [return] use 453 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:31,849: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:16:33,829: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8164 ms
+[INFO]2021-03-17 10:16:34,002: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:34,094: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:16:36,932: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7587 ms
+[INFO]2021-03-17 10:16:37,073: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:37,167: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:16:38,456: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:39,179: [return] use 723 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:39,256: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:16:41,804: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:42,611: [return] use 807 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:42,690: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:16:44,344: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8160 ms
+[INFO]2021-03-17 10:16:44,487: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:44,566: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:16:47,786: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 8515 ms
+[INFO]2021-03-17 10:16:47,928: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:48,008: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:16:48,195: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:48,694: [return] use 499 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:48,771: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:16:52,005: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:52,530: [return] use 525 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:52,593: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:16:53,913: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7201 ms
+[INFO]2021-03-17 10:16:54,052: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:54,174: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:16:57,686: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7591 ms
+[INFO]2021-03-17 10:16:57,842: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:16:57,936: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:16:58,576: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:16:59,185: [return] use 609 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:16:59,246: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:17:02,294: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:02,853: [return] use 559 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:02,916: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:17:04,359: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 8079 ms
+[INFO]2021-03-17 10:17:04,513: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:04,591: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:17:08,009: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7996 ms
+[INFO]2021-03-17 10:17:08,199: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:08,293: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:17:08,526: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:08,957: [return] use 431 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:09,019: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:17:11,867: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:12,354: [return] use 487 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:12,432: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:17:14,109: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7413 ms
+[INFO]2021-03-17 10:17:14,264: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:14,326: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:17:17,533: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7149 ms
+[INFO]2021-03-17 10:17:17,673: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:17,766: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:17:18,325: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:18,897: [return] use 572 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:18,993: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:17:21,823: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:22,404: [return] use 581 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:22,468: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:17:24,084: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7671 ms
+[INFO]2021-03-17 10:17:24,220: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:24,296: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:17:27,555: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7704 ms
+[INFO]2021-03-17 10:17:27,693: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:27,772: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:17:28,291: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:28,902: [return] use 611 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:28,998: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:17:32,223: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:32,816: [return] use 593 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:32,878: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:17:34,103: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7730 ms
+[INFO]2021-03-17 10:17:34,272: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:34,349: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:17:37,960: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 8095 ms
+[INFO]2021-03-17 10:17:38,082: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:38,161: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:17:38,517: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:38,996: [return] use 479 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:39,073: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:17:42,375: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:42,932: [return] use 557 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:42,993: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:17:44,175: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7724 ms
+[INFO]2021-03-17 10:17:44,314: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:44,391: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:17:48,113: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7867 ms
+[INFO]2021-03-17 10:17:48,238: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:48,316: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:17:48,443: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:49,086: [return] use 643 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:49,149: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:17:52,005: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:52,595: [return] use 590 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:52,658: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:17:54,253: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7779 ms
+[INFO]2021-03-17 10:17:54,407: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:54,498: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[WARNING]2021-03-17 10:17:57,740: scada.60515fa963fdc12e93ab111b[tid:11220] <locked _thread.RLock object owner=11220 count=1 at 0x0000022DA096C878> ,hold 7342 ms
+[INFO]2021-03-17 10:17:57,893: name=scada.60515fa963fdc12e93ab111b, pid=6904, tid=11220
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:17:57,972: *task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error
+[DEBUG]2021-03-17 10:17:58,528: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:17:59,055: [return] use 527 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:17:59,134: [task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[DEBUG]2021-03-17 10:18:02,332: send http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[DEBUG]2021-03-17 10:18:03,081: [return] use 749 ms,http_get: http://127.0.0.1:5551/api/agv/checkInitStatus?agv=AGV04&loc=None&timeoutSec=90
+[WARNING]2021-03-17 10:18:03,143: [*task[60515fa963fdc12e93ab111b][-] AP238(LM242) -> AP240(LM244) [waitForAgv]] apply agv failed: AttributeError: module 'driver.seerAgv.mockAgvCtrl' has no attribute 'checkInitSuccess'
+[WARNING]2021-03-17 10:18:04,221: scada.6051655b9427f7a63e5aa6f7[tid:7184] <locked _thread.RLock object owner=7184 count=1 at 0x0000022DA096C788> ,hold 7619 ms
+[INFO]2021-03-17 10:18:04,360: name=scada.6051655b9427f7a63e5aa6f7, pid=6904, tid=7184
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/utility.py", line 167, in __call() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/scadaCtrl/runTasks.py", line 745, in _taskFunc() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[INFO]2021-03-17 10:18:04,467: task[6051655b9427f7a63e5aa6f7][-] AP238(LM242) -> AP240(LM244) [waitForAgv] waitForAgv error

@@ -1,0 +1,37 @@
+[INFO]2021-03-18 17:14:15,341: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-18 17:14:15,342: find module account.main_account
+[INFO]2021-03-18 17:14:15,343: find module agvDevice.main_agvDevice
+[INFO]2021-03-18 17:14:15,344: find module alarm.main_alarm
+[INFO]2021-03-18 17:14:15,344: find module auth.main_auth
+[INFO]2021-03-18 17:14:15,345: find module feed.main_feed
+[INFO]2021-03-18 17:14:15,345: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-18 17:14:15,345: import account.main_account
+[INFO]2021-03-18 17:14:15,429: import agvDevice.main_agvDevice
+[INFO]2021-03-18 17:14:15,432: import alarm.main_alarm
+[INFO]2021-03-18 17:14:15,529: create lock <lock name:timer.lock_2208945038840,<unlocked _thread.RLock object owner=0 count=0 at 0x000002024F5DB670>>
+[ERROR]2021-03-18 17:14:15,540: mqtt is disabled
+[INFO]2021-03-18 17:14:15,541: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-18 17:14:15,541: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-18 17:14:18,590: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-18 17:14:18,594: import auth.main_auth
+[INFO]2021-03-18 17:14:18,609: import feed.main_feed
+[INFO]2021-03-18 17:14:18,616: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002024F8582B0>>
+[INFO]2021-03-18 17:14:18,621: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002024F858710>>
+[INFO]2021-03-18 17:14:18,706: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-18 17:14:18,717: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002024F90B490>>
+[INFO]2021-03-18 17:14:18,778: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002024F90B530>>
+[INFO]2021-03-18 17:14:18,779: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002024F90B238>>
+[INFO]2021-03-18 17:14:18,846: recover can release agv *task[6052a2d709e439fc7f7aae34][AGV05] AP188(LM190) -> AP185(LM186) [finish]
+[SUCC]2021-03-18 17:14:18,856: utility start, pid=7760, ppid=8676
+[DEBUG]2021-03-18 17:14:18,857: start timer
+[INFO]2021-03-18 17:14:18,859: add_ignore: taskStatus
+[INFO]2021-03-18 17:14:18,859: add_ignore: api/elevator/status
+[INFO]2021-03-18 17:14:18,860: add_ignore: scada/getTask
+[WARNING]2021-03-18 17:14:24,285: timer_thread[tid:4416] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=4416 count=1 at 0x000002024F90B530>> ,hold 3407 ms
+[INFO]2021-03-18 17:14:24,652: name=timer_thread, pid=7760, tid=4416
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()

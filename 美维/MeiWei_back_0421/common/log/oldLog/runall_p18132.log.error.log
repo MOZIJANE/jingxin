@@ -1,0 +1,44 @@
+[CRITICAL]2021-04-22 10:59:13,239: taskFunc2:task[6080e675591e537f3e3028b8][AGV30] LM16(LM17) -> LM9(LM12) [moveToPreSrc_onfinish] cause a error: not enough arguments for format string
+pid=18132, ppid=1052, tid=5432
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 578, in _taskFunc
+    elif not self.handle():
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 401, in handle
+    log.info("移动到 %s的前置点 %s" % self.source % self.s_info["prepoint"])
+TypeError: not enough arguments for format string
+
+[CRITICAL]2021-04-22 10:59:21,261: taskFunc2:task[6080e685591e537f3e3028b9][AGV30] LM16(LM17) -> LM9(LM12) [moveToPreSrc_onfinish] cause a error: not enough arguments for format string
+pid=18132, ppid=1052, tid=17852
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 578, in _taskFunc
+    elif not self.handle():
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 401, in handle
+    log.info("移动到 %s的前置点 %s" % self.source % self.s_info["prepoint"])
+TypeError: not enough arguments for format string
+
+[CRITICAL]2021-04-22 10:59:21,324: invoke <function urlGoHome at 0x0000019D6F1813A0> cause a error: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=18132, ppid=1052, tid=17844
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\main_agv.py", line 103, in urlGoHome
+    agvControl.goHome(agvId=agvId,force=force,timeout=timeout)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvControl.py", line 1300, in goHome
+    raise Exception("小车任务未结束2，调用goHome失败,agvId="+agv.agvId)
+Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+
+[CRITICAL]2021-04-22 10:59:21,340: task[6080e685591e537f3e3028b9][AGV30] LM16(LM17) -> LM9(LM12) [moveToPreSrc_onfinish]task release cause a error: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+pid=18132, ppid=1052, tid=17852
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 617, in _release
+    agvApi.goHome(self.agvId, force=False, timeout=60 * 60 * 3)
+  File "..\agvCtrl\agvApi.py", line 129, in goHome
+    _http_get(url + '/api/agv/goHome', param)
+  File "..\agvCtrl\agvApi.py", line 64, in _http_get
+    raise Exception(result["errormsg"])
+Exception: Exception: 小车任务未结束2，调用goHome失败,agvId=AGV30
+

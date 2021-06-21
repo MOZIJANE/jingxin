@@ -1,0 +1,58 @@
+[CRITICAL]2021-06-14 17:40:47,771: checkFinish cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/taskStatus', {'taskId': '60c7239c97f2467f76e3c113_5', 'appName': 'MeiWeiTask'}, 'error:', 'timed out')
+pid=1240, ppid=13792, tid=1616
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 244, in _checkFinish
+    status = getTaskStatus(ids)
+  File "..\agvCtrl\agvApi.py", line 74, in getTaskStatus
+    return _http_get(url + '/api/agv/taskStatus',{"taskId": taskId})["taskList"]
+  File "..\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/taskStatus', {'taskId': '60c7239c97f2467f76e3c113_5', 'appName': 'MeiWeiTask'}, 'error:', 'timed out')
+
+[CRITICAL]2021-06-14 17:57:03,853: 192.168.3.105:10001 <--> 192.168.3.106:54775 error:  cause a error: 192.168.3.105:10001 <--> 192.168.3.106:54775 tcp recv closed
+pid=1240, ppid=13792, tid=1408
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 131, in _handle
+    data = client.recv(6)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 181, in recv
+    raise Exception(self.desc+" tcp recv closed")
+Exception: 192.168.3.105:10001 <--> 192.168.3.106:54775 tcp recv closed
+
+[CRITICAL]2021-06-14 17:57:03,871: 192.168.3.105:10001 <--> 192.168.3.106:54776 error:  cause a error: 192.168.3.105:10001 <--> 192.168.3.106:54776 tcp recv closed
+pid=1240, ppid=13792, tid=11556
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 131, in _handle
+    data = client.recv(6)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 181, in recv
+    raise Exception(self.desc+" tcp recv closed")
+Exception: 192.168.3.105:10001 <--> 192.168.3.106:54776 tcp recv closed
+

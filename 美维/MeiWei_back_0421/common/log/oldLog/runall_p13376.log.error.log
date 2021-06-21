@@ -1,0 +1,33 @@
+[CRITICAL]2021-04-19 16:31:07,385: checkDoorClose cause a error: [WinError 2] 系统找不到指定的文件。: 'E:\\projects_by_myself\\MeiWei\\agvCtrl\\projects\\test\\AKM2F.smap'
+pid=13376, ppid=9448, tid=16640
+Traceback (most recent call last):
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvControl.py", line 191, in onCheckCharge
+    mapMgr.checkDoorClose()
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 142, in checkDoorClose
+    m.checkDoorClose()
+  File "E:\projects_by_myself\MeiWei\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 1011, in checkDoorClose
+    for a in self.agvs:
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 210, in agvs
+    return getAgvList(self.mapId)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 170, in getAgvList
+    aa = _getAgvs()
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 150, in _getAgvs
+    mm = agvList.getAgvList()
+  File "E:\projects_by_myself\MeiWei\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvList.py", line 130, in getAgvList
+    g_agvList = _loadAgvList()
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvList.py", line 105, in _loadAgvList
+    agv.createMock(mapId,homeLoc)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvList.py", line 1128, in createMock
+    return agvCtrl.addAgv(self.agvId,mapMgr.getMap(mapId),startPos,self.width,self.height)
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 54, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "E:\projects_by_myself\MeiWei\agvCtrl\mapMgr.py", line 336, in load
+    ctime = str(os.path.getmtime(pp))
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'E:\\projects_by_myself\\MeiWei\\agvCtrl\\projects\\test\\AKM2F.smap'
+

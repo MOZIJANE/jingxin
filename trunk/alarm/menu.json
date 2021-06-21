@@ -1,0 +1,26 @@
+{
+	"title": "系统管理",
+	"icon": "cogs", 
+	"order": 10000,
+	"children": [{
+		"title": "后台管理",
+		"icon": "tv", 
+		"children": [{
+			"icon": "bell",
+			"title": "系统告警",
+			"path": "/alarm/alarm" 
+		},{
+			"icon": "mobile",
+			"title": "告警门限配置",
+			"path": "/alarm/threshold",
+			"admin" : true,
+			"order": 10000
+		},{
+			"icon": "mobile",
+			"title": "告警转发配置",
+			"path": "/alarm/forward",
+			"admin" : true,
+			"order": 10000
+		}]
+	}]
+}

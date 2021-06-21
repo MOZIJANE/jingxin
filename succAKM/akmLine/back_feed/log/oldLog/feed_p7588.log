@@ -1,0 +1,37 @@
+[INFO]2020-09-08 13:27:45,232: log files at E:\python_work\znzz_office\feed\log
+[INFO]2020-09-08 13:27:45,233: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000267570C1B70>>
+[INFO]2020-09-08 13:27:45,236: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000267570CEC60>>
+[INFO]2020-09-08 13:27:45,432: create lock <lock name:timer.lock_2642866026912,<unlocked _thread.RLock object owner=0 count=0 at 0x00000267571739C0>>
+[INFO]2020-09-08 13:27:45,439: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000267571AD180>>
+[WARNING]2020-09-08 13:27:45,450: use mockAgvCtrl
+[INFO]2020-09-08 13:27:45,535: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000267571EFF00>>
+[INFO]2020-09-08 13:27:45,571: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000267559BE4B0>>
+[INFO]2020-09-08 13:27:45,623: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000026757252210>>
+[INFO]2020-09-08 13:27:45,627: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002674E386900>>
+[INFO]2020-09-08 13:27:45,642: create lock <lock name:feed.s_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000026757282180>>
+[INFO]2020-09-08 13:27:48,652: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-08 13:27:48,733: create task[5f5716543cbb7a10a1393090]: type= feed , 从loading1-1 运送货架到 drop1 {'taskType': 'feed', 'msg': None, 'type': 'feed', 'taskName': '从loading1-1 运送货架到 drop1', 'createTime': datetime.datetime(2020, 9, 8, 13, 27, 48, 727132), 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 48, 727132), 'startTime': None, 'endTime': None, 'status': 'waiting', 'step': 'waiting', 'history': [], '_id': ObjectId('5f5716543cbb7a10a1393090')}
+[INFO]2020-09-08 13:27:48,767: task[5f5716543cbb7a10a1393090] update info: {'taskName': '从loading1-1 运送货架到 drop1', 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 48, 756629)}
+[INFO]2020-09-08 13:27:48,802: Got a task from feed Hucais 5f5716543cbb7a10a1393090:s <__main__.feed object at 0x0000026757282070>
+[INFO]2020-09-08 13:27:48,826: task[5f5716543cbb7a10a1393090] update info: {'step': 'waitForAgv', 'msg': '等待分配小车', 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 48, 796104)}
+[INFO]2020-09-08 13:27:49,969: task[5f5716543cbb7a10a1393090] update info: {'agvId': 'AGV01', 'msg': '成功分配小车AGV01', 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 49, 952592)}
+[INFO]2020-09-08 13:27:50,028: task[5f5716543cbb7a10a1393090] update info: {'step': 'initJackdown', 'msg': '检测下降', 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 50, 17416)}
+[DEBUG]2020-09-08 13:27:50,051: send http_get: http://127.0.0.1:8999/api/agv/jackDownCattle?agv=AGV01&loc=None&timeoutSec=90
+[DEBUG]2020-09-08 13:27:50,126: [return] use 75 ms,http_get: http://127.0.0.1:8999/api/agv/jackDownCattle?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2020-09-08 13:27:50,159: task[5f5716543cbb7a10a1393090] update info: {'step': 'waitSrcPreLoc', 'msg': '成功分配小车AGV01', 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 50, 148442)}
+[DEBUG]2020-09-08 13:27:51,189: send http_get: http://127.0.0.1:8999/api/agv/jackClearCattle?agv=AGV01&loc=None&timeoutSec=90
+[DEBUG]2020-09-08 13:27:51,257: [return] use 68 ms,http_get: http://127.0.0.1:8999/api/agv/jackClearCattle?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2020-09-08 13:27:51,285: task[5f5716543cbb7a10a1393090] update info: {'step': 'goSource', 'msg': '前往工位', 'updateTime': datetime.datetime(2020, 9, 8, 13, 27, 51, 280142)}
+[INFO]2020-09-08 13:28:04,415: task: move finish callback <__main__.feed object at 0x0000026757282070>
+[DEBUG]2020-09-08 13:28:04,439: send http_get: http://127.0.0.1:8999/api/agv/jackUpCattle?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2020-09-08 13:28:04,440: task[5f5716543cbb7a10a1393090] update info: {'step': 'jackUpWP', 'msg': '转盘顶升', 'updateTime': datetime.datetime(2020, 9, 8, 13, 28, 4, 439210)}
+[DEBUG]2020-09-08 13:28:04,475: [return] use 36 ms,http_get: http://127.0.0.1:8999/api/agv/jackUpCattle?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2020-09-08 13:28:04,484: task[5f5716543cbb7a10a1393090] update info: {'step': 'waitDestPreLoc', 'msg': '等待目标位置LM5前置点锁', 'updateTime': datetime.datetime(2020, 9, 8, 13, 28, 4, 483106)}
+[INFO]2020-09-08 13:28:04,487: task[5f5716543cbb7a10a1393090] update info: {'step': 'goTarget', 'msg': '前往目标前置点', 'updateTime': datetime.datetime(2020, 9, 8, 13, 28, 4, 486098)}
+[INFO]2020-09-08 13:29:01,716: task: move finish callback <__main__.feed object at 0x0000026757282070>
+[DEBUG]2020-09-08 13:29:01,739: send http_get: http://127.0.0.1:8999/api/agv/jackDownCattle?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2020-09-08 13:29:01,740: task[5f5716543cbb7a10a1393090] update info: {'step': 'jackDown', 'msg': '转盘下降', 'updateTime': datetime.datetime(2020, 9, 8, 13, 29, 1, 739524)}
+[DEBUG]2020-09-08 13:29:01,767: [return] use 28 ms,http_get: http://127.0.0.1:8999/api/agv/jackDownCattle?agv=AGV01&loc=None&timeoutSec=90
+[INFO]2020-09-08 13:29:01,769: task[5f5716543cbb7a10a1393090]:  successed {'msg': '成功', 'endTime': datetime.datetime(2020, 9, 8, 13, 29, 1, 768437), 'status': 'success', 'step': 'finish'}
+[INFO]2020-09-08 13:29:01,773: <__main__.feed object at 0x0000026757282070> AGV01 release task, release agv True
+[INFO]2020-09-08 13:29:01,826: <__main__.feed object at 0x0000026757282070> let AGV01 gohome

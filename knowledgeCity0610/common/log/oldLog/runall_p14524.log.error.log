@@ -1,0 +1,788 @@
+[CRITICAL]2021-05-11 10:44:02,896: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:03,163: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:03,226: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:03,257: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:03,279: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:03,289: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:03,296: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:03,304: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:03,311: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:03,321: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:03,327: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:03,338: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:26,941: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:26,950: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:26,960: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:26,967: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:26,976: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:26,983: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:26,989: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:26,996: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:27,002: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:27,007: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:44:27,013: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:27,018: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:44:27,394: checkFinish cause a error: Expecting value: line 1 column 1 (char 0)
+pid=14524, ppid=17860, tid=18048
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 245, in _checkFinish
+    status = getTaskStatus(ids)
+  File "..\agvCtrl\agvApi.py", line 74, in getTaskStatus
+    return _http_get(url + '/api/agv/taskStatus',{"taskId": taskId})["taskList"]
+  File "..\agvCtrl\agvApi.py", line 62, in _http_get
+    result = json.load(r)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\json_codec.py", line 229, in load
+    r = json.loads(text)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[CRITICAL]2021-05-11 10:45:12,419: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:12,426: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:12,434: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:12,441: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:12,448: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:12,456: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:12,463: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:12,469: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:12,476: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:12,481: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:12,487: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:12,493: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:22,514: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:22,521: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:22,531: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:22,537: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:22,545: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:22,551: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:22,560: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:22,567: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:22,572: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:22,579: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:22,586: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:22,591: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:45:32,597: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12584
+
+[CRITICAL]2021-05-11 10:45:32,604: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12584
+
+[CRITICAL]2021-05-11 10:45:32,612: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12584
+
+[CRITICAL]2021-05-11 10:45:32,619: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:45:32,629: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12584
+
+[CRITICAL]2021-05-11 10:45:32,637: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:45:32,644: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12584
+
+[CRITICAL]2021-05-11 10:45:32,649: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=12584
+
+[CRITICAL]2021-05-11 10:45:32,655: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:45:32,662: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:45:32,669: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:45:32,674: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:45:42,697: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:45:42,705: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:42,712: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:45:42,719: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:42,726: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:45:42,733: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:42,761: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:45:42,780: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:42,794: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:45:42,803: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:45:42,811: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:42,816: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:45:52,840: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:45:52,848: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:45:52,855: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:52,863: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:45:52,869: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:52,876: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:45:52,884: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:52,891: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:45:52,896: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:45:52,902: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:52,911: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:45:52,916: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:02,962: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:02,973: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:02,986: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:02,997: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:03,007: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:03,015: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:03,022: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:03,029: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:03,041: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:03,046: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:03,056: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:03,061: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:13,131: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:13,141: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:46:13,149: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:13,156: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:46:13,163: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:13,174: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:46:13,181: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:13,187: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:46:13,194: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:13,199: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:13,205: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:46:13,209: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:46:23,241: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:23,249: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:23,256: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:46:23,262: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:23,269: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:46:23,275: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:23,283: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:46:23,289: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:23,294: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:23,300: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:46:23,307: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:46:23,311: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:46:33,373: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:46:33,395: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:33,401: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:46:33,408: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:33,415: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:46:33,422: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:33,428: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:46:33,436: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:33,446: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:46:33,451: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:46:33,456: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:33,461: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:43,493: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:43,503: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:43,510: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:43,517: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:43,523: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:43,529: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:43,535: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:43,541: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:43,551: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:43,556: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:46:43,562: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:43,567: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=16984
+
+[CRITICAL]2021-05-11 10:46:53,610: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:53,621: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:53,629: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:53,636: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:53,642: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:53,649: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:53,655: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:53,662: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:53,669: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:53,674: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:46:53,686: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:46:53,691: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:03,735: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:03,742: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:03,754: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:03,766: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:03,774: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:03,783: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:03,792: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:03,796: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:03,802: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:03,813: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:03,820: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:03,825: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:13,827: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16628
+
+[CRITICAL]2021-05-11 10:47:13,833: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16628
+
+[CRITICAL]2021-05-11 10:47:13,841: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16628
+
+[CRITICAL]2021-05-11 10:47:13,849: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16628
+
+[CRITICAL]2021-05-11 10:47:13,864: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=16628
+
+[CRITICAL]2021-05-11 10:47:13,868: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=16628
+
+[CRITICAL]2021-05-11 10:47:13,875: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:13,883: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:13,890: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:13,896: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:13,904: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:13,908: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:20,432: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=14524, ppid=17860, tid=13472
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 202, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 251, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 288, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    headData = _recv(agvId,ip, port, 1)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _recv
+    return tcpSocketLong.recv(agvId,ip, port, len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 155, in recv
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 150, in recv
+    return c.recv(len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 94, in recv
+    recvdata = self._socket.recv(remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-11 10:47:23,917: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:23,925: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:23,932: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:23,940: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:23,949: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:23,954: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17092
+
+[CRITICAL]2021-05-11 10:47:23,961: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:23,967: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:23,973: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:23,980: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:23,986: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:23,991: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:31,507: agvApi send task, agvId=AGV01 cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=14524, ppid=17860, tid=13472
+Traceback (most recent call last):
+  File "..\driver\seerAgv\agvApi.py", line 202, in task
+    ret = _handle(agvId, API_PORT_TASK, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 251, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 288, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 299, in sendCmd
+    headData = _recv(agvId,ip, port, 1)
+  File "..\driver\seerAgv\agvApi.py", line 383, in _recv
+    return tcpSocketLong.recv(agvId,ip, port, len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 155, in recv
+    raise e
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 150, in recv
+    return c.recv(len)
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\tcpSocketLong.py", line 94, in recv
+    recvdata = self._socket.recv(remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+[CRITICAL]2021-05-11 10:47:34,028: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:34,048: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:34,055: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:34,063: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:34,070: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:34,079: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:34,086: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:34,097: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:34,101: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17340
+
+[CRITICAL]2021-05-11 10:47:34,109: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:34,115: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:34,119: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:44,181: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:47:44,193: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:44,202: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:47:44,209: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:44,216: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:47:44,223: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:44,229: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:47:44,236: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:44,243: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:47:44,248: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:47:44,254: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:44,259: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=12876
+
+[CRITICAL]2021-05-11 10:47:54,291: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:54,299: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:54,312: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:54,319: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:54,326: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:54,332: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:54,342: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:54,348: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18152
+
+[CRITICAL]2021-05-11 10:47:54,356: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:54,364: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:54,372: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:54,378: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17236
+
+[CRITICAL]2021-05-11 10:47:55,315: task [AGV01] [6099eff473dabd38bc063a37] rollerFrontLoad failed cause a error: 'ret_code'
+pid=14524, ppid=17860, tid=16504
+Traceback (most recent call last):
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\autoCtrl\runTasks.py", line 1612, in rollerFrontLoad
+    if ret["ret_code"] == 0:
+KeyError: 'ret_code'
+
+[CRITICAL]2021-05-11 10:48:04,415: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:48:04,422: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:48:04,432: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:48:04,439: apply agv failed, count=0 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:48:04,446: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:48:04,453: apply agv failed, count=1 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:48:04,460: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:48:04,464: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099ec7873dabd3d10324107', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=18272
+
+[CRITICAL]2021-05-11 10:48:04,470: apply agv failed, count=2 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:48:04,477: apply agv failed, count=3 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:48:04,483: apply agv failed, count=4 cause a error: comba-ZSC-F1-F3.AP142找不到可用的小车
+pid=14524, ppid=17860, tid=17348
+
+[CRITICAL]2021-05-11 10:48:04,488: apply failed, count=1 cause a error: ('apply agv failed3!', 'taskId', '6099eb6473dabd3d103240a7', 'loc', 'AP142')
+pid=14524, ppid=17860, tid=17348
+

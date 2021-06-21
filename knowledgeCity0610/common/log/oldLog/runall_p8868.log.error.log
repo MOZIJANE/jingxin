@@ -1,0 +1,24 @@
+[CRITICAL]2021-04-25 17:21:26,963: import main_agv failed, path: agvCtrl cause a error: Expecting ',' delimiter: line 24 column 3 (char 459)
+pid=8868, ppid=144, tid=5676
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\Administrator\Desktop\SVN\knowledgeCity\agvCtrl\mapMgr.py", line 25, in <module>
+    import driver.seerAgv.agvCtrl as agvCtrl
+  File "..\driver\seerAgv\agvCtrl.py", line 33, in <module>
+    g_agvType = _loadAgvType()
+  File "..\driver\seerAgv\agvCtrl.py", line 28, in _loadAgvType
+    aa = json.load(f)
+  File "C:\Python37\lib\json\__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python37\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 24 column 3 (char 459)
+
+[CRITICAL]2021-04-25 17:21:26,969: import main_agv failed, path: agvCtrl ,cause Expecting ',' delimiter: line 24 column 3 (char 459)

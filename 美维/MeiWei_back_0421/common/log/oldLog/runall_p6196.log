@@ -1,0 +1,51 @@
+[INFO]2021-04-23 16:09:29,552: log files at E:\projects_by_myself\backup\MeiWei_back_0421\common\log
+[INFO]2021-04-23 16:09:29,553: find module account.main_account
+[INFO]2021-04-23 16:09:29,555: find module agvCtrl.main_agv
+[INFO]2021-04-23 16:09:29,556: find module agvDevice.main_agvDevice
+[INFO]2021-04-23 16:09:29,558: find module akmCtrl.main_akmCtrl
+[INFO]2021-04-23 16:09:29,559: find module alarm.main_alarm
+[INFO]2021-04-23 16:09:29,561: find module auth.main_auth
+[INFO]2021-04-23 16:09:29,563: find module door.main_door
+[INFO]2021-04-23 16:09:29,566: find module elevator.main_elevator
+[INFO]2021-04-23 16:09:29,572: find module feed.main_feed
+[INFO]2021-04-23 16:09:29,573: find module remoteio.main_remoteio
+[INFO]2021-04-23 16:09:29,575: import account.main_account
+[INFO]2021-04-23 16:09:29,670: import agvCtrl.main_agv
+[INFO]2021-04-23 16:09:30,024: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A9FD4D6EA0>>
+[INFO]2021-04-23 16:09:30,906: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A9FD4E9420>>
+[INFO]2021-04-23 16:09:31,021: create lock <lock name:timer.lock_2929129263696,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A9FDB593C0>>
+[ERROR]2021-04-23 16:09:31,033: mqtt is disabled
+[INFO]2021-04-23 16:09:31,035: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-23 16:09:31,036: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-23 16:09:34,078: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-23 16:09:34,112: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A9FDD69DB0>>
+[WARNING]2021-04-23 16:09:34,133: use mockAgvCtrl
+[INFO]2021-04-23 16:09:34,137: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002A9FBDC4360>>
+[CRITICAL]2021-04-23 16:09:34,350: import main_agv failed, path: agvCtrl cause a error: Extra data: line 5 column 2 (char 307)
+pid=6196, ppid=13180, tid=13520
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 11, in <module>
+    import rotationMgr
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\rotationMgr.py", line 35, in <module>
+    g_agvList = _loadAgvList()
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\rotationMgr.py", line 29, in _loadAgvList
+    aa = json.load(f)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "E:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 5 column 2 (char 307)
+
+[CRITICAL]2021-04-23 16:09:34,353: import main_agv failed, path: agvCtrl ,cause Extra data: line 5 column 2 (char 307)

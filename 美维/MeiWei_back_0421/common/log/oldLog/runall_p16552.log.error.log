@@ -1,0 +1,20 @@
+[CRITICAL]2021-06-15 09:32:36,444: invoke <function scadaTask._taskFunc at 0x00000219DE0446A8> cause a error: 'NoneType' object is not subscriptable
+pid=16552, ppid=16860, tid=16368
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 831, in _taskFunc
+    log.debug(str(self), old, "->", self.taskStep)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 170, in __str__
+    self.taskId, a, self.s_info["location"], self.s_info["prepoint"], self.t_info["location"],
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "..\common\utility.py", line 167, in __call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 837, in _taskFunc
+    log.exception("taskFunc2:" + str(self), e)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 170, in __str__
+    self.taskId, a, self.s_info["location"], self.s_info["prepoint"], self.t_info["location"],
+TypeError: 'NoneType' object is not subscriptable
+

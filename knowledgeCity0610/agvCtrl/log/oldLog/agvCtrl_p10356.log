@@ -1,0 +1,43 @@
+[INFO]2020-07-07 21:54:35,708: log files at E:\python_work\akm\agvCtrl\log
+[INFO]2020-07-07 21:54:35,712: create lock <lock name:timer.lock_2808894372064,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028DFF26B900>>
+[INFO]2020-07-07 21:54:36,299: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D801ABDE0>>
+[INFO]2020-07-07 21:54:36,303: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D801B4960>>
+[INFO]2020-07-07 21:54:36,567: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D801C2C00>>
+[WARNING]2020-07-07 21:54:36,581: use mockAgvCtrl
+[INFO]2020-07-07 21:54:36,685: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D802C3E40>>
+[INFO]2020-07-07 21:54:36,746: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D803092D0>>
+[INFO]2020-07-07 21:54:36,748: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D803132A0>>
+[INFO]2020-07-07 21:54:36,753: charge policy 0 , fix time
+[SUCC]2020-07-07 21:54:36,762: utility start, pid=10356, ppid=17496
+[ERROR]2020-07-07 21:54:36,763: mqtt is disabled
+[DEBUG]2020-07-07 21:54:36,764: start timer
+[INFO]2020-07-07 21:54:36,775: load agv file: E:\python_work\akm\agvCtrl/projects/test/agv.cfg
+[INFO]2020-07-07 21:54:36,800: create lock <lock name:agvList.AGV07.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D80313C30>>
+[DEBUG]2020-07-07 21:54:36,805: create aliveObj AGV07 AGV离线异常 timeout 300
+[INFO]2020-07-07 21:54:36,807: AGV07 start agvList run thread
+[INFO]2020-07-07 21:54:36,814: start load map E:\python_work\akm\agvCtrl\projects\test\akmsmtMap.smap
+[DEBUG]2020-07-07 21:54:39,737: elevator thread start
+[INFO]2020-07-07 21:54:40,251: load map E:\python_work\akm\agvCtrl\projects\test\akmsmtMap.smap ,used 3440 ms
+[INFO]2020-07-07 21:54:40,255: create lock <lock name:agvList.AGV08.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000028D8070D120>>
+[DEBUG]2020-07-07 21:54:40,267: create aliveObj AGV08 AGV离线异常 timeout 300
+[INFO]2020-07-07 21:54:40,272: AGV08 start agvList run thread
+[WARNING]2020-07-07 21:54:40,273: MainThread[tid:1444] <lock name:agvList.g_agvLock,<locked _thread.RLock object owner=1444 count=1 at 0x0000028D803092D0>> ,hold 3502 ms
+[INFO]2020-07-07 21:54:40,284: name=MainThread, pid=10356, tid=1444
+[01] File "E:/python_work/akm/agvCtrl/agvControl.py", line 2256, in <module>() 
+[02] File "../common/utility.py", line 558, in start() 
+[03] File "../common/lock.py", line 122, in _call() 
+[04] File "../common/lock.py", line 100, in release() 
+[05] File "../common/enhance.py", line 258, in getTrace() 
+[06] File "../common/enhance.py", line 240, in getThreadStack()
+[ERROR]2020-07-07 21:54:40,292: agvList: stop AGV07
+[CRITICAL]2020-07-07 21:55:10,038: Connect mongodb error! cause a error: 192.168.5.137:27017: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10356, ppid=17496, tid=14280
+
+[ERROR]2020-07-07 21:55:10,044: agv check init error False
+[ERROR]2020-07-07 21:55:10,553: agvList: stop AGV08
+[CRITICAL]2020-07-07 21:55:13,427: Connect mongodb error! cause a error: 192.168.5.137:27017: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10356, ppid=17496, tid=17360
+
+[CRITICAL]2020-07-07 21:55:15,975: Connect mongodb error! cause a error: 192.168.5.137:27017: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10356, ppid=17496, tid=21592
+

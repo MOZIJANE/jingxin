@@ -1,0 +1,23 @@
+[CRITICAL]2021-05-11 15:41:02,793: agv thread cause a error: AGV02Ö´ÐÐmove LM121Ê§°Ü,taskId:home_1
+pid=12804, ppid=10252, tid=1424
+
+[CRITICAL]2021-05-11 15:44:25,636: invoke <function scadaTask._taskFunc at 0x000001F4AFE4E8C8> cause a error: 'NoneType' object is not subscriptable
+pid=12804, ppid=10252, tid=9304
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 740, in _taskFunc
+    log.debug(str(self),old,"->",self.taskStep)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 300, in __str__
+    s = "task[%s][%s] %s(%s) -> %s(%s) [%s]"%(self.taskId,a,self.s_info["location"],self.s_info["prepoint"],self.t_info["location"],self.t_info["prepoint"],self.taskStep)
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\utility.py", line 167, in __call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 746, in _taskFunc
+    log.exception("taskFunc2:"+str(self),e)
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 300, in __str__
+    s = "task[%s][%s] %s(%s) -> %s(%s) [%s]"%(self.taskId,a,self.s_info["location"],self.s_info["prepoint"],self.t_info["location"],self.t_info["prepoint"],self.taskStep)
+TypeError: 'NoneType' object is not subscriptable
+

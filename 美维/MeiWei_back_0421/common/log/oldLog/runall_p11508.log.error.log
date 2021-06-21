@@ -1,0 +1,11 @@
+[CRITICAL]2021-04-22 17:00:11,600: invoke <function urlRelayopen at 0x00000247EAC54AF0> cause a error: 'DOOR_01'
+pid=11508, ppid=13916, tid=15508
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\door\main_door.py", line 15, in urlRelayopen
+    switchInfo= switchMgr.getDoor(id)
+  File "..\door\switchMgr.py", line 45, in getDoor
+    return getDoorList()[swichId]
+KeyError: 'DOOR_01'
+

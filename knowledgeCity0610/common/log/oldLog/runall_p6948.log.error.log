@@ -1,0 +1,25 @@
+[CRITICAL]2021-05-08 13:54:15,671: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=6948, ppid=9596, tid=5848
+
+[CRITICAL]2021-05-08 13:54:16,969: import main_agv failed, path: agvCtrl cause a error: mongodb is not connected
+pid=6948, ppid=9596, tid=5848
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\mapMgr.py", line 19, in <module>
+    import doorMgr
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\doorMgr.py", line 25, in <module>
+    import alarm.aliveApi
+  File "..\alarm\__init__.py", line 2, in <module>
+    import alarm.alarmApi
+  File "..\alarm\alarmApi.py", line 11, in <module>
+    import main_alarm
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\alarm\main_alarm.py", line 75, in <module>
+    ds = db.find("c_alarm_type",{"visible": True})
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
+[CRITICAL]2021-05-08 13:54:16,972: import main_agv failed, path: agvCtrl ,cause mongodb is not connected

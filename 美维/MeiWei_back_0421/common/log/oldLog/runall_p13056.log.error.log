@@ -1,0 +1,13 @@
+[CRITICAL]2021-06-11 16:49:30,590: invoke timer func<function lock.<locals>.call.<locals>._call at 0x00000297C09352F0> cause a error: 'NoneType' object is not subscriptable
+pid=13056, ppid=2940, tid=3716
+Traceback (most recent call last):
+  File "..\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\√¿Œ¨\MeiWei_back_0421\akmCtrl\runTasks01.py", line 58, in run
+    if not g_taskMgr.checkTask(t):
+  File "C:\Users\Administrator\Desktop\SVN\√¿Œ¨\MeiWei_back_0421\akmCtrl\beans\scadaTaskMgrBean.py", line 68, in checkTask
+    ret = task.islocAvailable(task.s_info["floorId"], task.s_info["prepoint"])
+TypeError: 'NoneType' object is not subscriptable
+

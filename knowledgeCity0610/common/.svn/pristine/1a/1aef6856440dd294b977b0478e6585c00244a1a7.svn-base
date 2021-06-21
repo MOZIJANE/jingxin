@@ -1,0 +1,61 @@
+#coding=utf-8
+# ycat			2017-08-16	  create
+# 可以简单选择文本的对话框 
+import sys,os
+import qtawesome as qta
+import setup
+if __name__ == '__main__':
+	setup.setCurPath(__file__)
+import ui.inputBox
+from PyQt5.QtWidgets import (QApplication, QDialog,QVBoxLayout,
+        QLabel, QPushButton, QHBoxLayout,QGroupBox) 
+from PyQt5.QtCore import QCoreApplication,Qt
+
+def getText(title,value):
+	dlg = inputDlg(title,value)
+	r = dlg.exec_()
+	if r == QDialog.Accepted:
+		return dlg.value
+	else:
+		return None
+
+class inputDlg(QDialog):	
+	def __init__(self,title,value=""):
+		super(inputDlg, self).__init__()
+		self.setWindowTitle(title)
+		self.setWindowIcon(qta.icon("fa.pencil",color="white"))
+		self.setFixedSize(300,150)
+		
+		self.input = ui.inputBox.inputBox()
+		self.input.setText(value)		
+		self.input.setFontSize(18)
+		self.setWindowFlags(Qt.WindowCloseButtonHint) 		
+		l = QVBoxLayout()
+		l.setSpacing(20) 
+		l.addWidget(self.input) 
+		
+		l2 = QHBoxLayout()
+		l2.setSpacing(20)
+		b = QPushButton(qta.icon("fa.check",scale_factor=1.5,color="green"),"确定")
+		b.setMinimumHeight(40)
+		b.clicked.connect(self.accept)
+		l2.addWidget(b)
+		
+		b = QPushButton(qta.icon("fa.remove",scale_factor=1.5,color="red"),"取消")
+		b.setMinimumHeight(40)
+		b.clicked.connect(self.reject)
+		l2.addWidget(b)
+		
+		l.addLayout(l2)
+		self.setLayout(l) 
+		 
+	@property
+	def value(self):
+		return self.input.text()
+	
+if __name__ == '__main__':
+	app = QApplication(sys.argv)
+	print(getText("ddddd","gggggg"))
+	#d = inputDlg("ddddddddddddd","vvvvv")
+	#d.exec_()
+

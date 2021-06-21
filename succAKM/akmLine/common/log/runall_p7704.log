@@ -1,0 +1,82 @@
+[INFO]2021-06-07 17:12:52,918: log files at C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\log
+[INFO]2021-06-07 17:12:52,918: find module agvCtrl.main_agv
+[INFO]2021-06-07 17:12:52,919: find module agvDevice.main_agvDevice
+[INFO]2021-06-07 17:12:52,919: find module alarm.main_alarm
+[INFO]2021-06-07 17:12:52,920: find module auth.main_auth
+[INFO]2021-06-07 17:12:52,921: find module button.main_button
+[INFO]2021-06-07 17:12:52,921: find module door.main_door
+[INFO]2021-06-07 17:12:52,921: find module elevator.main_elevator
+[INFO]2021-06-07 17:12:52,922: import agvCtrl.main_agv
+[ERROR]2021-06-07 17:12:53,055: mongo db is disabled
+[INFO]2021-06-07 17:12:53,350: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545CE005F8>>
+[INFO]2021-06-07 17:12:53,354: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545CE007B0>>
+[INFO]2021-06-07 17:12:53,530: create lock <lock name:timer.lock_1461850557240,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545D0D5DC8>>
+[ERROR]2021-06-07 17:12:53,542: mqtt is disabled
+[INFO]2021-06-07 17:12:53,557: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-06-07 17:12:53,559: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-06-07 17:12:53,622: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545D2CB508>>
+[WARNING]2021-06-07 17:12:53,640: use mockAgvCtrl
+[INFO]2021-06-07 17:12:53,643: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545B37A850>>
+[INFO]2021-06-07 17:12:54,262: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545D3D9AD0>>
+[INFO]2021-06-07 17:12:54,306: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545D40BE40>>
+[INFO]2021-06-07 17:12:54,672: charge policy 0 , fix time
+[INFO]2021-06-07 17:12:54,718: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001545D4BE1C0>>
+[INFO]2021-06-07 17:12:54,833: start load map C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\projects\test\akmLineMap.smap
+[CRITICAL]2021-06-07 17:12:54,933: import main_agv failed, path: agvCtrl cause a error: File contains no section headers.
+file: '<string>', line: 1
+'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+pid=7704, ppid=16372, tid=15964
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\main_agv.py", line 22, in <module>
+    mapMgr.loadAllMap()
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\mapMgr.py", line 78, in loadAllMap
+    getMap(m["id"])
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\mapMgr.py", line 54, in getMap
+    g_map[mapId] = mapInfo.load(mapId + ".smap")
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\mapMgr.py", line 352, in load
+    ret._init(oldPath,ctime)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\mapMgr.py", line 656, in _init
+    self.doors = doorMgr.doors(self.mapId)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\doorMgr.py", line 127, in __init__
+    self._load()
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\agvCtrl\doorMgr.py", line 137, in _load
+    d = switchMgr.getDoorByMapId(self.mapId)
+  File "..\door\switchMgr.py", line 45, in getDoorByMapId
+    swichList = getDoorList()
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "..\door\switchMgr.py", line 90, in getDoorList
+    g_swichList = _loadDoorList()
+  File "..\door\switchMgr.py", line 59, in _loadDoorList
+    proName = local.get("project","name")
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\local.py", line 84, in get
+    return _get_cfg().get(section,key,default)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\local.py", line 33, in _get_cfg
+    _loadStackFiles()
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\local.py", line 28, in _loadStackFiles
+    _add(dirName)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\local.py", line 21, in _add
+    g_cfg.addCfg(p)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\config.py", line 80, in addCfg
+    c = config(filename)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\config.py", line 26, in __init__
+    self.load(filename)
+  File "C:\Users\Administrator\Desktop\SVN\succAKM\akmLine\common\config.py", line 50, in load
+    self.cfg.read_string(s)
+  File "C:\Python37\lib\configparser.py", line 722, in read_string
+    self.read_file(sfile, source)
+  File "C:\Python37\lib\configparser.py", line 717, in read_file
+    self._read(f, source)
+  File "C:\Python37\lib\configparser.py", line 1079, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '<string>', line: 1
+'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
+[CRITICAL]2021-06-07 17:12:54,941: import main_agv failed, path: agvCtrl ,cause File contains no section headers.
+file: '<string>', line: 1
+'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'

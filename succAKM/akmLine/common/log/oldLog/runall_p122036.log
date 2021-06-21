@@ -1,0 +1,1201 @@
+[INFO]2020-09-21 16:42:02,647: log files at C:\akmLine\common\log
+[INFO]2020-09-21 16:42:02,648: find module agvCtrl.main_agv
+[INFO]2020-09-21 16:42:02,649: find module agvDevice.main_agvDevice
+[INFO]2020-09-21 16:42:02,650: find module alarm.main_alarm
+[INFO]2020-09-21 16:42:02,651: find module auth.main_auth
+[INFO]2020-09-21 16:42:02,652: find module door.main_door
+[INFO]2020-09-21 16:42:02,654: find module elevator.main_elevator
+[INFO]2020-09-21 16:42:02,655: find module feed.main_feed
+[INFO]2020-09-21 16:42:02,655: import agvCtrl.main_agv
+[INFO]2020-09-21 16:42:03,829: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C0328>>
+[INFO]2020-09-21 16:42:03,845: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C0580>>
+[INFO]2020-09-21 16:42:04,154: create lock <lock name:timer.lock_127919832,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000079DBB98>>
+[ERROR]2020-09-21 16:42:04,184: mqtt is disabled
+[INFO]2020-09-21 16:42:04,186: mqtt: subscribe [alarm/raise/+]
+[INFO]2020-09-21 16:42:04,190: mqtt: subscribe [alarm/clear/+]
+[INFO]2020-09-21 16:42:07,259: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-21 16:42:07,347: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007E0B620>>
+[INFO]2020-09-21 16:42:07,348: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007E0B260>>
+[INFO]2020-09-21 16:42:07,351: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007B76D78>>
+[INFO]2020-09-21 16:42:08,020: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000005B727B0>>
+[INFO]2020-09-21 16:42:09,128: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007F97990>>
+[INFO]2020-09-21 16:42:09,134: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000081C52D8>>
+[INFO]2020-09-21 16:42:09,373: charge policy 0 , fix time
+[INFO]2020-09-21 16:42:09,502: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000081C5E40>>
+[INFO]2020-09-21 16:42:09,979: start load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap
+[DEBUG]2020-09-21 16:42:18,121: elevator thread start
+[INFO]2020-09-21 16:42:18,664: load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap ,used 8724 ms
+[INFO]2020-09-21 16:42:18,702: start load map C:\akmLine\agvCtrl\projects\akmLine\office.smap
+[INFO]2020-09-21 16:42:18,930: load map C:\akmLine\agvCtrl\projects\akmLine\office.smap ,used 264 ms
+[WARNING]2020-09-21 16:42:18,932: MainThread[tid:154320] <lock name:mapMgr.lock,<locked _thread.RLock object owner=154320 count=1 at 0x0000000005B727B0>> ,hold 9428 ms
+[INFO]2020-09-21 16:42:18,935: name=MainThread, pid=122036, tid=154320
+[01] File "C:/akmLine/common/run_all.py", line 57, in <module>() 
+[02] File "C:/akmLine/common/run_all.py", line 39, in findModule() 
+[03] File "<frozen importlib._bootstrap>", line 983, in _find_and_load() 
+[04] File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked() 
+[05] File "<frozen importlib._bootstrap>", line 677, in _load_unlocked() 
+[06] File "<frozen importlib._bootstrap_external>", line 728, in exec_module() 
+[07] File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed() 
+[08] File "C:/akmLine/agvCtrl/main_agv.py", line 22, in <module>() 
+[09] File "C:/akmLine/common/lock.py", line 122, in _call() 
+[10] File "C:/akmLine/common/lock.py", line 100, in release() 
+[11] File "C:/akmLine/common/enhance.py", line 258, in getTrace() 
+[12] File "C:/akmLine/common/enhance.py", line 240, in getThreadStack()
+[INFO]2020-09-21 16:42:18,952: import agvDevice.main_agvDevice
+[INFO]2020-09-21 16:42:18,962: import alarm.main_alarm
+[INFO]2020-09-21 16:42:18,976: import auth.main_auth
+[INFO]2020-09-21 16:42:19,038: import door.main_door
+[INFO]2020-09-21 16:42:19,044: import elevator.main_elevator
+[INFO]2020-09-21 16:42:19,064: import feed.main_feed
+[INFO]2020-09-21 16:42:19,076: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A1E3F0>>
+[INFO]2020-09-21 16:42:19,249: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A1EC60>>
+[INFO]2020-09-21 16:42:19,274: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A1EB20>>
+[INFO]2020-09-21 16:42:19,828: IP: 0.0.0.0 port: 10001
+[SUCC]2020-09-21 16:42:19,877: utility start, pid=122036, ppid=153688
+[DEBUG]2020-09-21 16:42:19,879: start timer
+[INFO]2020-09-21 16:42:19,934: load agv file: C:\akmLine\agvCtrl/projects/akmLine/agv.cfg
+[INFO]2020-09-21 16:42:19,945: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DC94B8>>
+[DEBUG]2020-09-21 16:42:19,962: create aliveObj AGV01 AGV离线异常 timeout 300
+[INFO]2020-09-21 16:42:19,968: AGV01 start agvList run thread
+[INFO]2020-09-21 16:42:19,970: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DC9648>>
+[INFO]2020-09-21 16:42:19,971: AGV01 start agvList run2 thread
+[DEBUG]2020-09-21 16:42:19,974: try connect AGV01 192.168.20.199:19204
+[WARNING]2020-09-21 16:42:19,988: Local server start! version 3.7.3, path C:\akmLine\common, pid 122036
+[INFO]2020-09-21 16:42:19,996: add_ignore: taskStatus
+[INFO]2020-09-21 16:42:19,998: AGV01 connected
+[INFO]2020-09-21 16:42:20,002: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DC9698>>
+[DEBUG]2020-09-21 16:42:20,005: try connect AGV01 192.168.20.199:19205
+[INFO]2020-09-21 16:42:20,010: AGV01 connected
+[INFO]2020-09-21 16:42:20,013: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DC9710>>
+[DEBUG]2020-09-21 16:42:20,015: try connect AGV01 192.168.20.199:19206
+[INFO]2020-09-21 16:42:20,020: AGV01 connected
+[INFO]2020-09-21 16:42:20,022: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008DC9828>>
+[DEBUG]2020-09-21 16:42:20,029: try connect AGV01 192.168.20.199:19207
+[INFO]2020-09-21 16:42:20,034: AGV01 connected
+[INFO]2020-09-21 16:42:20,036: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008EE2328>>
+[DEBUG]2020-09-21 16:42:20,039: try connect AGV01 192.168.20.199:19208
+[INFO]2020-09-21 16:42:20,051: AGV01 connected
+[INFO]2020-09-21 16:42:20,053: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008EE2300>>
+[DEBUG]2020-09-21 16:42:20,056: try connect AGV01 192.168.20.199:19210
+[INFO]2020-09-21 16:42:20,064: AGV01 connected
+[INFO]2020-09-21 16:42:20,102: AGV01 current map akmLineMap
+[INFO]2020-09-21 16:42:20,125: AGV01 is online
+[INFO]2020-09-21 16:42:20,338: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65435
+[CRITICAL]2020-09-21 16:42:30,394: : 192.168.10.3:10001 <--> 192.168.20.202:65435 time out cause a error: <tcpSocket.client object at 0x0000000008BA4B70>
+pid=122036, ppid=153688, tid=158724
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:42:30,400: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65435
+[WARNING]2020-09-21 16:42:30,402: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65435
+[INFO]2020-09-21 16:42:30,417: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65436
+[CRITICAL]2020-09-21 16:42:40,477: : 192.168.10.3:10001 <--> 192.168.20.202:65436 time out cause a error: <tcpSocket.client object at 0x0000000007163C88>
+pid=122036, ppid=153688, tid=162336
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:42:40,485: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65436
+[WARNING]2020-09-21 16:42:40,488: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65436
+[INFO]2020-09-21 16:42:40,504: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65437
+[CRITICAL]2020-09-21 16:42:50,540: : 192.168.10.3:10001 <--> 192.168.20.202:65437 time out cause a error: <tcpSocket.client object at 0x0000000008BA4B70>
+pid=122036, ppid=153688, tid=164848
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:42:50,545: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65437
+[WARNING]2020-09-21 16:42:50,547: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65437
+[INFO]2020-09-21 16:42:50,561: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65438
+[ERROR]2020-09-21 16:43:00,405: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6513, id=5f6867946ea419ab821f5355
+[CRITICAL]2020-09-21 16:43:00,590: : 192.168.10.3:10001 <--> 192.168.20.202:65438 time out cause a error: <tcpSocket.client object at 0x0000000007163C88>
+pid=122036, ppid=153688, tid=168700
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:43:00,594: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65438
+[WARNING]2020-09-21 16:43:00,596: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65438
+[INFO]2020-09-21 16:43:00,612: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65439
+[WARNING]2020-09-21 16:43:00,948: clear alarm obj=AGV01, typeId=49997, id=5f6867946ea419ab821f5355
+[ERROR]2020-09-21 16:43:07,814: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7131, id=5f68679b6ea419ab821f5362
+[WARNING]2020-09-21 16:43:08,351: clear alarm obj=AGV01, typeId=49997, id=5f68679b6ea419ab821f5362
+[CRITICAL]2020-09-21 16:43:10,642: : 192.168.10.3:10001 <--> 192.168.20.202:65439 time out cause a error: <tcpSocket.client object at 0x0000000008BA4B70>
+pid=122036, ppid=153688, tid=4184
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:43:10,646: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65439
+[WARNING]2020-09-21 16:43:10,648: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65439
+[INFO]2020-09-21 16:43:10,664: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65440
+[CRITICAL]2020-09-21 16:43:20,719: : 192.168.10.3:10001 <--> 192.168.20.202:65440 time out cause a error: <tcpSocket.client object at 0x0000000007163C88>
+pid=122036, ppid=153688, tid=9092
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:43:20,726: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65440
+[WARNING]2020-09-21 16:43:20,728: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65440
+[INFO]2020-09-21 16:43:20,744: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65441
+[CRITICAL]2020-09-21 16:43:30,791: : 192.168.10.3:10001 <--> 192.168.20.202:65441 time out cause a error: <tcpSocket.client object at 0x0000000008BA4B70>
+pid=122036, ppid=153688, tid=14156
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:43:30,794: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65441
+[WARNING]2020-09-21 16:43:30,797: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65441
+[INFO]2020-09-21 16:43:30,812: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65442
+[DEBUG]2020-09-21 16:43:34,088: GET: http://192.168.10.3:8999/api/agv/seat addr: 192.168.20.4
+[DEBUG]2020-09-21 16:43:34,168: used 81ms 200 OK application/json;charset=utf-8, GET: http://192.168.10.3:8999/api/agv/seat
+[DEBUG]2020-09-21 16:43:40,222: GET: http://192.168.10.3:8999/api/agv/feed?source=Load1&target=Line07 addr: 192.168.20.4
+[DEBUG]2020-09-21 16:43:40,239: GET: http://127.0.0.1:8999/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2020-09-21 16:43:40,241: scadaTask init client agvApi
+[DEBUG]2020-09-21 16:43:40,244: used 5ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/init?appName=scadaTask
+[INFO]2020-09-21 16:43:40,250: create lock <lock name:feed.s_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000000A118F08>>
+[INFO]2020-09-21 16:43:40,292: create task[5f6867bc75c3cfa228185b2a]: , taskName: 从Load1 运送货架到 Line07, taskType: feed
+[INFO]2020-09-21 16:43:40,334: task[5f6867bc75c3cfa228185b2a] update info {'taskName': '从Load1 运送货架到 Line07', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 40, 317910)}
+[INFO]2020-09-21 16:43:40,353: Got a task from feed Hucais 5f6867bc75c3cfa228185b2a:s <runTasknanqu.feed object at 0x000000000A227588>
+[INFO]2020-09-21 16:43:40,365: task[5f6867bc75c3cfa228185b2a] update info {'step': 'waitForAgv', 'msg': '等待分配小车', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 40, 351912)}
+[CRITICAL]2020-09-21 16:43:40,872: : 192.168.10.3:10001 <--> 192.168.20.202:65442 time out cause a error: <tcpSocket.client object at 0x0000000007163C88>
+pid=122036, ppid=153688, tid=23884
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:43:40,930: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65442
+[WARNING]2020-09-21 16:43:40,946: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65442
+[INFO]2020-09-21 16:43:40,978: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65443
+[DEBUG]2020-09-21 16:43:41,537: GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM1&mapId=akmLineMap&taskId=5f6867bc75c3cfa228185b2a&timeout=15 addr: 127.0.0.1
+[INFO]2020-09-21 16:43:42,005: apply AGV01 ,taskId: 5f6867bc75c3cfa228185b2a ,loc akmLineMap.LM1 ,autoLock False , used 433 ms
+[DEBUG]2020-09-21 16:43:42,009: used 472ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM1&mapId=akmLineMap&taskId=5f6867bc75c3cfa228185b2a&timeout=15
+[DEBUG]2020-09-21 16:43:42,245: GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f6867bc75c3cfa228185b2a addr: 127.0.0.1
+[DEBUG]2020-09-21 16:43:42,276: lock:  AGV01 taskId 5f6867bc75c3cfa228185b2a app scadaTask
+[WARNING]2020-09-21 16:43:43,306: AGV01 clear task finish, cur= akmLineMap.LM16 task_status= 4
+[DEBUG]2020-09-21 16:43:43,341: used 1096ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f6867bc75c3cfa228185b2a
+[INFO]2020-09-21 16:43:43,428: task[5f6867bc75c3cfa228185b2a] update info {'agvId': 'AGV01', 'msg': '成功分配小车AGV01', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 43, 410087)}
+[INFO]2020-09-21 16:43:43,463: task[5f6867bc75c3cfa228185b2a] update info {'step': 'goSource', 'msg': '前往上料工位', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 43, 434088)}
+[DEBUG]2020-09-21 16:43:44,524: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&floorId=akmLineMap&loc=akmLineMap.LM1&location=LM1&seat1=Load1&seat2=Line07&sourceID=None&targetID=None&taskId=5f6867bc75c3cfa228185b2a_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line07&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 16:43:44,543: Begin: AGV01 move from akmLineMap.LM16 to akmLineMap.LM1 by paths: [('akmLineMap', ['LM16', 'LM1'], 2.689)] task: 5f6867bc75c3cfa228185b2a_1 timeout 86400 used 10 ms
+[DEBUG]2020-09-21 16:43:44,544: used 21ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&floorId=akmLineMap&loc=akmLineMap.LM1&location=LM1&seat1=Load1&seat2=Line07&sourceID=None&targetID=None&taskId=5f6867bc75c3cfa228185b2a_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line07&taskType=feed&timeoutSec=86400
+[INFO]2020-09-21 16:43:44,552: task[5f6867bc75c3cfa228185b2a] update info {'step': 'goSource', 'msg': '播放语音', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 44, 548152)}
+[DEBUG]2020-09-21 16:43:45,157: agvInfo: AGV01 akmLineMap.LM16 move to akmLineMap.LM1 ,taskId 5f6867bc75c3cfa228185b2a_1
+[WARNING]2020-09-21 16:43:46,364: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:43:46,865: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:43:47,367: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:43:47,870: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:43:48,371: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:43:48,872: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:43:49,374: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[DEBUG]2020-09-21 16:43:49,848: AGV01 set loc akmLineMap.LM1 ,old LM16 (-0.82,-8.73)
+[CRITICAL]2020-09-21 16:43:51,042: : 192.168.10.3:10001 <--> 192.168.20.202:65443 time out cause a error: <tcpSocket.client object at 0x0000000008BA4B70>
+pid=122036, ppid=153688, tid=32888
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:43:51,045: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65443
+[WARNING]2020-09-21 16:43:51,046: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65443
+[INFO]2020-09-21 16:43:51,059: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65444
+[SUCC]2020-09-21 16:43:55,894: Finish:  AGV01 arrived akmLineMap.LM1 ,task: 5f6867bc75c3cfa228185b2a_1
+[INFO]2020-09-21 16:43:56,383: task: move finish callback <runTasknanqu.feed object at 0x000000000A227588>
+[INFO]2020-09-21 16:43:57,392: task[5f6867bc75c3cfa228185b2a] update info {'step': 'jackUpWP', 'msg': '到达上料点', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 57, 384886)}
+[DEBUG]2020-09-21 16:43:57,591: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 16:43:57,596: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 16:43:57,603: used 6ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 16:43:57,606: [return] use 15 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 16:43:57,614: task[5f6867bc75c3cfa228185b2a] update info {'step': 'jackUpWP', 'msg': '等待上料确认', 'updatetime': datetime.datetime(2020, 9, 21, 16, 43, 57, 608899)}
+[DEBUG]2020-09-21 16:43:58,621: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:43:58,666: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:43:58,727: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:43:58,747: used 81ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:43:58,788: [return] use 166 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:43:58,793: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:00,821: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:00,916: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:00,982: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:01,002: used 86ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:01,048: [return] use 227 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:01,116: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[CRITICAL]2020-09-21 16:44:01,137: : 192.168.10.3:10001 <--> 192.168.20.202:65444 time out cause a error: <tcpSocket.client object at 0x0000000008BA42E8>
+pid=122036, ppid=153688, tid=44016
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:44:01,187: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65444
+[WARNING]2020-09-21 16:44:01,217: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65444
+[INFO]2020-09-21 16:44:01,260: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65445
+[DEBUG]2020-09-21 16:44:03,143: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:03,163: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:03,208: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:03,236: used 73ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:03,286: [return] use 143 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:03,288: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:05,293: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:05,321: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:05,329: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:05,330: used 10ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:05,360: [return] use 66 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:05,370: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:07,402: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:07,518: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:07,891: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:07,951: used 434ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:08,013: [return] use 611 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:08,049: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:10,183: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:10,286: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:10,366: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:10,411: used 125ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:10,444: [return] use 261 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:10,453: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[CRITICAL]2020-09-21 16:44:11,358: : 192.168.10.3:10001 <--> 192.168.20.202:65445 time out cause a error: <tcpSocket.client object at 0x000000000A21ED68>
+pid=122036, ppid=153688, tid=41688
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:44:11,432: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65445
+[WARNING]2020-09-21 16:44:11,504: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65445
+[INFO]2020-09-21 16:44:11,567: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65446
+[DEBUG]2020-09-21 16:44:12,458: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:12,565: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:12,606: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:12,627: used 62ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:12,663: [return] use 205 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:12,689: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:14,726: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:14,788: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:14,862: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:14,912: used 125ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:15,082: [return] use 356 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:15,112: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:17,158: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:17,269: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:17,343: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:17,378: used 109ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:17,421: [return] use 263 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:17,446: <runTasknanqu.feed object at 0x000000000A227588> audioPlayUp error
+[DEBUG]2020-09-21 16:44:19,464: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:19,496: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:19,698: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:19,724: used 228ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:19,785: [return] use 321 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:19,847: task[5f6867bc75c3cfa228185b2a] update info {'step': 'waitDestPreLoc', 'msg': '等待目标位置LM20前置点锁', 'updatetime': datetime.datetime(2020, 9, 21, 16, 44, 19, 810169)}
+[DEBUG]2020-09-21 16:44:20,889: send http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 16:44:21,024: GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01 addr: 127.0.0.1
+[DEBUG]2020-09-21 16:44:21,084: used 60ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 16:44:21,133: [return] use 244 ms,http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[INFO]2020-09-21 16:44:21,198: task[5f6867bc75c3cfa228185b2a] update info {'step': 'goTarget', 'msg': '前往下料点', 'updatetime': datetime.datetime(2020, 9, 21, 16, 44, 21, 169247)}
+[CRITICAL]2020-09-21 16:44:21,643: : 192.168.10.3:10001 <--> 192.168.20.202:65446 time out cause a error: <tcpSocket.client object at 0x0000000008BA42E8>
+pid=122036, ppid=153688, tid=57952
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:44:21,676: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65446
+[WARNING]2020-09-21 16:44:21,709: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65446
+[INFO]2020-09-21 16:44:21,814: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65447
+[DEBUG]2020-09-21 16:44:22,250: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&floorId=akmLineMap&loc=akmLineMap.LM2&location=LM2&result=True&resultDesc=None&seat1=Load1&seat2=Line07&sourceID=None&targetID=None&taskId=5f6867bc75c3cfa228185b2a_2&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line07&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:22,296: Begin: AGV01 move from akmLineMap.LM1 to akmLineMap.LM2 by paths: [('akmLineMap', ['LM1', 'LM2'], 11.114418203309437)] task: 5f6867bc75c3cfa228185b2a_2 timeout 86400 used 43 ms
+[DEBUG]2020-09-21 16:44:22,304: used 55ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&floorId=akmLineMap&loc=akmLineMap.LM2&location=LM2&result=True&resultDesc=None&seat1=Load1&seat2=Line07&sourceID=None&targetID=None&taskId=5f6867bc75c3cfa228185b2a_2&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line07&taskType=feed&timeoutSec=86400
+[INFO]2020-09-21 16:44:22,313: task[5f6867bc75c3cfa228185b2a] update info {'step': 'goTarget', 'msg': '等待下料确认', 'updatetime': datetime.datetime(2020, 9, 21, 16, 44, 22, 307312)}
+[DEBUG]2020-09-21 16:44:22,983: agvInfo: AGV01 akmLineMap.LM1 move to akmLineMap.LM2 ,taskId 5f6867bc75c3cfa228185b2a_2
+[WARNING]2020-09-21 16:44:24,191: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:24,694: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:25,196: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:25,697: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:26,199: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:26,703: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:27,205: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:27,709: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:28,213: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:28,735: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:29,237: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:29,739: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:30,265: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:30,769: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:31,272: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:31,783: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[ERROR]2020-09-21 16:44:31,814: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6637, id=5f6867ef6ea419ab821f53f8
+[CRITICAL]2020-09-21 16:44:31,898: : 192.168.10.3:10001 <--> 192.168.20.202:65447 time out cause a error: <tcpSocket.client object at 0x0000000008BA4B70>
+pid=122036, ppid=153688, tid=11324
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:44:31,967: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65447
+[WARNING]2020-09-21 16:44:31,968: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65447
+[INFO]2020-09-21 16:44:31,981: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65448
+[WARNING]2020-09-21 16:44:32,320: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:32,500: clear alarm obj=AGV01, typeId=49997, id=5f6867ef6ea419ab821f53f8
+[WARNING]2020-09-21 16:44:32,821: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:33,323: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:33,828: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:34,330: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:34,835: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:35,339: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:35,842: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[WARNING]2020-09-21 16:44:36,346: AGV01 waitFinish: loc is diff LM1 LM2 task_status= 2
+[DEBUG]2020-09-21 16:44:36,739: AGV01 set loc akmLineMap.LM2 ,old LM1 (-1.33,2.22)
+[SUCC]2020-09-21 16:44:39,353: Finish:  AGV01 arrived akmLineMap.LM2 ,task: 5f6867bc75c3cfa228185b2a_2
+[INFO]2020-09-21 16:44:39,517: task: move finish callback <runTasknanqu.feed object at 0x000000000A227588>
+[INFO]2020-09-21 16:44:40,525: task[5f6867bc75c3cfa228185b2a] update info {'step': 'jackDown', 'msg': '到达下料点', 'updatetime': datetime.datetime(2020, 9, 21, 16, 44, 40, 519353)}
+[DEBUG]2020-09-21 16:44:41,328: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 16:44:41,438: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 16:44:41,503: used 65ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 16:44:41,553: [return] use 225 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 16:44:41,600: task[5f6867bc75c3cfa228185b2a] update info {'step': 'jackDown', 'msg': '等待下料确认', 'updatetime': datetime.datetime(2020, 9, 21, 16, 44, 41, 578414)}
+[CRITICAL]2020-09-21 16:44:42,049: : 192.168.10.3:10001 <--> 192.168.20.202:65448 time out cause a error: <tcpSocket.client object at 0x000000000A21ED68>
+pid=122036, ppid=153688, tid=39732
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:44:42,092: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65448
+[WARNING]2020-09-21 16:44:42,161: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65448
+[INFO]2020-09-21 16:44:42,277: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65449
+[DEBUG]2020-09-21 16:44:42,631: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:42,872: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:43,048: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:43,079: used 206ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:43,176: [return] use 545 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:43,221: <runTasknanqu.feed object at 0x000000000A227588> audioPlayDown error
+[DEBUG]2020-09-21 16:44:45,266: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:45,382: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:45,436: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:45,466: used 84ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:45,511: [return] use 245 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:45,530: <runTasknanqu.feed object at 0x000000000A227588> audioPlayDown error
+[DEBUG]2020-09-21 16:44:47,534: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:47,645: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:47,711: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:47,741: used 97ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:47,809: [return] use 275 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:47,830: <runTasknanqu.feed object at 0x000000000A227588> audioPlayDown error
+[DEBUG]2020-09-21 16:44:49,907: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:50,096: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:50,126: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:50,162: used 66ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:50,284: [return] use 377 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:50,448: <runTasknanqu.feed object at 0x000000000A227588> audioPlayDown error
+[CRITICAL]2020-09-21 16:44:52,394: : 192.168.10.3:10001 <--> 192.168.20.202:65449 time out cause a error: <tcpSocket.client object at 0x0000000008B7E5F8>
+pid=122036, ppid=153688, tid=57712
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[DEBUG]2020-09-21 16:44:52,485: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:52,505: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65449
+[DEBUG]2020-09-21 16:44:52,574: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[WARNING]2020-09-21 16:44:52,636: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65449
+[INFO]2020-09-21 16:44:52,783: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65450
+[INFO]2020-09-21 16:44:52,900: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:52,942: used 368ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:52,989: [return] use 504 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:53,033: <runTasknanqu.feed object at 0x000000000A227588> audioPlayDown error
+[DEBUG]2020-09-21 16:44:55,108: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:55,165: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:55,184: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:55,194: used 29ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:55,230: [return] use 122 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:55,236: <runTasknanqu.feed object at 0x000000000A227588> audioPlayDown error
+[DEBUG]2020-09-21 16:44:57,251: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:57,389: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:44:57,503: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:44:57,528: used 139ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:44:57,579: [return] use 328 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:44:57,673: task[5f6867bc75c3cfa228185b2a] update info {'step': 'stopPlayDown', 'msg': '完成下料', 'updatetime': datetime.datetime(2020, 9, 21, 16, 44, 57, 634332)}
+[DEBUG]2020-09-21 16:44:58,742: send http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 16:44:58,943: GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01 addr: 127.0.0.1
+[DEBUG]2020-09-21 16:44:59,051: used 109ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 16:44:59,127: [return] use 385 ms,http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[INFO]2020-09-21 16:45:00,144: taskStepfinishfinishfinishfinishfinishfinish
+[INFO]2020-09-21 16:45:00,266: task[5f6867bc75c3cfa228185b2a]:  successed
+[INFO]2020-09-21 16:45:00,297: <runTasknanqu.feed object at 0x000000000A227588> AGV01 release task, release agv True
+[DEBUG]2020-09-21 16:45:00,412: GET: http://127.0.0.1:8999/api/agv/release?agv=AGV01&appName=scadaTask&force=False&taskId=5f6867bc75c3cfa228185b2a addr: 127.0.0.1
+[DEBUG]2020-09-21 16:45:00,434: unlock: AGV01 taskId 5f6867bc75c3cfa228185b2a app scadaTask force False
+[DEBUG]2020-09-21 16:45:00,465: used 53ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/release?agv=AGV01&appName=scadaTask&force=False&taskId=5f6867bc75c3cfa228185b2a
+[DEBUG]2020-09-21 16:45:00,647: GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=scadaTask&taskId=5f6867bc75c3cfa228185b2a addr: 127.0.0.1
+[DEBUG]2020-09-21 16:45:00,668: used 21ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=scadaTask&taskId=5f6867bc75c3cfa228185b2a
+[INFO]2020-09-21 16:45:00,729: <runTasknanqu.feed object at 0x000000000A227588> let AGV01 gohome
+[DEBUG]2020-09-21 16:45:00,849: GET: http://127.0.0.1:8999/api/agv/goHome?agv=AGV01&appName=scadaTask&force=False&timeout=10800 addr: 127.0.0.1
+[INFO]2020-09-21 16:45:00,900: AGV01 gohome home_1 force False taskId home_1 : AGV01.LM2 -> akmLineMap.LM16
+[INFO]2020-09-21 16:45:01,677: Begin: AGV01 move from akmLineMap.LM2 to akmLineMap.LM16 by paths: [('akmLineMap', ['LM2', 'LM1', 'LM16'], 13.803418203309436)] task: home_1 timeout 10800 used 746 ms
+[DEBUG]2020-09-21 16:45:01,707: used 858ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/goHome?agv=AGV01&appName=scadaTask&force=False&timeout=10800
+[INFO]2020-09-21 16:45:01,818: task: stop <runTasknanqu.feed object at 0x000000000A227588>
+[CRITICAL]2020-09-21 16:45:02,904: : 192.168.10.3:10001 <--> 192.168.20.202:65450 time out cause a error: <tcpSocket.client object at 0x0000000008B7E828>
+pid=122036, ppid=153688, tid=49564
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:45:03,045: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65450
+[WARNING]2020-09-21 16:45:03,067: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65450
+[INFO]2020-09-21 16:45:03,109: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65451
+[DEBUG]2020-09-21 16:45:03,156: agvInfo: AGV01 akmLineMap.LM2 move to akmLineMap.LM1 ,taskId home_1
+[ERROR]2020-09-21 16:45:04,370: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.722, id=5f6868106ea419ab821f542b
+[WARNING]2020-09-21 16:45:07,239: clear alarm obj=AGV01, typeId=49997, id=5f6868106ea419ab821f542b
+[ERROR]2020-09-21 16:45:11,173: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6935, id=5f6868176ea419ab821f5438
+[CRITICAL]2020-09-21 16:45:13,212: : 192.168.10.3:10001 <--> 192.168.20.202:65451 time out cause a error: <tcpSocket.client object at 0x0000000008AA3BE0>
+pid=122036, ppid=153688, tid=52164
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:45:13,277: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65451
+[WARNING]2020-09-21 16:45:13,302: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65451
+[INFO]2020-09-21 16:45:13,352: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65452
+[WARNING]2020-09-21 16:45:13,562: clear alarm obj=AGV01, typeId=49997, id=5f6868176ea419ab821f5438
+[ERROR]2020-09-21 16:45:14,139: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.735, id=5f68681a6ea419ab821f5449
+[WARNING]2020-09-21 16:45:15,992: clear alarm obj=AGV01, typeId=49997, id=5f68681a6ea419ab821f5449
+[DEBUG]2020-09-21 16:45:19,854: AGV01 turn to wait check cur LM2 next LM16 0.701 False
+[DEBUG]2020-09-21 16:45:20,934: agvInfo: AGV01 akmLineMap.LM2 move to akmLineMap.LM16 ,taskId home_1
+[DEBUG]2020-09-21 16:45:21,463: AGV01 set loc akmLineMap.LM1 ,old LM2 (-0.98,-8.66)
+[WARNING]2020-09-21 16:45:22,299: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:22,854: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:23,389: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[CRITICAL]2020-09-21 16:45:23,464: : 192.168.10.3:10001 <--> 192.168.20.202:65452 time out cause a error: <tcpSocket.client object at 0x0000000008BA43C8>
+pid=122036, ppid=153688, tid=36480
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:45:23,471: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65452
+[WARNING]2020-09-21 16:45:23,481: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65452
+[INFO]2020-09-21 16:45:23,494: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65453
+[WARNING]2020-09-21 16:45:23,970: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:24,497: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:25,043: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:25,546: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:26,073: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:26,652: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:27,267: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:27,778: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:28,308: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:28,874: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[WARNING]2020-09-21 16:45:29,425: AGV01 waitFinish: loc is diff LM1 LM16 task_status= 2
+[DEBUG]2020-09-21 16:45:29,872: AGV01 set loc akmLineMap.LM16 ,old LM1 (1.56,-8.73)
+[ERROR]2020-09-21 16:45:31,965: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6618, id=5f68682b6ea419ab821f5461
+[WARNING]2020-09-21 16:45:33,427: clear alarm obj=AGV01, typeId=49997, id=5f68682b6ea419ab821f5461
+[CRITICAL]2020-09-21 16:45:33,635: : 192.168.10.3:10001 <--> 192.168.20.202:65453 time out cause a error: <tcpSocket.client object at 0x0000000008F299B0>
+pid=122036, ppid=153688, tid=68208
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:45:33,671: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65453
+[WARNING]2020-09-21 16:45:33,691: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65453
+[INFO]2020-09-21 16:45:33,741: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65454
+[SUCC]2020-09-21 16:45:36,691: Finish:  AGV01 arrived akmLineMap.LM16 ,task: home_1
+[DEBUG]2020-09-21 16:45:36,783: unlock: AGV01 taskId None app None force False
+[CRITICAL]2020-09-21 16:45:43,826: : 192.168.10.3:10001 <--> 192.168.20.202:65454 time out cause a error: <tcpSocket.client object at 0x0000000008BA43C8>
+pid=122036, ppid=153688, tid=46200
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:45:43,906: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65454
+[WARNING]2020-09-21 16:45:43,927: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65454
+[INFO]2020-09-21 16:45:43,978: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65455
+[CRITICAL]2020-09-21 16:45:54,067: : 192.168.10.3:10001 <--> 192.168.20.202:65455 time out cause a error: <tcpSocket.client object at 0x0000000008AA2F98>
+pid=122036, ppid=153688, tid=163740
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:45:54,133: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65455
+[WARNING]2020-09-21 16:45:54,189: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65455
+[INFO]2020-09-21 16:45:54,286: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65456
+[INFO]2020-09-21 16:45:58,899: create lock <lock name:feed.s_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009FE0A08>>
+[INFO]2020-09-21 16:45:58,980: create task[5f68684675c3cfa228185b35]: , taskName: 从Load1 运送货架到 Line01, taskType: feed
+[INFO]2020-09-21 16:45:59,019: task[5f68684675c3cfa228185b35] update info {'taskName': '从Load1 运送货架到 Line01', 'updatetime': datetime.datetime(2020, 9, 21, 16, 45, 58, 988842)}
+[INFO]2020-09-21 16:45:59,105: Got a task from feed Hucais 5f68684675c3cfa228185b35:s <runTasknanqu.feed object at 0x000000000A4174E0>
+[INFO]2020-09-21 16:45:59,191: task[5f68684675c3cfa228185b35] update info {'step': 'waitForAgv', 'msg': '等待分配小车', 'updatetime': datetime.datetime(2020, 9, 21, 16, 45, 59, 103848)}
+[DEBUG]2020-09-21 16:46:00,332: GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM1&mapId=akmLineMap&taskId=5f68684675c3cfa228185b35&timeout=15 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:00,534: apply AGV01 ,taskId: 5f68684675c3cfa228185b35 ,loc akmLineMap.LM1 ,autoLock False , used 172 ms
+[DEBUG]2020-09-21 16:46:00,560: used 228ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM1&mapId=akmLineMap&taskId=5f68684675c3cfa228185b35&timeout=15
+[DEBUG]2020-09-21 16:46:00,713: GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f68684675c3cfa228185b35 addr: 127.0.0.1
+[DEBUG]2020-09-21 16:46:00,738: lock:  AGV01 taskId 5f68684675c3cfa228185b35 app scadaTask
+[WARNING]2020-09-21 16:46:01,770: AGV01 clear task finish, cur= akmLineMap.LM16 task_status= 4
+[DEBUG]2020-09-21 16:46:01,810: used 1097ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f68684675c3cfa228185b35
+[INFO]2020-09-21 16:46:01,985: task[5f68684675c3cfa228185b35] update info {'agvId': 'AGV01', 'msg': '成功分配小车AGV01', 'updatetime': datetime.datetime(2020, 9, 21, 16, 46, 1, 926010)}
+[INFO]2020-09-21 16:46:02,113: task[5f68684675c3cfa228185b35] update info {'step': 'goSource', 'msg': '前往上料工位', 'updatetime': datetime.datetime(2020, 9, 21, 16, 46, 2, 74018)}
+[DEBUG]2020-09-21 16:46:03,296: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM1&location=LM1&location1=None&location2=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f68684675c3cfa228185b35_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:03,312: Begin: AGV01 move from akmLineMap.LM16 to akmLineMap.LM1 by paths: [('akmLineMap', ['LM16', 'LM1'], 2.689)] task: 5f68684675c3cfa228185b35_1 timeout 86400 used 12 ms
+[DEBUG]2020-09-21 16:46:03,314: used 18ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM1&location=LM1&location1=None&location2=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f68684675c3cfa228185b35_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400
+[INFO]2020-09-21 16:46:03,323: task[5f68684675c3cfa228185b35] update info {'step': 'goSource', 'msg': '播放语音', 'updatetime': datetime.datetime(2020, 9, 21, 16, 46, 3, 318089)}
+[DEBUG]2020-09-21 16:46:04,248: agvInfo: AGV01 akmLineMap.LM16 move to akmLineMap.LM1 ,taskId 5f68684675c3cfa228185b35_1
+[WARNING]2020-09-21 16:46:05,506: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:06,008: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:06,511: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:07,013: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:07,526: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:08,031: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:08,532: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[WARNING]2020-09-21 16:46:09,033: AGV01 waitFinish: loc is diff LM16 LM1 task_status= 2
+[DEBUG]2020-09-21 16:46:09,316: AGV01 set loc akmLineMap.LM1 ,old LM16 (-0.91,-8.74)
+[CRITICAL]2020-09-21 16:46:09,549: : 192.168.10.3:10001 <--> 192.168.20.202:65456 time out cause a error: <tcpSocket.client object at 0x000000000A451B38>
+pid=122036, ppid=153688, tid=68692
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:46:09,554: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65456
+[WARNING]2020-09-21 16:46:09,555: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65456
+[INFO]2020-09-21 16:46:09,570: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65457
+[ERROR]2020-09-21 16:46:13,580: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6961, id=5f6868556ea419ab821f54b0
+[WARNING]2020-09-21 16:46:14,126: clear alarm obj=AGV01, typeId=49997, id=5f6868556ea419ab821f54b0
+[SUCC]2020-09-21 16:46:15,055: Finish:  AGV01 arrived akmLineMap.LM1 ,task: 5f68684675c3cfa228185b35_1
+[INFO]2020-09-21 16:46:15,165: task: move finish callback <runTasknanqu.feed object at 0x000000000A4174E0>
+[INFO]2020-09-21 16:46:16,186: task[5f68684675c3cfa228185b35] update info {'step': 'jackUpWP', 'msg': '到达上料点', 'updatetime': datetime.datetime(2020, 9, 21, 16, 46, 16, 172824)}
+[DEBUG]2020-09-21 16:46:16,377: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 16:46:16,380: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 16:46:16,389: used 9ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 16:46:16,395: [return] use 18 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 16:46:16,402: task[5f68684675c3cfa228185b35] update info {'step': 'jackUpWP', 'msg': '等待上料确认', 'updatetime': datetime.datetime(2020, 9, 21, 16, 46, 16, 397837)}
+[DEBUG]2020-09-21 16:46:17,417: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:17,523: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:17,583: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:17,603: used 81ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:17,690: [return] use 273 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:17,725: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:46:19,611: : 192.168.10.3:10001 <--> 192.168.20.202:65457 time out cause a error: <tcpSocket.client object at 0x0000000008AA2F98>
+pid=122036, ppid=153688, tid=12572
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:46:19,638: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65457
+[WARNING]2020-09-21 16:46:19,663: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65457
+[INFO]2020-09-21 16:46:19,736: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65458
+[DEBUG]2020-09-21 16:46:19,810: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:19,957: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:20,150: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:20,180: used 223ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:20,283: [return] use 473 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:20,319: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:22,365: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:22,498: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:22,554: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:22,579: used 81ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:22,681: [return] use 316 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:22,737: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:24,863: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:24,969: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:25,063: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:25,070: used 101ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:25,137: [return] use 274 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:25,182: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:27,233: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:27,488: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:27,528: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:27,552: used 64ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:27,627: [return] use 394 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:27,660: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:29,709: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:29,868: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[CRITICAL]2020-09-21 16:46:29,874: : 192.168.10.3:10001 <--> 192.168.20.202:65458 time out cause a error: <tcpSocket.client object at 0x0000000008BA43C8>
+pid=122036, ppid=153688, tid=51496
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:46:29,913: AGV01 checkUnitStatus unitId: 1
+[INFO]2020-09-21 16:46:29,941: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65458
+[DEBUG]2020-09-21 16:46:29,966: used 98ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[WARNING]2020-09-21 16:46:30,060: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65458
+[DEBUG]2020-09-21 16:46:30,175: [return] use 466 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:30,289: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65459
+[INFO]2020-09-21 16:46:30,404: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:32,478: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:32,603: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:32,641: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:32,642: used 39ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:32,724: [return] use 246 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:32,748: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:34,877: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:34,880: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:34,886: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:34,887: used 7ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:34,891: [return] use 14 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:34,894: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:36,897: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:36,900: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:36,906: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:36,907: used 7ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:36,910: [return] use 13 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:36,912: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:38,917: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:38,928: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:38,938: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:38,942: used 13ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:38,970: [return] use 53 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:39,010: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:46:40,504: : 192.168.10.3:10001 <--> 192.168.20.202:65459 time out cause a error: <tcpSocket.client object at 0x000000000A216AC8>
+pid=122036, ppid=153688, tid=16068
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:46:40,534: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65459
+[WARNING]2020-09-21 16:46:40,576: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65459
+[INFO]2020-09-21 16:46:40,614: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65460
+[DEBUG]2020-09-21 16:46:41,013: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:41,083: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:41,130: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:41,146: used 63ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:41,193: [return] use 180 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:41,194: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:43,195: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:43,202: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:43,222: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:43,224: used 21ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:43,227: [return] use 32 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:43,228: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:45,233: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:45,241: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:45,259: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:45,264: used 23ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:45,268: [return] use 35 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:45,269: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:47,270: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:47,284: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:47,295: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:47,296: used 12ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:47,303: [return] use 33 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:47,304: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:49,305: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:49,341: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:49,350: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:49,351: used 10ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:49,354: [return] use 49 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:49,355: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:46:50,698: : 192.168.10.3:10001 <--> 192.168.20.202:65460 time out cause a error: <tcpSocket.client object at 0x000000000A1E9BE0>
+pid=122036, ppid=153688, tid=73032
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:46:50,730: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65460
+[WARNING]2020-09-21 16:46:50,766: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65460
+[INFO]2020-09-21 16:46:50,821: tcp server [0.0.0.0][10001] ,connectedLen: 2, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65461
+[DEBUG]2020-09-21 16:46:51,357: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:51,430: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:51,441: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:51,454: used 25ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:51,458: [return] use 101 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:51,459: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:53,465: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:53,551: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:53,624: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:53,637: used 87ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:53,650: [return] use 185 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:53,670: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:55,706: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:55,776: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:55,835: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:55,855: used 79ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:55,895: [return] use 189 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:55,900: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:46:57,945: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:58,030: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:46:58,079: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:46:58,085: used 56ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:46:58,088: [return] use 143 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:46:58,089: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:00,096: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:00,181: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:00,245: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:00,270: used 89ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:00,296: [return] use 200 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:00,316: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:47:00,873: : 192.168.10.3:10001 <--> 192.168.20.202:65461 time out cause a error: <tcpSocket.client object at 0x0000000008F29B38>
+pid=122036, ppid=153688, tid=75480
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:47:00,875: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65461
+[WARNING]2020-09-21 16:47:00,876: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65461
+[INFO]2020-09-21 16:47:00,892: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65462
+[DEBUG]2020-09-21 16:47:02,334: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:02,390: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:02,454: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:02,479: used 90ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:02,547: [return] use 213 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:02,568: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:04,593: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:04,668: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:04,741: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:04,743: used 75ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:04,750: [return] use 157 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:04,753: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:06,756: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:06,821: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:06,862: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:06,864: used 42ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:06,922: [return] use 165 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:06,932: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:08,949: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:09,267: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:09,293: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:09,321: used 53ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:09,427: [return] use 478 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:09,428: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:47:11,008: : 192.168.10.3:10001 <--> 192.168.20.202:65462 time out cause a error: <tcpSocket.client object at 0x0000000008F299B0>
+pid=122036, ppid=153688, tid=78700
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:47:11,025: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65462
+[WARNING]2020-09-21 16:47:11,045: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65462
+[INFO]2020-09-21 16:47:11,085: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65463
+[DEBUG]2020-09-21 16:47:11,436: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:11,497: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:11,501: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:11,503: used 6ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:11,506: [return] use 70 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:11,511: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:13,587: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:13,653: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:13,659: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:13,660: used 7ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:13,663: [return] use 77 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:13,664: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:15,665: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:15,947: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:15,989: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:15,992: used 45ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:16,003: [return] use 338 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:16,008: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:18,017: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:18,059: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:18,118: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:18,128: used 69ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:18,163: [return] use 146 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:18,173: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:20,175: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:20,213: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:20,233: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:20,253: used 41ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:20,275: [return] use 100 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:20,295: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:47:21,148: : 192.168.10.3:10001 <--> 192.168.20.202:65463 time out cause a error: <tcpSocket.client object at 0x000000000A216AC8>
+pid=122036, ppid=153688, tid=81016
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:47:21,173: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65463
+[WARNING]2020-09-21 16:47:21,175: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65463
+[INFO]2020-09-21 16:47:21,192: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65464
+[DEBUG]2020-09-21 16:47:22,337: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:22,503: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:22,522: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:22,543: used 40ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:22,570: [return] use 233 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:22,606: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:24,632: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:24,704: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:24,740: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:24,761: used 57ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:24,787: [return] use 155 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:24,808: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:26,835: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:26,911: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:26,955: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:26,961: used 50ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:26,965: [return] use 130 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:26,986: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:29,027: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:29,103: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:29,131: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:29,162: used 59ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:29,200: [return] use 173 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:29,220: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:31,250: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:31,310: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[CRITICAL]2020-09-21 16:47:31,358: : 192.168.10.3:10001 <--> 192.168.20.202:65464 time out cause a error: <tcpSocket.client object at 0x000000000A2168D0>
+pid=122036, ppid=153688, tid=84180
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:47:31,381: AGV01 checkUnitStatus unitId: 1
+[INFO]2020-09-21 16:47:31,397: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65464
+[DEBUG]2020-09-21 16:47:31,448: used 138ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[WARNING]2020-09-21 16:47:31,499: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65464
+[DEBUG]2020-09-21 16:47:31,555: [return] use 304 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:31,605: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65465
+[INFO]2020-09-21 16:47:31,610: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:33,716: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:33,764: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:33,780: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:33,791: used 28ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:33,795: [return] use 79 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:33,830: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:35,843: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:35,866: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:35,889: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:35,900: used 34ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:35,909: [return] use 66 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:35,915: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:37,916: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:37,966: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:37,997: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:38,004: used 38ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:38,007: [return] use 91 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:38,009: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:40,014: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:40,067: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:40,122: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:40,142: used 76ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:40,188: [return] use 174 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:40,214: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:47:41,770: : 192.168.10.3:10001 <--> 192.168.20.202:65465 time out cause a error: <tcpSocket.client object at 0x000000000A216AC8>
+pid=122036, ppid=153688, tid=87196
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:47:41,782: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65465
+[WARNING]2020-09-21 16:47:41,809: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65465
+[INFO]2020-09-21 16:47:41,870: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65466
+[DEBUG]2020-09-21 16:47:42,230: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:42,285: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:42,326: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:42,352: used 67ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:42,368: [return] use 138 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:42,388: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:44,419: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:44,514: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:44,565: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:44,590: used 76ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:44,617: [return] use 198 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:44,638: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:46,664: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:46,759: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:46,828: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:46,867: used 108ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:46,904: [return] use 240 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:46,921: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:48,983: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:49,119: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:49,296: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:49,320: used 201ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:49,380: [return] use 397 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:49,437: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:51,492: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:51,570: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:51,655: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:51,665: used 95ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:51,673: [return] use 182 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:51,675: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:47:51,920: : 192.168.10.3:10001 <--> 192.168.20.202:65466 time out cause a error: <tcpSocket.client object at 0x000000000A417EB8>
+pid=122036, ppid=153688, tid=89872
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:47:51,986: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65466
+[WARNING]2020-09-21 16:47:52,036: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65466
+[INFO]2020-09-21 16:47:52,113: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65467
+[DEBUG]2020-09-21 16:47:53,700: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:53,743: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:53,778: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:53,793: used 51ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:53,839: [return] use 139 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:53,859: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:55,875: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:55,921: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:55,986: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:55,996: used 75ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:55,999: [return] use 124 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:56,001: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:47:58,020: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:58,086: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:47:58,194: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:47:58,204: used 118ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:47:58,212: [return] use 192 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:47:58,228: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:00,248: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:00,281: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:00,325: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:00,336: used 55ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:00,339: [return] use 91 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:00,346: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:48:02,178: : 192.168.10.3:10001 <--> 192.168.20.202:65467 time out cause a error: <tcpSocket.client object at 0x000000000A21BD68>
+pid=122036, ppid=153688, tid=93468
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:48:02,185: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65467
+[WARNING]2020-09-21 16:48:02,186: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65467
+[INFO]2020-09-21 16:48:02,217: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65468
+[DEBUG]2020-09-21 16:48:02,349: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:02,381: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:02,412: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:02,413: used 33ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:02,421: [return] use 72 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:02,422: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:04,479: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:04,580: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:04,640: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:04,665: used 86ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:04,705: [return] use 226 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:04,735: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:06,768: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:06,843: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:06,856: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:06,857: used 14ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:06,861: [return] use 93 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:06,862: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:08,869: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:08,941: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:08,946: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:08,947: used 6ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:08,977: [return] use 108 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:09,014: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:11,022: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:11,150: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:11,187: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:11,208: used 58ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:11,322: [return] use 300 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:11,345: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:48:12,269: : 192.168.10.3:10001 <--> 192.168.20.202:65468 time out cause a error: <tcpSocket.client object at 0x000000000A1E96D8>
+pid=122036, ppid=153688, tid=95608
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:48:12,296: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65468
+[WARNING]2020-09-21 16:48:12,412: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65468
+[INFO]2020-09-21 16:48:12,464: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65469
+[DEBUG]2020-09-21 16:48:13,380: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:13,556: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:13,637: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:13,674: used 118ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:13,740: [return] use 360 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:13,775: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:15,800: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:15,893: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:15,952: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:16,009: used 116ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:16,046: [return] use 245 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:16,066: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:18,089: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:18,122: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:18,144: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:18,159: used 37ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:18,189: [return] use 100 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:18,205: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:20,230: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:20,406: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:20,488: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:20,494: used 88ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:20,517: [return] use 287 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:20,537: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:48:22,633: : 192.168.10.3:10001 <--> 192.168.20.202:65469 time out cause a error: <tcpSocket.client object at 0x000000000A21BD68>
+pid=122036, ppid=153688, tid=98856
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:48:22,635: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65469
+[WARNING]2020-09-21 16:48:22,636: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65469
+[DEBUG]2020-09-21 16:48:22,640: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:22,653: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65470
+[DEBUG]2020-09-21 16:48:22,734: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:22,745: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:22,750: used 16ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:22,773: [return] use 132 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:22,793: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:24,807: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:24,879: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:24,902: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:24,917: used 38ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:24,943: [return] use 136 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:24,968: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:27,011: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:27,062: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:27,111: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:27,117: used 56ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:27,158: [return] use 147 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:27,188: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:29,220: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:29,274: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:29,346: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:29,348: used 74ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:29,371: [return] use 151 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:29,392: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:31,463: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:31,543: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:31,638: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:31,648: used 105ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:31,658: [return] use 195 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:31,659: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:48:32,805: : 192.168.10.3:10001 <--> 192.168.20.202:65470 time out cause a error: <tcpSocket.client object at 0x0000000008B7E278>
+pid=122036, ppid=153688, tid=101792
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:48:32,851: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65470
+[WARNING]2020-09-21 16:48:32,876: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65470
+[INFO]2020-09-21 16:48:32,930: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65471
+[DEBUG]2020-09-21 16:48:33,684: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:33,728: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:33,765: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:33,767: used 39ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:33,839: [return] use 155 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:33,859: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:35,897: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:36,021: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:36,042: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:36,067: used 46ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:36,085: [return] use 188 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:36,095: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:38,117: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:38,197: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:38,289: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:38,314: used 117ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:38,360: [return] use 243 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:38,390: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:40,426: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:40,469: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:40,546: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:40,571: used 102ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:40,612: [return] use 186 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:40,647: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[DEBUG]2020-09-21 16:48:42,737: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:42,783: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 16:48:42,819: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 16:48:42,839: used 56ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 16:48:42,885: [return] use 148 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 16:48:42,915: <runTasknanqu.feed object at 0x000000000A4174E0> audioPlayUp error
+[CRITICAL]2020-09-21 16:48:43,070: : 192.168.10.3:10001 <--> 192.168.20.202:65471 time out cause a error: <tcpSocket.client object at 0x000000000A21BD68>
+pid=122036, ppid=153688, tid=16612
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 16:48:43,137: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:65471
+[WARNING]2020-09-21 16:48:43,161: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:65471
+[INFO]2020-09-21 16:48:43,198: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:65472

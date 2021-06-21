@@ -1,0 +1,38 @@
+[INFO]2021-05-11 13:32:43,090: log files at C:\Users\comba\Desktop\知识城地牛\knowledgeCity\common\log
+[INFO]2021-05-11 13:32:43,090: find module agvCtrl.main_agv
+[INFO]2021-05-11 13:32:43,090: find module agvDevice.main_agvDevice
+[INFO]2021-05-11 13:32:43,091: find module alarm.main_alarm
+[INFO]2021-05-11 13:32:43,091: find module auth.main_auth
+[INFO]2021-05-11 13:32:43,091: find module autoCtrl.main_akmCtrl
+[INFO]2021-05-11 13:32:43,091: find module door.main_door
+[INFO]2021-05-11 13:32:43,092: find module elevator.main_elevator
+[INFO]2021-05-11 13:32:43,092: find module feed.main_feed
+[INFO]2021-05-11 13:32:43,097: find module remoteio.main_remoteio
+[INFO]2021-05-11 13:32:43,097: import agvCtrl.main_agv
+[INFO]2021-05-11 13:32:43,325: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000185FB1B67B0>>
+[INFO]2021-05-11 13:32:43,327: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000185FB1B6918>>
+[INFO]2021-05-11 13:32:43,374: create lock <lock name:timer.lock_1674957597272,<unlocked _thread.RLock object owner=0 count=0 at 0x00000185FB3FF440>>
+[ERROR]2021-05-11 13:32:43,381: mqtt is disabled
+[INFO]2021-05-11 13:32:43,382: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-05-11 13:32:43,382: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-05-11 13:32:46,400: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-05-11 13:32:46,461: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000185FB5C8B48>>
+[INFO]2021-05-11 13:32:46,462: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000185FB5C8788>>
+[INFO]2021-05-11 13:32:46,464: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000185FB5C8300>>
+[CRITICAL]2021-05-11 13:32:46,478: import main_agv failed, path: agvCtrl cause a error: invalid syntax (agvApi.py, line 38)
+pid=15248, ppid=9712, tid=14392
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\mapMgr.py", line 25, in <module>
+    import driver.seerAgv.agvCtrl as agvCtrl
+  File "..\driver\seerAgv\agvCtrl.py", line 10, in <module>
+    import driver.seerAgv.agvApi as agvApi
+  File "..\driver\seerAgv\agvApi.py", line 38
+    "robot_control_reloc_req": 2002,
+                            ^
+SyntaxError: invalid syntax
+
+[CRITICAL]2021-05-11 13:32:46,479: import main_agv failed, path: agvCtrl ,cause invalid syntax (agvApi.py, line 38)

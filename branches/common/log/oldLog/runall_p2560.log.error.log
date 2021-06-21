@@ -1,0 +1,2059 @@
+[CRITICAL]2021-04-09 11:06:29,931: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>')
+pid=2560, ppid=2464, tid=8228
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>')
+
+[CRITICAL]2021-04-09 11:06:32,996: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>')
+pid=2560, ppid=2464, tid=8228
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>')
+
+[CRITICAL]2021-04-09 11:06:36,063: agvApi.init cause a error: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>')
+pid=2560, ppid=2464, tid=8228
+Traceback (most recent call last):
+  File "C:\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Python37\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python37\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Python37\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Python37\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 40, in init
+    _http_get(url + '/api/agv/init', param)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvCtrl\agvApi.py", line 61, in _http_get
+    r = webutility.http_get(url, param, timeout=45,writelog=False)
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/agv/init', {'appName': 'scadaTask'}, 'error:', '<urlopen error [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£>')
+
+[CRITICAL]2021-04-09 11:06:51,595: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5124
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:06:51,967: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:06:54,728: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:06:55,161: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:06:58,077: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=10168
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:06:58,419: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:01,250: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=4704
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:01,648: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:04,447: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=6928
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:04,974: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:07,928: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5484
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:08,316: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:11,152: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13412
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:11,618: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:14,689: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:15,020: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:18,204: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=10168
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:18,547: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:21,386: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=4704
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:21,823: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:25,013: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=6928
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:25,476: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:28,839: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5484
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:29,236: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:31,926: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5124
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:32,392: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:35,194: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:35,589: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:38,339: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=10168
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:38,781: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:41,676: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=1916
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:41,911: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:44,748: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=6928
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:45,166: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:47,971: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5484
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:48,316: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:51,211: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13412
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:51,579: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:54,619: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5124
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:54,996: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:58,292: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:07:58,623: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:01,416: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=2820
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:01,753: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:05,111: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=10168
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:05,439: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:08,136: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=4704
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:08,475: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:11,345: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=1916
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:11,718: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:14,522: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=6928
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:14,929: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:18,126: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13804
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:18,441: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:21,299: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5484
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:21,625: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:24,799: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13412
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:25,061: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:28,038: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5124
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:28,495: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:31,715: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:32,075: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:34,827: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=2820
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:35,122: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:37,836: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=10168
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:38,072: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:41,386: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=4704
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:41,687: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:44,607: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=1916
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:45,014: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:47,627: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13804
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:47,969: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:50,625: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5484
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:50,988: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:53,801: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13412
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:54,186: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:57,055: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5124
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:08:57,416: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:00,204: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:00,578: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:03,493: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=2820
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:03,725: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:06,585: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=10168
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:07,055: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:09,756: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=4704
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:10,092: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:12,848: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=1916
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:13,235: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:16,054: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=6928
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:16,428: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:19,326: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=13804
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:19,726: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:22,510: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5484
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:22,913: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:25,736: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5124
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:26,075: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:28,683: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=908
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:29,072: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:31,865: invoke <function urlJackup at 0x000001DF2D7AE9D8> cause a error: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=2820
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\main_agvDevice.py", line 23, in urlJackup
+    return jackMgr.jackUp(agvId=agvId, timeout=timeout,loc=loc)
+  File "C:\Users\Administrator\Desktop\SVN\branches\agvDevice\jackMgr.py", line 23, in jackUp
+    ret = agvCtrl.jackUp(agvId,loc=loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 317, in jackUp
+    _forkUpOther(agvId,loc)
+  File "..\driver\seerAgv\agvCtrl.py", line 150, in _forkUpOther
+    agvApi.other(agvId, "robot_other_set_fork_height_req", {"heigth":1})
+  File "..\driver\seerAgv\agvApi.py", line 228, in other
+    return _handle(agvId, API_PORT_OTHER, type, data)
+  File "..\driver\seerAgv\agvApi.py", line 256, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 294, in _request
+    result = sendCmd(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 320, in sendCmd
+    result= _checkError(agvId, type, obj)
+  File "..\driver\seerAgv\agvApi.py", line 371, in _checkError
+    raise IOError(agvId + "Ö´ÐÐ" + str(type) + "´íÎó" + ",code=" + str(code) + ",msg=" + msg)
+OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+
+[CRITICAL]2021-04-09 11:09:32,224: *task[606fc2c577fba39ecec38e1b][AGV02] AP142(LM120) -> LM121(LM122) [loadPlayload_jackup] jackup cause a error: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+pid=2560, ppid=2464, tid=5036
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\branches\pharmapackCtrl\runTasks.py", line 913, in _jackUp
+    jackApi.jackUp(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 44, in jackUp
+    return _jack('/api/agv/jackup', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 64, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: OSError: AGV02Ö´ÐÐ6040´íÎó,code=40001,msg=param: height
+

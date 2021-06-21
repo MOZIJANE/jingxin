@@ -1,0 +1,196 @@
+{ 
+    "_id" : "<蚀刻>滚筒to电梯", 
+    "loc1" : "AKM-AOI.LM71", 
+    "loc2" : "AKM-AOI.LM69", 
+    "sName" : "显影_OUT", 
+    "io1" : "XYload", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "电梯２_IN", 
+    "io2" : "SKele002", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-AOI"
+}
+{ 
+    "_id" : "<蚀刻>电梯to滚筒", 
+    "loc1" : "AKM-AOI.LM76", 
+    "loc2" : "AKM-AOI.LM73", 
+    "sName" : "电梯２_OUT", 
+    "io1" : "SKele002", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "显影_IN", 
+    "io2" : "XYunload", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-AOI"
+}
+{ 
+    "_id" : "<蚀刻AOI>滚筒to滚筒", 
+    "loc1" : "AKM-AOI.LM62", 
+    "loc2" : "AKM-AOI.LM65", 
+    "sName" : "蚀刻滚筒_OUT", 
+    "io1" : "SKload", 
+    "typeio1" : "PLCXJ", 
+    "s_direction" : "1", 
+    "tName" : "检测滚筒_IN", 
+    "io2" : "AOIunload", 
+    "typeio2" : "PLCM30", 
+    "t_direction" : "1", 
+    "map" : "AKM-AOI"
+}
+{ 
+    "_id" : "<AOI>滚筒to电梯", 
+    "loc1" : "AKM-AOI.LM48", 
+    "loc2" : "AKM-AOI.LM4", 
+    "sName" : "检测滚筒_OUT", 
+    "io1" : "AOIload", 
+    "typeio1" : "PLCM30", 
+    "s_direction" : "2", 
+    "tName" : "电梯进料_IN", 
+    "io2" : "ele002", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "2", 
+    "map" : "AKM-AOI"
+}
+{ 
+    "_id" : "<靶冲>电梯to滚筒", 
+    "loc1" : "AKM-LYH.LM6", 
+    "loc2" : "AKM-LYH.LM37", 
+    "sName" : "电梯出口_OUT", 
+    "io1" : "ele001", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "1", 
+    "tName" : "靶冲滚筒_IN", 
+    "io2" : "BCunload01", 
+    "typeio2" : "PLCM30", 
+    "t_direction" : "2", 
+    "map" : "AKM-LYH"
+}
+{ 
+    "_id" : "<快压靶冲>滚筒to滚筒", 
+    "loc1" : "AKM-LYH.LM31", 
+    "loc2" : "AKM-LYH.LM36", 
+    "sName" : "快压滚筒_OUT", 
+    "io1" : "KYload01", 
+    "typeio1" : "PLCM30", 
+    "s_direction" : "1", 
+    "tName" : "靶冲滚筒_IN", 
+    "io2" : "BCunload02", 
+    "typeio2" : "PLCM30", 
+    "t_direction" : "1", 
+    "map" : "AKM-LYH"
+}
+{ 
+    "_id" : "<电镀铜>滚筒to电梯", 
+    "loc1" : "AKM-DDT.LM1", 
+    "loc2" : "AKM-DDT.LM5", 
+    "sName" : "电镀铜滚筒_OUT", 
+    "io1" : "DDload", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "电梯输入_IN", 
+    "io2" : "DDele001", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "2", 
+    "map" : "AKM-DDT"
+}
+{ 
+    "_id" : "<电镀铜>电梯to滚筒", 
+    "loc1" : "AKM-DDT.LM7", 
+    "loc2" : "AKM-DDT.LM13", 
+    "sName" : "电梯输输出_OUT", 
+    "io1" : "DDele001", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "电镀铜滚筒_IN", 
+    "io2" : "DDunload", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-DDT"
+}
+{ 
+    "_id" : "<装配>滚筒to电梯", 
+    "loc1" : "AKM-ZP.LM20", 
+    "loc2" : "AKM-ZP.LM5", 
+    "sName" : "装配滚筒_OUT", 
+    "io1" : "ZPload", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "电梯输入_IN", 
+    "io2" : "ZPele001", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-ZP"
+}
+{ 
+    "_id" : "<装配>电梯to滚筒", 
+    "loc1" : "AKM-ZP.LM2", 
+    "loc2" : "AKM-ZP.LM10", 
+    "sName" : "电梯输出_OUT", 
+    "io1" : "ZPele001", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "装配滚筒_IN", 
+    "io2" : "ZPunload", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-ZP"
+}
+{ 
+    "_id" : "<电测>电梯to滚筒", 
+    "loc1" : "AKM-DC.LM6", 
+    "loc2" : "AKM-DC.LM1", 
+    "sName" : "电梯输出_OUT", 
+    "io1" : "DCele002", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "电测滚筒_IN", 
+    "io2" : "DCunload", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-DC"
+}
+{ 
+    "_id" : "<电测>滚筒to电梯", 
+    "loc1" : "AKM-DC.LM10", 
+    "loc2" : "AKM-DC.LM4", 
+    "sName" : "电测滚筒_OUT", 
+    "io1" : "DCload", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "电梯输入_IN", 
+    "io2" : "DCele002", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-DC"
+}
+{ 
+    "_id" : "<处理FQC>滚筒to滚筒", 
+    "loc1" : "AKM-FQC.LM18", 
+    "loc2" : "AKM-FQC.LM2", 
+    "sName" : "表面处理滚筒_OUT", 
+    "io1" : "CLload", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "2", 
+    "tName" : "FQC滚筒_IN", 
+    "io2" : "FQCunload", 
+    "typeio2" : "PLCD100", 
+    "t_direction" : "1", 
+    "map" : "AKM-FQC"
+}
+{ 
+    "_id" : "<AOI>电梯to滚筒", 
+    "loc1" : "AKM-AOI.LM1", 
+    "loc2" : "AKM-AOI.LM65", 
+    "sName" : "电梯输出_OUT", 
+    "io1" : "ele002", 
+    "typeio1" : "PLCD104", 
+    "s_direction" : "1", 
+    "tName" : "检测滚筒_IN", 
+    "io2" : "AOIunload", 
+    "typeio2" : "PLCM30", 
+    "t_direction" : "1", 
+    "map" : "AKM-AOI"
+}

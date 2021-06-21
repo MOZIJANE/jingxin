@@ -1,0 +1,11 @@
+[CRITICAL]2021-05-06 16:39:13,544: agvApi finish callback cause a error: readDIList() missing 1 required positional argument: 'id'
+pid=15456, ppid=15868, tid=6976
+Traceback (most recent call last):
+  File "..\agvCtrl\agvApi.py", line 279, in _checkFinish
+    t.finishCallback(t.params)
+  File "..\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 432, in onFinish
+    leaveSign = remoteioMgr.readDIList()
+TypeError: readDIList() missing 1 required positional argument: 'id'
+

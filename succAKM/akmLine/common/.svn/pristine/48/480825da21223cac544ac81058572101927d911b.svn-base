@@ -1,0 +1,72 @@
+#coding=utf-8
+# ycat			2017-07-27	  create
+# 空文件模板 
+import sys,os
+import setup
+import qtawesome as qta
+if __name__ == '__main__':
+	setup.setCurPath(__file__)
+from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog,
+        QInputDialog, QGridLayout, QWidget, QHBoxLayout,
+        QLabel, QPushButton, QSpinBox, QTextEdit,QLineEdit,QMessageBox,QFormLayout,
+        QVBoxLayout,QTableWidget,QHeaderView,QAbstractItemView,QTableWidgetItem,QTableView)
+from PyQt5.QtGui import (QStandardItemModel,QStandardItem)
+from PyQt5.QtCore import QCoreApplication,Qt
+import ui.inputBox
+import qtutility
+import conf,user
+import ui.auto
+
+class loginDlg(QDialog):
+	def __init__(self):
+		super(loginDlg, self).__init__(None)
+		self.setWindowTitle("用户登陆") 
+		l1 = QFormLayout()
+		l1.setSpacing(10)
+		b = QWidget()
+		b.setFixedSize(20,20)
+		l1.addRow(b)  
+				
+		b = QComboBox()
+		for u in user.users():
+			b.addItem(u,u)
+		qtutility.setFontSize(b,conf.fontSize)
+		self.userBox = b
+		t = QLabel("用户名")
+		qtutility.setFontSize(t,conf.fontSize)
+		l1.addRow(t,b)
+		
+		self.pwdBox = ui.auto.pwdCtrl()#ui.inputBox.inputBox()
+		self.pwdBox.setEchoMode(QLineEdit.Password) 
+		qtutility.setFontSize(self.pwdBox,conf.fontSize)
+		t = QLabel("密码  ")
+		qtutility.setFontSize(t,conf.fontSize)
+		l1.addRow(t,self.pwdBox)
+		
+		l2 = QHBoxLayout()
+		l2.setSpacing(20)
+		b = QPushButton(qta.icon("fa.check",scale_factor=1.5,color="green"),"确定")
+		b.setMinimumHeight(40) 
+		l2.addWidget(b)
+		
+		b = QPushButton(qta.icon("fa.remove",scale_factor=1.5,color="red"),"取消")
+		b.setMinimumHeight(40)
+		b.clicked.connect(self.reject)
+		l2.addWidget(b)
+		
+		l = QVBoxLayout()
+		l.addLayout(l1)
+		l.addLayout(l2)
+		
+		self.setLayout(l)
+		self.setMinimumSize(300,200)
+		self.setWindowIcon(qta.icon("fa.user",color="white"))
+		self.setWindowFlags(Qt.WindowCloseButtonHint)
+	 
+ 
+	
+if __name__ == '__main__':
+	import sys
+	app = QApplication(sys.argv) 
+	dialog = loginDlg()
+	sys.exit(dialog.exec_())

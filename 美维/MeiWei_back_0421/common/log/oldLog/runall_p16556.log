@@ -1,0 +1,45 @@
+[INFO]2021-04-19 16:26:11,154: log files at E:\projects_by_myself\MeiWei\common\log
+[INFO]2021-04-19 16:26:11,156: find module account.main_account
+[INFO]2021-04-19 16:26:11,157: find module agvCtrl.main_agv
+[INFO]2021-04-19 16:26:11,158: find module agvDevice.main_agvDevice
+[INFO]2021-04-19 16:26:11,160: find module akmCtrl.main_akmCtrl
+[INFO]2021-04-19 16:26:11,161: find module alarm.main_alarm
+[INFO]2021-04-19 16:26:11,162: find module auth.main_auth
+[INFO]2021-04-19 16:26:11,163: find module door.main_door
+[INFO]2021-04-19 16:26:11,164: find module elevator.main_elevator
+[INFO]2021-04-19 16:26:11,164: find module feed.main_feed
+[INFO]2021-04-19 16:26:11,169: find module remoteio.main_remoteio
+[INFO]2021-04-19 16:26:11,170: import account.main_account
+[INFO]2021-04-19 16:26:11,457: import agvCtrl.main_agv
+[INFO]2021-04-19 16:26:13,547: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000228F545BEA0>>
+[INFO]2021-04-19 16:26:14,802: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000228F547E420>>
+[INFO]2021-04-19 16:26:15,132: create lock <lock name:timer.lock_2374943740496,<unlocked _thread.RLock object owner=0 count=0 at 0x00000228F5AD93C0>>
+[ERROR]2021-04-19 16:26:15,161: mqtt is disabled
+[INFO]2021-04-19 16:26:15,162: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-04-19 16:26:15,163: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-04-19 16:26:18,349: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-04-19 16:26:18,377: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000228F5CE9DB0>>
+[WARNING]2021-04-19 16:26:18,388: use mockAgvCtrl
+[INFO]2021-04-19 16:26:18,390: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000228F3D53360>>
+[CRITICAL]2021-04-19 16:26:18,606: import main_agv failed, path: agvCtrl cause a error: [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\agvCtrl\\projects\\test\\agv.cfg'
+pid=16556, ppid=3924, tid=16316
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "E:\projects_by_myself\MeiWei\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "E:\projects_by_myself\MeiWei\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "E:\projects_by_myself\MeiWei\agvDevice\main_agvDevice.py", line 11, in <module>
+    import rotationMgr
+  File "E:\projects_by_myself\MeiWei\agvDevice\rotationMgr.py", line 35, in <module>
+    g_agvList = _loadAgvList()
+  File "E:\projects_by_myself\MeiWei\agvDevice\rotationMgr.py", line 27, in _loadAgvList
+    with open(os.path.abspath(os.path.dirname(__file__) + file), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\agvCtrl\\projects\\test\\agv.cfg'
+
+[CRITICAL]2021-04-19 16:26:18,609: import main_agv failed, path: agvCtrl ,cause [Errno 2] No such file or directory: 'E:\\projects_by_myself\\MeiWei\\agvCtrl\\projects\\test\\agv.cfg'

@@ -1,0 +1,2082 @@
+[INFO]2020-09-21 15:37:35,923: log files at C:\akmLine\common\log
+[INFO]2020-09-21 15:37:35,924: find module agvCtrl.main_agv
+[INFO]2020-09-21 15:37:35,925: find module agvDevice.main_agvDevice
+[INFO]2020-09-21 15:37:35,926: find module alarm.main_alarm
+[INFO]2020-09-21 15:37:35,927: find module auth.main_auth
+[INFO]2020-09-21 15:37:35,928: find module door.main_door
+[INFO]2020-09-21 15:37:35,929: find module elevator.main_elevator
+[INFO]2020-09-21 15:37:35,930: find module feed.main_feed
+[INFO]2020-09-21 15:37:35,931: import agvCtrl.main_agv
+[INFO]2020-09-21 15:37:36,890: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C0328>>
+[INFO]2020-09-21 15:37:36,896: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000000074C0580>>
+[INFO]2020-09-21 15:37:37,159: create lock <lock name:timer.lock_128120480,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007A0BBE8>>
+[ERROR]2020-09-21 15:37:37,181: mqtt is disabled
+[INFO]2020-09-21 15:37:37,183: mqtt: subscribe [alarm/raise/+]
+[INFO]2020-09-21 15:37:37,185: mqtt: subscribe [alarm/clear/+]
+[INFO]2020-09-21 15:37:40,246: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2020-09-21 15:37:40,343: create lock <lock name:elevatorApi.tcp_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C2B670>>
+[INFO]2020-09-21 15:37:40,345: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007C2B2B0>>
+[INFO]2020-09-21 15:37:40,348: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007BA5DC8>>
+[INFO]2020-09-21 15:37:40,946: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000005B727B0>>
+[INFO]2020-09-21 15:37:41,967: create lock <lock name:agvList.g_agvLock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FA89E0>>
+[INFO]2020-09-21 15:37:41,973: create lock <lock name:taskList.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FD5328>>
+[INFO]2020-09-21 15:37:42,234: charge policy 0 , fix time
+[INFO]2020-09-21 15:37:42,358: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000007FD5E90>>
+[INFO]2020-09-21 15:37:42,741: start load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap
+[DEBUG]2020-09-21 15:37:43,389: elevator thread start
+[INFO]2020-09-21 15:37:43,472: load map C:\akmLine\agvCtrl\projects\akmLine\akmLineMap.smap ,used 763 ms
+[INFO]2020-09-21 15:37:43,511: start load map C:\akmLine\agvCtrl\projects\akmLine\office.smap
+[INFO]2020-09-21 15:37:43,751: load map C:\akmLine\agvCtrl\projects\akmLine\office.smap ,used 277 ms
+[INFO]2020-09-21 15:37:43,794: import agvDevice.main_agvDevice
+[INFO]2020-09-21 15:37:43,797: import alarm.main_alarm
+[INFO]2020-09-21 15:37:43,799: import auth.main_auth
+[INFO]2020-09-21 15:37:43,816: import door.main_door
+[INFO]2020-09-21 15:37:43,845: import elevator.main_elevator
+[INFO]2020-09-21 15:37:43,847: import feed.main_feed
+[INFO]2020-09-21 15:37:43,869: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A304B8>>
+[INFO]2020-09-21 15:37:44,384: create lock <lock name:PDA runTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000008A30D28>>
+[INFO]2020-09-21 15:37:44,399: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009E9F2D8>>
+[INFO]2020-09-21 15:37:44,770: IP: 0.0.0.0 port: 10001
+[SUCC]2020-09-21 15:37:44,786: utility start, pid=9112, ppid=68480
+[DEBUG]2020-09-21 15:37:44,788: start timer
+[INFO]2020-09-21 15:37:44,831: load agv file: C:\akmLine\agvCtrl/projects/akmLine/agv.cfg
+[INFO]2020-09-21 15:37:44,833: create lock <lock name:agvList.AGV01.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009EB0288>>
+[DEBUG]2020-09-21 15:37:44,839: create aliveObj AGV01 AGV离线异常 timeout 300
+[INFO]2020-09-21 15:37:44,845: AGV01 start agvList run thread
+[INFO]2020-09-21 15:37:44,848: AGV01 start agvList run2 thread
+[INFO]2020-09-21 15:37:44,849: create lock <lock name:agv.AGV01.lock_status,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009EB0648>>
+[DEBUG]2020-09-21 15:37:44,856: try connect AGV01 192.168.20.199:19204
+[WARNING]2020-09-21 15:37:44,860: Local server start! version 3.7.3, path C:\akmLine\common, pid 9112
+[INFO]2020-09-21 15:37:44,863: add_ignore: taskStatus
+[INFO]2020-09-21 15:37:44,865: AGV01 connected
+[INFO]2020-09-21 15:37:44,869: create lock <lock name:agv.AGV01.lock_ctrl,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009EB0580>>
+[DEBUG]2020-09-21 15:37:44,871: try connect AGV01 192.168.20.199:19205
+[INFO]2020-09-21 15:37:44,877: AGV01 connected
+[INFO]2020-09-21 15:37:44,880: create lock <lock name:agv.AGV01.lock_task,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009EB0828>>
+[DEBUG]2020-09-21 15:37:44,882: try connect AGV01 192.168.20.199:19206
+[INFO]2020-09-21 15:37:44,888: AGV01 connected
+[INFO]2020-09-21 15:37:44,892: create lock <lock name:agv.AGV01.lock_conf,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009EB0800>>
+[DEBUG]2020-09-21 15:37:44,896: try connect AGV01 192.168.20.199:19207
+[INFO]2020-09-21 15:37:44,902: AGV01 connected
+[INFO]2020-09-21 15:37:44,946: create lock <lock name:agv.AGV01.lock_core,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009F072B0>>
+[DEBUG]2020-09-21 15:37:44,952: try connect AGV01 192.168.20.199:19208
+[INFO]2020-09-21 15:37:44,961: AGV01 connected
+[INFO]2020-09-21 15:37:44,966: create lock <lock name:agv.AGV01.lock_other,<unlocked _thread.RLock object owner=0 count=0 at 0x0000000009F07328>>
+[DEBUG]2020-09-21 15:37:44,970: try connect AGV01 192.168.20.199:19210
+[INFO]2020-09-21 15:37:44,978: AGV01 connected
+[INFO]2020-09-21 15:37:45,097: AGV01 current map akmLineMap
+[INFO]2020-09-21 15:37:45,126: AGV01 is online
+[INFO]2020-09-21 15:38:46,520: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:58207
+[DEBUG]2020-09-21 15:38:46,588: GET: http://127.0.0.1:8999/api/agv/init?appName=scadaTask addr: 127.0.0.1
+[INFO]2020-09-21 15:38:46,590: scadaTask init client agvApi
+[DEBUG]2020-09-21 15:38:46,596: used 8ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/init?appName=scadaTask
+[INFO]2020-09-21 15:38:46,601: create lock <lock name:feed.s_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000000E3F40D0>>
+[INFO]2020-09-21 15:38:46,637: create task[5f68588609bee64dcc25aca0]: , taskName: 从Load1 运送货架到 Line01, taskType: feed
+[INFO]2020-09-21 15:38:46,670: task[5f68588609bee64dcc25aca0] update info {'taskName': '从Load1 运送货架到 Line01', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 46, 662206)}
+[INFO]2020-09-21 15:38:46,698: task[5f68588609bee64dcc25aca0] update info {'step': 'waitForAgv', 'msg': '等待分配小车', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 46, 694207)}
+[INFO]2020-09-21 15:38:46,704: Got a task from feed Hucais 5f68588609bee64dcc25aca0:s <runTasknanqu.feed object at 0x000000000E3D1EF0>
+[DEBUG]2020-09-21 15:38:47,815: GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM77&mapId=akmLineMap&taskId=5f68588609bee64dcc25aca0&timeout=15 addr: 127.0.0.1
+[INFO]2020-09-21 15:38:48,365: apply AGV01 ,taskId: 5f68588609bee64dcc25aca0 ,loc akmLineMap.LM77 ,autoLock False , used 507 ms
+[DEBUG]2020-09-21 15:38:48,390: used 575ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM77&mapId=akmLineMap&taskId=5f68588609bee64dcc25aca0&timeout=15
+[DEBUG]2020-09-21 15:38:48,496: GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f68588609bee64dcc25aca0 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:38:48,516: lock:  AGV01 taskId 5f68588609bee64dcc25aca0 app scadaTask
+[WARNING]2020-09-21 15:38:49,546: AGV01 clear task finish, cur= akmLineMap.LM77 task_status= 4
+[DEBUG]2020-09-21 15:38:49,580: used 1084ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f68588609bee64dcc25aca0
+[INFO]2020-09-21 15:38:49,643: task[5f68588609bee64dcc25aca0] update info {'agvId': 'AGV01', 'msg': '成功分配小车AGV01', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 49, 615375)}
+[INFO]2020-09-21 15:38:49,698: task[5f68588609bee64dcc25aca0] update info {'step': 'goSource', 'msg': '前往上料工位', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 49, 676378)}
+[DEBUG]2020-09-21 15:38:50,754: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM77&location=LM77&location1=None&location2=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f68588609bee64dcc25aca0_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 15:38:50,775: task[5f68588609bee64dcc25aca0] update info {'step': 'goSource', 'msg': '播放语音', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 50, 769441)}
+[INFO]2020-09-21 15:38:51,293: task: move finish callback <runTasknanqu.feed object at 0x000000000E3D1EF0>
+[INFO]2020-09-21 15:38:52,304: task[5f68588609bee64dcc25aca0] update info {'step': 'jackUpWP', 'msg': '到达上料点', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 52, 296528)}
+[DEBUG]2020-09-21 15:38:52,781: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:38:52,797: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 15:38:52,839: used 41ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:38:52,898: [return] use 117 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 15:38:52,964: task[5f68588609bee64dcc25aca0] update info {'step': 'jackUpWP', 'msg': '等待上料确认', 'updatetime': datetime.datetime(2020, 9, 21, 15, 38, 52, 935564)}
+[DEBUG]2020-09-21 15:38:53,991: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:38:54,054: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:38:54,127: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:38:54,174: used 121ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:38:54,231: [return] use 240 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:38:54,253: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayUp error
+[DEBUG]2020-09-21 15:38:56,305: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:38:56,442: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:38:56,499: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:38:56,524: used 82ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:38:56,584: [return] use 279 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:38:56,625: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayUp error
+[CRITICAL]2020-09-21 15:38:56,936: : 192.168.10.3:10001 <--> 192.168.20.202:58207 time out cause a error: <tcpSocket.client object at 0x000000000E3D4198>
+pid=9112, ppid=68480, tid=72044
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:38:56,997: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:58207
+[WARNING]2020-09-21 15:38:57,021: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:58207
+[INFO]2020-09-21 15:38:57,081: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:58208
+[DEBUG]2020-09-21 15:38:58,683: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:38:58,773: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:38:58,864: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:38:58,894: used 121ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:38:58,931: [return] use 247 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:38:58,957: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayUp error
+[DEBUG]2020-09-21 15:39:00,994: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:01,073: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:01,155: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:01,182: used 109ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:01,234: [return] use 240 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:01,279: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayUp error
+[DEBUG]2020-09-21 15:39:03,310: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:03,384: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:03,442: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:03,470: used 86ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:03,518: [return] use 208 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:03,549: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayUp error
+[DEBUG]2020-09-21 15:39:05,568: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:05,696: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:05,737: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:05,772: used 76ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:05,827: [return] use 259 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:05,898: task[5f68588609bee64dcc25aca0] update info {'step': 'waitDestPreLoc', 'msg': '等待目标位置LM20前置点锁', 'updatetime': datetime.datetime(2020, 9, 21, 15, 39, 5, 879305)}
+[DEBUG]2020-09-21 15:39:06,947: send http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:39:07,048: GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:39:07,114: used 66ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:39:07,173: [return] use 226 ms,http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[CRITICAL]2020-09-21 15:39:07,188: : 192.168.10.3:10001 <--> 192.168.20.202:58208 time out cause a error: <tcpSocket.client object at 0x000000000E3D4E80>
+pid=9112, ppid=68480, tid=73832
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:39:07,232: task[5f68588609bee64dcc25aca0] update info {'step': 'goTarget', 'msg': '前往下料点', 'updatetime': datetime.datetime(2020, 9, 21, 15, 39, 7, 209381)}
+[INFO]2020-09-21 15:39:07,347: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:58208
+[WARNING]2020-09-21 15:39:07,392: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:58208
+[INFO]2020-09-21 15:39:07,505: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:58209
+[DEBUG]2020-09-21 15:39:08,349: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM78&location=LM78&location1=None&location2=None&result=True&resultDesc=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f68588609bee64dcc25aca0_2&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:08,401: Begin: AGV01 move from akmLineMap.LM77 to akmLineMap.LM78 by paths: [('akmLineMap', ['LM77', 'LM78'], 7.560352761889867)] task: 5f68588609bee64dcc25aca0_2 timeout 86400 used 22 ms
+[INFO]2020-09-21 15:39:08,429: task[5f68588609bee64dcc25aca0] update info {'step': 'goTarget', 'msg': '等待下料确认', 'updatetime': datetime.datetime(2020, 9, 21, 15, 39, 8, 424450)}
+[DEBUG]2020-09-21 15:39:09,414: agvInfo: AGV01 akmLineMap.LM77 move to akmLineMap.LM78 ,taskId 5f68588609bee64dcc25aca0_2
+[WARNING]2020-09-21 15:39:10,621: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:11,124: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:11,627: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:12,131: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:12,655: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:13,159: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:13,663: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:14,166: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:14,670: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:15,173: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:15,713: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:16,215: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:16,718: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:17,219: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[CRITICAL]2020-09-21 15:39:17,557: : 192.168.10.3:10001 <--> 192.168.20.202:58209 time out cause a error: <tcpSocket.client object at 0x000000000E3FA748>
+pid=9112, ppid=68480, tid=76136
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:39:17,565: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:58209
+[WARNING]2020-09-21 15:39:17,568: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:58209
+[INFO]2020-09-21 15:39:17,584: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51442
+[WARNING]2020-09-21 15:39:17,722: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:18,226: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:18,730: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:39:19,233: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[DEBUG]2020-09-21 15:39:19,602: AGV01 set loc akmLineMap.LM78 ,old LM77 (15.75,-14.13)
+[SUCC]2020-09-21 15:39:22,324: Finish:  AGV01 arrived akmLineMap.LM78 ,task: 5f68588609bee64dcc25aca0_2
+[INFO]2020-09-21 15:39:22,758: task: move finish callback <runTasknanqu.feed object at 0x000000000E3D1EF0>
+[INFO]2020-09-21 15:39:23,762: task[5f68588609bee64dcc25aca0] update info {'step': 'jackDown', 'msg': '到达下料点', 'updatetime': datetime.datetime(2020, 9, 21, 15, 39, 23, 758327)}
+[DEBUG]2020-09-21 15:39:24,440: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:39:24,575: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 15:39:24,661: used 86ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:39:24,721: [return] use 281 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 15:39:24,783: task[5f68588609bee64dcc25aca0] update info {'step': 'jackDown', 'msg': '等待下料确认', 'updatetime': datetime.datetime(2020, 9, 21, 15, 39, 24, 751384)}
+[DEBUG]2020-09-21 15:39:25,826: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:25,915: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:25,999: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:26,020: used 105ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:26,071: [return] use 245 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:26,104: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayDown error
+[CRITICAL]2020-09-21 15:39:27,635: : 192.168.10.3:10001 <--> 192.168.20.202:51442 time out cause a error: <tcpSocket.client object at 0x000000000E3D4E80>
+pid=9112, ppid=68480, tid=78520
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:39:27,701: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51442
+[WARNING]2020-09-21 15:39:27,776: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51442
+[INFO]2020-09-21 15:39:27,881: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51443
+[DEBUG]2020-09-21 15:39:28,140: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:28,265: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:28,500: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:28,548: used 283ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:28,595: [return] use 455 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:28,625: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayDown error
+[DEBUG]2020-09-21 15:39:30,665: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:30,785: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:30,812: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:30,849: used 64ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:30,891: [return] use 226 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:30,940: <runTasknanqu.feed object at 0x000000000E3D1EF0> audioPlayDown error
+[DEBUG]2020-09-21 15:39:32,983: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:33,160: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:33,524: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:39:33,549: used 389ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:39:33,596: [return] use 613 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:39:33,634: task[5f68588609bee64dcc25aca0] update info {'step': 'stopPlayDown', 'msg': '完成下料', 'updatetime': datetime.datetime(2020, 9, 21, 15, 39, 33, 617891)}
+[DEBUG]2020-09-21 15:39:34,736: send http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:39:34,882: GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:39:34,968: used 86ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:39:35,019: [return] use 283 ms,http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[INFO]2020-09-21 15:39:36,044: taskStepfinishfinishfinishfinishfinishfinish
+[INFO]2020-09-21 15:39:36,096: task[5f68588609bee64dcc25aca0]:  successed
+[INFO]2020-09-21 15:39:36,126: <runTasknanqu.feed object at 0x000000000E3D1EF0> AGV01 release task, release agv True
+[DEBUG]2020-09-21 15:39:36,203: GET: http://127.0.0.1:8999/api/agv/release?agv=AGV01&appName=scadaTask&force=False&taskId=5f68588609bee64dcc25aca0 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:39:36,249: unlock: AGV01 taskId 5f68588609bee64dcc25aca0 app scadaTask force False
+[DEBUG]2020-09-21 15:39:36,279: used 76ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/release?agv=AGV01&appName=scadaTask&force=False&taskId=5f68588609bee64dcc25aca0
+[DEBUG]2020-09-21 15:39:36,437: GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=scadaTask&taskId=5f68588609bee64dcc25aca0 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:39:36,463: used 26ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=scadaTask&taskId=5f68588609bee64dcc25aca0
+[INFO]2020-09-21 15:39:36,535: <runTasknanqu.feed object at 0x000000000E3D1EF0> let AGV01 gohome
+[DEBUG]2020-09-21 15:39:36,635: GET: http://127.0.0.1:8999/api/agv/goHome?agv=AGV01&appName=scadaTask&force=False&timeout=10800 addr: 127.0.0.1
+[INFO]2020-09-21 15:39:36,661: AGV01 gohome home_1 force False taskId home_1 : AGV01.LM78 -> akmLineMap.LM76
+[INFO]2020-09-21 15:39:36,784: Begin: AGV01 move from akmLineMap.LM78 to akmLineMap.LM76 by paths: [('akmLineMap', ['LM78', 'LM77', 'LM76'], 13.75242849005635)] task: home_1 timeout 10800 used 50 ms
+[DEBUG]2020-09-21 15:39:36,809: used 174ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/goHome?agv=AGV01&appName=scadaTask&force=False&timeout=10800
+[INFO]2020-09-21 15:39:36,869: task: stop <runTasknanqu.feed object at 0x000000000E3D1EF0>
+[DEBUG]2020-09-21 15:39:37,627: agvInfo: AGV01 akmLineMap.LM78 move to akmLineMap.LM77 ,taskId home_1
+[CRITICAL]2020-09-21 15:39:37,922: : 192.168.10.3:10001 <--> 192.168.20.202:51443 time out cause a error: <tcpSocket.client object at 0x000000000E26A048>
+pid=9112, ppid=68480, tid=80408
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:39:37,966: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51443
+[WARNING]2020-09-21 15:39:38,000: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51443
+[INFO]2020-09-21 15:39:38,080: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51444
+[DEBUG]2020-09-21 15:39:38,388: AGV01 choise next pos cur LM78 next LM76 pre LM77 13.752 False
+[DEBUG]2020-09-21 15:39:38,414: AGV01 turn to wait check cur LM78 next LM76 13.752 False
+[ERROR]2020-09-21 15:39:39,371: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.5686, id=5f6858bb6ea419ab821f37e5
+[DEBUG]2020-09-21 15:39:39,613: agvInfo: AGV01 akmLineMap.LM78 move to akmLineMap.LM76 ,taskId home_1
+[WARNING]2020-09-21 15:39:40,984: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:41,580: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:42,118: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:42,275: clear alarm obj=AGV01, typeId=49997, id=5f6858bb6ea419ab821f37e5
+[WARNING]2020-09-21 15:39:42,686: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:43,240: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:43,925: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:44,465: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:45,055: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:45,724: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:46,347: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:46,919: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:47,470: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:48,076: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[ERROR]2020-09-21 15:39:48,158: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7474, id=5f6858c46ea419ab821f37f7
+[CRITICAL]2020-09-21 15:39:48,159: : 192.168.10.3:10001 <--> 192.168.20.202:51444 time out cause a error: <tcpSocket.client object at 0x000000000E3D4E80>
+pid=9112, ppid=68480, tid=83064
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:39:48,230: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51444
+[WARNING]2020-09-21 15:39:48,255: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51444
+[INFO]2020-09-21 15:39:48,321: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51445
+[WARNING]2020-09-21 15:39:48,632: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:49,190: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:49,730: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:50,269: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:50,852: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[DEBUG]2020-09-21 15:39:51,323: AGV01 set loc akmLineMap.LM77 ,old LM78 (8.12,-14.08)
+[WARNING]2020-09-21 15:39:51,681: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:52,285: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:52,856: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:53,403: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:53,983: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:54,549: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:54,912: clear alarm obj=AGV01, typeId=49997, id=5f6858c46ea419ab821f37f7
+[WARNING]2020-09-21 15:39:55,083: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:55,630: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:56,330: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:56,921: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:39:57,459: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[DEBUG]2020-09-21 15:39:57,793: AGV01 set loc akmLineMap.LM76 ,old LM77 (2.27,-14.00)
+[CRITICAL]2020-09-21 15:39:58,369: : 192.168.10.3:10001 <--> 192.168.20.202:51445 time out cause a error: <tcpSocket.client object at 0x000000000E270080>
+pid=9112, ppid=68480, tid=85248
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:39:58,405: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51445
+[WARNING]2020-09-21 15:39:58,425: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51445
+[INFO]2020-09-21 15:39:58,615: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51446
+[ERROR]2020-09-21 15:39:59,924: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.5686, id=5f6858cf6ea419ab821f380d
+[WARNING]2020-09-21 15:40:01,016: clear alarm obj=AGV01, typeId=49997, id=5f6858cf6ea419ab821f380d
+[ERROR]2020-09-21 15:40:02,396: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7082, id=5f6858d26ea419ab821f3819
+[WARNING]2020-09-21 15:40:03,239: clear alarm obj=AGV01, typeId=49997, id=5f6858d26ea419ab821f3819
+[INFO]2020-09-21 15:40:04,998: create lock <lock name:feed.s_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000000000A6C5170>>
+[INFO]2020-09-21 15:40:05,227: create task[5f6858d509bee64dcc25aca7]: , taskName: 从Load1 运送货架到 Line01, taskType: feed
+[SUCC]2020-09-21 15:40:05,329: Finish:  AGV01 arrived akmLineMap.LM76 ,task: home_1
+[DEBUG]2020-09-21 15:40:05,437: unlock: AGV01 taskId None app None force False
+[INFO]2020-09-21 15:40:05,442: task[5f6858d509bee64dcc25aca7] update info {'taskName': '从Load1 运送货架到 Line01', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 5, 384708)}
+[INFO]2020-09-21 15:40:05,573: Got a task from feed Hucais 5f6858d509bee64dcc25aca7:s <runTasknanqu.feed object at 0x000000000E3D4898>
+[INFO]2020-09-21 15:40:05,609: task[5f6858d509bee64dcc25aca7] update info {'step': 'waitForAgv', 'msg': '等待分配小车', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 5, 567719)}
+[DEBUG]2020-09-21 15:40:06,966: GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM77&mapId=akmLineMap&taskId=5f6858d509bee64dcc25aca7&timeout=15 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:07,108: apply AGV01 ,taskId: 5f6858d509bee64dcc25aca7 ,loc akmLineMap.LM77 ,autoLock False , used 101 ms
+[DEBUG]2020-09-21 15:40:07,134: used 168ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/apply?appName=scadaTask&autoLock=False&exclude&loc=LM77&mapId=akmLineMap&taskId=5f6858d509bee64dcc25aca7&timeout=15
+[DEBUG]2020-09-21 15:40:07,244: GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f6858d509bee64dcc25aca7 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:40:07,269: lock:  AGV01 taskId 5f6858d509bee64dcc25aca7 app scadaTask
+[WARNING]2020-09-21 15:40:08,327: AGV01 clear task finish, cur= akmLineMap.LM76 task_status= 4
+[DEBUG]2020-09-21 15:40:08,357: used 1114ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/lock?agv=AGV01&appName=scadaTask&taskId=5f6858d509bee64dcc25aca7
+[INFO]2020-09-21 15:40:08,501: task[5f6858d509bee64dcc25aca7] update info {'agvId': 'AGV01', 'msg': '成功分配小车AGV01', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 8, 454884)}
+[INFO]2020-09-21 15:40:08,611: task[5f6858d509bee64dcc25aca7] update info {'step': 'goSource', 'msg': '前往上料工位', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 8, 583891)}
+[DEBUG]2020-09-21 15:40:09,710: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM77&location=LM77&location1=None&location2=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f6858d509bee64dcc25aca7_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:09,730: Begin: AGV01 move from akmLineMap.LM76 to akmLineMap.LM77 by paths: [('akmLineMap', ['LM76', 'LM77'], 6.192075728166483)] task: 5f6858d509bee64dcc25aca7_1 timeout 86400 used 15 ms
+[DEBUG]2020-09-21 15:40:09,733: used 23ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM77&location=LM77&location1=None&location2=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f6858d509bee64dcc25aca7_1&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400
+[INFO]2020-09-21 15:40:09,746: task[5f6858d509bee64dcc25aca7] update info {'step': 'goSource', 'msg': '播放语音', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 9, 742958)}
+[DEBUG]2020-09-21 15:40:10,617: agvInfo: AGV01 akmLineMap.LM76 move to akmLineMap.LM77 ,taskId 5f6858d509bee64dcc25aca7_1
+[WARNING]2020-09-21 15:40:11,823: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:12,324: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:12,826: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:13,330: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:13,838: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:14,346: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:14,855: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:15,377: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:15,882: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[CRITICAL]2020-09-21 15:40:15,944: : 192.168.10.3:10001 <--> 192.168.20.202:51446 time out cause a error: <tcpSocket.client object at 0x000000000E3D4978>
+pid=9112, ppid=68480, tid=87936
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:40:15,953: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51446
+[WARNING]2020-09-21 15:40:15,954: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51446
+[INFO]2020-09-21 15:40:15,968: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51447
+[WARNING]2020-09-21 15:40:16,386: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:16,891: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:17,392: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:17,900: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[ERROR]2020-09-21 15:40:17,903: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7216, id=5f6858e16ea419ab821f3845
+[WARNING]2020-09-21 15:40:18,405: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[WARNING]2020-09-21 15:40:18,909: AGV01 waitFinish: loc is diff LM76 LM77 task_status= 2
+[DEBUG]2020-09-21 15:40:18,976: AGV01 set loc akmLineMap.LM77 ,old LM76 (8.11,-14.06)
+[WARNING]2020-09-21 15:40:19,524: clear alarm obj=AGV01, typeId=49997, id=5f6858e16ea419ab821f3845
+[SUCC]2020-09-21 15:40:21,943: Finish:  AGV01 arrived akmLineMap.LM77 ,task: 5f6858d509bee64dcc25aca7_1
+[INFO]2020-09-21 15:40:22,180: task: move finish callback <runTasknanqu.feed object at 0x000000000E3D4898>
+[INFO]2020-09-21 15:40:23,197: task[5f6858d509bee64dcc25aca7] update info {'step': 'jackUpWP', 'msg': '到达上料点', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 23, 184726)}
+[DEBUG]2020-09-21 15:40:23,757: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:40:23,948: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 15:40:24,027: used 80ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:40:24,112: [return] use 355 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 15:40:24,265: task[5f6858d509bee64dcc25aca7] update info {'step': 'jackUpWP', 'msg': '等待上料确认', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 24, 197784)}
+[DEBUG]2020-09-21 15:40:25,333: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:25,534: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:25,604: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:25,636: used 102ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:25,686: [return] use 353 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:25,726: <runTasknanqu.feed object at 0x000000000E3D4898> audioPlayUp error
+[CRITICAL]2020-09-21 15:40:25,995: : 192.168.10.3:10001 <--> 192.168.20.202:51447 time out cause a error: <tcpSocket.client object at 0x000000000E25CC50>
+pid=9112, ppid=68480, tid=93028
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:40:26,086: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51447
+[WARNING]2020-09-21 15:40:26,138: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51447
+[INFO]2020-09-21 15:40:26,229: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51448
+[DEBUG]2020-09-21 15:40:27,760: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:27,956: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:28,023: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:28,044: used 88ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:28,176: [return] use 416 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:28,296: <runTasknanqu.feed object at 0x000000000E3D4898> audioPlayUp error
+[DEBUG]2020-09-21 15:40:30,371: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:30,618: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:30,771: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:30,842: used 224ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:30,928: [return] use 557 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:31,065: task[5f6858d509bee64dcc25aca7] update info {'step': 'waitDestPreLoc', 'msg': '等待目标位置LM20前置点锁', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 30, 993173)}
+[DEBUG]2020-09-21 15:40:32,184: send http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:40:32,361: GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:40:32,467: used 106ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:40:32,525: [return] use 341 ms,http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[INFO]2020-09-21 15:40:32,619: task[5f6858d509bee64dcc25aca7] update info {'step': 'goTarget', 'msg': '前往下料点', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 32, 587264)}
+[DEBUG]2020-09-21 15:40:33,683: GET: http://127.0.0.1:8999/api/agv/move?agv=AGV01&agvId=AGV01&appName=scadaTask&direction1&direction2&floorId=akmLineMap&floorId1=akmLineMap&floorId2=akmLineMap&loc=akmLineMap.LM78&location=LM78&location1=None&location2=None&result=True&resultDesc=None&seat1=Load1&seat2=Line01&sourceID=None&targetID=None&taskId=5f6858d509bee64dcc25aca7_2&taskName=%E4%BB%8ELoad1%20%E8%BF%90%E9%80%81%E8%B4%A7%E6%9E%B6%E5%88%B0%20Line01&taskType=feed&timeoutSec=86400 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:33,703: Begin: AGV01 move from akmLineMap.LM77 to akmLineMap.LM78 by paths: [('akmLineMap', ['LM77', 'LM78'], 7.560352761889867)] task: 5f6858d509bee64dcc25aca7_2 timeout 86400 used 14 ms
+[INFO]2020-09-21 15:40:33,760: task[5f6858d509bee64dcc25aca7] update info {'step': 'goTarget', 'msg': '等待下料确认', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 33, 726329)}
+[DEBUG]2020-09-21 15:40:34,634: agvInfo: AGV01 akmLineMap.LM77 move to akmLineMap.LM78 ,taskId 5f6858d509bee64dcc25aca7_2
+[WARNING]2020-09-21 15:40:35,839: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[CRITICAL]2020-09-21 15:40:36,272: : 192.168.10.3:10001 <--> 192.168.20.202:51448 time out cause a error: <tcpSocket.client object at 0x000000000E25CB00>
+pid=9112, ppid=68480, tid=93668
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:40:36,276: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51448
+[WARNING]2020-09-21 15:40:36,278: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51448
+[INFO]2020-09-21 15:40:36,292: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51449
+[WARNING]2020-09-21 15:40:36,342: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:36,846: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:37,349: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:37,850: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:38,351: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:38,854: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:39,356: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:39,859: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:40,374: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:40,879: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:41,386: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:41,898: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:42,400: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:42,902: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:43,403: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:43,904: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[WARNING]2020-09-21 15:40:44,406: AGV01 waitFinish: loc is diff LM77 LM78 task_status= 2
+[DEBUG]2020-09-21 15:40:44,479: AGV01 set loc akmLineMap.LM78 ,old LM77 (15.66,-14.13)
+[CRITICAL]2020-09-21 15:40:46,318: : 192.168.10.3:10001 <--> 192.168.20.202:51449 time out cause a error: <tcpSocket.client object at 0x000000000E3A72B0>
+pid=9112, ppid=68480, tid=99576
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:40:46,323: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51449
+[WARNING]2020-09-21 15:40:46,325: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51449
+[INFO]2020-09-21 15:40:46,343: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51450
+[SUCC]2020-09-21 15:40:47,469: Finish:  AGV01 arrived akmLineMap.LM78 ,task: 5f6858d509bee64dcc25aca7_2
+[INFO]2020-09-21 15:40:47,580: task: move finish callback <runTasknanqu.feed object at 0x000000000E3D4898>
+[INFO]2020-09-21 15:40:48,590: task[5f6858d509bee64dcc25aca7] update info {'step': 'jackDown', 'msg': '到达下料点', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 48, 583179)}
+[DEBUG]2020-09-21 15:40:48,796: send http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:40:48,802: GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation addr: 127.0.0.1
+[DEBUG]2020-09-21 15:40:48,810: used 9ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[DEBUG]2020-09-21 15:40:48,814: [return] use 17 ms,http_get: http://127.0.0.1:8999/api/agv/playaudio?agv=AGV01&loop=False&name=navigation
+[INFO]2020-09-21 15:40:48,820: task[5f6858d509bee64dcc25aca7] update info {'step': 'jackDown', 'msg': '等待下料确认', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 48, 815192)}
+[DEBUG]2020-09-21 15:40:49,824: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:49,939: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:50,010: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:50,033: used 93ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:50,076: [return] use 252 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:50,103: <runTasknanqu.feed object at 0x000000000E3D4898> audioPlayDown error
+[DEBUG]2020-09-21 15:40:52,150: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:52,298: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:52,371: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:52,411: used 113ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:52,508: [return] use 358 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:52,558: <runTasknanqu.feed object at 0x000000000E3D4898> audioPlayDown error
+[DEBUG]2020-09-21 15:40:54,705: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:54,827: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:54,988: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:55,023: used 196ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:55,104: [return] use 399 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:55,174: <runTasknanqu.feed object at 0x000000000E3D4898> audioPlayDown error
+[CRITICAL]2020-09-21 15:40:56,379: : 192.168.10.3:10001 <--> 192.168.20.202:51450 time out cause a error: <tcpSocket.client object at 0x000000000E3B6D30>
+pid=9112, ppid=68480, tid=97296
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:40:56,430: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51450
+[WARNING]2020-09-21 15:40:56,461: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51450
+[INFO]2020-09-21 15:40:56,541: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51451
+[DEBUG]2020-09-21 15:40:57,279: send http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:57,432: GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1 addr: 127.0.0.1
+[INFO]2020-09-21 15:40:57,567: AGV01 checkUnitStatus unitId: 1
+[DEBUG]2020-09-21 15:40:57,593: used 162ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[DEBUG]2020-09-21 15:40:57,648: [return] use 369 ms,http_get: http://127.0.0.1:8999/api/agv/checkUnitloadStatus?agv=AGV01&timeoutSec=30&unitId=1
+[INFO]2020-09-21 15:40:57,720: task[5f6858d509bee64dcc25aca7] update info {'step': 'stopPlayDown', 'msg': '完成下料', 'updatetime': datetime.datetime(2020, 9, 21, 15, 40, 57, 688700)}
+[DEBUG]2020-09-21 15:40:58,805: send http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:40:58,936: GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:40:59,002: used 66ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[DEBUG]2020-09-21 15:40:59,051: [return] use 246 ms,http_get: http://127.0.0.1:8999/api/agv/stopaudio?agv=AGV01
+[INFO]2020-09-21 15:41:00,076: taskStepfinishfinishfinishfinishfinishfinish
+[INFO]2020-09-21 15:41:00,114: task[5f6858d509bee64dcc25aca7]:  successed
+[INFO]2020-09-21 15:41:00,138: <runTasknanqu.feed object at 0x000000000E3D4898> AGV01 release task, release agv True
+[DEBUG]2020-09-21 15:41:00,250: GET: http://127.0.0.1:8999/api/agv/release?agv=AGV01&appName=scadaTask&force=False&taskId=5f6858d509bee64dcc25aca7 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:41:00,266: unlock: AGV01 taskId 5f6858d509bee64dcc25aca7 app scadaTask force False
+[DEBUG]2020-09-21 15:41:00,288: used 37ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/release?agv=AGV01&appName=scadaTask&force=False&taskId=5f6858d509bee64dcc25aca7
+[DEBUG]2020-09-21 15:41:00,400: GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=scadaTask&taskId=5f6858d509bee64dcc25aca7 addr: 127.0.0.1
+[DEBUG]2020-09-21 15:41:00,433: used 33ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/isLocked?agv=AGV01&appName=scadaTask&taskId=5f6858d509bee64dcc25aca7
+[INFO]2020-09-21 15:41:00,480: <runTasknanqu.feed object at 0x000000000E3D4898> let AGV01 gohome
+[DEBUG]2020-09-21 15:41:00,641: GET: http://127.0.0.1:8999/api/agv/goHome?agv=AGV01&appName=scadaTask&force=False&timeout=10800 addr: 127.0.0.1
+[INFO]2020-09-21 15:41:00,671: AGV01 gohome home_2 force False taskId home_2 : AGV01.LM78 -> akmLineMap.LM76
+[INFO]2020-09-21 15:41:01,097: Begin: AGV01 move from akmLineMap.LM78 to akmLineMap.LM76 by paths: [('akmLineMap', ['LM78', 'LM77', 'LM76'], 13.75242849005635)] task: home_2 timeout 10800 used 394 ms
+[DEBUG]2020-09-21 15:41:01,166: used 525ms 200 OK application/json;charset=utf-8, GET: http://127.0.0.1:8999/api/agv/goHome?agv=AGV01&appName=scadaTask&force=False&timeout=10800
+[INFO]2020-09-21 15:41:01,263: task: stop <runTasknanqu.feed object at 0x000000000E3D4898>
+[DEBUG]2020-09-21 15:41:02,014: agvInfo: AGV01 akmLineMap.LM78 move to akmLineMap.LM77 ,taskId home_2
+[DEBUG]2020-09-21 15:41:02,766: AGV01 choise next pos cur LM78 next LM76 pre LM77 13.752 False
+[DEBUG]2020-09-21 15:41:02,801: AGV01 turn to wait check cur LM78 next LM76 13.752 False
+[ERROR]2020-09-21 15:41:03,234: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.5535, id=5f68590f6ea419ab821f38a4
+[DEBUG]2020-09-21 15:41:03,482: agvInfo: AGV01 akmLineMap.LM78 move to akmLineMap.LM76 ,taskId home_2
+[WARNING]2020-09-21 15:41:04,745: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:05,272: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:05,798: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:06,335: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[CRITICAL]2020-09-21 15:41:06,659: : 192.168.10.3:10001 <--> 192.168.20.202:51451 time out cause a error: <tcpSocket.client object at 0x000000000E3B6E48>
+pid=9112, ppid=68480, tid=99940
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:41:06,747: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51451
+[WARNING]2020-09-21 15:41:06,861: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51451
+[INFO]2020-09-21 15:41:06,928: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51452
+[WARNING]2020-09-21 15:41:06,939: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:07,485: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:08,049: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:08,598: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:09,154: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:09,707: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:10,236: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:10,777: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:11,306: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:11,872: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:12,443: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:13,099: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:13,671: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:14,269: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:14,858: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:15,467: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:16,008: AGV01 waitFinish: loc is diff LM78 LM76 task_status= 2
+[DEBUG]2020-09-21 15:41:16,211: AGV01 set loc akmLineMap.LM77 ,old LM78 (8.15,-14.17)
+[WARNING]2020-09-21 15:41:16,698: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[CRITICAL]2020-09-21 15:41:16,988: : 192.168.10.3:10001 <--> 192.168.20.202:51452 time out cause a error: <tcpSocket.client object at 0x000000000E3FA390>
+pid=9112, ppid=68480, tid=101992
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:41:17,029: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51452
+[WARNING]2020-09-21 15:41:17,054: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51452
+[INFO]2020-09-21 15:41:17,100: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51453
+[WARNING]2020-09-21 15:41:17,285: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:17,936: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:18,505: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:19,086: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:19,646: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:20,195: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:20,810: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:21,343: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:21,936: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:22,506: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:23,066: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:23,658: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:23,796: clear alarm obj=AGV01, typeId=49997, id=5f68590f6ea419ab821f38a4
+[WARNING]2020-09-21 15:41:24,220: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:24,787: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[ERROR]2020-09-21 15:41:25,215: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6773, id=5f6859256ea419ab821f38c3
+[WARNING]2020-09-21 15:41:25,342: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:25,884: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:26,166: clear alarm obj=AGV01, typeId=49997, id=5f6859256ea419ab821f38c3
+[WARNING]2020-09-21 15:41:26,485: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[ERROR]2020-09-21 15:41:26,895: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6393, id=5f6859266ea419ab821f38cc
+[WARNING]2020-09-21 15:41:27,049: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[CRITICAL]2020-09-21 15:41:27,164: : 192.168.10.3:10001 <--> 192.168.20.202:51453 time out cause a error: <tcpSocket.client object at 0x000000000A6DC978>
+pid=9112, ppid=68480, tid=105308
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:41:27,294: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51453
+[WARNING]2020-09-21 15:41:27,354: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51453
+[INFO]2020-09-21 15:41:27,434: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51454
+[WARNING]2020-09-21 15:41:27,589: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:28,217: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:28,827: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[WARNING]2020-09-21 15:41:29,439: AGV01 waitFinish: loc is diff LM77 LM76 task_status= 2
+[DEBUG]2020-09-21 15:41:29,608: AGV01 set loc akmLineMap.LM76 ,old LM77 (2.15,-14.07)
+[SUCC]2020-09-21 15:41:35,308: Finish:  AGV01 arrived akmLineMap.LM76 ,task: home_2
+[DEBUG]2020-09-21 15:41:35,353: unlock: AGV01 taskId None app None force False
+[CRITICAL]2020-09-21 15:41:37,561: : 192.168.10.3:10001 <--> 192.168.20.202:51454 time out cause a error: <tcpSocket.client object at 0x000000000E3FA8D0>
+pid=9112, ppid=68480, tid=105596
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:41:37,724: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51454
+[WARNING]2020-09-21 15:41:37,914: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51454
+[INFO]2020-09-21 15:41:37,990: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51455
+[CRITICAL]2020-09-21 15:41:48,066: : 192.168.10.3:10001 <--> 192.168.20.202:51455 time out cause a error: <tcpSocket.client object at 0x000000000E25C2E8>
+pid=9112, ppid=68480, tid=109492
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:41:48,113: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51455
+[WARNING]2020-09-21 15:41:48,197: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51455
+[INFO]2020-09-21 15:41:48,292: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51456
+[CRITICAL]2020-09-21 15:41:58,345: : 192.168.10.3:10001 <--> 192.168.20.202:51456 time out cause a error: <tcpSocket.client object at 0x000000000E25CF28>
+pid=9112, ppid=68480, tid=109608
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:41:58,391: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51456
+[WARNING]2020-09-21 15:41:58,441: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51456
+[INFO]2020-09-21 15:41:58,496: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51457
+[CRITICAL]2020-09-21 15:42:08,606: : 192.168.10.3:10001 <--> 192.168.20.202:51457 time out cause a error: <tcpSocket.client object at 0x000000000E3D1710>
+pid=9112, ppid=68480, tid=1712
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:42:08,638: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51457
+[WARNING]2020-09-21 15:42:08,689: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51457
+[INFO]2020-09-21 15:42:08,738: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51458
+[CRITICAL]2020-09-21 15:42:18,800: : 192.168.10.3:10001 <--> 192.168.20.202:51458 time out cause a error: <tcpSocket.client object at 0x000000000E3B6550>
+pid=9112, ppid=68480, tid=115976
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:42:18,837: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51458
+[WARNING]2020-09-21 15:42:18,857: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51458
+[INFO]2020-09-21 15:42:18,913: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51459
+[CRITICAL]2020-09-21 15:42:28,969: : 192.168.10.3:10001 <--> 192.168.20.202:51459 time out cause a error: <tcpSocket.client object at 0x000000000E401198>
+pid=9112, ppid=68480, tid=117824
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:42:29,002: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51459
+[WARNING]2020-09-21 15:42:29,028: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51459
+[INFO]2020-09-21 15:42:29,093: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51460
+[CRITICAL]2020-09-21 15:42:39,204: : 192.168.10.3:10001 <--> 192.168.20.202:51460 time out cause a error: <tcpSocket.client object at 0x000000000E3B6BE0>
+pid=9112, ppid=68480, tid=117948
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:42:39,264: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51460
+[WARNING]2020-09-21 15:42:39,299: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51460
+[INFO]2020-09-21 15:42:39,379: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51461
+[CRITICAL]2020-09-21 15:42:49,452: : 192.168.10.3:10001 <--> 192.168.20.202:51461 time out cause a error: <tcpSocket.client object at 0x000000000A6CA0B8>
+pid=9112, ppid=68480, tid=122740
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:42:49,513: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51461
+[WARNING]2020-09-21 15:42:49,573: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51461
+[INFO]2020-09-21 15:42:49,716: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51462
+[CRITICAL]2020-09-21 15:42:59,769: : 192.168.10.3:10001 <--> 192.168.20.202:51462 time out cause a error: <tcpSocket.client object at 0x000000000E2703C8>
+pid=9112, ppid=68480, tid=124316
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:42:59,822: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51462
+[WARNING]2020-09-21 15:42:59,889: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51462
+[INFO]2020-09-21 15:42:59,936: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51463
+[CRITICAL]2020-09-21 15:43:09,962: : 192.168.10.3:10001 <--> 192.168.20.202:51463 time out cause a error: <tcpSocket.client object at 0x000000000E401710>
+pid=9112, ppid=68480, tid=126128
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:43:10,071: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51463
+[WARNING]2020-09-21 15:43:10,116: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51463
+[INFO]2020-09-21 15:43:10,198: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51464
+[CRITICAL]2020-09-21 15:43:20,325: : 192.168.10.3:10001 <--> 192.168.20.202:51464 time out cause a error: <tcpSocket.client object at 0x000000000E3BB3C8>
+pid=9112, ppid=68480, tid=129584
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:43:20,419: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51464
+[WARNING]2020-09-21 15:43:20,454: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51464
+[INFO]2020-09-21 15:43:20,519: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51465
+[CRITICAL]2020-09-21 15:43:30,597: : 192.168.10.3:10001 <--> 192.168.20.202:51465 time out cause a error: <tcpSocket.client object at 0x000000000E401C88>
+pid=9112, ppid=68480, tid=130300
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:43:30,710: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51465
+[WARNING]2020-09-21 15:43:30,769: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51465
+[INFO]2020-09-21 15:43:30,830: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51466
+[CRITICAL]2020-09-21 15:43:40,904: : 192.168.10.3:10001 <--> 192.168.20.202:51466 time out cause a error: <tcpSocket.client object at 0x000000000E26AE48>
+pid=9112, ppid=68480, tid=131892
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:43:40,959: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51466
+[WARNING]2020-09-21 15:43:41,018: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51466
+[INFO]2020-09-21 15:43:41,134: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51467
+[CRITICAL]2020-09-21 15:43:51,262: : 192.168.10.3:10001 <--> 192.168.20.202:51467 time out cause a error: <tcpSocket.client object at 0x000000000E401C88>
+pid=9112, ppid=68480, tid=136996
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:43:51,374: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51467
+[WARNING]2020-09-21 15:43:51,434: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51467
+[INFO]2020-09-21 15:43:51,552: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51468
+[CRITICAL]2020-09-21 15:44:01,638: : 192.168.10.3:10001 <--> 192.168.20.202:51468 time out cause a error: <tcpSocket.client object at 0x000000000E3D1828>
+pid=9112, ppid=68480, tid=142032
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:44:01,709: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51468
+[WARNING]2020-09-21 15:44:01,745: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51468
+[INFO]2020-09-21 15:44:01,820: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51469
+[CRITICAL]2020-09-21 15:44:11,877: : 192.168.10.3:10001 <--> 192.168.20.202:51469 time out cause a error: <tcpSocket.client object at 0x000000000E270FD0>
+pid=9112, ppid=68480, tid=139952
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:44:11,932: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51469
+[WARNING]2020-09-21 15:44:11,973: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51469
+[INFO]2020-09-21 15:44:12,034: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51470
+[CRITICAL]2020-09-21 15:44:22,217: : 192.168.10.3:10001 <--> 192.168.20.202:51470 time out cause a error: <tcpSocket.client object at 0x000000000E3BB390>
+pid=9112, ppid=68480, tid=141988
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:44:22,268: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51470
+[WARNING]2020-09-21 15:44:22,318: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51470
+[INFO]2020-09-21 15:44:22,388: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51471
+[CRITICAL]2020-09-21 15:44:32,465: : 192.168.10.3:10001 <--> 192.168.20.202:51471 time out cause a error: <tcpSocket.client object at 0x000000000E401A90>
+pid=9112, ppid=68480, tid=142532
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:44:32,535: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51471
+[WARNING]2020-09-21 15:44:32,585: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51471
+[INFO]2020-09-21 15:44:32,678: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51472
+[CRITICAL]2020-09-21 15:44:42,731: : 192.168.10.3:10001 <--> 192.168.20.202:51472 time out cause a error: <tcpSocket.client object at 0x000000000E401C88>
+pid=9112, ppid=68480, tid=146864
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:44:42,765: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51472
+[WARNING]2020-09-21 15:44:42,815: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51472
+[INFO]2020-09-21 15:44:42,856: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51473
+[CRITICAL]2020-09-21 15:44:52,927: : 192.168.10.3:10001 <--> 192.168.20.202:51473 time out cause a error: <tcpSocket.client object at 0x000000000A6CA5F8>
+pid=9112, ppid=68480, tid=147560
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:44:52,963: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51473
+[WARNING]2020-09-21 15:44:53,004: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51473
+[INFO]2020-09-21 15:44:53,099: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51474
+[CRITICAL]2020-09-21 15:45:03,169: : 192.168.10.3:10001 <--> 192.168.20.202:51474 time out cause a error: <tcpSocket.client object at 0x000000000E3BB208>
+pid=9112, ppid=68480, tid=149120
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:45:03,242: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51474
+[WARNING]2020-09-21 15:45:03,322: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51474
+[INFO]2020-09-21 15:45:03,407: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51475
+[CRITICAL]2020-09-21 15:45:13,466: : 192.168.10.3:10001 <--> 192.168.20.202:51475 time out cause a error: <tcpSocket.client object at 0x000000000E26A898>
+pid=9112, ppid=68480, tid=61348
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:45:13,518: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51475
+[WARNING]2020-09-21 15:45:13,613: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51475
+[INFO]2020-09-21 15:45:13,691: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51476
+[CRITICAL]2020-09-21 15:45:23,782: : 192.168.10.3:10001 <--> 192.168.20.202:51476 time out cause a error: <tcpSocket.client object at 0x000000000E3D4E80>
+pid=9112, ppid=68480, tid=154676
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:45:23,851: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51476
+[WARNING]2020-09-21 15:45:23,897: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51476
+[INFO]2020-09-21 15:45:23,954: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51477
+[CRITICAL]2020-09-21 15:45:34,066: : 192.168.10.3:10001 <--> 192.168.20.202:51477 time out cause a error: <tcpSocket.client object at 0x000000000E3B6BE0>
+pid=9112, ppid=68480, tid=157316
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:45:34,146: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51477
+[WARNING]2020-09-21 15:45:34,181: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51477
+[INFO]2020-09-21 15:45:34,242: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51478
+[CRITICAL]2020-09-21 15:45:44,316: : 192.168.10.3:10001 <--> 192.168.20.202:51478 time out cause a error: <tcpSocket.client object at 0x000000000E3BB3C8>
+pid=9112, ppid=68480, tid=159364
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:45:44,371: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51478
+[WARNING]2020-09-21 15:45:44,431: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51478
+[INFO]2020-09-21 15:45:44,511: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51479
+[CRITICAL]2020-09-21 15:45:54,565: : 192.168.10.3:10001 <--> 192.168.20.202:51479 time out cause a error: <tcpSocket.client object at 0x000000000E3D4E80>
+pid=9112, ppid=68480, tid=161632
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:45:54,605: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51479
+[WARNING]2020-09-21 15:45:54,646: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51479
+[INFO]2020-09-21 15:45:54,690: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51480
+[CRITICAL]2020-09-21 15:46:04,758: : 192.168.10.3:10001 <--> 192.168.20.202:51480 time out cause a error: <tcpSocket.client object at 0x000000000A6DCCF8>
+pid=9112, ppid=68480, tid=163152
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:46:04,814: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51480
+[WARNING]2020-09-21 15:46:04,872: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51480
+[INFO]2020-09-21 15:46:04,935: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51481
+[CRITICAL]2020-09-21 15:46:15,053: : 192.168.10.3:10001 <--> 192.168.20.202:51481 time out cause a error: <tcpSocket.client object at 0x000000000E3D1710>
+pid=9112, ppid=68480, tid=166756
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:46:15,103: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51481
+[WARNING]2020-09-21 15:46:15,159: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51481
+[INFO]2020-09-21 15:46:15,234: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51482
+[CRITICAL]2020-09-21 15:46:25,321: : 192.168.10.3:10001 <--> 192.168.20.202:51482 time out cause a error: <tcpSocket.client object at 0x000000000E3D1828>
+pid=9112, ppid=68480, tid=167796
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:46:25,378: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51482
+[WARNING]2020-09-21 15:46:25,489: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51482
+[INFO]2020-09-21 15:46:25,658: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51483
+[CRITICAL]2020-09-21 15:46:35,710: : 192.168.10.3:10001 <--> 192.168.20.202:51483 time out cause a error: <tcpSocket.client object at 0x000000000A6CA400>
+pid=9112, ppid=68480, tid=70260
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:46:35,790: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51483
+[WARNING]2020-09-21 15:46:35,876: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51483
+[INFO]2020-09-21 15:46:35,962: tcp server [0.0.0.0][10001] ,connectedLen: 2, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51484
+[CRITICAL]2020-09-21 15:46:46,049: : 192.168.10.3:10001 <--> 192.168.20.202:51484 time out cause a error: <tcpSocket.client object at 0x000000000A6DCA20>
+pid=9112, ppid=68480, tid=6248
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:46:46,112: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51484
+[WARNING]2020-09-21 15:46:46,147: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51484
+[INFO]2020-09-21 15:46:46,252: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51485
+[CRITICAL]2020-09-21 15:46:56,317: : 192.168.10.3:10001 <--> 192.168.20.202:51485 time out cause a error: <tcpSocket.client object at 0x000000000E28B128>
+pid=9112, ppid=68480, tid=16848
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:46:56,363: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51485
+[WARNING]2020-09-21 15:46:56,389: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51485
+[INFO]2020-09-21 15:46:56,440: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51486
+[CRITICAL]2020-09-21 15:47:06,511: : 192.168.10.3:10001 <--> 192.168.20.202:51486 time out cause a error: <tcpSocket.client object at 0x000000000E270C50>
+pid=9112, ppid=68480, tid=22196
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:47:06,579: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51486
+[WARNING]2020-09-21 15:47:06,604: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51486
+[INFO]2020-09-21 15:47:06,757: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51487
+[CRITICAL]2020-09-21 15:47:16,836: : 192.168.10.3:10001 <--> 192.168.20.202:51487 time out cause a error: <tcpSocket.client object at 0x000000000E401C88>
+pid=9112, ppid=68480, tid=22244
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:47:16,931: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51487
+[WARNING]2020-09-21 15:47:16,996: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51487
+[INFO]2020-09-21 15:47:17,152: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51488
+[CRITICAL]2020-09-21 15:47:27,191: : 192.168.10.3:10001 <--> 192.168.20.202:51488 time out cause a error: <tcpSocket.client object at 0x000000000E3B6898>
+pid=9112, ppid=68480, tid=29636
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:47:27,218: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51488
+[WARNING]2020-09-21 15:47:27,234: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51488
+[INFO]2020-09-21 15:47:27,271: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51489
+[CRITICAL]2020-09-21 15:47:37,437: : 192.168.10.3:10001 <--> 192.168.20.202:51489 time out cause a error: <tcpSocket.client object at 0x000000000E3B6550>
+pid=9112, ppid=68480, tid=33676
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:47:37,509: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51489
+[WARNING]2020-09-21 15:47:37,610: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51489
+[INFO]2020-09-21 15:47:37,692: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51490
+[CRITICAL]2020-09-21 15:47:47,771: : 192.168.10.3:10001 <--> 192.168.20.202:51490 time out cause a error: <tcpSocket.client object at 0x000000000E3B6E48>
+pid=9112, ppid=68480, tid=40308
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:47:47,885: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51490
+[WARNING]2020-09-21 15:47:47,940: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51490
+[INFO]2020-09-21 15:47:48,002: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51491
+[CRITICAL]2020-09-21 15:47:58,095: : 192.168.10.3:10001 <--> 192.168.20.202:51491 time out cause a error: <tcpSocket.client object at 0x000000000E3FAEB8>
+pid=9112, ppid=68480, tid=14260
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:47:58,175: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51491
+[WARNING]2020-09-21 15:47:58,225: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51491
+[INFO]2020-09-21 15:47:58,329: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51492
+[CRITICAL]2020-09-21 15:48:08,413: : 192.168.10.3:10001 <--> 192.168.20.202:51492 time out cause a error: <tcpSocket.client object at 0x000000000E3D1CF8>
+pid=9112, ppid=68480, tid=52880
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:48:08,451: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51492
+[WARNING]2020-09-21 15:48:08,493: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51492
+[INFO]2020-09-21 15:48:08,545: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51493
+[CRITICAL]2020-09-21 15:48:18,599: : 192.168.10.3:10001 <--> 192.168.20.202:51493 time out cause a error: <tcpSocket.client object at 0x000000000E25C278>
+pid=9112, ppid=68480, tid=61600
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:48:18,643: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51493
+[WARNING]2020-09-21 15:48:18,687: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51493
+[INFO]2020-09-21 15:48:18,753: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51494
+[CRITICAL]2020-09-21 15:48:28,880: : 192.168.10.3:10001 <--> 192.168.20.202:51494 time out cause a error: <tcpSocket.client object at 0x000000000E270A58>
+pid=9112, ppid=68480, tid=16636
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:48:28,946: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51494
+[WARNING]2020-09-21 15:48:29,032: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51494
+[INFO]2020-09-21 15:48:29,086: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51495
+[CRITICAL]2020-09-21 15:48:39,175: : 192.168.10.3:10001 <--> 192.168.20.202:51495 time out cause a error: <tcpSocket.client object at 0x000000000E3D17B8>
+pid=9112, ppid=68480, tid=28828
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:48:39,316: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51495
+[WARNING]2020-09-21 15:48:39,337: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51495
+[INFO]2020-09-21 15:48:39,425: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51496
+[CRITICAL]2020-09-21 15:48:49,525: : 192.168.10.3:10001 <--> 192.168.20.202:51496 time out cause a error: <tcpSocket.client object at 0x000000000E26A9E8>
+pid=9112, ppid=68480, tid=55932
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:48:49,557: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51496
+[WARNING]2020-09-21 15:48:49,589: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51496
+[INFO]2020-09-21 15:48:49,617: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51497
+[CRITICAL]2020-09-21 15:48:59,694: : 192.168.10.3:10001 <--> 192.168.20.202:51497 time out cause a error: <tcpSocket.client object at 0x000000000DD714A8>
+pid=9112, ppid=68480, tid=10936
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:48:59,769: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51497
+[WARNING]2020-09-21 15:48:59,789: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51497
+[INFO]2020-09-21 15:48:59,845: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51498
+[CRITICAL]2020-09-21 15:49:09,903: : 192.168.10.3:10001 <--> 192.168.20.202:51498 time out cause a error: <tcpSocket.client object at 0x000000000E3B6048>
+pid=9112, ppid=68480, tid=39888
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:49:09,944: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51498
+[WARNING]2020-09-21 15:49:09,980: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51498
+[INFO]2020-09-21 15:49:10,098: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51499
+[CRITICAL]2020-09-21 15:49:20,169: : 192.168.10.3:10001 <--> 192.168.20.202:51499 time out cause a error: <tcpSocket.client object at 0x000000000E3FAC88>
+pid=9112, ppid=68480, tid=54228
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:49:20,193: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51499
+[WARNING]2020-09-21 15:49:20,212: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51499
+[INFO]2020-09-21 15:49:20,278: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51500
+[CRITICAL]2020-09-21 15:49:30,397: : 192.168.10.3:10001 <--> 192.168.20.202:51500 time out cause a error: <tcpSocket.client object at 0x000000000E3FA8D0>
+pid=9112, ppid=68480, tid=10000
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:49:30,477: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51500
+[WARNING]2020-09-21 15:49:30,543: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51500
+[INFO]2020-09-21 15:49:30,644: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51501
+[CRITICAL]2020-09-21 15:49:40,830: : 192.168.10.3:10001 <--> 192.168.20.202:51501 time out cause a error: <tcpSocket.client object at 0x000000000A6DCE10>
+pid=9112, ppid=68480, tid=8060
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:49:40,871: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51501
+[WARNING]2020-09-21 15:49:40,906: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51501
+[INFO]2020-09-21 15:49:40,977: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51502
+[CRITICAL]2020-09-21 15:49:51,044: : 192.168.10.3:10001 <--> 192.168.20.202:51502 time out cause a error: <tcpSocket.client object at 0x000000000A6DCF98>
+pid=9112, ppid=68480, tid=12208
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:49:51,075: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51502
+[WARNING]2020-09-21 15:49:51,105: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51502
+[INFO]2020-09-21 15:49:51,380: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51503
+[CRITICAL]2020-09-21 15:50:01,492: : 192.168.10.3:10001 <--> 192.168.20.202:51503 time out cause a error: <tcpSocket.client object at 0x000000000E3D1710>
+pid=9112, ppid=68480, tid=62456
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:50:01,601: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51503
+[WARNING]2020-09-21 15:50:01,621: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51503
+[INFO]2020-09-21 15:50:01,737: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51504
+[CRITICAL]2020-09-21 15:50:11,852: : 192.168.10.3:10001 <--> 192.168.20.202:51504 time out cause a error: <tcpSocket.client object at 0x000000000E3B6128>
+pid=9112, ppid=68480, tid=14356
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:50:11,934: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51504
+[WARNING]2020-09-21 15:50:12,081: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51504
+[INFO]2020-09-21 15:50:12,308: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51505
+[CRITICAL]2020-09-21 15:50:22,502: : 192.168.10.3:10001 <--> 192.168.20.202:51505 time out cause a error: <tcpSocket.client object at 0x000000000E3FAE10>
+pid=9112, ppid=68480, tid=49688
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:50:22,567: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51505
+[WARNING]2020-09-21 15:50:22,662: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51505
+[INFO]2020-09-21 15:50:22,769: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51506
+[CRITICAL]2020-09-21 15:50:32,990: : 192.168.10.3:10001 <--> 192.168.20.202:51506 time out cause a error: <tcpSocket.client object at 0x000000000A6DCCF8>
+pid=9112, ppid=68480, tid=67636
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:50:33,167: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51506
+[WARNING]2020-09-21 15:50:33,182: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51506
+[INFO]2020-09-21 15:50:33,361: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51507
+[CRITICAL]2020-09-21 15:50:43,425: : 192.168.10.3:10001 <--> 192.168.20.202:51507 time out cause a error: <tcpSocket.client object at 0x000000000E3B6BE0>
+pid=9112, ppid=68480, tid=18144
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:50:43,596: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51507
+[WARNING]2020-09-21 15:50:43,761: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51507
+[INFO]2020-09-21 15:50:43,886: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51508
+[CRITICAL]2020-09-21 15:50:53,973: : 192.168.10.3:10001 <--> 192.168.20.202:51508 time out cause a error: <tcpSocket.client object at 0x000000000E3D1048>
+pid=9112, ppid=68480, tid=31124
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:50:54,090: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51508
+[WARNING]2020-09-21 15:50:54,185: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51508
+[INFO]2020-09-21 15:50:54,315: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51509
+[CRITICAL]2020-09-21 15:51:04,459: : 192.168.10.3:10001 <--> 192.168.20.202:51509 time out cause a error: <tcpSocket.client object at 0x000000000A6DC5F8>
+pid=9112, ppid=68480, tid=51108
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:51:04,620: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51509
+[WARNING]2020-09-21 15:51:04,726: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51509
+[INFO]2020-09-21 15:51:04,826: tcp server [0.0.0.0][10001] ,connectedLen: 2, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51510
+[CRITICAL]2020-09-21 15:51:14,945: : 192.168.10.3:10001 <--> 192.168.20.202:51510 time out cause a error: <tcpSocket.client object at 0x000000000A6CA470>
+pid=9112, ppid=68480, tid=15980
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:51:14,967: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51510
+[WARNING]2020-09-21 15:51:14,999: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51510
+[INFO]2020-09-21 15:51:15,114: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51511
+[CRITICAL]2020-09-21 15:51:25,190: : 192.168.10.3:10001 <--> 192.168.20.202:51511 time out cause a error: <tcpSocket.client object at 0x000000000E37FBE0>
+pid=9112, ppid=68480, tid=71788
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:51:25,269: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51511
+[WARNING]2020-09-21 15:51:25,376: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51511
+[INFO]2020-09-21 15:51:25,467: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51512
+[CRITICAL]2020-09-21 15:51:35,533: : 192.168.10.3:10001 <--> 192.168.20.202:51512 time out cause a error: <tcpSocket.client object at 0x000000000E3B6128>
+pid=9112, ppid=68480, tid=73592
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:51:35,575: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51512
+[WARNING]2020-09-21 15:51:35,655: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51512
+[INFO]2020-09-21 15:51:35,812: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51513
+[CRITICAL]2020-09-21 15:51:45,926: : 192.168.10.3:10001 <--> 192.168.20.202:51513 time out cause a error: <tcpSocket.client object at 0x000000000E28B2B0>
+pid=9112, ppid=68480, tid=76120
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:51:45,978: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51513
+[WARNING]2020-09-21 15:51:46,009: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51513
+[INFO]2020-09-21 15:51:46,060: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51514
+[CRITICAL]2020-09-21 15:51:56,153: : 192.168.10.3:10001 <--> 192.168.20.202:51514 time out cause a error: <tcpSocket.client object at 0x000000000A6DC550>
+pid=9112, ppid=68480, tid=78624
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:51:56,297: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51514
+[WARNING]2020-09-21 15:51:56,357: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51514
+[INFO]2020-09-21 15:51:56,427: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51515
+[CRITICAL]2020-09-21 15:52:06,524: : 192.168.10.3:10001 <--> 192.168.20.202:51515 time out cause a error: <tcpSocket.client object at 0x000000000A6DC2E8>
+pid=9112, ppid=68480, tid=81100
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:52:06,594: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51515
+[WARNING]2020-09-21 15:52:06,669: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51515
+[INFO]2020-09-21 15:52:06,838: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51516
+[CRITICAL]2020-09-21 15:52:16,956: : 192.168.10.3:10001 <--> 192.168.20.202:51516 time out cause a error: <tcpSocket.client object at 0x000000000E4012B0>
+pid=9112, ppid=68480, tid=83420
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:52:17,020: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51516
+[WARNING]2020-09-21 15:52:17,065: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51516
+[INFO]2020-09-21 15:52:17,156: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51517
+[CRITICAL]2020-09-21 15:52:27,272: : 192.168.10.3:10001 <--> 192.168.20.202:51517 time out cause a error: <tcpSocket.client object at 0x000000000E401940>
+pid=9112, ppid=68480, tid=85628
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:52:27,318: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51517
+[WARNING]2020-09-21 15:52:27,352: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51517
+[INFO]2020-09-21 15:52:27,407: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51518
+[CRITICAL]2020-09-21 15:52:37,471: : 192.168.10.3:10001 <--> 192.168.20.202:51518 time out cause a error: <tcpSocket.client object at 0x000000000E401A90>
+pid=9112, ppid=68480, tid=89492
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:52:37,534: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51518
+[WARNING]2020-09-21 15:52:37,608: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51518
+[INFO]2020-09-21 15:52:37,730: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51519
+[CRITICAL]2020-09-21 15:52:47,810: : 192.168.10.3:10001 <--> 192.168.20.202:51519 time out cause a error: <tcpSocket.client object at 0x0000000006DC0438>
+pid=9112, ppid=68480, tid=90000
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:52:47,862: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51519
+[WARNING]2020-09-21 15:52:47,893: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51519
+[INFO]2020-09-21 15:52:47,968: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51520
+[CRITICAL]2020-09-21 15:52:58,166: : 192.168.10.3:10001 <--> 192.168.20.202:51520 time out cause a error: <tcpSocket.client object at 0x000000000E4015F8>
+pid=9112, ppid=68480, tid=92800
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:52:58,297: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51520
+[WARNING]2020-09-21 15:52:58,337: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51520
+[INFO]2020-09-21 15:52:58,568: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51521
+[CRITICAL]2020-09-21 15:53:08,719: : 192.168.10.3:10001 <--> 192.168.20.202:51521 time out cause a error: <tcpSocket.client object at 0x000000000E3FAC88>
+pid=9112, ppid=68480, tid=93632
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:53:08,834: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51521
+[WARNING]2020-09-21 15:53:08,867: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51521
+[INFO]2020-09-21 15:53:08,923: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51522
+[CRITICAL]2020-09-21 15:53:19,000: : 192.168.10.3:10001 <--> 192.168.20.202:51522 time out cause a error: <tcpSocket.client object at 0x000000000E3D4160>
+pid=9112, ppid=68480, tid=93840
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:53:19,050: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51522
+[WARNING]2020-09-21 15:53:19,111: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51522
+[INFO]2020-09-21 15:53:19,216: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51523
+[CRITICAL]2020-09-21 15:53:29,307: : 192.168.10.3:10001 <--> 192.168.20.202:51523 time out cause a error: <tcpSocket.client object at 0x000000000A6CA550>
+pid=9112, ppid=68480, tid=95888
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:53:29,467: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51523
+[WARNING]2020-09-21 15:53:29,542: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51523
+[INFO]2020-09-21 15:53:29,909: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51524
+[CRITICAL]2020-09-21 15:53:40,141: : 192.168.10.3:10001 <--> 192.168.20.202:51524 time out cause a error: <tcpSocket.client object at 0x000000000A6CA6D8>
+pid=9112, ppid=68480, tid=99488
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:53:40,181: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51524
+[WARNING]2020-09-21 15:53:40,199: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51524
+[INFO]2020-09-21 15:53:40,475: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51525
+[CRITICAL]2020-09-21 15:53:50,574: : 192.168.10.3:10001 <--> 192.168.20.202:51525 time out cause a error: <tcpSocket.client object at 0x000000000E401438>
+pid=9112, ppid=68480, tid=102848
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:53:50,600: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51525
+[WARNING]2020-09-21 15:53:50,630: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51525
+[INFO]2020-09-21 15:53:50,669: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51526
+[CRITICAL]2020-09-21 15:54:00,756: : 192.168.10.3:10001 <--> 192.168.20.202:51526 time out cause a error: <tcpSocket.client object at 0x000000000E28B588>
+pid=9112, ppid=68480, tid=107064
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:54:00,850: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51526
+[WARNING]2020-09-21 15:54:00,915: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51526
+[INFO]2020-09-21 15:54:00,978: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51527
+[ERROR]2020-09-21 15:54:06,152: raise alarm obj=AGV01, typeId=52106, desc=AGV异常, id=5f685c1e6ea419ab821f3c29
+[CRITICAL]2020-09-21 15:54:11,047: : 192.168.10.3:10001 <--> 192.168.20.202:51527 time out cause a error: <tcpSocket.client object at 0x000000000E3D1400>
+pid=9112, ppid=68480, tid=109344
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:54:11,078: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51527
+[WARNING]2020-09-21 15:54:11,098: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51527
+[INFO]2020-09-21 15:54:11,289: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51528
+[CRITICAL]2020-09-21 15:54:21,466: : 192.168.10.3:10001 <--> 192.168.20.202:51528 time out cause a error: <tcpSocket.client object at 0x000000000E28B8D0>
+pid=9112, ppid=68480, tid=113040
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:54:21,503: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51528
+[WARNING]2020-09-21 15:54:21,544: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51528
+[INFO]2020-09-21 15:54:21,680: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51529
+[ERROR]2020-09-21 15:54:23,860: raise alarm obj=AGV01, typeId=52117, desc=AGV异常, id=5f685c2f6ea419ab821f3c40
+[ERROR]2020-09-21 15:54:29,792: raise alarm obj=AGV01, typeId=52119, desc=AGV异常, id=5f685c356ea419ab821f3c4b
+[WARNING]2020-09-21 15:54:31,236: clear alarm obj=AGV01, typeId=52119, id=5f685c356ea419ab821f3c4b
+[CRITICAL]2020-09-21 15:54:31,786: : 192.168.10.3:10001 <--> 192.168.20.202:51529 time out cause a error: <tcpSocket.client object at 0x000000000E28B7B8>
+pid=9112, ppid=68480, tid=115628
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:54:31,873: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51529
+[WARNING]2020-09-21 15:54:31,937: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51529
+[INFO]2020-09-21 15:54:32,035: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51530
+[ERROR]2020-09-21 15:54:32,874: raise alarm obj=AGV01, typeId=54100, desc=AGV异常, id=5f685c386ea419ab821f3c5a
+[WARNING]2020-09-21 15:54:33,116: clear alarm obj=AGV01, typeId=52117, id=5f685c2f6ea419ab821f3c40
+[WARNING]2020-09-21 15:54:35,642: disconnect AGV01 192.168.20.199 19204
+[DEBUG]2020-09-21 15:54:36,237: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:37,339: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:37,456: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:54:39,499: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:40,720: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:40,785: AGV01 checkLink failed 192.168.20.199 19204
+[CRITICAL]2020-09-21 15:54:42,169: : 192.168.10.3:10001 <--> 192.168.20.202:51530 time out cause a error: <tcpSocket.client object at 0x000000000E26A9E8>
+pid=9112, ppid=68480, tid=118080
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:54:42,216: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51530
+[WARNING]2020-09-21 15:54:42,236: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51530
+[INFO]2020-09-21 15:54:42,314: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51531
+[DEBUG]2020-09-21 15:54:42,879: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:44,114: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:44,161: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:54:46,210: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:47,240: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:47,295: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:54:49,331: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:50,467: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:50,608: AGV01 checkLink failed 192.168.20.199 19204
+[CRITICAL]2020-09-21 15:54:52,456: : 192.168.10.3:10001 <--> 192.168.20.202:51531 time out cause a error: <tcpSocket.client object at 0x000000000DD71FD0>
+pid=9112, ppid=68480, tid=120824
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:54:52,489: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51531
+[WARNING]2020-09-21 15:54:52,502: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51531
+[INFO]2020-09-21 15:54:52,527: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51532
+[DEBUG]2020-09-21 15:54:52,721: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:53,920: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:53,960: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:54:56,016: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:54:57,134: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:54:57,221: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:54:59,336: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:55:00,438: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:00,470: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:02,493: try connect AGV01 192.168.20.199:19204
+[CRITICAL]2020-09-21 15:55:02,598: : 192.168.10.3:10001 <--> 192.168.20.202:51532 time out cause a error: <tcpSocket.client object at 0x000000000E3BB390>
+pid=9112, ppid=68480, tid=124036
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:55:02,634: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51532
+[WARNING]2020-09-21 15:55:02,659: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51532
+[INFO]2020-09-21 15:55:02,738: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51533
+[ERROR]2020-09-21 15:55:03,732: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:03,844: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:05,925: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:55:07,148: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:07,194: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:09,272: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:55:10,516: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:10,538: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:12,610: try connect AGV01 192.168.20.199:19204
+[CRITICAL]2020-09-21 15:55:12,843: : 192.168.10.3:10001 <--> 192.168.20.202:51533 time out cause a error: <tcpSocket.client object at 0x000000000E3D1D68>
+pid=9112, ppid=68480, tid=126456
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:55:12,879: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51533
+[WARNING]2020-09-21 15:55:12,911: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51533
+[INFO]2020-09-21 15:55:13,047: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51534
+[ERROR]2020-09-21 15:55:13,919: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:13,980: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:16,131: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:55:17,356: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:17,487: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:19,615: try connect AGV01 192.168.20.199:19204
+[CRITICAL]2020-09-21 15:55:23,198: : 192.168.10.3:10001 <--> 192.168.20.202:51534 time out cause a error: <tcpSocket.client object at 0x000000000E3BB390>
+pid=9112, ppid=68480, tid=131088
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:55:23,254: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51534
+[WARNING]2020-09-21 15:55:23,314: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51534
+[INFO]2020-09-21 15:55:23,420: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51535
+[ERROR]2020-09-21 15:55:29,670: connect AGV01 failed timed out
+[INFO]2020-09-21 15:55:29,717: AGV01 checkLink failed 192.168.20.199 19204
+[WARNING]2020-09-21 15:55:29,781: agvThread.AGV01[tid:65992] <lock name:agv.AGV01.lock_status,<locked _thread.RLock object owner=65992 count=1 at 0x0000000009EB0648>> ,hold 10166 ms
+[INFO]2020-09-21 15:55:29,849: name=agvThread.AGV01, pid=9112, tid=65992
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/akmLine/agvCtrl/agvList.py", line 562, in run() 
+[03] File "../driver/seerAgv/agvCtrl.py", line 36, in checkLink() 
+[04] File "../driver/seerAgv/agvApi.py", line 175, in checkLink() 
+[05] File "C:/akmLine/common/lock.py", line 100, in release() 
+[06] File "C:/akmLine/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/akmLine/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2020-09-21 15:55:31,923: try connect AGV01 192.168.20.199:19204
+[CRITICAL]2020-09-21 15:55:33,563: : 192.168.10.3:10001 <--> 192.168.20.202:51535 time out cause a error: <tcpSocket.client object at 0x000000000E3D1D68>
+pid=9112, ppid=68480, tid=130728
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:55:33,609: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51535
+[WARNING]2020-09-21 15:55:33,629: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51535
+[INFO]2020-09-21 15:55:33,780: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51536
+[ERROR]2020-09-21 15:55:41,119: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:41,231: AGV01 checkLink failed 192.168.20.199 19204
+[WARNING]2020-09-21 15:55:41,322: agvThread.AGV01[tid:65992] <lock name:agv.AGV01.lock_status,<locked _thread.RLock object owner=65992 count=1 at 0x0000000009EB0648>> ,hold 9399 ms
+[INFO]2020-09-21 15:55:41,534: name=agvThread.AGV01, pid=9112, tid=65992
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/akmLine/agvCtrl/agvList.py", line 562, in run() 
+[03] File "../driver/seerAgv/agvCtrl.py", line 36, in checkLink() 
+[04] File "../driver/seerAgv/agvApi.py", line 175, in checkLink() 
+[05] File "C:/akmLine/common/lock.py", line 100, in release() 
+[06] File "C:/akmLine/common/enhance.py", line 258, in getTrace() 
+[07] File "C:/akmLine/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2020-09-21 15:55:43,637: try connect AGV01 192.168.20.199:19204
+[CRITICAL]2020-09-21 15:55:43,871: : 192.168.10.3:10001 <--> 192.168.20.202:51536 time out cause a error: <tcpSocket.client object at 0x000000000E3D4E80>
+pid=9112, ppid=68480, tid=134544
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:55:43,903: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51536
+[WARNING]2020-09-21 15:55:43,930: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51536
+[INFO]2020-09-21 15:55:43,996: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51537
+[ERROR]2020-09-21 15:55:44,743: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:44,993: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:47,117: try connect AGV01 192.168.20.199:19204
+[ERROR]2020-09-21 15:55:48,310: connect AGV01 failed [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[INFO]2020-09-21 15:55:48,413: AGV01 checkLink failed 192.168.20.199 19204
+[DEBUG]2020-09-21 15:55:50,490: try connect AGV01 192.168.20.199:19204
+[INFO]2020-09-21 15:55:50,637: AGV01 connected
+[INFO]2020-09-21 15:55:50,981: AGV01 is relocating
+[WARNING]2020-09-21 15:55:51,093: clear alarm obj=AGV01, typeId=52106, id=5f685c1e6ea419ab821f3c29
+[INFO]2020-09-21 15:55:51,630: AGV01 is relocating
+[INFO]2020-09-21 15:55:52,280: AGV01 is relocating
+[INFO]2020-09-21 15:55:53,033: AGV01 is relocating
+[INFO]2020-09-21 15:55:53,767: AGV01 is relocating
+[CRITICAL]2020-09-21 15:55:54,102: : 192.168.10.3:10001 <--> 192.168.20.202:51537 time out cause a error: <tcpSocket.client object at 0x000000000E3BB4E0>
+pid=9112, ppid=68480, tid=139228
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:55:54,155: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51537
+[WARNING]2020-09-21 15:55:54,199: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51537
+[INFO]2020-09-21 15:55:54,418: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51538
+[INFO]2020-09-21 15:55:54,969: AGV01 is relocating
+[WARNING]2020-09-21 15:55:56,000: AGV01 low battery charge,batteryLevel= -0.000 start charge level= 0.400
+[WARNING]2020-09-21 15:55:56,092: AGV01 battery -0.000 check failed: no_loadmap
+[INFO]2020-09-21 15:55:56,297: AGV01 is relocating
+[INFO]2020-09-21 15:55:57,269: AGV01 is relocating
+[WARNING]2020-09-21 15:55:57,791: clear alarm obj=AGV01, typeId=54100, id=5f685c386ea419ab821f3c5a
+[INFO]2020-09-21 15:55:58,863: AGV01 is relocating
+[INFO]2020-09-21 15:55:59,595: AGV01 is relocating
+[INFO]2020-09-21 15:56:00,235: AGV01 is relocating
+[INFO]2020-09-21 15:56:01,028: AGV01 is relocating
+[INFO]2020-09-21 15:56:01,696: AGV01 is relocating
+[INFO]2020-09-21 15:56:02,479: AGV01 is relocating
+[INFO]2020-09-21 15:56:03,264: AGV01 relocate finish
+[INFO]2020-09-21 15:56:04,038: AGV01 relocate finish
+[CRITICAL]2020-09-21 15:56:04,707: : 192.168.10.3:10001 <--> 192.168.20.202:51538 time out cause a error: <tcpSocket.client object at 0x000000000A6CA3C8>
+pid=9112, ppid=68480, tid=144064
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:56:04,737: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51538
+[WARNING]2020-09-21 15:56:04,772: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51538
+[INFO]2020-09-21 15:56:04,896: AGV01 relocate finish
+[INFO]2020-09-21 15:56:04,902: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51539
+[INFO]2020-09-21 15:56:05,788: AGV01 relocate finish
+[INFO]2020-09-21 15:56:06,917: AGV01 relocate finish
+[INFO]2020-09-21 15:56:07,715: AGV01 relocate finish
+[INFO]2020-09-21 15:56:08,469: AGV01 relocate finish
+[INFO]2020-09-21 15:56:09,221: AGV01 relocate finish
+[INFO]2020-09-21 15:56:10,006: AGV01 relocate finish
+[INFO]2020-09-21 15:56:10,711: AGV01 relocate successful，reloc_status 3
+[WARNING]2020-09-21 15:56:10,762: disconnect AGV01 192.168.20.199 19205
+[CRITICAL]2020-09-21 15:56:10,894: readStatus1, agvId:AGV01 cause a error: [WinError 10053] 您的主机中的软件中止了一个已建立的连接。
+pid=9112, ppid=68480, tid=65992
+Traceback (most recent call last):
+  File "C:\akmLine\agvCtrl\agvList.py", line 850, in readStatus1
+    self._checkReloc()
+  File "C:\akmLine\agvCtrl\agvList.py", line 880, in _checkReloc
+    self._confirmReloc()
+  File "C:\akmLine\agvCtrl\agvList.py", line 463, in _confirmReloc
+    agvCtrl.confirmReloc(self.agvId)
+  File "..\driver\seerAgv\agvCtrl.py", line 63, in confirmReloc
+    data= agvApi.ctrl(agvId,"robot_control_comfirmloc_req",None)
+  File "..\driver\seerAgv\agvApi.py", line 181, in ctrl
+    return _handle(agvId, API_PORT_CTRL, type, data, "lock_ctrl")
+  File "..\driver\seerAgv\agvApi.py", line 241, in _handle
+    result = _request(agvId, port, typeId, data)
+  File "..\driver\seerAgv\agvApi.py", line 278, in _request
+    result = GetDataLong(agvId, buf, ip, port, type)
+  File "..\driver\seerAgv\agvApi.py", line 283, in GetDataLong
+    _send(agvId,ip, port, buf.buf)
+  File "..\driver\seerAgv\agvApi.py", line 373, in _send
+    return tcpSocketLong.send(agvId,ip, port, buf)
+  File "C:\akmLine\common\tcpSocketLong.py", line 124, in send
+    raise e
+  File "C:\akmLine\common\tcpSocketLong.py", line 119, in send
+    c.send(sendData)
+  File "C:\akmLine\common\tcpSocketLong.py", line 78, in send
+    self._socket.send(sendData)
+ConnectionAbortedError: [WinError 10053] 您的主机中的软件中止了一个已建立的连接。
+
+[DEBUG]2020-09-21 15:56:11,504: try connect AGV01 192.168.20.199:19205
+[INFO]2020-09-21 15:56:11,560: AGV01 connected
+[INFO]2020-09-21 15:56:11,687: AGV01 relocate successful，reloc_status 3
+[INFO]2020-09-21 15:56:11,811: AGV01 set reloc akmLineMap.LM76 ( 2.192 -14.138 )
+[CRITICAL]2020-09-21 15:56:15,102: : 192.168.10.3:10001 <--> 192.168.20.202:51539 time out cause a error: <tcpSocket.client object at 0x000000000E3D47B8>
+pid=9112, ppid=68480, tid=144020
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:56:15,158: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51539
+[WARNING]2020-09-21 15:56:15,209: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51539
+[INFO]2020-09-21 15:56:15,336: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51540
+[CRITICAL]2020-09-21 15:56:25,568: : 192.168.10.3:10001 <--> 192.168.20.202:51540 time out cause a error: <tcpSocket.client object at 0x000000000A6CA3C8>
+pid=9112, ppid=68480, tid=145508
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:56:25,593: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51540
+[WARNING]2020-09-21 15:56:25,644: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51540
+[INFO]2020-09-21 15:56:25,774: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51541
+[CRITICAL]2020-09-21 15:56:35,975: : 192.168.10.3:10001 <--> 192.168.20.202:51541 time out cause a error: <tcpSocket.client object at 0x000000000E28B470>
+pid=9112, ppid=68480, tid=152500
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:56:36,057: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51541
+[WARNING]2020-09-21 15:56:36,112: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51541
+[INFO]2020-09-21 15:56:36,271: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51542
+[CRITICAL]2020-09-21 15:56:46,460: : 192.168.10.3:10001 <--> 192.168.20.202:51542 time out cause a error: <tcpSocket.client object at 0x000000000E270B70>
+pid=9112, ppid=68480, tid=155800
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:56:46,566: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51542
+[WARNING]2020-09-21 15:56:46,761: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51542
+[INFO]2020-09-21 15:56:47,002: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51543
+[CRITICAL]2020-09-21 15:56:57,114: : 192.168.10.3:10001 <--> 192.168.20.202:51543 time out cause a error: <tcpSocket.client object at 0x000000000E270AC8>
+pid=9112, ppid=68480, tid=159080
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:56:57,156: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51543
+[WARNING]2020-09-21 15:56:57,235: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51543
+[INFO]2020-09-21 15:56:57,357: tcp server [0.0.0.0][10001] ,connectedLen: 2, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51544
+[CRITICAL]2020-09-21 15:57:07,441: : 192.168.10.3:10001 <--> 192.168.20.202:51544 time out cause a error: <tcpSocket.client object at 0x000000000E401C88>
+pid=9112, ppid=68480, tid=163264
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:57:07,512: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51544
+[WARNING]2020-09-21 15:57:07,567: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51544
+[INFO]2020-09-21 15:57:07,657: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51545
+[ERROR]2020-09-21 15:57:15,151: raise alarm obj=AGV01, typeId=54001, desc=AGV异常, id=5f685cdb6ea419ab821f3e8c
+[WARNING]2020-09-21 15:57:16,586: clear alarm obj=AGV01, typeId=54001, id=5f685cdb6ea419ab821f3e8c
+[WARNING]2020-09-21 15:57:16,742: clear alarm obj=AGV01, typeId=49997, id=5f6859266ea419ab821f38cc
+[CRITICAL]2020-09-21 15:57:17,775: : 192.168.10.3:10001 <--> 192.168.20.202:51545 time out cause a error: <tcpSocket.client object at 0x000000000E2702B0>
+pid=9112, ppid=68480, tid=167924
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:57:17,825: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51545
+[WARNING]2020-09-21 15:57:17,915: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51545
+[INFO]2020-09-21 15:57:18,061: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51546
+[DEBUG]2020-09-21 15:57:19,773: AGV01 set loc akmLineMap.LM77 ,old LM76 (8.32,-14.27)
+[ERROR]2020-09-21 15:57:20,589: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.5896, id=5f685ce06ea419ab821f3eba
+[WARNING]2020-09-21 15:57:25,614: clear alarm obj=AGV01, typeId=49997, id=5f685ce06ea419ab821f3eba
+[CRITICAL]2020-09-21 15:57:28,303: : 192.168.10.3:10001 <--> 192.168.20.202:51546 time out cause a error: <tcpSocket.client object at 0x000000000E3B6128>
+pid=9112, ppid=68480, tid=3924
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:57:28,394: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51546
+[WARNING]2020-09-21 15:57:28,445: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51546
+[INFO]2020-09-21 15:57:28,526: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51547
+[ERROR]2020-09-21 15:57:29,387: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6425, id=5f685ce96ea419ab821f3ef2
+[WARNING]2020-09-21 15:57:32,285: clear alarm obj=AGV01, typeId=49997, id=5f685ce96ea419ab821f3ef2
+[ERROR]2020-09-21 15:57:32,954: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6624, id=5f685cec6ea419ab821f3f0d
+[WARNING]2020-09-21 15:57:34,353: clear alarm obj=AGV01, typeId=49997, id=5f685cec6ea419ab821f3f0d
+[ERROR]2020-09-21 15:57:37,552: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.0, id=5f685cf16ea419ab821f3f2e
+[CRITICAL]2020-09-21 15:57:38,631: : 192.168.10.3:10001 <--> 192.168.20.202:51547 time out cause a error: <tcpSocket.client object at 0x000000000E26A8D0>
+pid=9112, ppid=68480, tid=7812
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:57:38,729: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51547
+[WARNING]2020-09-21 15:57:38,880: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51547
+[INFO]2020-09-21 15:57:39,082: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51548
+[WARNING]2020-09-21 15:57:43,747: clear alarm obj=AGV01, typeId=49997, id=5f685cf16ea419ab821f3f2e
+[ERROR]2020-09-21 15:57:45,045: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.0039, id=5f685cf96ea419ab821f3f5b
+[CRITICAL]2020-09-21 15:57:49,219: : 192.168.10.3:10001 <--> 192.168.20.202:51548 time out cause a error: <tcpSocket.client object at 0x000000000E270CC0>
+pid=9112, ppid=68480, tid=21264
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:57:49,262: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51548
+[WARNING]2020-09-21 15:57:49,298: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51548
+[INFO]2020-09-21 15:57:49,492: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51549
+[WARNING]2020-09-21 15:57:56,453: clear alarm obj=AGV01, typeId=49997, id=5f685cf96ea419ab821f3f5b
+[ERROR]2020-09-21 15:57:57,106: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7031, id=5f685d056ea419ab821f3fac
+[CRITICAL]2020-09-21 15:57:59,669: : 192.168.10.3:10001 <--> 192.168.20.202:51549 time out cause a error: <tcpSocket.client object at 0x000000000E3FAE10>
+pid=9112, ppid=68480, tid=34248
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:57:59,691: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51549
+[WARNING]2020-09-21 15:57:59,727: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51549
+[INFO]2020-09-21 15:57:59,809: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51550
+[CRITICAL]2020-09-21 15:58:09,972: : 192.168.10.3:10001 <--> 192.168.20.202:51550 time out cause a error: <tcpSocket.client object at 0x000000000E39C7F0>
+pid=9112, ppid=68480, tid=42288
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:58:10,207: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51550
+[WARNING]2020-09-21 15:58:10,340: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51550
+[INFO]2020-09-21 15:58:10,535: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51551
+[WARNING]2020-09-21 15:58:20,551: clear alarm obj=AGV01, typeId=49997, id=5f685d056ea419ab821f3fac
+[CRITICAL]2020-09-21 15:58:20,644: : 192.168.10.3:10001 <--> 192.168.20.202:51551 time out cause a error: <tcpSocket.client object at 0x000000000E3B6128>
+pid=9112, ppid=68480, tid=53428
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:58:20,844: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51551
+[WARNING]2020-09-21 15:58:20,874: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51551
+[INFO]2020-09-21 15:58:21,179: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51552
+[ERROR]2020-09-21 15:58:21,435: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.496, id=5f685d1d6ea419ab821f403a
+[WARNING]2020-09-21 15:58:28,479: clear alarm obj=AGV01, typeId=49997, id=5f685d1d6ea419ab821f403a
+[CRITICAL]2020-09-21 15:58:31,408: : 192.168.10.3:10001 <--> 192.168.20.202:51552 time out cause a error: <tcpSocket.client object at 0x000000000E3737B8>
+pid=9112, ppid=68480, tid=64832
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:58:31,523: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51552
+[ERROR]2020-09-21 15:58:31,550: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.748, id=5f685d276ea419ab821f407b
+[WARNING]2020-09-21 15:58:31,632: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51552
+[INFO]2020-09-21 15:58:31,817: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51553
+[WARNING]2020-09-21 15:58:32,321: clear alarm obj=AGV01, typeId=49997, id=5f685d276ea419ab821f407b
+[ERROR]2020-09-21 15:58:32,972: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.6705, id=5f685d286ea419ab821f4089
+[DEBUG]2020-09-21 15:58:36,264: AGV01 set loc akmLineMap.LM79 ,old LM77 (0.77,-13.96)
+[CRITICAL]2020-09-21 15:58:42,008: : 192.168.10.3:10001 <--> 192.168.20.202:51553 time out cause a error: <tcpSocket.client object at 0x000000000E3B6A20>
+pid=9112, ppid=68480, tid=36884
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:58:42,147: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51553
+[WARNING]2020-09-21 15:58:42,190: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51553
+[INFO]2020-09-21 15:58:42,310: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51554
+[CRITICAL]2020-09-21 15:58:52,566: : 192.168.10.3:10001 <--> 192.168.20.202:51554 time out cause a error: <tcpSocket.client object at 0x000000000E3B6518>
+pid=9112, ppid=68480, tid=13848
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:58:52,796: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51554
+[WARNING]2020-09-21 15:58:52,923: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51554
+[INFO]2020-09-21 15:58:53,144: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51555
+[WARNING]2020-09-21 15:58:54,364: clear alarm obj=AGV01, typeId=49997, id=5f685d286ea419ab821f4089
+[ERROR]2020-09-21 15:58:55,038: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7386, id=5f685d3e6ea419ab821f410f
+[WARNING]2020-09-21 15:58:56,400: clear alarm obj=AGV01, typeId=49997, id=5f685d3e6ea419ab821f410f
+[ERROR]2020-09-21 15:59:00,105: raise alarm obj=AGV01, typeId=49997, desc=小车置信度小于最低阈值,当前值:0.7293, id=5f685d446ea419ab821f4137
+[CRITICAL]2020-09-21 15:59:03,225: : 192.168.10.3:10001 <--> 192.168.20.202:51555 time out cause a error: <tcpSocket.client object at 0x000000000A6DC2B0>
+pid=9112, ppid=68480, tid=58908
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:59:03,276: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51555
+[WARNING]2020-09-21 15:59:03,322: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51555
+[INFO]2020-09-21 15:59:03,382: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51556
+[CRITICAL]2020-09-21 15:59:13,613: : 192.168.10.3:10001 <--> 192.168.20.202:51556 time out cause a error: <tcpSocket.client object at 0x000000000E3B64E0>
+pid=9112, ppid=68480, tid=48136
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:59:13,736: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51556
+[WARNING]2020-09-21 15:59:13,877: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51556
+[INFO]2020-09-21 15:59:14,017: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51557
+[CRITICAL]2020-09-21 15:59:24,233: : 192.168.10.3:10001 <--> 192.168.20.202:51557 time out cause a error: <tcpSocket.client object at 0x000000000A6DCC18>
+pid=9112, ppid=68480, tid=57292
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:59:24,255: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51557
+[WARNING]2020-09-21 15:59:24,268: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51557
+[INFO]2020-09-21 15:59:24,299: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51558
+[CRITICAL]2020-09-21 15:59:34,344: : 192.168.10.3:10001 <--> 192.168.20.202:51558 time out cause a error: <tcpSocket.client object at 0x000000000A6CA048>
+pid=9112, ppid=68480, tid=9800
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:59:34,356: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51558
+[WARNING]2020-09-21 15:59:34,381: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51558
+[INFO]2020-09-21 15:59:34,424: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51559
+[CRITICAL]2020-09-21 15:59:44,494: : 192.168.10.3:10001 <--> 192.168.20.202:51559 time out cause a error: <tcpSocket.client object at 0x000000000E28B7B8>
+pid=9112, ppid=68480, tid=9660
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:59:44,535: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51559
+[WARNING]2020-09-21 15:59:44,551: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51559
+[INFO]2020-09-21 15:59:44,604: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51560
+[CRITICAL]2020-09-21 15:59:54,679: : 192.168.10.3:10001 <--> 192.168.20.202:51560 time out cause a error: <tcpSocket.client object at 0x000000000E26AF98>
+pid=9112, ppid=68480, tid=16500
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[INFO]2020-09-21 15:59:54,719: tcp server [0.0.0.0][10001] ,connectedLen: 1, disconnect:  : 192.168.10.3:10001 <--> 192.168.20.202:51560
+[WARNING]2020-09-21 15:59:54,744: disconnect : 192.168.10.3:10001 <--> 192.168.20.202:51560
+[INFO]2020-09-21 15:59:54,779: tcp server [0.0.0.0][10001] ,connectedLen: 1, tcp connected : 192.168.10.3:10001 <--> 192.168.20.202:51561

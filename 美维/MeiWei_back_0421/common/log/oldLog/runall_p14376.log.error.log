@@ -1,0 +1,66 @@
+[CRITICAL]2021-04-26 16:40:59,882: invoke <function urlJackdownOld at 0x000001DF7D16CF70> cause a error: jackDownOld() got an unexpected keyword argument 'loc'
+pid=14376, ppid=4424, tid=13296
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 32, in urlJackdownOld
+    return jackMgr.jackDownOld(agvId=agvId, timeout=timeout,loc=loc)
+TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-04-26 16:41:00,385: task[60867c90b40c8ef6f4223307][AGV30] 6(1) -> 7(8) [initJackdown] jackDown cause a error: TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+pid=14376, ppid=4424, tid=712
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 729, in _jackDown
+    jackApi.jackDownOld(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDownOld
+    return _jack('/api/agv/jackdownOld', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 70, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-04-26 16:41:03,029: invoke <function urlJackdownOld at 0x000001DF7D16CF70> cause a error: jackDownOld() got an unexpected keyword argument 'loc'
+pid=14376, ppid=4424, tid=18112
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 32, in urlJackdownOld
+    return jackMgr.jackDownOld(agvId=agvId, timeout=timeout,loc=loc)
+TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-04-26 16:41:03,468: task[60867c90b40c8ef6f4223307][AGV30] 6(1) -> 7(8) [initJackdown] jackDown cause a error: TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+pid=14376, ppid=4424, tid=712
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 729, in _jackDown
+    jackApi.jackDownOld(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDownOld
+    return _jack('/api/agv/jackdownOld', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 70, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-04-26 16:41:06,112: invoke <function urlJackdownOld at 0x000001DF7D16CF70> cause a error: jackDownOld() got an unexpected keyword argument 'loc'
+pid=14376, ppid=4424, tid=3096
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvDevice\main_agvDevice.py", line 32, in urlJackdownOld
+    return jackMgr.jackDownOld(agvId=agvId, timeout=timeout,loc=loc)
+TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+
+[CRITICAL]2021-04-26 16:41:06,352: task[60867c90b40c8ef6f4223307][AGV30] 6(1) -> 7(8) [initJackdown] jackDown cause a error: TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+pid=14376, ppid=4424, tid=712
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\akmCtrl\beans\scadaTaskBean.py", line 729, in _jackDown
+    jackApi.jackDownOld(self.agvId, timeoutSec=90)
+  File "..\agvDevice\jackApi.py", line 47, in jackDownOld
+    return _jack('/api/agv/jackdownOld', agvId,timeoutSec,loc)
+  File "..\agvDevice\jackApi.py", line 70, in _jack
+    return http_get(url + apiurl, param,timeout=timeoutSec+2)
+  File "..\agvDevice\jackApi.py", line 18, in http_get
+    raise Exception(result["errormsg"])
+Exception: TypeError: jackDownOld() got an unexpected keyword argument 'loc'
+

@@ -1,0 +1,9 @@
+[CRITICAL]2021-06-15 13:36:56,463: 192.168.252.159:10001 <--> 192.168.252.148:62723 socket error cause a error: <tcpSocket.client object at 0x0000028C3E121EF0>
+pid=16508, ppid=12344, tid=1732
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\feed\main_feed.py", line 131, in _handle
+    data = client.recv(6)
+  File "C:\Users\Administrator\Desktop\SVN\美维\MeiWei_back_0421\common\tcpSocket.py", line 179, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

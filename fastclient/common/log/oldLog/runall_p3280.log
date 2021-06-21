@@ -1,0 +1,42 @@
+[INFO]2021-03-17 09:19:19,093: log files at C:\Users\Administrator\Desktop\SVN\fastclient\common\log
+[INFO]2021-03-17 09:19:19,094: find module account.main_account
+[INFO]2021-03-17 09:19:19,095: find module agvDevice.main_agvDevice
+[INFO]2021-03-17 09:19:19,098: find module alarm.main_alarm
+[INFO]2021-03-17 09:19:19,099: find module auth.main_auth
+[INFO]2021-03-17 09:19:19,100: find module feed.main_feed
+[INFO]2021-03-17 09:19:19,102: find module scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 09:19:19,103: find module scadaCtrlEle.main_scadaCtrl
+[INFO]2021-03-17 09:19:19,104: import account.main_account
+[INFO]2021-03-17 09:19:19,203: import agvDevice.main_agvDevice
+[INFO]2021-03-17 09:19:19,205: import alarm.main_alarm
+[INFO]2021-03-17 09:19:19,304: create lock <lock name:timer.lock_1605472318856,<unlocked _thread.RLock object owner=0 count=0 at 0x00000175CD96C698>>
+[ERROR]2021-03-17 09:19:19,316: mqtt is disabled
+[INFO]2021-03-17 09:19:19,317: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-03-17 09:19:19,318: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-03-17 09:19:22,373: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-03-17 09:19:22,394: import auth.main_auth
+[INFO]2021-03-17 09:19:22,405: import feed.main_feed
+[INFO]2021-03-17 09:19:22,417: create lock <lock name:feedTask.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000175CDBE92D8>>
+[INFO]2021-03-17 09:19:22,423: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000175CDBE9738>>
+[INFO]2021-03-17 09:19:22,506: import scadaCtrl.main_scadaCtrl
+[INFO]2021-03-17 09:19:22,516: create lock <lock name:agvApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000175CDCAC4B8>>
+[INFO]2021-03-17 09:19:22,557: create lock <lock name:runTasks.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000175CDCAC558>>
+[INFO]2021-03-17 09:19:22,563: create lock <lock name:runTasks.pre_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x00000175CDCAC1E8>>
+[INFO]2021-03-17 09:19:22,650: import scadaCtrlEle.main_scadaCtrl
+[SUCC]2021-03-17 09:19:22,662: utility start, pid=3280, ppid=3096
+[DEBUG]2021-03-17 09:19:22,664: start timer
+[INFO]2021-03-17 09:19:22,666: add_ignore: taskStatus
+[INFO]2021-03-17 09:19:22,668: add_ignore: api/elevator/status
+[INFO]2021-03-17 09:19:22,669: add_ignore: scada/getTask
+[WARNING]2021-03-17 09:19:28,439: timer_thread[tid:15032] <lock name:runTasks.g_lock,<locked _thread.RLock object owner=15032 count=1 at 0x00000175CDCAC558>> ,hold 3748 ms
+[INFO]2021-03-17 09:19:28,750: name=timer_thread, pid=3280, tid=15032
+[01] File "C:/Python37/lib/threading.py", line 865, in run() 
+[02] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/mytimer.py", line 113, in _loop() 
+[03] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 122, in _call() 
+[04] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/lock.py", line 100, in release() 
+[05] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 258, in getTrace() 
+[06] File "C:/Users/Administrator/Desktop/SVN/fastclient/common/enhance.py", line 240, in getThreadStack()
+[DEBUG]2021-03-17 09:27:15,674: GET: http://127.0.0.1:5550/api/scada/cancelTask?taskId=604b1815f60397473597ab2ahttp://127.0.0.1:5550/api/scada/fail?taskId=604b1815f60397473597ab2a addr: 127.0.0.1
+[DEBUG]2021-03-17 09:27:18,859: GET: http://127.0.0.1:5550/api/scada/cancelTask?taskId=604b1815f60397473597ab2ahttp://127.0.0.1:5550/api/scada/fail?taskId=604b1815f60397473597ab2a addr: 127.0.0.1
+[DEBUG]2021-03-17 09:27:34,776: GET: http://127.0.0.1:5550/api/scada/cancelTask?taskId=604b1815f60397473597ab2ahttp://127.0.0.1:5550/api/scada/fail?taskId=604b1815f60397473597ab2a addr: 127.0.0.1
+[DEBUG]2021-03-17 09:27:36,791: GET: http://127.0.0.1:5550/api/scada/cancelTask?taskId=604b1815f60397473597ab2ahttp://127.0.0.1:5550/api/scada/fail?taskId=604b1815f60397473597ab2a addr: 127.0.0.1

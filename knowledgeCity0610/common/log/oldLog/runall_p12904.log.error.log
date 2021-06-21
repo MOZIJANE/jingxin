@@ -1,0 +1,20 @@
+[CRITICAL]2021-05-12 14:32:18,506: import main_agv failed, path: agvCtrl cause a error: 'gbk' codec can't decode byte 0x80 in position 15: illegal multibyte sequence
+pid=12904, ppid=14844, tid=17788
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\main_agv.py", line 10, in <module>
+    import mapMgr
+  File "C:\Users\comba\Desktop\知识城地牛\knowledgeCity\agvCtrl\mapMgr.py", line 25, in <module>
+    import driver.seerAgv.agvCtrl as agvCtrl
+  File "..\driver\seerAgv\agvCtrl.py", line 10, in <module>
+    import driver.seerAgv.agvApi as agvApi
+  File "..\driver\seerAgv\agvApi.py", line 271, in <module>
+    g_agvList = _loadAgvList()
+  File "..\driver\seerAgv\agvApi.py", line 263, in _loadAgvList
+    aa = json.load(f)
+  File "C:\Users\comba\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 15: illegal multibyte sequence
+
+[CRITICAL]2021-05-12 14:32:18,508: import main_agv failed, path: agvCtrl ,cause 'gbk' codec can't decode byte 0x80 in position 15: illegal multibyte sequence

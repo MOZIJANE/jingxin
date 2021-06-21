@@ -1,0 +1,13 @@
+[CRITICAL]2021-04-26 15:51:09,487: agv thread cause a error: check() got an unexpected keyword argument 'blockPath'
+pid=11492, ppid=4424, tid=4340
+Traceback (most recent call last):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvList.py", line 624, in handle
+    ret = obj.callback(obj.params)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvControl.py", line 637, in oncheck
+    if not checkAgv(agvInfo.curTarget,paths[-1]):
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "E:\projects_by_myself\backup\MeiWei_back_0421\agvCtrl\agvControl.py", line 407, in checkAgv
+    if not agvElement.check(mapMgr.getAgvList(agvElement.mapId),blockPath=None):
+TypeError: check() got an unexpected keyword argument 'blockPath'
+

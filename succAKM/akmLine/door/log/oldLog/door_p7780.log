@@ -1,0 +1,21 @@
+[INFO]2020-07-16 11:10:12,258: log files at E:\python_work\akm_office\door\log
+[SUCC]2020-07-16 11:10:12,260: utility start, pid=7780, ppid=11992
+[INFO]2020-07-16 11:10:12,261: create lock <lock name:timer.lock_2218039968480,<unlocked _thread.RLock object owner=0 count=0 at 0x000002046D7C0300>>
+[DEBUG]2020-07-16 11:10:12,262: start timer
+[INFO]2020-07-16 11:10:12,264: open the door 192.168.252.195
+[CRITICAL]2020-07-16 11:10:22,297: setSwitch cause a error: timed out
+pid=7780, ppid=11992, tid=3168
+Traceback (most recent call last):
+  File "E:\python_work\akm_office\door\switchControl2.py", line 189, in test_action
+    open(ip,0)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 40, in open
+    return _request(ip=ip,type=BUTTON_OPEN,addr=addr,data=OPEN_VALUE)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 81, in _request
+    result = GetDataShort(buf,ip,PORT)
+  File "E:\python_work\akm_office\door\switchControl2.py", line 101, in GetDataShort
+    recData = client.recv()
+  File "../common\tcpSocketAdvanced.py", line 39, in recv
+    part_body = self._socket.recv(recvLen)
+socket.timeout: timed out
+
+[INFO]2020-07-16 11:10:24,303: open the door 192.168.252.195

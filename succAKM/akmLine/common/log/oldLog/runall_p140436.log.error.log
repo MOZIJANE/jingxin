@@ -1,0 +1,53 @@
+[CRITICAL]2020-09-21 15:09:32,175: : 192.168.10.3:10001 <--> 192.168.20.210:52624 time out cause a error: <tcpSocket.client object at 0x000000000C5BB518>
+pid=140436, ppid=140264, tid=150668
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2020-09-21 15:09:42,706: : 192.168.10.3:10001 <--> 192.168.20.210:52625 time out cause a error: <tcpSocket.client object at 0x000000000C5BBC18>
+pid=140436, ppid=140264, tid=150596
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+
+[CRITICAL]2020-09-21 15:09:52,859: : 192.168.10.3:10001 <--> 192.168.20.210:52626 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=140436, ppid=140264, tid=34992
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 49, in _handle
+    addTask(str(devID), str(keyID))
+  File "C:\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\akmLine\feed\main_feed.py", line 92, in addTask
+    type, source, target = getButtonInfo(devID, keyID)
+  File "C:\akmLine\feed\main_feed.py", line 118, in getButtonInfo
+    type,source,target = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[CRITICAL]2020-09-21 15:09:55,701: : 192.168.10.3:10001 <--> 192.168.20.210:52627 error:  cause a error: 'NoneType' object has no attribute 'split'
+pid=140436, ppid=140264, tid=149756
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 49, in _handle
+    addTask(str(devID), str(keyID))
+  File "C:\akmLine\common\lock.py", line 120, in _call
+    return func(*p,**pp)
+  File "C:\akmLine\feed\main_feed.py", line 92, in addTask
+    type, source, target = getButtonInfo(devID, keyID)
+  File "C:\akmLine\feed\main_feed.py", line 118, in getButtonInfo
+    type,source,target = local.get(devID,keyID).split(",")
+AttributeError: 'NoneType' object has no attribute 'split'
+
+[CRITICAL]2020-09-21 15:10:06,731: : 192.168.10.3:10001 <--> 192.168.20.210:52628 time out cause a error: <tcpSocket.client object at 0x000000000C609D68>
+pid=140436, ppid=140264, tid=149668
+Traceback (most recent call last):
+  File "C:\akmLine\feed\main_feed.py", line 43, in _handle
+    data = client.recv(6)
+  File "C:\akmLine\common\tcpSocket.py", line 176, in recv
+    recvdata = self._socket.recv(bufferLen if remainLen > bufferLen else remainLen)
+socket.timeout: timed out
+

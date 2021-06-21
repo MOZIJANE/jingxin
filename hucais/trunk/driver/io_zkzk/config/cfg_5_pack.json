@@ -1,0 +1,93 @@
+{
+
+"ioCtrl": {
+	"info": {
+		"id": "EV001-001",
+		"mfrs": "ZKZK",
+		"type": "ZKD-8I8SO-RS232"
+	},
+	"connect": {
+		"type":"comm",
+		"comm": {
+			"type": "slave",
+			"devId": "0x01",
+			"port":"/dev/ttyUSB0",
+			"baud":115200,
+			"byteSize":8,
+			"parity":"N",
+			"stopBits":1
+		},
+		"tcp": {
+			"type":	"server",
+			"devId": "0x01",
+			"ip": "192.168.1.254",
+			"port": 502
+		}
+	},
+	"control": {
+		"polling" : 100
+	}
+},
+
+"dev_plc01": {
+	"desc": "rule: if exist critical error then status and counter will not execute.",
+	"errorLevel": "warning | minor | major | critical",
+	"error": [
+		{
+			"id": "4002",
+			"fcode": 2,
+			"addr": [{"start": 4, "num": 1}],
+			"value": [[1,1]],
+			"msg": "Emergency Stop",
+			"level": "warning"
+		},
+		{
+			"id": "4003",
+			"fcode": 2,
+			"addr": [{"start": 5, "num": 1}],
+			"value": [[1,1]],
+			"msg": "Motor Failure",
+			"level": "critical"
+		},
+		{
+			"id": "4004",
+			"fcode": 2,
+			"addr": [{"start": 6, "num": 1}],
+			"value": [[1,1]],
+			"msg": "Motor Failure",
+			"level": "critical"
+		}
+	],
+	"status": [
+		{
+			"id": "run",
+			"fcode": 2,
+			"addr": [{"start": 0, "num": 1}],
+			"value": [[1,1]]
+		},
+		{
+			"id": "standby",
+			"fcode": 2,
+			"addr": [{"start": 1, "num": 1}],
+			"value": [[1,1]]
+		},
+		{
+			"id": "stop",
+			"fcode": 2,
+			"addr": [{"start": 2, "num": 1}],
+			"value": [[1,1]]
+		}
+	],
+	"counter": [
+		{
+			"id": "Line beat",
+			"fcode": 2,
+			"addr": [{"start": 3, "num": 1}],
+			"value": [[0,0,1,1]],
+			"factor": 1
+		}
+	]
+}
+
+}
+
