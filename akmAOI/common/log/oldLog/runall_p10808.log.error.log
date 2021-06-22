@@ -1,0 +1,2346 @@
+[CRITICAL]2021-03-04 13:34:45,839: [modbusApi: 192.168.20.150] execute fcode=1, addr=0 exception:  cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:45,862: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+  File "D:\python_lx\akm\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:45,885: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+  File "D:\python_lx\akm\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:45,920: [modbusApi: 192.168.20.151] execute fcode=1, addr=0 exception:  cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:45,942: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+  File "D:\python_lx\akm\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:45,962: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+  File "D:\python_lx\akm\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:48,022: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:48,040: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:48,065: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:48,084: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:50,128: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:50,151: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:50,184: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:50,205: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:52,231: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:52,254: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:52,277: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:52,301: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:54,342: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:54,358: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:54,376: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:54,395: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:56,424: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:56,454: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:56,495: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:56,524: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:58,544: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:58,550: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:58,557: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:34:58,563: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:00,595: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:00,611: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:00,635: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:00,643: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:02,651: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:02,657: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:02,680: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:02,696: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:04,720: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:04,727: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:04,744: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:04,750: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:06,771: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:06,783: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:06,792: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:06,799: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:08,806: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:08,813: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:08,833: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:08,840: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:10,866: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:10,894: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:10,919: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:10,934: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:12,945: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:12,951: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:12,957: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:12,966: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:14,988: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:15,001: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:15,020: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:15,026: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:17,060: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:17,084: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:17,118: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:17,141: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:19,186: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:19,214: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:19,238: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:19,255: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:21,280: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:21,302: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:21,315: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:21,337: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:23,458: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:23,505: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:23,523: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:23,539: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:25,585: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:25,592: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:25,600: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:25,608: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:27,633: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:27,655: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:27,674: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:27,687: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:29,698: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:29,705: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:29,713: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:29,720: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:31,761: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:31,784: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:31,808: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:31,823: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:33,849: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:33,873: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:33,898: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:33,923: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:35,957: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:35,972: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:35,990: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:36,011: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:38,048: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:38,073: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:38,098: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:38,125: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:40,148: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:40,172: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:40,209: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:40,237: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:42,263: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:42,291: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:42,326: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:42,350: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:44,395: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:44,421: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:44,455: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:44,470: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:46,520: magneticAGV01 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:46,538: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:46,564: magneticAGV02 readDIList fail cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+[CRITICAL]2021-03-04 13:35:46,579: magneticAGV readDIList error cause a error: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+pid=10808, ppid=19156, tid=8268
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 90, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+

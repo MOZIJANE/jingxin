@@ -1,0 +1,15 @@
+[CRITICAL]2021-06-22 17:11:21,540: [modbusApi: 127.0.0.1] execute fcode=6, addr=20 exception:  cause a error: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+pid=23716, ppid=11900, tid=16976
+Traceback (most recent call last):
+  File "../common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+

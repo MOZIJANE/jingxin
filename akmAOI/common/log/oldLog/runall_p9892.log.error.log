@@ -1,0 +1,16 @@
+[CRITICAL]2021-02-28 22:02:25,227: taskFunc2:¾­¹ýÃÅ['DOOR100', 'DOOR101'] cause a error: _release() missing 1 required positional argument: 'io'
+pid=9892, ppid=15108, tid=2336
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 147, in _taskFunc
+    self._release()
+TypeError: _release() missing 1 required positional argument: 'io'
+
+[CRITICAL]2021-02-28 22:02:26,694: invoke timer func<function _monitorDevices at 0x000002F08618CB80> cause a error: dictionary keys changed during iteration
+pid=9892, ppid=15108, tid=3568
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 98, in _monitorDevices
+    for t in g_lastTask:
+RuntimeError: dictionary keys changed during iteration
+

@@ -1,0 +1,13 @@
+[CRITICAL]2021-03-03 15:09:55,106: invoke <function urlRelayclose at 0x00000258C3FEAC10> cause a error: 'dict' object is not callable
+pid=6268, ppid=14296, tid=18412
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_lx\akm\door\main_door.py", line 24, in urlRelayclose
+    switchInfo.close()
+  File "D:\python_lx\akm\door\switchMgr.py", line 148, in close
+    vitualDoor.vitualDoorClose(self.ip)
+  File "D:\python_lx\akm\door\vitualDoor.py", line 53, in vitualDoorClose
+    g_swichList(ip).close()
+TypeError: 'dict' object is not callable
+

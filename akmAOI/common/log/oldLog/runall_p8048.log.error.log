@@ -1,0 +1,9 @@
+[CRITICAL]2021-03-04 11:19:10,641: invoke timer func<function _loadDevicesAlarm at 0x0000017E785E73A0> cause a error: name 'db' is not defined
+pid=8048, ppid=8904, tid=12768
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 119, in _loadDevicesAlarm
+    ds = db.find("r_alarm", { "typeId": {"$in":[39998]}, "domain": "agv"})
+NameError: name 'db' is not defined
+

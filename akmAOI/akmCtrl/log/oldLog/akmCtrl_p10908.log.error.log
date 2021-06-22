@@ -1,0 +1,13 @@
+[CRITICAL]2020-04-23 17:31:45,590: update task error: cause a error: setItem(self, int, int, QTableWidgetItem): argument 3 has unexpected type 'int'
+pid=10908, ppid=19200, tid=10476
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 265, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 252, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 231, in updateTask
+    set(i, task["typeId"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 224, in set
+    self.table.setItem(rowIndex, col, item)
+TypeError: setItem(self, int, int, QTableWidgetItem): argument 3 has unexpected type 'int'
+

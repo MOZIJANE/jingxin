@@ -1,0 +1,14 @@
+[CRITICAL]2021-02-26 10:38:30,782: import main_doorCtrl failed, path: virtualDoor cause a error: No module named 'runTasks'
+pid=3236, ppid=19028, tid=10116
+Traceback (most recent call last):
+  File "D:/python_lx/akm/common/run_all.py", line 40, in findModule
+    __import__(m[1])
+  File "D:\python_lx\akm\virtualDoor\main_doorCtrl.py", line 18, in <module>
+    import doorCtrlRunTasks
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 20, in <module>
+    import magneticAGV
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 24, in <module>
+    import runTasks
+ModuleNotFoundError: No module named 'runTasks'
+
+[CRITICAL]2021-02-26 10:38:30,783: import main_doorCtrl failed, path: virtualDoor ,cause No module named 'runTasks'

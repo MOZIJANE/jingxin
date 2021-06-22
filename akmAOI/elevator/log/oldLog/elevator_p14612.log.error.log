@@ -1,0 +1,15 @@
+[CRITICAL]2021-06-21 12:37:50,141: [modbusApi: 127.0.0.1] execute fcode=3, addr=10 exception:  cause a error: timed out
+pid=14612, ppid=10888, tid=13768
+Traceback (most recent call last):
+  File "../common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+

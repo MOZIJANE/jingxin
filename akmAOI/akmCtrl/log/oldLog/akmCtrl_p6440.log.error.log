@@ -1,0 +1,52 @@
+[CRITICAL]2020-04-26 11:02:16,288: update task error: cause a error: 'NoneType' object has no attribute 'setBackground'
+pid=6440, ppid=9592, tid=10980
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 183, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 170, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 122, in updateTask
+    set(i, task["agvId"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 113, in set
+    item.setBackground(PyQt5.QtGui.QBrush(PyQt5.QtGui.QColor(resultColor)))
+AttributeError: 'NoneType' object has no attribute 'setBackground'
+
+[CRITICAL]2020-04-26 11:02:16,460: update task error: cause a error: setItem(self, int, int, QTableWidgetItem): argument 3 has unexpected type 'int'
+pid=6440, ppid=9592, tid=10980
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 295, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 282, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 261, in updateTask
+    set(i, task["typeId"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 254, in set
+    self.table.setItem(rowIndex, col, item)
+TypeError: setItem(self, int, int, QTableWidgetItem): argument 3 has unexpected type 'int'
+
+[CRITICAL]2020-04-26 11:02:43,252: update task error: cause a error: 'NoneType' object has no attribute 'setBackground'
+pid=6440, ppid=9592, tid=10980
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 183, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 170, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 122, in updateTask
+    set(i, task["agvId"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 113, in set
+    item.setBackground(PyQt5.QtGui.QBrush(PyQt5.QtGui.QColor(resultColor)))
+AttributeError: 'NoneType' object has no attribute 'setBackground'
+
+[CRITICAL]2020-04-26 11:02:43,283: update task error: cause a error: setItem(self, int, int, QTableWidgetItem): argument 3 has unexpected type 'int'
+pid=6440, ppid=9592, tid=10980
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 295, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 282, in updateTaskBydb
+    self.updateTask(tasks[i], index)
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 261, in updateTask
+    set(i, task["typeId"])
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 254, in set
+    self.table.setItem(rowIndex, col, item)
+TypeError: setItem(self, int, int, QTableWidgetItem): argument 3 has unexpected type 'int'
+

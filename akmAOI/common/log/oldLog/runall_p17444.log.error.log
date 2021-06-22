@@ -1,0 +1,26 @@
+[CRITICAL]2021-03-03 15:07:20,028: invoke <function urlRelayclose at 0x0000028C639D8C10> cause a error: 网络连接错误
+pid=17444, ppid=15668, tid=11792
+Traceback (most recent call last):
+  File "D:\python_lx\akm\door\doorControlQLZ.py", line 157, in close
+    _request(ip,port,startflag, addr, addrEndFlag, ctrl, l, flag,data, cs, endflag, timeout)
+  File "D:\python_lx\akm\door\doorControlQLZ.py", line 21, in _request
+    result = GetDataShort(buf,ip,port)
+  File "D:\python_lx\akm\door\doorControlQLZ.py", line 27, in GetDataShort
+    with tcpSocket.client(ip, port, timeout) as client:
+  File "D:\python_lx\akm\common\tcpSocketAdvanced.py", line 18, in __enter__
+    self._socket.connect(self._addr)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\scadaUtility.py", line 45, in __call
+    ret = func(*p,**pp)
+  File "D:\python_lx\akm\door\main_door.py", line 24, in urlRelayclose
+    switchInfo.close()
+  File "D:\python_lx\akm\door\switchMgr.py", line 146, in close
+    doorControlQLZ.close(self.ip, self.port)
+  File "D:\python_lx\akm\door\doorControlQLZ.py", line 160, in close
+    raise Exception("网络连接错误")
+Exception: 网络连接错误
+

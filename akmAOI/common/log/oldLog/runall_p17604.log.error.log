@@ -1,0 +1,14 @@
+[CRITICAL]2021-02-26 10:48:20,437: import main_doorCtrl failed, path: virtualDoor cause a error: No module named 'remoteio'
+pid=17604, ppid=26876, tid=13044
+Traceback (most recent call last):
+  File "D:/python_lx/akm/common/run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "D:\python_lx\akm\virtualDoor\main_doorCtrl.py", line 17, in <module>
+    import doorCtrlRunTasks
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 20, in <module>
+    import magneticAGV
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 25, in <module>
+    import remoteio.remoteioApi as ioApi
+ModuleNotFoundError: No module named 'remoteio'
+
+[CRITICAL]2021-02-26 10:48:20,438: import main_doorCtrl failed, path: virtualDoor ,cause No module named 'remoteio'

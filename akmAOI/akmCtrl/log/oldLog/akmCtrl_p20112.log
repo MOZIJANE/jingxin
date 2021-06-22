@@ -1,0 +1,33 @@
+[INFO]2020-04-21 14:34:51,142: log files at E:\python_work\akm\akmCtrl\log
+[CRITICAL]2020-04-21 14:34:51,149: Connect mongodb error! cause a error: 192.168.5.137:27017: timed out
+pid=20112, ppid=19200, tid=9940
+
+[CRITICAL]2020-04-21 14:34:51,504: update task error: cause a error: mongodb is not connected
+pid=20112, ppid=19200, tid=9940
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 150, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 128, in updateTaskBydb
+    tasks = getAkmTask()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 160, in getAkmTask
+    ds = db.find("u_akm_task",{"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
+[CRITICAL]2020-04-21 14:35:51,131: Connect mongodb error! cause a error: 192.168.5.137:27017: timed out
+pid=20112, ppid=19200, tid=9940
+
+[CRITICAL]2020-04-21 14:35:51,138: update task error: cause a error: mongodb is not connected
+pid=20112, ppid=19200, tid=9940
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 150, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 128, in updateTaskBydb
+    tasks = getAkmTask()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 160, in getAkmTask
+    ds = db.find("u_akm_task",{"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+

@@ -1,0 +1,22 @@
+[CRITICAL]2020-04-26 11:30:48,541: update task error: cause a error: 'day' is an invalid keyword argument for __new__()
+pid=2864, ppid=9592, tid=2892
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 184, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 162, in updateTaskBydb
+    tasks = getAkmTask()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 306, in getAkmTask
+    t = t - datetime.timedelta(day=1)
+TypeError: 'day' is an invalid keyword argument for __new__()
+
+[CRITICAL]2020-04-26 11:30:48,541: update task error: cause a error: 'day' is an invalid keyword argument for __new__()
+pid=2864, ppid=9592, tid=2892
+Traceback (most recent call last):
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 296, in autoUpdateTask
+    self.updateTaskBydb()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 274, in updateTaskBydb
+    tasks = akmArarm()
+  File "E:/python_work/akm/akmCtrl/taskUI.py", line 333, in akmArarm
+    t = t - datetime.timedelta(day=1)
+TypeError: 'day' is an invalid keyword argument for __new__()
+

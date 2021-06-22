@@ -1,0 +1,717 @@
+[CRITICAL]2021-03-04 10:43:06,511: [modbusApi: 192.168.20.150] execute fcode=1, addr=0 exception:  cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:06,520: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+  File "D:\python_lx\akm\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:06,529: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+  File "D:\python_lx\akm\common\modbusapi.py", line 45, in read
+    return self.__execute(fcode, start, num)
+  File "D:\python_lx\akm\common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python38\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 152, in execute
+    self.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:13,561: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:13,572: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:20,603: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:20,621: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:27,664: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:27,681: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:34,729: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:34,755: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:41,784: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:41,790: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:48,834: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:48,862: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:55,890: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:43:55,901: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:02,960: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:02,993: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:10,030: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:10,048: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:17,078: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:17,099: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:24,140: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:24,162: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:31,198: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:31,217: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:38,268: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:38,289: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:45,341: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:45,394: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:52,485: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:52,506: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:59,532: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:44:59,543: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:45:06,563: magneticAGV01 readDIList fail cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+
+[CRITICAL]2021-03-04 10:45:06,569: magneticAGV readDIList error cause a error: timed out
+pid=13804, ppid=15676, tid=6544
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 81, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 223, in _read
+    self.master.open()
+  File "D:\python_lx\akm\common\modbusapi.py", line 60, in open
+    self.master.open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus.py", line 99, in open
+    self._do_open()
+  File "C:\Python38\lib\site-packages\modbus_tk\modbus_tcp.py", line 173, in _do_open
+    self._sock.connect((self._host, self._port))
+socket.timeout: timed out
+

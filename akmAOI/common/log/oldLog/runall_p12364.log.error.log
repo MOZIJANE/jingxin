@@ -1,0 +1,9 @@
+[CRITICAL]2021-02-28 22:03:39,458: invoke timer func<function _monitorDevices at 0x000001FF314ECB80> cause a error: dictionary keys changed during iteration
+pid=12364, ppid=2976, tid=15892
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 98, in _monitorDevices
+    for t in g_lastTask:
+RuntimeError: dictionary keys changed during iteration
+

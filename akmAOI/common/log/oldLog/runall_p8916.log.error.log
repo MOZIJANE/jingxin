@@ -1,0 +1,61 @@
+[CRITICAL]2021-02-26 10:49:10,555: magneticAGV01 readDIList fail cause a error: name 'mdef' is not defined
+pid=8916, ppid=23000, tid=21984
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+NameError: name 'mdef' is not defined
+
+[CRITICAL]2021-02-26 10:49:10,569: magneticAGV readDIList error cause a error: name 'mdef' is not defined
+pid=8916, ppid=23000, tid=21984
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 79, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+NameError: name 'mdef' is not defined
+
+[CRITICAL]2021-02-26 10:49:11,598: invoke timer func<function _monitorDevices at 0x00000200B6FDCDC0> cause a error: 'str' object has no attribute 'running'
+pid=8916, ppid=23000, tid=21984
+Traceback (most recent call last):
+  File "D:\python_lx\akm\common\mytimer.py", line 113, in _loop
+    v.func(*v.args)
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 98, in _monitorDevices
+    if task.running == False:
+AttributeError: 'str' object has no attribute 'running'
+
+[CRITICAL]2021-02-26 10:49:13,206: magneticAGV01 readDIList fail cause a error: name 'mdef' is not defined
+pid=8916, ppid=23000, tid=21984
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+NameError: name 'mdef' is not defined
+
+[CRITICAL]2021-02-26 10:49:13,232: magneticAGV readDIList error cause a error: name 'mdef' is not defined
+pid=8916, ppid=23000, tid=21984
+Traceback (most recent call last):
+  File "D:\python_lx\akm\virtualDoor\doorCtrlRunTasks.py", line 79, in _monitorDevices
+    s1 = magneticAGV.readDIList(d)["status"]
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 140, in readDIList
+    result = remoteioInfo.readDIList()
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 192, in readDIList
+    return self._read(D0, IO_LENTH)
+  File "D:\python_lx\akm\common\lock.py", line 122, in _call
+    return func(*p,**pp)
+  File "D:\python_lx\akm\virtualDoor\magneticAGV.py", line 226, in _read
+    s = self.master.read(mdef.READ_COILS, addr, length)
+NameError: name 'mdef' is not defined
+

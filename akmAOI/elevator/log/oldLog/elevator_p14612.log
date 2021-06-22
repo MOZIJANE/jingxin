@@ -1,0 +1,30 @@
+[INFO]2021-06-21 12:37:44,984: log files at D:\UÅÌbackup\¿ª·¢Çø\akmAOI\elevator\log
+[INFO]2021-06-21 12:37:44,991: create lock <lock name:elevatorApi.g_lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000002955A575C88>>
+[INFO]2021-06-21 12:37:45,000: {'elevatorId': 'ELEVATOR01', 'slave': 2, 'ip': '127.0.0.1', 'port': 502, 'floor': 1, '_isLock': False, 'm_lock': <unlocked _thread.RLock object owner=0 count=0 at 0x000002956ABEF2B0>, 'master': <modbusapi.tcpMaster object at 0x000002956AC02128>}
+[DEBUG]2021-06-21 12:37:45,008: lock:  ELEVATOR01
+[CRITICAL]2021-06-21 12:37:50,141: [modbusApi: 127.0.0.1] execute fcode=3, addr=10 exception:  cause a error: timed out
+pid=14612, ppid=10888, tid=13768
+Traceback (most recent call last):
+  File "../common\modbusapi.py", line 35, in __execute
+    data = self.master.execute(self.__salveId, fcode, start, quantity_of_x=num, output_value=value)
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 39, in new
+    raise excpt
+  File "C:\Python37\lib\site-packages\modbus_tk\utils.py", line 37, in new
+    ret = fcn(*args, **kwargs)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus.py", line 298, in execute
+    response = self._recv(expected_length)
+  File "C:\Python37\lib\site-packages\modbus_tk\modbus_tcp.py", line 216, in _recv
+    rcv_byte = self._sock.recv(1)
+socket.timeout: timed out
+
+[WARN]2021-06-21 12:37:50,163: MainThread[tid:13768] <locked _thread.RLock object owner=13768 count=1 at 0x000002956ABEF2B0> ,hold 5148 ms
+[INFO]2021-06-21 12:37:50,172: name=MainThread, pid=14612, tid=13768
+[01] File "liftMgr.py", line 426, in <module>() 
+[02] File "liftMgr.py", line 420, in test2() 
+[03] File "liftMgr.py", line 165, in getStatus() 
+[04] File "liftMgr.py", line 233, in status() 
+[05] File "../common/lock.py", line 124, in _call() 
+[06] File "../common/lock.py", line 102, in release() 
+[07] File "../common/enhance.py", line 268, in getTrace() 
+[08] File "../common/enhance.py", line 248, in getThreadStack()
+[INFO]2021-06-21 12:37:50,186: statuslist getstatus ELEVATOR01 fail
