@@ -1,0 +1,42 @@
+[CRITICAL]2021-06-17 11:15:03,363: readDIList error cause a error: ('http get', 'http://127.0.0.1:5551/api/remoteio/readDIList', {'id': 'load001'}, 'error:', 'timed out')
+pid=12504, ppid=12696, tid=13016
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\webutility.py", line 103, in http_get
+    f = urllib.request.urlopen(u,timeout=timeout)
+  File "C:\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\akmCtrl\deviceCtrl.py", line 64, in _monitorDevices
+    s1 = ioApi.readDIList(devices[d]["io1"])["status"] #上板机
+  File "..\remoteio\remoteioApi.py", line 45, in readDIList
+    return _remoteio('/api/remoteio/readDIList', id, param)
+  File "..\remoteio\remoteioApi.py", line 65, in _remoteio
+    return http_get(url + apiurl, param)
+  File "..\remoteio\remoteioApi.py", line 16, in http_get
+    r = webutility.http_get(url, param)
+  File "C:\Users\Administrator\Desktop\SVN\中山\AKMfloor\common\webutility.py", line 105, in http_get
+    raise Exception("http get",url,params,"error:",str(e))
+Exception: ('http get', 'http://127.0.0.1:5551/api/remoteio/readDIList', {'id': 'load001'}, 'error:', 'timed out')
+

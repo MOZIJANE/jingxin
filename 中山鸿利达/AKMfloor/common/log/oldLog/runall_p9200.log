@@ -1,0 +1,43 @@
+[INFO]2021-06-16 14:18:52,670: log files at C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\common\log
+[INFO]2021-06-16 14:18:52,671: find module account.main_account
+[INFO]2021-06-16 14:18:52,672: find module agvCtrl.main_agv
+[INFO]2021-06-16 14:18:52,672: find module agvDevice.main_agvDevice
+[INFO]2021-06-16 14:18:52,673: find module akmCtrl.main_akmCtrl
+[INFO]2021-06-16 14:18:52,673: find module alarm.main_alarm
+[INFO]2021-06-16 14:18:52,673: find module auth.main_auth
+[INFO]2021-06-16 14:18:52,674: find module door.main_door
+[INFO]2021-06-16 14:18:52,674: find module elevator.main_elevator
+[INFO]2021-06-16 14:18:52,675: find module menu.main_menu
+[INFO]2021-06-16 14:18:52,675: find module remoteio.main_remoteio
+[INFO]2021-06-16 14:18:52,675: find module webFront.main_web
+[INFO]2021-06-16 14:18:52,675: find module wmqtt.main_wmqtt
+[INFO]2021-06-16 14:18:52,676: import account.main_account
+[INFO]2021-06-16 14:18:52,846: import agvCtrl.main_agv
+[INFO]2021-06-16 14:18:53,965: create lock <lock name:doorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001861CCF9E18>>
+[INFO]2021-06-16 14:18:53,997: create lock <lock name:door.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001861CCF9FD0>>
+[INFO]2021-06-16 14:18:54,118: create lock <lock name:timer.lock_1675524624168,<unlocked _thread.RLock object owner=0 count=0 at 0x000001861D063C60>>
+[ERROR]2021-06-16 14:18:54,137: mqtt is disabled
+[INFO]2021-06-16 14:18:54,138: mqtt: subscribe [alarm/raise/+]
+[INFO]2021-06-16 14:18:54,139: mqtt: subscribe [alarm/clear/+]
+[INFO]2021-06-16 14:18:57,214: Mongodb connect to 127.0.0.1 port 27017
+[INFO]2021-06-16 14:18:57,262: create lock <lock name:elevatorMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001861CD59E68>>
+[WARNING]2021-06-16 14:18:57,300: use mockAgvCtrl
+[INFO]2021-06-16 14:18:57,304: create lock <lock name:mapMgr.lock,<unlocked _thread.RLock object owner=0 count=0 at 0x000001861B4E4670>>
+[CRITICAL]2021-06-16 14:18:57,401: import main_agv failed, path: agvCtrl cause a error: No module named 'forkMgr'
+pid=9200, ppid=13112, tid=14040
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvDevice\main_agvDevice.py", line 11, in <module>
+    import forkMgr
+ModuleNotFoundError: No module named 'forkMgr'
+
+[CRITICAL]2021-06-16 14:18:57,405: import main_agv failed, path: agvCtrl ,cause No module named 'forkMgr'

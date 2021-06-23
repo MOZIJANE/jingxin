@@ -1,0 +1,18 @@
+[CRITICAL]2021-06-16 14:18:57,401: import main_agv failed, path: agvCtrl cause a error: No module named 'forkMgr'
+pid=9200, ppid=13112, tid=14040
+Traceback (most recent call last):
+  File "run_all.py", line 39, in findModule
+    __import__(m[1])
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvCtrl\main_agv.py", line 11, in <module>
+    import agvControl
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvCtrl\agvControl.py", line 10, in <module>
+    import agvList
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvCtrl\agvList.py", line 24, in <module>
+    import agvDevice.rotationApi as rotationApi
+  File "..\agvDevice\rotationApi.py", line 8, in <module>
+    import main_agvDevice
+  File "C:\Users\Administrator\Desktop\SVN\zhongshan\AKMfloor\agvDevice\main_agvDevice.py", line 11, in <module>
+    import forkMgr
+ModuleNotFoundError: No module named 'forkMgr'
+
+[CRITICAL]2021-06-16 14:18:57,405: import main_agv failed, path: agvCtrl ,cause No module named 'forkMgr'

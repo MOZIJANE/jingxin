@@ -1,0 +1,32 @@
+[CRITICAL]2021-04-03 01:59:53,932: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=8580, ppid=12592, tid=13528
+
+[CRITICAL]2021-04-03 01:59:53,932: update task error: cause a error: mongodb is not connected
+pid=8580, ppid=12592, tid=13528
+Traceback (most recent call last):
+  File "D:\AKMfloor\akmCtrl\taskUI.py", line 299, in autoUpdateTask
+    self.updateTaskBydb()
+  File "D:\AKMfloor\akmCtrl\taskUI.py", line 277, in updateTaskBydb
+    tasks = akmArarm()
+  File "D:\AKMfloor\akmCtrl\taskUI.py", line 337, in akmArarm
+    ds = db.find("r_alarm", {"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
+[CRITICAL]2021-04-03 02:00:27,071: Connect mongodb error! cause a error: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+pid=8580, ppid=12592, tid=13528
+
+[CRITICAL]2021-04-03 02:00:27,071: update task error: cause a error: mongodb is not connected
+pid=8580, ppid=12592, tid=13528
+Traceback (most recent call last):
+  File "D:\AKMfloor\akmCtrl\taskUI.py", line 187, in autoUpdateTask
+    self.updateTaskBydb()
+  File "D:\AKMfloor\akmCtrl\taskUI.py", line 165, in updateTaskBydb
+    tasks = getAkmTask()
+  File "D:\AKMfloor\akmCtrl\taskUI.py", line 310, in getAkmTask
+    ds = db.find("u_smt_task", {"createTime": {"$gt": t}})
+  File "../common\mongodb.py", line 188, in find
+    raise Exception("mongodb is not connected")
+Exception: mongodb is not connected
+
